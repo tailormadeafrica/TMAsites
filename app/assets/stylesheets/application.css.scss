@@ -1,0 +1,201 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require jquery.colorbox-example1
+ *= require_tree .
+ *= require_self
+ */
+
+@mixin main_font ($weight:400,$color:#999999){ font-family: 'Open Sans', sans-serif; font-weight:$weight; color:$color;}
+@mixin header_font ($weight:400,$color:#000000){ font-family: 'Open Sans', sans-serif; font-weight:$weight; color:$color;}
+@mixin slider_font ($weight:400,$color:#ffffff){ font-family: 'Marcellus', serif; font-weight:$weight; color:$color;}
+@mixin vertical-align($position: relative) { position: $position; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+
+/* For modern browsers */
+.cf:before, .cf:after {content:""; display:table;}
+.cf:after {clear:both;}
+
+/* For IE 6/7 (triggers hasLayout) */
+.cf {*zoom:1;}
+
+.clear {clear:both;}
+
+//.div1,.div2,.div3,.div4,.div5,.div6 { opacity:0; filter:alpha(opacity=0); }
+
+body { @include main_font(); font-size:14px; line-height:28px; overflow-x:hidden; text-align:center;}
+
+h1 {@include header_font(); font-size:24px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:36px;}
+h2 {@include header_font(); font-size:16px; letter-spacing:2px; text-transform: uppercase; margin:30px 0; line-height:30px;}
+h3 {@include header_font(); font-size:14px; letter-spacing:2px; text-transform: uppercase; margin:0; line-height:30px;}
+
+a,a:hover,a:focus {color:#000000; text-decoration:none;}
+
+p {width:740px; text-align:justify; margin:0 auto 30px auto;}
+
+nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+nav {position: fixed; z-index: 10; background-color: rgba(0,0,0, 0.85); width: 100%; height: 100%; text-align: center; display: table; color: white;
+  ul {list-style:none; margin:0; padding:0; display: table-cell; vertical-align: middle;
+    h2 {color:#ffffff; cursor:pointer;}
+    a, a:hover, a:focus {color:#ffffff;}
+    li ul {display:block;}
+    li ul li {padding:5px 0;}
+  }
+}
+.nav-hide {display: none;}
+
+.navbar-hamburger { position: fixed; top: 20px; right: 20px; width: 30px; height: 22px; z-index: 20; cursor: pointer; }
+
+.bar1, .bar2, .bar3 { width: 100%; height: 3px; margin-bottom: 6px; background-color: #ffffff; transition: all 0.3s ease-in-out;}
+
+.navbar-on {
+  .bar1, .bar2, .bar3 { background-color: white; }
+  .bar1 { transform-origin: 5% 50%; transform: rotate(45deg); }
+  .bar3 { transform-origin: 10% 50%; transform: rotate(-45deg); }
+  .bar2 { background-color: transparent; }
+}
+
+.emerging-countries {height:190px;
+  .country-1 {display:none;}
+  .country-2 {display:none;}
+  .country-3 {display:none;}
+  .country-4 {display:none;}
+  .country-5 {display:none;}
+}
+
+.telephone-number {
+  h2 {position:absolute; z-index:2; right:100px; color:#ffffff; margin:20px 0 0 0; line-height:22px;}
+  .fa {font-size:18px;}
+}
+
+#masterslider {
+  h2 {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px;}
+  h1 {@include slider_font(); font-size:120px; margin:45px 0 30px 0; letter-spacing:13px;}
+  h3 {@include header_font(300); font-size:14px; color:#ffffff; letter-spacing:0;}
+  .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
+  .logo,.banner-text {top:50%; margin-top:-100px; left:50%;}
+  .logo { margin-left:-250px;}
+  .about {margin-left:-341px;}
+  .sierra-leone { margin-left:-460px;}
+  .ghana { margin-left:-247px;}
+  .ethiopia { margin-left:-313px;}
+  .rwanda {margin-left:-304px;}
+  .madagascar {margin-left:-480px}
+  .arrow {top:60%; left:50%; margin:0 0 0 -15px;}
+  .arrow:hover {cursor:pointer;}
+}
+.ms-skin-default .ms-nav-prev {left:40px!important;}
+.ms-skin-default .ms-nav-next {right:40px!important}
+
+#welcome,#locations,#contact {padding:50px 0 70px 0;
+  .contact-form span {width: 740px; margin: 0 auto!important; background-color: #FFFFFF; border: 1px solid red; padding: 0; display: block; margin: 15px; color: red; line-height:18px; padding:5px;}
+  .contact-form span.success { background-color: #ffffff; border: 1px solid green; color: green; }
+  form {width:740px; margin:0 auto;
+    input {border-radius:0; box-shadow:none; margin-bottom:5px; height:44px; color:#999999;}
+    textarea {border-radius:0; box-shadow:none; margin-bottom:5px; padding:10px 12px;}
+    .btn-custom {background: #000; border-radius: 0; border: 0; height: 41px; width:200px; color: #fff; margin-top:30px;}
+    ::-webkit-input-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
+    :-moz-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
+    ::-moz-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
+    :-ms-input-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
+  }
+  .contact-details {margin-bottom:30px;
+    .fa {margin:20px 0; color:#000000; font-size:20px;}
+    h3 {font-size:14px;}
+  }
+}
+
+#people {background: #489AF0 url("../assets/bg-people.jpg") bottom center no-repeat; padding:100px 0 20px 0;
+  .content-container .content {position:initial; transform:none; top:initial;
+    .street-child {padding:5px 0; width:740px; margin:0 auto;
+      img {float:left; margin-right:20px;}
+      p {font-size:10px; line-height:16px; color:#000000; margin:0; width:auto;}
+    }
+  }
+}
+
+#countries {background: #184e39 url("../assets/bg-countries.jpg") top center;
+  .content-container {height: 495px;}
+}
+
+#footer {background: url("../assets/bg-footer.jpg") top center; height:450px;
+  .content-container {height: 450px;}
+}
+
+.content-container .content {@include vertical-align(); color:#ffffff;
+  h1,h2 {width:740px; color:#ffffff; margin:0 auto 50px auto;}
+  h2 { margin-bottom:30px;}
+  img.flags {margin:50px auto 0 auto;}
+  img.logo {display:block; margin:50px auto 80px auto;}
+  span, a {color:#ffffff; font-size:8px; font-size:8px; text-transform:uppercase;}
+}
+
+.bio-pic {margin:0 auto 30px auto;}
+
+
+
+/*** xs ***/
+@media (max-width:767px) {
+  .container {max-width:320px;}
+  .logo {position: absolute; width: 220px; left: 50%; margin-left: -110px; top:50%; margin-top:-36px;}
+  .navbar-hamburger {top:10px; right:10px;}
+  nav ul h2 {margin:30px 0!important;}
+  .banner {position:relative;}
+  .banner .banner-text {position: absolute; top:50%; margin-top:-33px; width:100%;}
+  .banner .banner-text h2 {@include slider_font(); margin:0!important;}
+  .banner .banner-text h1 {@include slider_font(); font-size:36px;}
+  #welcome,#locations,#contact,#people,#countries {padding:35px 0 0 0;}
+  .div1,.div2,.div3,.div4,.div5,.div6 {opacity:1;}
+  h1,h2,p {margin:0 0 30px 0!important; width:100%!important;}
+  #people { background: #489AF0;}
+  #people .street-child,form { width:100%!important;}
+  #people .street-child img {float:none!important; margin:0 auto 30px auto;}
+  #countries {background: #000000;}
+  #countries .content-container{ height: auto;}
+  #countries .content-container .content {transform: none;}
+  .contact-form span {width:100%!important;}
+  .captcha {margin-bottom:5px;}
+  .content-container .content img.logo {position:relative; left:0;}
+}
+
+/*** sm ***/
+
+@media (min-width:768px) and (max-width: 991px) {
+  .container {width: 750px;}
+  #people {background-position:1140px 0; padding:100px 0;}
+  p,form,.street-child, .contact-form span {width:100%!important;}
+  #masterslider h2 {font-size:28px;}
+  #masterslider h1 {font-size:70px; letter-spacing:8px; margin:20px 0 15px 0;}
+  #masterslider h3 {font-size:12px;}
+  #masterslider .about {margin-left:-205px;}
+  #masterslider .sierra-leone {margin-left:-270px;}
+  #masterslider .ghana {margin-left:-161px;}
+  #masterslider .ethiopia {margin-left:-225px;}
+  #masterslider .madagascar {margin-left:-282px;}
+  #masterslider .rwanda {margin-left:-230px;}
+}
+
+/*** md ***/
+
+@media (min-width:992px) and (max-width:1199px) {
+  .container {width: 970px;}
+  #masterslider h2 {font-size:36px;}
+  #masterslider h1 {font-size:90px; letter-spacing:10px; margin:30px 0 20px 0;}
+  #masterslider .about {margin-left:-257px;}
+  #masterslider .sierra-leone {margin-left:-346px;}
+  #masterslider .ghana {margin-left:-188px;}
+  #masterslider .ethiopia {margin-left:-262px;}
+  #masterslider .madagascar {margin-left:-371px;}
+  #masterslider .rwanda {margin-left:-361px;}
+}
+
+/*** lg ***/
+@media (min-width: 1200px) {
+  .container {width: 1170px;}
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+
+    <%= render '/refinery/header' -%>
+
+    <%= render '/shared/banner' %>
+
+    <div id="welcome">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 div1">
+            <h1>Description</h1>
+            <p>
+              <%=raw @location.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% accommodations = Refinery::Accommodations::Accommodation.all %>
+    <% if accommodations.present? %>
+      <div class="accommodations">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="accommodations_slider">
+                <% accommodations.each do |accommodation| %>
+                  <div class="slide"><%= link_to (image_fu accommodation.cover_image, "300x150#c"), refinery.accommodations_accommodation_path(accommodation) %><span><%= link_to accommodation.name, refinery.accommodations_accommodation_path(accommodation) %></span></div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <% activities = Refinery::Activities::Activity.all %>
+    <% if activities.present? %>
+      <div class="activities">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="activities_slider">
+                <% activities.each do |activity| %>
+                  <div class="slide"><%= link_to (image_fu activity.cover_image, "300x150#c"), refinery.activities_activity_path(activity) %><span><%= link_to activity.name, refinery.activities_activity_path(activity) %></span></div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= render '/refinery/footer' -%>
+
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>

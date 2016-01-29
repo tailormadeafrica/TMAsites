@@ -1,0 +1,187 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+//= require refinerycms-pods
+//= require jquery.colorbox
+//= require_tree .
+
+$(document).ready(function() {
+
+    $(".cboxElement").colorbox({
+        maxWidth: "90%",
+        maxHeight: "90%"
+    });
+
+//  $(".activity_video_url").colorbox({iframe:true, innerWidth:640, innerHeight:390, transition:"elastic"});
+
+    $('.carousel').carousel();
+
+
+    //////////////////////////////////////////
+    var slider = new MasterSlider();
+
+    slider.setup('masterslider' , {
+        width:1920,
+        height:935,
+        space:1,
+        layout:'fullscreen',
+        loop:true,
+        preload:0,
+        autoplay:true,
+        overPause:false,
+        shuffle:false,
+        instantStartLayers: true,
+        view:"fade"
+    });
+    slider.control('arrows');
+
+    $(function(){
+        $('.navbar-hamburger').click(function(){
+            $('.navbar-hamburger').toggleClass('navbar-on');
+            $('nav').fadeToggle();
+            $('nav').removeClass('nav-hide');
+        });
+    });
+
+
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+
+    $('.arrow').click(function() {
+        $('html,body').animate({
+            scrollTop: $('#welcome').offset().top
+        }, 1000);
+        return false;
+    });
+
+    $('#accommodations_slider').bxSlider({
+        slideWidth: 300,
+        slideMargin: 10,
+        minSlides: 2,
+        maxSlides: 3,
+        moveSlides: 1,
+        auto: true,
+        pager: false,
+        speed: 1000,
+        pause: 6000
+    });
+
+    $('#locations_slider').bxSlider({
+        slideWidth: 300,
+        slideMargin: 10,
+        minSlides: 2,
+        maxSlides: 3,
+        moveSlides: 1,
+        auto: true,
+        pager: false,
+        speed: 1000,
+        pause: 6000
+    });
+
+    $('#activities_slider').bxSlider({
+        slideWidth: 300,
+        slideMargin: 10,
+        minSlides: 2,
+        maxSlides: 3,
+        moveSlides: 1,
+        auto: true,
+        pager: false,
+        speed: 1000,
+        pause: 6000
+    });
+    ///////////////////////////////////////////
+
+
+
+    WaterMark('input#inquiry_name','Name');
+    WaterMark('input#inquiry_email','Email');
+    WaterMark('input#inquiry_phone','Phone');
+    WaterMark('input#inquiry_captcha','Enter code here');
+    WaterMark('textarea#inquiry_message','Message');
+
+});
+
+
+function WaterMark(id_name,watermark){
+    //init, set watermark text and class
+    $(id_name).attr("placeholder",watermark).addClass('watermark');
+    //if blur and no value inside, set watermark text and class again.
+    $(id_name).blur(function(){
+        if ($(this).attr("placeholder").length == 0){
+            $(this).attr("placeholder", watermark).addClass('watermark');
+        }
+    });
+    //if focus and text is watermrk, set it to empty and remove the watermark class
+    $(id_name).focus(function(){
+        if ($(this).attr("placeholder") == watermark){
+            $(this).attr("placeholder",'').removeClass('watermark');
+        }
+    });
+}
+
+$(window).load(function() {
+
+    var $container = $('.portfolio-isotope');
+    // initialize
+    $container.isotope({
+        filter : ".portfolio-item",
+        layoutMode: 'masonry'
+
+    });
+});
+
+//$(window).scroll( function() {
+//    console.dir($(window).scrollTop());
+//
+//    if ( $(window).scrollTop() > 200 ) {
+//        loadDiv('.div1');
+//    }
+//
+//    if ( $(window).scrollTop() > 700 ) {
+//        loadDiv('.div2');
+//    }
+//
+//    if ( $(window).scrollTop() > 1100 ) {
+//        loadDiv('.div3');
+//    }
+//
+//    if ( $(window).scrollTop() > 1500 ) {
+//        loadDiv('.div4');
+//    }
+//
+//    if ( $(window).scrollTop() > 2000 ) {
+//        loadDiv('.div5');
+//    }
+//
+//    if ( $(window).scrollTop() > 2300 ) {
+//        loadDiv('.div6');
+//    }
+//
+//});
+//
+//function loadDiv(element) {
+//    $(element).fadeIn('slow', function() {
+//        $(this).fadeTo("slow", 1);
+//    });
+//}
