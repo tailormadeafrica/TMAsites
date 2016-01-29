@@ -33,6 +33,16 @@
       <%= f.label :message %>
       <%= f.text_area :message, :rows => 6 %>
     </div>
+
+    <div class="control">
+      <img src="/assets/captcha.png">
+    </div>
+
+    <div class="control">
+      <%= f.label :captcha, 'Retype Captcha' %>
+      <%= f.text_field :captcha %>
+    </div>
+
     <div class='field form-actions'>
       <%= f.submit t('submit', :scope => 'refinery.blog.posts.show') %>
     </div>
