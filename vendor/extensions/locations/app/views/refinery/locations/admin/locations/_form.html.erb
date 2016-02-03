@@ -42,6 +42,18 @@
   </div>
 
   <div class='field'>
+    <%= f.label :latitude -%>
+    <%= f.text_field :latitude  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :longitude -%>
+    <%= f.text_field :longitude  -%>
+
+  </div>
+
+  <div class='field'>
     <%= f.label :gallery_id, 'Gallery' -%>
     <%= f.collection_select :gallery_id, ::Refinery::Portfolio::Gallery.order(:title), :id , :title, {:prompt => "-- Please select when relevant --"}, {} -%>
   </div>
