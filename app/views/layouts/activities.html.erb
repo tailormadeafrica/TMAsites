@@ -69,7 +69,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h1>Popular Locations</h1>
+              <h1>Popular Places</h1>
               <div id="locations_slider">
                 <% locations.each do |location| %>
                   <div class="slide"><%= link_to (image_fu location.cover_image, "300x150#c") + location.name, refinery.locations_location_path(location) %></span></div>
