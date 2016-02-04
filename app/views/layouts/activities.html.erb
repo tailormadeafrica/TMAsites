@@ -10,51 +10,77 @@
 
     <%= render '/shared/banner' %>
 
-    <div id="welcome">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h1>Description</h1>
-            <p>
-              <%=raw @activity.description %>
-            </p>
+    <% if action_name == "index" %>
+
+      <% if @activities.present? %>
+      <div id="activities">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 div1">
+                <h1>Activities</h1>
+                <ul>
+                  <% @activities.each do |activity| %>
+                  <li>
+                    <h3><%= link_to activity.name, refinery.activities_activity_path(activity) %></h3>
+                  </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      <% end %>
 
-    <% accommodations = Refinery::Accommodations::Accommodation.all %>
-    <% if accommodations.present? %>
-    <div class="accommodations">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="accommodations_slider">
-              <% accommodations.each do |accommodation| %>
-                <div class="slide"><%= link_to (image_fu accommodation.cover_image, "300x150#c"), refinery.accommodations_accommodation_path(accommodation) %><span><%= link_to accommodation.name, refinery.accommodations_accommodation_path(accommodation) %></span></div>
-              <% end %>
+    <% else %>
+
+      <div id="welcome">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 div1">
+              <p>
+                <%=raw @activity.description %>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
 
-  <% locations = Refinery::Locations::Location.all %>
-  <% if locations.present? %>
-    <div class="locations">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="locations_slider">
-              <% locations.each do |location| %>
-                <div class="slide"><%= link_to (image_fu location.cover_image, "300x150#c"), refinery.locations_location_path(location) %><span><%= link_to location.name, refinery.locations_location_path(location) %></span></div>
-              <% end %>
+      <% accommodations = Refinery::Accommodations::Accommodation.all %>
+      <% if accommodations.present? %>
+        <h1>Lodges</h1>
+        <div class="accommodations">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1>Popular Lodges</h1>
+                <div id="accommodations_slider">
+                  <% accommodations.each do |accommodation| %>
+                    <div class="slide"><%= link_to (image_fu accommodation.cover_image, "300x175#c") + accommodation.name, refinery.accommodations_accommodation_path(accommodation) %></div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    <% locations = Refinery::Locations::Location.all %>
+    <% if locations.present? %>
+      <div class="locations">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1>Popular Locations</h1>
+              <div id="locations_slider">
+                <% locations.each do |location| %>
+                  <div class="slide"><%= link_to (image_fu location.cover_image, "300x150#c") + location.name, refinery.locations_location_path(location) %></span></div>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 
     <%= render '/refinery/footer' -%>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="content-container">
-          <div class="content div4">
+          <div class="content">
             <h1><%= copywriting('Countries Title', {:phrase_type => 'string', :scope => 'Footer', :default => 'In depth knowledge of 16 countries' }) %></h1>
             <p><%= copywriting('Countries Text', {:phrase_type => 'text', :scope => 'Footer', :default => 'Over many years of experience in our industry the founders and directors of Tailormade Africa have built up a detailed, in depth knowledge of 16 countries on the African continent. Not only do we offer the better known destinations in Africa but we actively promote and support the countries where the tourism infrastructure is not as advanced or, dare we say, compromised by over-commercialization. Including some of these less well-known regions in your Tailormade Africa itinerary is highly rewarding. As well as recapturing that sense of exploration you will be making a positive and long lasting impact on the development of local tourism, conservation and job creation.' }) %></p>
             <img src="/assets/countries.png" class="img-responsive hidden-xs flags">
@@ -18,11 +18,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div class="div5">
+        <div class="">
           <h1><%= copywriting('Contact title', {:phrase_type => 'string', :scope => 'Footer', :default => 'Let us tailor make your next journey' }) %></h1>
           <p><%= copywriting('Contact Text', {:phrase_type => 'text', :scope => 'Footer', :default => 'Whether you are a seasoned Africa traveller or going to Africa for the very first time, we would love to speak to you. Our first aim is to get to know you, what interests you have and to then match these with our tailormade collection of experiences, camps and lodges. It is always best to talk this over and get the ball rolling from there, so please do pick up the phone for an informal chat with us. We look forward to speaking with you and tailor making your next journey.' }) %></p>
         </div>
-        <div class="div6 contact-form">
+        <div class="contact-form">
           <h2>Fill in the form below and we'll get back to you asap</h2>
           <% @inquiry ||= ::Refinery::Inquiries::Inquiry.new %>
           <%= simple_form_for [refinery, :inquiries, @inquiry], :html => {:class => 'form-vertical'} do |f| %>

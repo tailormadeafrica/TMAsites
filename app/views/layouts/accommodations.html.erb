@@ -14,7 +14,6 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 div1">
-            <h1>Description</h1>
             <p>
               <%=raw @accommodation.description %>
             </p>
@@ -25,20 +24,21 @@
 
     <% activities = Refinery::Activities::Activity.all %>
     <% if activities.present? %>
-    <div class="activities">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="activities_slider">
-              <% activities.each do |activity| %>
-                <div class="slide"><%= link_to (image_fu activity.cover_image, "300x150#c"), refinery.activities_activity_path(activity) %><span><%= link_to activity.name, refinery.activities_activity_path(activity) %></span></div>
-              <% end %>
+      <div class="activities">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1>Popular Activities</h1>
+              <div id="activities_slider">
+                <% activities.each do |activity| %>
+                  <div class="slide"><%= link_to (image_fu activity.cover_image, "300x175#c") + activity.name, refinery.activities_activity_path(activity) %></div>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
 
     <%= render '/refinery/footer' -%>
 
