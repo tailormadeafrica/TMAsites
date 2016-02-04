@@ -17,7 +17,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12 div1">
-                <h1>Activities</h1>
+                <h1>Experiences</h1>
                 <ul>
                   <% @activities.each do |activity| %>
                   <li>
@@ -47,7 +47,6 @@
 
       <% accommodations = Refinery::Accommodations::Accommodation.all %>
       <% if accommodations.present? %>
-        <h1>Lodges</h1>
         <div class="accommodations">
           <div class="container">
             <div class="row">

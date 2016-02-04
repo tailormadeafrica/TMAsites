@@ -13,7 +13,7 @@
     <% if action_name == "index" %>
 
       <% if @locations.present? %>
-        <div id="activities">
+        <div id="locations">
           <div class="container">
             <div class="row">
               <div class="col-xs-12 div1">
@@ -67,7 +67,7 @@
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
-                <h1>Popular Activities</h1>
+                <h1>Popular Experiences</h1>
                 <div id="activities_slider">
                   <% activities.each do |activity| %>
                     <div class="slide"><%= link_to (image_fu activity.cover_image, "300x175#c") + activity.name, refinery.activities_activity_path(activity) %></div>
