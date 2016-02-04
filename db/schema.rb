@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160129095803) do
+ActiveRecord::Schema.define(:version => 20160203142440) do
 
   create_table "refinery_accommodations", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20160129095803) do
     t.string   "latitude"
     t.string   "longitude"
     t.text     "address"
+    t.string   "sub_name"
   end
 
   create_table "refinery_accommodations_posts", :id => false, :force => true do |t|
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20160129095803) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.integer  "gallery_id"
+    t.string   "sub_name"
   end
 
   create_table "refinery_activities_accommodations", :id => false, :force => true do |t|
@@ -205,6 +207,7 @@ ActiveRecord::Schema.define(:version => 20160129095803) do
     t.integer  "gallery_id"
     t.string   "latitude"
     t.string   "longitude"
+    t.string   "sub_name"
   end
 
   create_table "refinery_locations_posts", :id => false, :force => true do |t|

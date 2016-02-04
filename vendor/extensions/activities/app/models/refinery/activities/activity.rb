@@ -5,7 +5,7 @@ module Refinery
     
       acts_as_indexed :fields => [:name, :description, :rating]
 
-      attr_accessible :name, :cover_image_id, :description, :rating, :position, :gallery_id, :longitude, :latitude
+      attr_accessible :name, :cover_image_id, :description, :rating, :position, :gallery_id, :longitude, :latitude, :sub_name
 
       validates :name, :presence => true, :uniqueness => true
           
