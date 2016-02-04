@@ -7,7 +7,7 @@ module Refinery
 
       validates :name, :presence => true, :uniqueness => true
 
-      attr_accessible :name, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :sub_name
+      attr_accessible :name, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name
           
       belongs_to :cover_image, :class_name => '::Refinery::Image'
       belongs_to :gallery, :class_name => '::Refinery::Portfolio::Gallery'

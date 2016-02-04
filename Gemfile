@@ -109,3 +109,5 @@ gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'
 gem 'refinerycms-locations', :path => 'vendor/extensions'
 gem 'refinerycms-teams', :path => 'vendor/extensions'
+
+gem 'coffee-script-source', '1.8.0'

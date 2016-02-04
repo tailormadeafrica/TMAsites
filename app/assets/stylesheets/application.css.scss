@@ -138,6 +138,14 @@ nav {position: fixed; z-index: 10; background-color: rgba(0,0,0, 0.85); width: 1
 
 .bio-pic {margin:0 auto 30px auto;}
 
+.accommodations,.activities {background:#484848;
+  .bx-viewport {background:#484848;}
+  .slide {background:#484848;
+    span {display:block; height:50px; line-height:50px;}
+    a {color:#ffffff;}
+  }
+}
+
 
 
 /*** xs ***/
