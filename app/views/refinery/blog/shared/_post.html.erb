@@ -1,47 +1,35 @@
 <% if post.live? %>
   <article class="blog_post" id="<%= dom_id(post) %>">
-    <header>
-      <h1><%= link_to post.title, refinery.blog_post_path(post) %></h1>
-      <%= image_fu post.image, "650x400#c" %>
-      <section class='details'>
-        <time datetime="<%=l post.published_at.to_date, :format => :default %>" class='posted_at'>
-          <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(post.published_at.to_date, :format => :short)) %>
-        </time>
-        <%= "#{t('by', :scope => 'refinery.blog.posts.show')} #{post.author.username}" if post.author.present? %>.
-        <% if (categories = post.categories).any? %>
-          <aside class='filed_in'>
-            <%= t('filed_in', :scope => 'refinery.blog.posts.show') %>
-            <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
-          </aside>
-        <% end %>
-        <% if (tags = post.tags).any? %>
-          <aside class='tagged'>
-            <%= t('tagged', :scope => 'refinery.blog.posts.show') %>
-            <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %>
-          </aside>
-        <% end %>
-      </section>
-    </header>
-    <section class='clearfix'>
-      <% if blog_post_teaser_enabled? %>
-        <%= blog_post_teaser(post) %>
-      <% else %>
-        <%= post.body.html_safe %>
-      <% end %>
-    </section>
-    <footer>
-      <p>
-        <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
-      </p>
-      <aside class='comment_count'>
-        <% if Refinery::Blog::Post.comments_allowed? %>
-          <% if post.comments.any? %>
-             (<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %>)
-          <% else %>
-                (<%= t('none', :scope => 'refinery.blog.shared.comments') %>)
+  <div class="col-xs-12 col-md-4">
+    <div class="blog_post_pod">
+      <div class="header">
+        <%= link_to(image_fu(post.image, "360x240#c", :class=>"img-responsive"), refinery.blog_post_path(post)) %>
+        <div class="details">
+          <div class="date">
+            <div class="month"><%= post.published_at.strftime("%b") %></div>
+            <div class="day"><%= post.published_at.strftime("%d") %></div>
+          </div>
+          <% if Refinery::Blog::Post.comments_allowed? %>
+            <% if post.comments.any? %>
+               <div class="comments"><img src="../assets/comments-icon.png"><%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></div>
+            <% else %>
+                  <div class="comments"><img src="../assets/comments-icon.png"></i>0</div>
+            <% end %>
           <% end %>
+        </div>
+      </div>
+      <div class="content">
+        <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
+        <% if blog_post_teaser_enabled? %>
+          <%= blog_post_teaser(post) %>
+        <% else %>
+          <%= post.body.html_safe %>
         <% end %>
-      </aside>
-    </footer>
+      </div>
+      <div class="clear"></div>
+      <div class="button"><%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %></div>
+    </div>
+  </div>
+
   </article>
 <% end %>
