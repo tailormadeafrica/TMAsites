@@ -1,42 +1,48 @@
 <% if @location.present? and @location.gallery.present? and @location.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
     <% @location.gallery.items.each do |item| %>
-      <div class="ms-slide slide-1" data-delay="8">
+      <div class="ms-slide slide-1" data-delay="6">
+        <div class="overlay"></div>
         <%= image_fu(item.image, "1920x935#c") %>
-        <div class="ms-layer banner-text about" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
+        <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <h2>Discover</h2>
           <h1><%= @location.name %></h1>
+          <img src="/assets/downarrow.png" class="arrow" style="display: block;">
           <h3><%= @location.sub_name %></h3>
         </div>
-        <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
+
       </div>
     <% end %>
   </div>
 <% elsif @accommodation.present? and @accommodation.gallery.present? and @accommodation.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
     <% @accommodation.gallery.items.each do |item| %>
-      <div class="ms-slide slide-1" data-delay="8">
+      <div class="ms-slide slide-1" data-delay="6">
+              <div class="overlay"></div>
         <%= image_fu(item.image, "1920x935#c") %>
-        <div class="ms-layer banner-text about" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
+        <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <h2>Visit</h2>
           <h1><%= @accommodation.name %></h1>
-          <h1><%= @accommodation.sub_name %></h1>
+          <img src="/assets/downarrow.png" class="arrow" style="display: block;">
+          <h3><%= @accommodation.sub_name %></h3>
         </div>
-        <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
+
       </div>
     <% end %>
   </div>
 <% elsif @activity.present? and @activity.gallery.present? and @activity.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
     <% @activity.gallery.items.each do |item| %>
-      <div class="ms-slide slide-1" data-delay="8">
+      <div class="ms-slide slide-1" data-delay="6">
+              <div class="overlay"></div>
         <%= image_fu(item.image, "1920x935#c") %>
-        <div class="ms-layer banner-text about" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
+        <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <h2>Experience</h2>
           <h1><%= @activity.name %></h1>
+          <img src="/assets/downarrow.png" class="arrow" style="display: block;">
           <h3><%= @activity.sub_name %></h3>
         </div>
-        <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
+
       </div>
     <% end %>
   </div>
@@ -49,11 +55,10 @@
           <% if home_page? %>
             <img src="/assets/blank.gif" data-src="/assets/logo.png" class="ms-layer logo" data-type="image" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <% elsif banner.description.present? %>
-            <div class="ms-layer banner-text about" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
+            <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
               <%= raw banner.description %>
             </div>
           <% end %>
-          <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
   </div>
@@ -64,7 +69,7 @@
   <% if home_page? %>
     <img src="/assets/logo.png" class="logo img-responsive">
   <% else %>
-    <div class="banner-text about">
+    <div class="banner-text">
       <h1><%= @page.title if @page.present? %></h1>
     </div>
   <% end %>
