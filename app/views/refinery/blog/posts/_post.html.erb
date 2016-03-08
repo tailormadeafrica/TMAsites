@@ -60,7 +60,7 @@
   <% end %>
   <% if @post.activities.present? %>
     <div class="blog_locations">
-      <h2>Activity</h2>
+      <h2>Experience</h2>
       <ul>
         <% @post.activities.each do |activity| %>
           <li><%= link_to (image_fu activity.cover_image, "75x75#c") + activity.name, refinery.activities_activity_path(activity) %></li>
