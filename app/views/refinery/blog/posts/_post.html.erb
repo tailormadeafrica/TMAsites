@@ -5,62 +5,67 @@
 <% end %>
 <article id="blog_post">
   <header>
+    <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>
     <h1><%= @post.title %></h1>
-    <section class='details'>
-      <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
-        <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
-      </time>
-      <%= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present? %>
-      <% if @post.source_url.present? %>
-        <div class='blog_source'>
-          <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
-          <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
-        </div>
-      <% end %>
-      <% if (categories = @post.categories).any? %>
-        <aside class='filed_in'>
-          <%= t('filed_in', :scope => 'refinery.blog.posts.show') %>
-          <% categories.each_with_index do |category, index| %>
-            <%= link_to category.title, refinery.blog_category_path(category) -%><%= ',' if index < ((categories.length) - 1) %>
+
+
+        <div class="details clearfix">
+           <span class="date"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;<%= @post.published_at.strftime("%d %B %Y") %></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <% if @post.comments.any? %>
+             <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= pluralize(@post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></span>
+          <% else %>
+                <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= t('none', :scope => 'refinery.blog.shared.comments') %></span>
           <% end %>
-        </aside>
-      <% end %>
-    </section>
+        </div>
+
+
+
   </header>
+  <br/>
   <%= @post.body.html_safe %>
 
-  <% if Refinery::Blog::Post::ShareThis.enabled? %>
-    <span class="st_sharethis" displayText="ShareThis"></span>
-  <% end %>
+  <span class='st_twitter'></span>
+  <span class='st_facebook'></span>
+  <span class='st_pinterest'></span>
+  <span class='st_linkedin'></span>
+  <span class='st_' displayText=''></span>
+<hr>
 </article>
+
 
 <% content_for :right do %>
   <% if @post.locations.present? %>
     <div class="blog_locations">
-      <h2>Locations</h2>
+      <h2>Location</h2>
       <ul>
-      <% @post.locations.each do |location| %>
-        <li><%= link_to location.name, refinery.locations_location_path(location) %></li>
-      <% end %>
+        <% @post.locations.each do |location| %>
+          <li><%= link_to (image_fu location.cover_image, "75x75#c") + location.name, refinery.locations_location_path(location) %></li>
+          <div class="description"><%=raw truncate(location.description, :length => 100) %></div></li>
+          <div class="clear"></div>
+        <% end %>
       </ul>
     </div>
   <% end %>
   <% if @post.accommodations.present? %>
     <div class="blog_locations">
-      <h2>Accommodations</h2>
+      <h2>Accommodation</h2>
       <ul>
         <% @post.accommodations.each do |accommodation| %>
-          <li><%= link_to accommodation.name, refinery.accommodations_accommodation_path(accommodation) %></li>
+          <li><%= link_to (image_fu accommodation.cover_image, "75x75#c") + accommodation.name, refinery.accommodations_accommodation_path(accommodation) %>
+          <div class="description"><%=raw truncate(accommodation.description, :length => 100) %></div></li>
+          <div class="clear"></div>
         <% end %>
       </ul>
     </div>
   <% end %>
   <% if @post.activities.present? %>
     <div class="blog_locations">
-      <h2>Activities</h2>
+      <h2>Activity</h2>
       <ul>
         <% @post.activities.each do |activity| %>
-          <li><%= link_to activity.name, refinery.activities_activity_path(activity) %></li>
+          <li><%= link_to (image_fu activity.cover_image, "75x75#c") + activity.name, refinery.activities_activity_path(activity) %></li>
+          <div class="description"><%=raw truncate(activity.description, :length => 100) %></div></li>
+          <div class="clear"></div>
         <% end %>
       </ul>
     </div>

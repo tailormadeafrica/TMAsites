@@ -31,7 +31,12 @@
                 <h1>Popular Experiences</h1>
                 <div id="activities_slider">
                   <% activities.each do |activity| %>
-                    <div class="slide"><%= link_to (image_fu activity.cover_image, "300x175#c") + activity.name, refinery.activities_activity_path(activity) %></div>
+                    <div class="slide">
+                      <%= link_to refinery.activities_activity_path(activity)  do %>                        
+                        <%= image_fu activity.cover_image, "300x175#c" if activity.cover_image.present? %> 
+                        <%= activity.name %>
+                      <% end %>
+                    </div>
                   <% end %>
                 </div>
               </div>

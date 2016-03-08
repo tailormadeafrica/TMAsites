@@ -10,33 +10,37 @@
 
     <%= render '/shared/banner' %>
 
-<div class="blog_background">
-  <% if action_name == "show" %>    
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8">        
-          <%= yield %>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <%= yield :right %>
-        </div>
-      </div>
-    </div>    
-  <% else %>    
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12">
-          <div class="row">
+
+  <% if action_name == "show" %>
+    <div class="blog_show">    
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8">        
             <%= yield %>
           </div>
+          <div class="col-xs-12 col-sm-4">
+            <%= yield :right %>
+          </div>
         </div>
-        <!-- <div class="col-xs-12 col-sm-4">
-          <%#= yield :right %>
-        </div> -->
-      </div>
+      </div>  
     </div>  
+  <% else %>    
+    <div class="blog_list">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12">
+            <div class="row">
+              <%= yield %>
+            </div>
+          </div>
+          <!-- <div class="col-xs-12 col-sm-4">
+            <%#= yield :right %>
+          </div> -->
+        </div>
+      </div> 
+    </div> 
   <% end %>
-</div>    
+   
     <%= render '/refinery/footer' -%>
 
     <%= render '/refinery/javascripts' %>

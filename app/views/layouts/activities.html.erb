@@ -54,7 +54,12 @@
                 <h1>Popular Lodges</h1>
                 <div id="accommodations_slider">
                   <% accommodations.each do |accommodation| %>
-                    <div class="slide"><%= link_to (image_fu accommodation.cover_image, "300x175#c") + accommodation.name, refinery.accommodations_accommodation_path(accommodation) %></div>
+                    <div class="slide">
+                      <%= link_to refinery.accommodations_accommodation_path(accommodation)  do %>                        
+                        <%= image_fu accommodation.cover_image, "300x175#c" if accommodation.cover_image.present? %> 
+                        <%= accommodation.name %>
+                      <% end %>
+                    </div>
                   <% end %>
                 </div>
               </div>
@@ -72,7 +77,12 @@
               <h1>Popular Places</h1>
               <div id="locations_slider">
                 <% locations.each do |location| %>
-                  <div class="slide"><%= link_to (image_fu location.cover_image, "300x150#c") + location.name, refinery.locations_location_path(location) %></span></div>
+                    <div class="slide">
+                      <%= link_to refinery.locations_location_path(location)  do %>                        
+                        <%= image_fu location.cover_image, "300x175#c" if location.cover_image.present? %> 
+                        <%= location.name %>
+                      <% end %>
+                    </div>
                 <% end %>
               </div>
             </div>

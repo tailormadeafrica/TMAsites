@@ -4,21 +4,16 @@
     <div class="blog_post_pod">
       <div class="header">
         <%= link_to(image_fu(post.image, "360x240#c", :class=>"img-responsive"), refinery.blog_post_path(post)) %>
-        <div class="details">
-          <div class="date">
-            <div class="month"><%= post.published_at.strftime("%b") %></div>
-            <div class="day"><%= post.published_at.strftime("%d") %></div>
-          </div>
-          <% if Refinery::Blog::Post.comments_allowed? %>
-            <% if post.comments.any? %>
-               <div class="comments"><img src="../assets/comments-icon.png"><%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></div>
-            <% else %>
-                  <div class="comments"><img src="../assets/comments-icon.png"></i>0</div>
-            <% end %>
-          <% end %>
-        </div>
       </div>
       <div class="content">
+                    <div class="details">
+           <span class="date"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;<%= post.published_at.strftime("%d %B %Y") %></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <% if post.comments.any? %>
+             <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></span>
+          <% else %>
+                <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= t('none', :scope => 'refinery.blog.shared.comments') %></span>
+          <% end %>
+        </div>
         <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
         <% if blog_post_teaser_enabled? %>
           <%= blog_post_teaser(post) %>
@@ -26,8 +21,6 @@
           <%= post.body.html_safe %>
         <% end %>
       </div>
-      <div class="clear"></div>
-      <div class="button"><%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %></div>
     </div>
   </div>
 
