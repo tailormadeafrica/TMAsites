@@ -7,10 +7,9 @@
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <h2>Discover</h2>
           <h1><%= @location.name %></h1>
-          <img src="/assets/downarrow.png" class="arrow" style="display: block;">
           <h3><%= @location.sub_name %></h3>
         </div>
-
+        <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
       </div>
     <% end %>
   </div>
@@ -23,10 +22,9 @@
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <h2>Visit</h2>
           <h1><%= @accommodation.name %></h1>
-          <img src="/assets/downarrow.png" class="arrow" style="display: block;">
-          <h3><%= @accommodation.sub_name %></h3>
+          <h1><%= @accommodation.sub_name %></h1>
         </div>
-
+        <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
       </div>
     <% end %>
   </div>
@@ -39,10 +37,9 @@
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
           <h2>Experience</h2>
           <h1><%= @activity.name %></h1>
-          <img src="/assets/downarrow.png" class="arrow" style="display: block;">
           <h3><%= @activity.sub_name %></h3>
         </div>
-
+        <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
       </div>
     <% end %>
   </div>
@@ -59,6 +56,7 @@
               <%= raw banner.description %>
             </div>
           <% end %>
+          <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
   </div>
