@@ -278,6 +278,7 @@ DEPENDENCIES
   commands
   dragonfly (= 0.9.12)
   fog (~> 0.8.1)
+  i18n (= 0.6.1)
   jquery-colorbox-rails (= 0.1.4)
   jquery-rails (~> 2.0.0)
   json (= 1.8.1)

@@ -2,6 +2,7 @@
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
+  s.authors           = 'Tailor Made Africa'
   s.name              = 'refinerycms-activities'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Activities extension for Refinery CMS'

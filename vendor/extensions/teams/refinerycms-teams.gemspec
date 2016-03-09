@@ -2,6 +2,7 @@
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
+  s.authors           = 'Tailor Made Africa'
   s.name              = 'refinerycms-teams'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Teams extension for Refinery CMS'
