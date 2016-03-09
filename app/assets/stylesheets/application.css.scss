@@ -39,6 +39,8 @@ a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
 p {width:740px; text-align:justify; margin:0 auto 30px auto;}
 
+p img {margin:0 auto;}
+
 hr {margin:30px 0; border-top:1px solid #e7e7e7;}
 
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
@@ -101,9 +103,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 #welcome strong {color: #777777;}
+#welcome ul {width:740px; margin:0 auto 30px auto; text-align:left;}
 
 #people {background: url("/assets/bg-people.jpg") bottom center no-repeat; padding:100px 0 20px 0;
   .content-container .content {position:initial; transform:none; top:initial;
+    h2 {font-size:15px;}
     .street-child {padding:5px 0; width:740px; margin:0 auto;
       img {float:left; margin-right:20px;}
       p {font-size:10px; line-height:16px; color:#000000; margin:0; width:auto;}
@@ -201,9 +205,10 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .blog_locations { border:1px solid #e7e7e7; padding:20px 20px 10px 20px; margin-bottom:20px;
   h2 {margin:0 0 20px 0; text-align:left; line-height:16px;}
   ul {list-style:none; margin:0; padding:0; text-align:left;
+    li {line-height:20px;}
     li img {margin:0 15px 10px 0; float:left;}
   }
-  .details,.description {font-size:11px; line-height:11px;
+  .details,.description {font-size:11px; line-height:30px;
     h1 {display:none;}
     p {width:auto; line-height:16px; margin:0;}
   }
@@ -230,9 +235,12 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #countries {background: #000000;}
   #countries .content-container{ height: auto;}
   #countries .content-container .content {transform: none;}
-  .contact-form span {width:100%!important;}
+  .contact-form span, #welcome ul  {width:100%!important;}
   .captcha {margin-bottom:5px;}
   .content-container .content img.logo {position:relative; left:0;}
+  #activities ul, #locations ul { -webkit-column-count: 1;}
+  .activities .bx-wrapper,.accommodations .bx-wrapper, .locations .bx-wrapper {max-width:620px!important;}
+  .activities h1,.accommodations h1, .locations h1 {margin:30px 0!important;}
 }
 
 /*** sm ***/
@@ -240,7 +248,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 @media (min-width:768px) and (max-width: 991px) {
   .container {width: 750px;}
   #people {background-position:1140px 0; padding:100px 0;}
-  p,form,.street-child, .contact-form span {width:100%!important;}
+  p,form,.street-child, .contact-form span, #welcome ul {width:100%!important;}
   #masterslider h2 {font-size:28px;}
   #masterslider h1 {font-size:70px; letter-spacing:8px; margin:20px 0 15px 0;}
   #masterslider h3 {font-size:12px;}
@@ -250,6 +258,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #masterslider .ethiopia {margin-left:-225px;}
   #masterslider .madagascar {margin-left:-282px;}
   #masterslider .rwanda {margin-left:-230px;}
+  .activities .bx-wrapper,.accommodations .bx-wrapper, .locations .bx-wrapper {max-width:620px!important;}
 }
 
 /*** md ***/
