@@ -46,6 +46,7 @@ $(document).ready(function() {
     });
     slider.control('arrows');
 
+
     $(function(){
         $('.navbar-hamburger').click(function(){
             $('.navbar-hamburger').toggleClass('navbar-on');

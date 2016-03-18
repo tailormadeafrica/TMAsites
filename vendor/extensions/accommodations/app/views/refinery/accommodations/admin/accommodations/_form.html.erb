@@ -4,6 +4,8 @@
               :include_object_name => true %>
 
   <%= hidden_field_tag 'accommodation[activity_ids][]' %>
+  <%= hidden_field_tag 'accommodation[location_ids][]' %>
+  <%= hidden_field_tag 'accommodation[amenity_ids][]' %>
   
   <div class='field'>
     <%= f.label :name -%>
@@ -77,11 +79,31 @@
   </div>
 
   <div class="field">
+    <%= f.label :amenities %>
+    <% ::Refinery::Amenities::Amenity.all.each do |amenity| %>
+      <div>
+        <%= check_box_tag "accommodation[amenity_ids][]", amenity.id, @accommodation.amenities.include?(amenity) %>
+        <%= amenity.name %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= f.label :activities %>
     <% ::Refinery::Activities::Activity.all.each do |activity| %>
       <div>
         <%= check_box_tag "accommodation[activity_ids][]", activity.id, @accommodation.activities.include?(activity) %>
         <%= activity.name %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :locations %>
+    <% ::Refinery::Locations::Location.where("parent_id IS NOT NULL").all.each do |location| %>
+      <div>
+        <%= check_box_tag "accommodation[location_ids][]", location.id, @accommodation.locations.include?(location) %>
+        <%= location.name %>
       </div>
     <% end %>
   </div>

@@ -1,0 +1,50 @@
+<% if @accommodation.present? %>
+  <div class="master-slider ms-skin-default hidden-xs" id="masterslider2">
+    <% @accommodation.gallery.items.each do |banner| %>
+      <div class="ms-slide slide-1" data-delay="6">
+        <div class="overlay"></div>
+        <%= image_fu(banner.image, "1920x500#c") %>
+        <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
+          <%= @accommodation.name %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="accommodation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <% if @accommodation.amenities.present? %>
+            <ul>
+              <% @accommodation.amenities.each do |amenity| %>
+                <li>
+                  <%= image_fu amenity.image, "100x100#c", :title => amenity.name %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+          <%= raw @accommodation.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script>
+  var slider2 = new MasterSlider();
+
+  slider2.setup('masterslider2' , {
+    width:1920,
+    height:500,
+    space:1,
+    layout:'fullwidth',
+    loop:true,
+    preload:0,
+    autoplay:true,
+    overPause:false,
+    shuffle:false,
+    instantStartLayers: true,
+    view:"fade"
+  });
+  slider2.control('arrows');
+</script>

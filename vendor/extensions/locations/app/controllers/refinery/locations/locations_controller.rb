@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_locations
-        @locations = Location.order('position ASC')
+        @locations = Location.where("parent_id IS NULL").order('position ASC')
       end
 
       def find_page

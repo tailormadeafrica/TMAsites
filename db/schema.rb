@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160203142440) do
+ActiveRecord::Schema.define(:version => 20160318090646) do
 
   create_table "refinery_accommodations", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(:version => 20160203142440) do
     t.text     "address"
     t.string   "sub_name"
   end
+
+  create_table "refinery_accommodations_amenities", :id => false, :force => true do |t|
+    t.integer "amenity_id"
+    t.integer "accommodation_id"
+  end
+
+  add_index "refinery_accommodations_amenities", ["accommodation_id"], :name => "index_refinery_accommodations_amenities_on_accommodation_id"
+  add_index "refinery_accommodations_amenities", ["amenity_id"], :name => "index_refinery_accommodations_amenities_on_amenity_id"
+
+  create_table "refinery_accommodations_locations", :id => false, :force => true do |t|
+    t.integer "location_id"
+    t.integer "accommodation_id"
+  end
+
+  add_index "refinery_accommodations_locations", ["accommodation_id"], :name => "index_refinery_accommodations_locations_on_accommodation_id"
+  add_index "refinery_accommodations_locations", ["location_id"], :name => "index_refinery_accommodations_locations_on_location_id"
 
   create_table "refinery_accommodations_posts", :id => false, :force => true do |t|
     t.integer "post_id"
@@ -72,6 +88,14 @@ ActiveRecord::Schema.define(:version => 20160203142440) do
 
   add_index "refinery_activities_posts", ["activity_id"], :name => "index_refinery_activities_posts_on_activity_id"
   add_index "refinery_activities_posts", ["post_id"], :name => "index_refinery_activities_posts_on_post_id"
+
+  create_table "refinery_amenities", :force => true do |t|
+    t.string   "name"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_banners", :force => true do |t|
     t.string   "name"
@@ -208,6 +232,11 @@ ActiveRecord::Schema.define(:version => 20160203142440) do
     t.string   "latitude"
     t.string   "longitude"
     t.string   "sub_name"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.text     "side_body"
   end
 
   create_table "refinery_locations_posts", :id => false, :force => true do |t|

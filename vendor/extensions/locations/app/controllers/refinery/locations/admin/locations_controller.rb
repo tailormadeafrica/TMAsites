@@ -4,7 +4,7 @@ module Refinery
       class LocationsController < ::Refinery::AdminController
 
         crudify :'refinery/locations/location',
-                :title_attribute => 'name', :xhr_paging => true
+                :title_attribute => 'name', :xhr_paging => true, :order => "lft", :per_page => 1000
 
       end
     end

@@ -4,6 +4,7 @@
               :include_object_name => true %>
 
   <%= hidden_field_tag 'location[activity_ids][]' %>
+  <%= hidden_field_tag 'location[accommodation_ids][]' %>
   
   <div class='field'>
     <%= f.label :name -%>
@@ -30,14 +31,14 @@
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
-        <% [:description].each_with_index do |part, part_index| %>
+        <% [:description, :side_body].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
             <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/locations/location", :default => part.to_s.titleize), "##{part}" %>
           </li>
         <% end %>
       </ul>
       <div id='page_part_editors'>
-        <% [:description].each do |part| %>
+        <% [:description, :side_body].each do |part| %>
           <div class='page_part' id='<%= part %>'>
             <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
           </div>
@@ -64,12 +65,28 @@
     <%= f.collection_select :gallery_id, ::Refinery::Portfolio::Gallery.order(:title), :id , :title, {:prompt => "-- Please select when relevant --"}, {} -%>
   </div>
 
+  <div class='field'>
+    <%= f.label :parent_id -%>
+    <%= f.collection_select :parent_id, ::Refinery::Locations::Location.where("parent_id IS NULL").order(:name), :id, :name, {:prompt => "-- Please Select --"}  -%>
+
+  </div>
+
   <div class="field">
     <%= f.label :activities %>
     <% ::Refinery::Activities::Activity.all.each do |activity| %>
       <div>
         <%= check_box_tag "location[activity_ids][]", activity.id, @location.activities.include?(activity) %>
         <%= activity.name %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :accommodations %>
+    <% ::Refinery::Accommodations::Accommodation.all.each do |accommodation| %>
+      <div>
+        <%= check_box_tag "location[accommodation_ids][]", accommodation.id, @location.accommodations.include?(accommodation) %>
+        <%= accommodation.name %>
       </div>
     <% end %>
   </div>
