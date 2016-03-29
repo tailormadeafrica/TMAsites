@@ -33,97 +33,119 @@
 
     <% elsif @location.present? and @location.parent_id == nil %>
 
-      <div id="welcome">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 div1">
-                <%=raw @location.description %>
-            </div>
+    <div id="welcome-locations">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 div1">
+              <%=raw @location.description %>
           </div>
         </div>
-      </div>
-
-      <% child_locations = Refinery::Locations::Location.where(:parent_id => @location.id) %>
-      <% if child_locations.present? %>
-        <div class="accommodations">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <h1>Popular Locations</h1>
-                <p><%= @location.side_body %></p>
-                <div id="accommodations_slider">
-                  <% child_locations.each do |child| %>
-                    <div class="slide">
-                      <%= link_to refinery.locations_location_path(child)  do %>
-                        <%= image_fu child.cover_image, "300x175#c" if child.cover_image.present? %>
-                        <%= child.name %>
-                      <% end %>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-    <% blogs = @location.posts.live.first(2) %>
-    <% if blogs.present? %>
-      <div class="location_blogs">
-        <div class="container">
+        <% child_locations = Refinery::Locations::Location.where(:parent_id => @location.id) %>
+        <% if child_locations.present? %>
+        <div class="locations">          
           <div class="row">
             <div class="col-xs-12">
-              <h1>Location Blogs</h1>
-            </div>
-            <% blogs.each do |blog| %>
-              <div class="col-xs-6">
-                <%= link_to refinery.blog_post_path(blog)  do %>
-                  <%= image_fu blog.image, "585x450#c", :class=>"img-responsive" if blog.image.present? %>
-                  <%= blog.title %>
+              <h2>Truly Special Locations</h2>
+              <p><%=raw @location.side_body %></p>
+              <div id="locations_slider">
+                <% child_locations.each do |child| %>
+                  <div class="slide">
+                    <%= link_to refinery.locations_location_path(child)  do %>
+                      <%= image_fu child.cover_image, "110x110#c" if child.cover_image.present? %>
+                      <div class="name"><%= child.name %></div>
+                    <% end %>
+                  </div>
                 <% end %>
               </div>
-            <% end %>
+            </div>
           </div>
         </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+
+    <div id="locations-blog-container">
+      <div class="container">
+        <% blogs = @location.posts.live.first(3) %>
+        <% if blogs.present? %>
+          <div class="location_blogs">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h1>Recent <%= @location.name %> Posts</h1>
+                </div>
+                <% blogs.each_with_index do |blog, index| %>
+                  <div class="col-xs-12 col-md-4">
+                    <div class="blog-post">
+                    <%= link_to refinery.blog_post_path(blog)  do %>
+                      <%= image_fu blog.image, "360x280#c", :class=>"img-responsive" if blog.image.present? %>
+                      <div class="banner-arrow"><img class="img-responsive" src="/assets/arrow.png"></div>
+                      <div class="content">
+                        <h2><%= link_to blog.title, refinery.blog_post_path(blog) %></h2>
+                        <div class="date"><%= blog.published_at.strftime("%d %B %Y") %></div>                         
+                        <% if Refinery::Blog::Post.teasers_enabled? %>
+                          <% if blog.respond_to?(:custom_teaser) && blog.custom_teaser.present? %>
+                            <%= blog.custom_teaser.html_safe %>
+                          <% else %>
+                           <%= truncate(blog.body, {
+                             :length => Refinery::Blog.post_teaser_length,
+                             :preserve_html_tags => true
+                            }).html_safe
+                           %>
+                           <% end %>
+                        <% else %>
+                          <%= blog.body.html_safe %>
+                        <% end %>
+                      </div>
+                    <% end %>
+                  </div></div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
 
 
     <% else %>
 
-      <div id="welcome">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 div1">
+
+
+
+
+
+
+    <div id="welcome-accommodation">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 div1">
               <%=raw @location.description %>
-            </div>
           </div>
         </div>
-      </div>
-
       <% accommodations = Refinery::Accommodations::Accommodation.all %>
       <% if accommodations.present? %>
-        <div class="accommodations">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <h1>Popular Lodges</h1>
-                <div id="accommodations_slider">
-                  <% accommodations.each do |accommodation| %>
-                    <div class="slide">
+        <div class="accommodations">        
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Camps / Lodges</h2>
+              <div id="accommodations_slider">
+                <% accommodations.each do |accommodation| %>
+                  <div class="slide">
                       <%= link_to refinery.accommodations_accommodation_path(accommodation), :remote => true do %>
-                        <%= image_fu accommodation.cover_image, "300x175#c" if accommodation.cover_image.present? %>
-                        <%= accommodation.name %>
-                      <% end %>
-                    </div>
-                  <% end %>
-                </div>
+                        <%= image_fu accommodation.cover_image, "110x110#c" if accommodation.cover_image.present? %>
+                        <div class="name"><%= accommodation.name %></div>
+                    <% end %>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>
         </div>
-      <% end %>
+        <% end %>
+      </div>
+    </div>
 
     <!--           start           -->
     <div class="accommodation_item"></div>
@@ -131,28 +153,7 @@
 
 
 
-      <% activities = Refinery::Activities::Activity.all %>
-      <% if activities.present? %>
-        <div class="activities">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <h1>Popular Experiences</h1>
-                <div id="activities_slider">
-                  <% activities.each do |activity| %>
-                    <div class="slide">
-                      <%= link_to refinery.activities_activity_path(activity)  do %>
-                        <%= image_fu activity.cover_image, "300x175#c" if activity.cover_image.present? %>
-                        <%= activity.name %>
-                      <% end %>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
+
 
     <% end %>
 

@@ -29,22 +29,21 @@ $(document).ready(function() {
 
 
     //////////////////////////////////////////
-    var slider = new MasterSlider();
 
-    slider.setup('masterslider' , {
-        width:1920,
-        height:935,
-        space:1,
-        layout:'fullscreen',
-        loop:true,
-        preload:0,
-        autoplay:true,
-        overPause:false,
-        shuffle:false,
-        instantStartLayers: true,
-        view:"fade"
-    });
-    slider.control('arrows');
+  var slider = new MasterSlider();
+
+  slider.control('arrows');
+  slider.control('bullets');
+
+  slider.setup('masterslider' , {
+    width:1920,
+    height:935,
+    space:0,
+    layout:'fullscreen',
+    loop:true,
+    preload:0,
+    autoplay:true
+  });
 
 
     $(function(){
@@ -77,36 +76,36 @@ $(document).ready(function() {
     });
 
     $('#accommodations_slider').bxSlider({
-        slideWidth: 300,
-        slideMargin: 10,
+        slideWidth: 110,
+        slideMargin: 15,
         minSlides: 2,
-        maxSlides: 3,
+        maxSlides: 6,
         moveSlides: 1,
-        auto: true,
+        auto: false,
         pager: false,
         speed: 1000,
         pause: 6000
     });
 
     $('#locations_slider').bxSlider({
-        slideWidth: 300,
-        slideMargin: 10,
+        slideWidth: 110,
+        slideMargin: 15,
         minSlides: 2,
-        maxSlides: 3,
+        maxSlides: 6,
         moveSlides: 1,
-        auto: true,
+        auto: false,
         pager: false,
         speed: 1000,
         pause: 6000
     });
 
     $('#activities_slider').bxSlider({
-        slideWidth: 300,
-        slideMargin: 10,
+        slideWidth: 110,
+        slideMargin: 15,
         minSlides: 2,
-        maxSlides: 3,
+        maxSlides: 6,
         moveSlides: 1,
-        auto: true,
+        auto: false,
         pager: false,
         speed: 1000,
         pause: 6000

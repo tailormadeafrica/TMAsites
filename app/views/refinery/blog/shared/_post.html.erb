@@ -6,7 +6,7 @@
         <%= link_to(image_fu(post.image, "360x240#c", :class=>"img-responsive"), refinery.blog_post_path(post)) %>
       </div>
       <div class="content">
-                    <div class="details">
+        <div class="details">
            <span class="date"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;<%= post.published_at.strftime("%d %B %Y") %></span>&nbsp;&nbsp;|&nbsp;&nbsp;
           <% if post.comments.any? %>
              <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></span>
