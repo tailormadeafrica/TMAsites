@@ -136,7 +136,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 /*** LOCATIONS ***/
 
-#welcome-locations,.welcome-accommodation {padding:50px 0 70px 0;
+#welcome-locations,#welcome-accommodation {padding:50px 0 70px 0;
   .locations {padding-bottom:30px;}
     h2 {font-size:20px; margin:20px 0 50px 0;}
     .slide {@include header_font(); font-size:12px; letter-spacing:1px; text-transform: uppercase; 
@@ -155,7 +155,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .blog-post {width:360px; position:relative;
     h2 {margin:0; font-size:14px;}
     .content {background:#ffffff; padding:20px;
-      .date {    font-size: 12px; font-style: italic; padding-bottom: 10px; }
+      .date {    font-size: 12px; font-style: italic;}
       p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
     }
   }
@@ -192,7 +192,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .blog_post_pod {width:360px; position:relative; margin-bottom:30px;
     h2 {margin:0; font-size:14px; line-height:20px;}
     .content {background:#ffffff; padding:20px;
-      .date {font-size: 12px; font-style: italic; padding-bottom: 10px; }
+      .date {font-size: 12px; font-style: italic;}
       p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
     }
   }
