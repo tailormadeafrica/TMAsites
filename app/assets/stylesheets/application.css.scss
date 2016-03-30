@@ -32,8 +32,8 @@
 body { @include main_font(); font-size:14px; line-height:28px; overflow-x:hidden; text-align:center;}
 
 h1 {@include header_font(); font-size:24px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:18px;}
-h2 {@include header_font(); font-size:16px; letter-spacing:2px; text-transform: uppercase; margin:30px 0; line-height:16px;}
-h3 {@include header_font(); font-size:14px; letter-spacing:2px; text-transform: uppercase; margin:0; line-height:30px;}
+h2 {@include header_font(); font-size:16px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:16px;}
+h3 {@include header_font(); font-size:14px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:30px;}
 
 a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
@@ -41,7 +41,7 @@ p {width:740px; text-align:justify; margin:0 auto 30px auto;}
 
 p img {margin:0 auto;}
 
-hr {margin:30px 0; border-top:1px solid #e7e7e7;}
+hr {margin:50px 0; border-top:1px solid #e7e7e7;}
 
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
 nav {position: fixed; z-index: 10; background-color: rgba(0,0,0, 0.85); width: 100%; height: 100%;
@@ -98,7 +98,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   }
   .contact-details {margin-bottom:30px;
     .fa {margin:20px 0; color:#000000; font-size:20px;}
-    h3 {font-size:14px;}
+    h3 {margin:0;}
   }
 }
 
@@ -107,7 +107,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #people {background: url("/assets/bg-people.jpg") bottom center no-repeat; padding:100px 0 20px 0;
   .content-container .content {position:initial; transform:none; top:initial;
-    h2 {font-size:15px;}
+    h2 {font-size:15px; line-height:24px;}
     .street-child {padding:5px 0; width:740px; margin:0 auto;
       img {float:left; margin-right:20px;}
       p {font-size:10px; line-height:16px; color:#000000; margin:0; width:auto;}
@@ -169,6 +169,12 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .ms-skin-default .ms-nav-prev {left:40px!important;}
   .ms-skin-default .ms-nav-next {right:40px!important}
 }
+.accommodation {padding-bottom:70px;
+  ul {list-style:none; margin:100px auto 50px auto; padding:0; width:740px; text-align:left;
+    li {display:inline-block; margin:0 10px 13px 0;}
+    li:nth-child(8) {margin-right:0;}
+  }
+}
 
 #activities,#locations {
   ul {list-style:none; margin:0 0 50px 0; padding:0; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; background:#e8e8e8; padding:15px 30px; text-align:left;
@@ -181,21 +187,19 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .blog_show {padding:50px 0 100px 0;}
 
 .blog_post {
-  .blog_post_pod { box-shadow: 0 1px 2px rgba(0,0,0,0.1); -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 0px rgba(0,0,0,0.1); background: #fff; border-bottom: none; margin-bottom:20px;
-  .details {font-size:11px; line-height:11px; color:#999999; text-align:left; margin-bottom:15px;}
-    .content {padding:20px 20px 5px 20px;
-      h2 {text-align:left; margin:0 0 10px 0; line-height:24px; font-weight:600;}
-      p { width: auto; margin-bottom: 20px; font-size: 13px; line-height: 22px; }
+  .blog_post_pod {width:360px; position:relative;
+    h2 {margin:0; font-size:14px;}
+    .content {background:#ffffff; padding:20px;
+      .date {font-size: 12px; font-style: italic; padding-bottom: 10px; }
+      p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
     }
   }
+  .banner-arrow {position: absolute; top:271px; z-index: 1;}
 }
 
 #blog_post {
-  h1 {margin:50px 0 0 0;}
-  .details {font-size:13px; color:#999999;
-    .fa {font-size:11px;}
-  }
   p {width:auto;}
+  .share {padding-top:10px;}
   .stButton {width:83px!important;
     .twitter { background-image: url(/assets/tweet.gif)!important; width:83px!important; height:30px!important;}
     .facebook { background-image: url(/assets/facebook.gif)!important; width:83px!important; height:30px!important;}
@@ -206,7 +210,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #comments{
   input {padding:0 20px; margin-bottom:5px; border: 0;  width:100%; height:44px; border:1px solid #e7e7e7;}
-  textarea {padding:20px; border: 0;  width:100%; border:1px solid #e7e7e7;}
+  textarea {padding:10px 20px; border: 0;  width:100%; border:1px solid #e7e7e7;}
   .captcha {background: url(/assets/captcha-lg.png) top center no-repeat; height:60px; margin:-5px 0 5px 0;}
   .form-actions {background:none; border-top:none; padding:0;}
   .form-actions input {background: #000; border-radius: 0; border: 0; height: 44px; width: 200px; color: #fff; margin-top: 30px;}

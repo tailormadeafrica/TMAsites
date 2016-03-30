@@ -7,28 +7,15 @@
   <header>
     <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>
     <h1><%= @post.title %></h1>
-
-
-        <div class="details clearfix">
-           <span class="date"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;<%= @post.published_at.strftime("%d %B %Y") %></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-          <% if @post.comments.any? %>
-             <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= pluralize(@post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></span>
-          <% else %>
-                <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= t('none', :scope => 'refinery.blog.shared.comments') %></span>
-          <% end %>
-        </div>
-
-
-
   </header>
-  <br/>
   <%= @post.body.html_safe %>
-
+<div class="share">
   <span class='st_twitter'></span>
   <span class='st_facebook'></span>
   <span class='st_pinterest'></span>
   <span class='st_linkedin'></span>
   <span class='st_' displayText=''></span>
+</div>
 <hr>
 </article>
 
@@ -40,7 +27,7 @@
       <ul>
         <% @post.locations.each do |location| %>
           <li><%= link_to (image_fu location.cover_image, "75x75#c") + location.name, refinery.locations_location_path(location) %></li>
-          <div class="description"><%=raw truncate(location.description, :length => 100) %></div></li>
+          <div class="description"><%=raw truncate(location.description, :length => 110) %></div></li>
           <div class="clear"></div>
         <% end %>
       </ul>
@@ -52,7 +39,7 @@
       <ul>
         <% @post.accommodations.each do |accommodation| %>
           <li><%= link_to (image_fu accommodation.cover_image, "75x75#c") + accommodation.name, refinery.accommodations_accommodation_path(accommodation) %>
-          <div class="description"><%=raw truncate(accommodation.description, :length => 100) %></div></li>
+          <div class="description"><%=raw truncate(accommodation.description, :length => 110) %></div></li>
           <div class="clear"></div>
         <% end %>
       </ul>
@@ -64,7 +51,7 @@
       <ul>
         <% @post.activities.each do |activity| %>
           <li><%= link_to (image_fu activity.cover_image, "75x75#c") + activity.name, refinery.activities_activity_path(activity) %></li>
-          <div class="description"><%=raw truncate(activity.description, :length => 100) %></div></li>
+          <div class="description"><%=raw truncate(activity.description, :length => 110) %></div></li>
           <div class="clear"></div>
         <% end %>
       </ul>

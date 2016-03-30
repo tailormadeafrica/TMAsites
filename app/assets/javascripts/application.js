@@ -33,7 +33,6 @@ $(document).ready(function() {
   var slider = new MasterSlider();
 
   slider.control('arrows');
-  slider.control('bullets');
 
   slider.setup('masterslider' , {
     width:1920,

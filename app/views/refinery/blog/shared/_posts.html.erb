@@ -6,14 +6,7 @@
     <% @posts.each do |blog_post| %>
       <li class='clearfix'>
       <%= link_to (image_fu blog_post.image, "75x75#c") + blog_post.title, refinery.blog_post_path(blog_post) %>
-      	<div class="details">
-           <span class="date"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;<%= blog_post.published_at.strftime("%d %B %Y") %></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-          <% if blog_post.comments.any? %>
-             <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= pluralize(blog_post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></span>
-          <% else %>
-                <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= t('none', :scope => 'refinery.blog.shared.comments') %></span>
-          <% end %>
-        </div>
+      <div class="description"><%=raw truncate(blog_post.body, :length => 110) %></div></li>
       </li>
     <% end %>
   </ul>

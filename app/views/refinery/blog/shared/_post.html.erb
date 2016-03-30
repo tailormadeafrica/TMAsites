@@ -2,27 +2,23 @@
   <article class="blog_post" id="<%= dom_id(post) %>">
   <div class="col-xs-12 col-md-4">
     <div class="blog_post_pod">
-      <div class="header">
-        <%= link_to(image_fu(post.image, "360x240#c", :class=>"img-responsive"), refinery.blog_post_path(post)) %>
-      </div>
+
+      <%= link_to(image_fu(post.image, "360x280#c", :class=>"img-responsive"), refinery.blog_post_path(post)) %>
+      <div class="banner-arrow"><img class="img-responsive" src="/assets/arrow.png"></div>
       <div class="content">
-        <div class="details">
-           <span class="date"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;<%= post.published_at.strftime("%d %B %Y") %></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-          <% if post.comments.any? %>
-             <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %></span>
-          <% else %>
-                <span class="comments"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<%= t('none', :scope => 'refinery.blog.shared.comments') %></span>
-          <% end %>
-        </div>
         <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
+        <div class="date"><%= post.published_at.strftime("%d %B %Y") %></div>
         <% if blog_post_teaser_enabled? %>
           <%= blog_post_teaser(post) %>
         <% else %>
           <%= post.body.html_safe %>
         <% end %>
       </div>
+
     </div>
   </div>
 
   </article>
 <% end %>
+
+
