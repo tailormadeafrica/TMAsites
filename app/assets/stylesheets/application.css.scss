@@ -137,7 +137,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 /*** LOCATIONS ***/
 
 #welcome-locations,.accommodations {padding:50px 0 70px 0;
-  .locations {padding-bottom:30px;
+  .locations {padding-bottom:30px;}
     h2 {font-size:20px; margin:20px 0 50px 0;}
     .slide {@include header_font(); font-size:12px; letter-spacing:1px; text-transform: uppercase; 
       a {
@@ -149,7 +149,6 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     .bx-prev,.bx-next { background: url(/assets/controls.png) no-repeat; width: 13px!important; height:25px!important; top:45%!important; }
     .bx-prev {left: -50px; background-position:top left!important;}
     .bx-next {right: -50px; background-position:top right!important;}
-  }
 }
 
 #locations-blog-container {padding:50px 0 100px 0; background:#f4f4f4; text-align:center;
