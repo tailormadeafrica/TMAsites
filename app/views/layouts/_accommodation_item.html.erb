@@ -2,7 +2,7 @@
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider2">
     <% @accommodation.gallery.items.each do |banner| %>
       <div class="ms-slide slide-1" data-delay="6">
-        <h1><%= @accommodation.name %></h1>
+        <!-- <h1><%= @accommodation.name %></h1> -->
         <div class="overlay"></div>
         <%= image_fu(banner.image, "1920x935#c") %>
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
