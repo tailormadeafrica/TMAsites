@@ -1,11 +1,13 @@
 <% content_for :body_content_left do %>
-  <ul id="teams">
+  <div id="teams">
     <% @teams.each do |team| %>
-      <li>
-        <%= link_to team.name, refinery.teams_team_path(team) %>
-      </li>
+
+      	<%= image_fu(team.image,'400x291#c') %>
+        <h2><%=raw team.name %> - <%=raw team.title %></h2>
+        <p><%=raw team.body %></p>
+
     <% end %>
-  </ul>
+  </div>
 <% end %>
 
 <%= render '/refinery/content_page' %>

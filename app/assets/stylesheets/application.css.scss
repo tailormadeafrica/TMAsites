@@ -74,7 +74,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #masterslider {
   h2 {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px;}
-  h1 {@include slider_font(); font-size:120px; margin:45px 0 30px 0; letter-spacing:13px;}
+  h1 {@include slider_font(); font-size:120px; margin:45px 0 30px 0; letter-spacing:13px; line-height:50px;}
   h3 {@include header_font(300); font-size:14px; color:#ffffff; letter-spacing:0;}
   .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
   .logo,.banner-text {top:50%; margin-top:-100px; position:relative;}
@@ -103,9 +103,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 #welcome strong {color: #777777;}
-#welcome ul {width:740px; margin:0 auto 30px auto; text-align:left;}
+#welcome ul, #welcome-locations ul, #welcome-accommodation ul {width:740px; margin:0 auto 30px auto; text-align:left;}
 
-#people {background: url("/assets/bg-people.jpg") bottom center no-repeat; padding:100px 0 20px 0;
+#people {background: url("/assets/bg-people.jpg") 0 0 no-repeat; padding:85px 0;
   .content-container .content {position:initial; transform:none; top:initial;
     h2 {font-size:15px; line-height:24px;}
     .street-child {padding:5px 0; width:740px; margin:0 auto;
@@ -187,8 +187,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .blog_show {padding:50px 0 100px 0;}
 
 .blog_post {
-  .blog_post_pod {width:360px; position:relative;
-    h2 {margin:0; font-size:14px;}
+  .blog_post_pod {width:360px; position:relative; margin-bottom:30px;
+    h2 {margin:0; font-size:14px; line-height:20px;}
     .content {background:#ffffff; padding:20px;
       .date {font-size: 12px; font-style: italic; padding-bottom: 10px; }
       p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
