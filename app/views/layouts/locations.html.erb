@@ -64,11 +64,10 @@
       </div>
     </div>
 
-    <% if blogs.present? %>
     <div id="locations-blog-container">
       <div class="container">
         <% blogs = @location.posts.live.first(3) %>
-        
+        <% if blogs.present? %>
           <div class="location_blogs">
             <div class="container">
               <div class="row">
@@ -105,9 +104,9 @@
               </div>
             </div>
           </div>
-        
+        <% end %>
       </div>
-    </div><% end %>
+    </div>
 
 
 
