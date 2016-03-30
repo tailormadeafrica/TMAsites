@@ -171,8 +171,10 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .ms-skin-default .ms-nav-prev {left:40px!important;}
   .ms-skin-default .ms-nav-next {right:40px!important}
 }
-.accommodation {padding-bottom:70px;
+.accommodation {padding-bottom:87px;
+  h2 {font-size:20px; margin:20px 0 50px 0;}
   ul.amenities {list-style:none; margin:100px auto 50px auto; padding:0; width:740px; text-align:left;
+
     li {display:inline-block; margin:0 10px 13px 0;}
     li:nth-child(8) {margin-right:0;}
   }
