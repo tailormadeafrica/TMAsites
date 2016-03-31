@@ -39,8 +39,6 @@ a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
 p {width:740px; text-align:justify; margin:0 auto 30px auto;}
 
-// p img {margin:0 auto;}
-
 hr {margin:50px 0; border-top:1px solid #e7e7e7;}
 
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
@@ -100,7 +98,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     .fa {margin:20px 0; color:#000000; font-size:20px;}
     h3 {margin:0;}
   }
-  .team-member {padding-bottom:10px;}
+  .team-member {padding-bottom:10px;
+    img {margin:0 auto;}
+  }
 }
 
 #welcome strong {color: #777777;}
@@ -225,7 +225,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     p {width:auto;}
 }
 
-.blog_locations { border:1px solid #e7e7e7; padding:20px 20px 10px 20px; margin-bottom:20px;
+.blog_locations { border:1px solid #e7e7e7; padding:20px 20px 10px 20px; margin-bottom:30px;
   h2 {margin:0 0 5px 0; text-align:left; line-height:16px;}
   ul {list-style:none; margin:0; padding:0; text-align:left;
     li {border-bottom: 1px solid #efefef;  padding: 10px 0;}
@@ -248,7 +248,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .navbar-hamburger {top:10px; right:10px;}
   nav ul h2 {margin:30px 0!important;}
   .banner {position:relative;}
-  .banner .banner-text {position: absolute; top:50%; margin-top:-9px; width:100%;}
+  .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
   .banner .banner-text h2 {@include slider_font(); margin:0!important;}
   .banner .banner-text h1 {@include slider_font(); font-size:36px;}
   h1 {line-height:30px; margin:30px 0;}
@@ -256,12 +256,12 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   h3 {line-height:24px; margin:30px 0;}
   .div1,.div2,.div3 {opacity:1;}
   h1,h2,p,#welcome ul, #welcome-locations ul, .accommodation ul {width:100%!important;}
-  #welcome, #locations, #contact, #people, #countries {padding:0;}
+  #welcome, #locations, #contact, #people, #countries,#locations-blog-container,#welcome-locations,#welcome-accomodation,.accommodation{padding:0;}
   .content-container .content h1, .content-container .content h2 {margin:30px 0;}
   #people { background: #489AF0;}
   #people .content-container .content h2 {margin:30px 0;}
-  #people .street-child,form { width:100%!important; padding:0;}
-  #people .street-child img {float:none!important; margin:0 auto 30px auto;}
+  #people .street-child,form { width:100%!important; padding:0!important;}
+  #people .street-child img {float:none!important; margin:0 auto 30px auto!important;}
   #countries {background: #000000;}
   #countries .content-container{ height: auto;}
   #countries .content-container .content {transform: none;}
@@ -272,11 +272,14 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:108px!important;}
   #welcome-locations .bx-viewport, #welcome-accommodation .bx-viewport {height:138px!important;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
-  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:196px;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:218px;}
   #locations-blog-container .blog-post h2 {margin:0!important;}
   .accommodation ul.amenities {width:100%;}
   .accommodation ul.amenities li:nth-child(8) {margin-right:10px;}
+.accommodation ul.amenities li {margin:0 5px 10px 5px;}
   .blog_locations {margin-top:30px;}
+#welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:0 0 30px 0;}
+.blog_show {padding:30px 0 0 0;}
 }
 
 /*** sm ***/
