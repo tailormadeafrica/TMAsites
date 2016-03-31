@@ -255,7 +255,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   h2 {line-height:24px; margin:30px 0;}
   h3 {line-height:24px; margin:30px 0;}
   .div1,.div2,.div3 {opacity:1;}
-  h1,h2,p,#welcome ul, #welcome-locations ul, .accommodation ul {width:100%!important;}
+  h1,h2,p,#welcome ul, #welcome-locations ul, .accommodation ul,.accommodation ul.amenities {width:100%!important;}
   #welcome, #locations, #contact, #people, #countries,#locations-blog-container,#welcome-locations,#welcome-accomodation,.accommodation{padding:0;}
   .content-container .content h1, .content-container .content h2 {margin:30px 0;}
   #people { background: #489AF0;}
@@ -274,12 +274,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:218px;}
   #locations-blog-container .blog-post h2 {margin:0!important;}
-  .accommodation ul.amenities {width:100%;}
   .accommodation ul.amenities li:nth-child(8) {margin-right:10px;}
-.accommodation ul.amenities li {margin:0 5px 10px 5px;}
+  .accommodation ul.amenities li {margin:0 5px 10px 5px;}
   .blog_locations {margin-top:30px;}
-#welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:0 0 30px 0;}
-.blog_show {padding:30px 0 0 0;}
+  #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:0 0 30px 0;}
+  .blog_show {padding:30px 0 0 0;}
 }
 
 /*** sm ***/
