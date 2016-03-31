@@ -175,11 +175,13 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .ms-skin-default .ms-nav-prev {left:40px!important;}
   .ms-skin-default .ms-nav-next {right:40px!important}
 }
-.accommodation {padding:50px 0 87px 0;
-  h2 {font-size:20px; padding:20px 0 50px 0; margin:0;}
-  ul.amenities {list-style:none; margin:0 auto; padding:0; width:740px; text-align:left;
-    li {display:inline-block; margin:0 10px 13px 0;}
-    li:nth-child(8) {margin-right:0;}
+  .accommodation {padding:50px 0 87px 0;
+    .accommodation-container { margin-top: -170px; background: #ffffff; position: relative;
+      h2 {font-size:20px; padding:20px 0 50px 0; margin:0;}
+      ul.amenities {list-style:none; margin:0 auto; padding:0; width:740px; text-align:left;
+      li {display:inline-block; margin:0 10px 13px 0;}
+      li:nth-child(8) {margin-right:0;}
+    }
   }
 }
 
@@ -187,7 +189,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 .blog_list {background:#F4F4F4; padding:50px 0 70px 0;}
 .blog_show {padding:50px 0 100px 0;}
-
+.blog_show_container { margin-top: -170px; background: #ffffff; position: relative; padding:0 30px;}
 .blog_post {
   .blog_post_pod {width:360px; position:relative; margin-bottom:30px;
     h2 {margin:0; font-size:14px; line-height:20px;}
@@ -200,6 +202,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 #blog_post {
+  img {margin-bottom:30px;}
   p {width:auto;}
   .share {padding-top:10px;}
   .stButton {width:83px!important;
@@ -278,6 +281,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .blog_locations {margin-top:30px;}
   #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:0 0 30px 0;}
   .blog_show {padding:30px 0 0 0;}
+  .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }
 
 /*** sm ***/
@@ -292,6 +296,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px;}
   .blog_locations #blog_posts img {display:none;}
+  .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }
 
 /*** md ***/
@@ -300,6 +305,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .container {width: 970px;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px;}
+  .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }
 
 /*** lg ***/

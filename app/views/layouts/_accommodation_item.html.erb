@@ -12,20 +12,22 @@
   </div>
   <div class="accommodation">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <%= raw @accommodation.description %>
-          <% if @accommodation.amenities.present? %>
-            <h2>Activities & Facilities</h2>
-            <ul class="amenities">
-            
-              <% @accommodation.amenities.each do |amenity| %>
-                <li>
-                  <%= image_fu amenity.image, "80x80#c", :title => amenity.name, :class => "img-responsive"%>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
+      <div class="accommodation-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= raw @accommodation.description %>
+            <% if @accommodation.amenities.present? %>
+              <h2>Activities & Facilities</h2>
+              <ul class="amenities">
+              
+                <% @accommodation.amenities.each do |amenity| %>
+                  <li>
+                    <%= image_fu amenity.image, "80x80#c", :title => amenity.name, :class => "img-responsive"%>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
