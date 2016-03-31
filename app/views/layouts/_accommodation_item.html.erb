@@ -21,7 +21,7 @@
             
               <% @accommodation.amenities.each do |amenity| %>
                 <li>
-                  <%= image_fu amenity.image, "80x80#c", :title => amenity.name %>
+                  <%= image_fu amenity.image, "80x80#c", :title => amenity.name, :class => "img-responsive"%>
                 </li>
               <% end %>
             </ul>
@@ -48,6 +48,6 @@
     instantStartLayers: true,
     view:"fade"
   });
-      slider2.control('bullets');
+  slider2.control('bullets');
   slider2.control('arrows');
 </script>

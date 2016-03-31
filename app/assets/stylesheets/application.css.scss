@@ -109,7 +109,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 #people {background: url("/assets/bg-people.jpg") 0 0 no-repeat; padding:85px 0 10px 0;
   .content-container .content {transform:none;
     h2 {font-size:15px; line-height:24px;}
-    .street-child {width:740px; margin:0 auto;
+    .street-child {width:740px; margin:0 auto; padding: 50px 0 0 0;
       img {float:left; margin-right:20px;}
       p {font-size:10px; line-height:16px; color:#000000; margin:0; width:auto;}
     }
@@ -155,8 +155,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     .bx-next {right: -50px; background-position:top right!important;}
 }
 
-#locations-blog-container {padding:50px 0 100px 0; background:#f4f4f4; text-align:center;
-  .blog-post {width:360px; position:relative;
+#locations-blog-container {padding:50px 0 70px 0; background:#f4f4f4; text-align:center;
+  .blog-post {width:360px; position:relative; margin-bottom:30px;
     h2 {margin:0; font-size:14px;}
     .content {background:#ffffff; padding:20px;
       .date {    font-size: 12px; font-style: italic;}
@@ -185,7 +185,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 /*** BLOG ***/
 
-.blog_list {background:#F4F4F4; padding:50px 0 100px 0;}
+.blog_list {background:#F4F4F4; padding:50px 0 70px 0;}
 .blog_show {padding:50px 0 100px 0;}
 
 .blog_post {
@@ -272,32 +272,22 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 @media (min-width:768px) and (max-width: 991px) {
   .container {width: 750px;}
-  #people {background-position:1140px 0; padding:100px 0;}
-  p,form,.street-child, .contact-form span, #welcome ul {width:100%!important;}
-  #masterslider h2 {font-size:28px;}
-  #masterslider h1 {font-size:70px; letter-spacing:8px; margin:20px 0 15px 0;}
-  #masterslider h3 {font-size:12px;}
-  #masterslider .about {margin-left:-205px;}
-  #masterslider .sierra-leone {margin-left:-270px;}
-  #masterslider .ghana {margin-left:-161px;}
-  #masterslider .ethiopia {margin-left:-225px;}
-  #masterslider .madagascar {margin-left:-282px;}
-  #masterslider .rwanda {margin-left:-230px;}
-  .activities .bx-wrapper,.accommodations .bx-wrapper, .locations .bx-wrapper {max-width:620px!important;}
+  p,form,#people .content-container .content h2, .street-child, .contact-form span, #welcome ul {width:100%!important;}
+  #people .content-container .content .street-child {padding: 30px 0 0 0;}
+  #people .content-container .content .street-child img {margin-right:13px;}
+  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:610px!important;}
+  .amenities img {width:78px; height:78px;}
+  #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px;}
+  #blog_posts img {display:none;}
 }
 
 /*** md ***/
 
 @media (min-width:992px) and (max-width:1199px) {
   .container {width: 970px;}
-  #masterslider h2 {font-size:36px;}
-  #masterslider h1 {font-size:90px; letter-spacing:10px; margin:30px 0 20px 0;}
-  #masterslider .about {margin-left:-257px;}
-  #masterslider .sierra-leone {margin-left:-346px;}
-  #masterslider .ghana {margin-left:-188px;}
-  #masterslider .ethiopia {margin-left:-262px;}
-  #masterslider .madagascar {margin-left:-371px;}
-  #masterslider .rwanda {margin-left:-361px;}
+  #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px;}
 }
 
 /*** lg ***/
