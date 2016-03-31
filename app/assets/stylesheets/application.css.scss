@@ -27,7 +27,7 @@
 
 .clear {clear:both;}
 
-.div1,.div2,.div3,.div4,.div5,.div6 { opacity:0; filter:alpha(opacity=0); }
+.div1,.div2,.div3 { opacity:0; filter:alpha(opacity=0); }
 
 body { @include main_font(); font-size:14px; line-height:28px; overflow-x:hidden; text-align:center;}
 
@@ -39,7 +39,7 @@ a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
 p {width:740px; text-align:justify; margin:0 auto 30px auto;}
 
-p img {margin:0 auto;}
+// p img {margin:0 auto;}
 
 hr {margin:50px 0; border-top:1px solid #e7e7e7;}
 
@@ -107,9 +107,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 #welcome ul, #welcome-locations ul, .accommodation ul {width:740px; margin:0 auto 30px auto; text-align:left;}
 
 #people {background: url("/assets/bg-people.jpg") 0 0 no-repeat; padding:85px 0 10px 0;
-  .content-container .content {position:initial; transform:none; top:initial;
+  .content-container .content {transform:none;
     h2 {font-size:15px; line-height:24px;}
-    .street-child {padding:5px 0; width:740px; margin:0 auto;
+    .street-child {width:740px; margin:0 auto;
       img {float:left; margin-right:20px;}
       p {font-size:10px; line-height:16px; color:#000000; margin:0; width:auto;}
     }
@@ -132,9 +132,13 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   span, a {color:#ffffff; font-size:8px; font-size:8px; text-transform:uppercase;}
 }
 
-.bio-pic {margin:0 auto 30px auto;}
-
 /*** LOCATIONS ***/
+
+#locations {
+  ul {list-style:none; margin:0 0 50px 0; padding:0; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; background:#e8e8e8; padding:15px 30px; text-align:left;
+    li {padding:10px 0;}
+  }
+}
 
 #welcome-locations,#welcome-accommodation {padding:50px 0 70px 0;
   .locations {padding-bottom:30px;}
@@ -174,19 +178,13 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .accommodation {padding:50px 0 87px 0;
   h2 {font-size:20px; padding:20px 0 50px 0; margin:0;}
   ul.amenities {list-style:none; margin:0 auto; padding:0; width:740px; text-align:left;
-
     li {display:inline-block; margin:0 10px 13px 0;}
     li:nth-child(8) {margin-right:0;}
   }
 }
 
-#activities,#locations {
-  ul {list-style:none; margin:0 0 50px 0; padding:0; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; background:#e8e8e8; padding:15px 30px; text-align:left;
-    li {padding:10px 0;}
-  }
-}
-
 /*** BLOG ***/
+
 .blog_list {background:#F4F4F4; padding:50px 0 100px 0;}
 .blog_show {padding:50px 0 100px 0;}
 
@@ -228,14 +226,16 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 .blog_locations { border:1px solid #e7e7e7; padding:20px 20px 10px 20px; margin-bottom:20px;
-  h2 {margin:0 0 20px 0; text-align:left; line-height:16px;}
+  h2 {margin:0 0 5px 0; text-align:left; line-height:16px;}
   ul {list-style:none; margin:0; padding:0; text-align:left;
-    li {line-height:20px;}
-    li img {margin:0 15px 10px 0; float:left;}
+    li {border-bottom: 1px solid #efefef;  padding: 10px 0;}
+    li:last-child {border-bottom:0;}
+    a {line-height:34px;}
+    li img {margin:0 15px 0 0; float:left;}
   }
   .details,.description {font-size:11px; line-height:30px;
     h1 {display:none;}
-    p {width:auto; line-height:16px; margin:0;}
+    p {width:auto; line-height:16px; margin:0; text-align:left;}
   }
 }
 

@@ -16,8 +16,9 @@
         <div class="col-xs-12">
           <%= raw @accommodation.description %>
           <% if @accommodation.amenities.present? %>
-            <ul class="amenities">
             <h2>Activities & Facilities</h2>
+            <ul class="amenities">
+            
               <% @accommodation.amenities.each do |amenity| %>
                 <li>
                   <%= image_fu amenity.image, "80x80#c", :title => amenity.name %>
