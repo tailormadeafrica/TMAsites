@@ -1,2 +1,7 @@
 $(".accommodation_item").html("");
 $(".accommodation_item").append("<%= j render :partial => 'layouts/accommodation_item' %>");
+
+$('html,body').animate({
+  scrollTop: $('#accommodation_item').offset().top
+}, 1000);
+

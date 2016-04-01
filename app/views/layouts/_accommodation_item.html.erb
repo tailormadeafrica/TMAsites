@@ -16,6 +16,11 @@
         <div class="row">
           <div class="col-xs-12">
             <%= raw @accommodation.description %>
+          </div>
+          <div class="col-xs-12">
+            <%= link_to 'Start Your Journey', '#contact', :class=>"contact_btn" %>
+          </div>
+          <div class="col-xs-12">
             <% if @accommodation.amenities.present? %>
               <h2>Activities & Facilities</h2>
               <ul class="amenities">
@@ -28,9 +33,6 @@
               </ul>
             <% end %>
           </div>
-        </div>
-        <div class="col-xs-12">
-          <%= link_to 'Start Your Journey', '#contact', :class=>"contact_btn" %>
         </div>
       </div>
     </div>
@@ -55,4 +57,19 @@
   });
   slider2.control('bullets');
   slider2.control('arrows');
+
+  $(function() {
+    $('.contact_btn').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
 </script>

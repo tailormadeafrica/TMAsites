@@ -65,6 +65,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .bar2 { background-color: transparent; }
 }
 
+nav ul h2 span {
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .telephone-number {
   h2 {position:absolute; z-index:2; right:100px; color:#ffffff; margin:20px 0 0 0; line-height:22px;}
   .fa {font-size:18px;}
