@@ -3,15 +3,15 @@
     css = "class='#{classes.join(' ')}'".html_safe
   end
 -%>
-<li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
+<li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %> class="parent">
 
   <% if menu_branch.url.include? '/locations' %>
     <h2><span  class="location_btn">Locations</span></h2>
     <% @menu_locations = Refinery::Locations::Location.where('parent_id IS null') %>
     <% if @menu_locations.present? %>
-      <ul>
+      <ul class="location_nav">
         <% @menu_locations.each do |location| %>
-          <li class="location_nav">
+          <li>
             <%= link_to location.name, refinery.locations_location_path(location) %>
           </li>
         <% end %>

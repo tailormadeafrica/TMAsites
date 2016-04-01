@@ -132,12 +132,14 @@ $(document).ready(function() {
     $('.location_btn').click(function() {
         var clicks = $(this).data('clicks');
         if (clicks) {
-            $(".location_nav").fadeOut();
+            $(".location_nav").slideUp("slow");
         } else {
-            $(".location_nav").fadeIn();
+            $(".location_nav").slideDown("slow");
         }
         $(this).data("clicks", !clicks);
     });
+
+
     ///////////////////////////////////////////
 
 

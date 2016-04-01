@@ -45,7 +45,9 @@ nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; 
 nav {position: fixed; z-index: 10; background-color: rgba(0,0,0, 0.85); width: 100%; height: 100%;
   ul {list-style:none; margin:0; padding:0; vertical-align: middle; display:inline-block;
     a, a:hover, a:focus {color:#ffffff;}
-    li {@include header_font(); font-size:16px; letter-spacing:2px; text-transform: uppercase; margin:30px 0; line-height:30px;}
+
+
+    li h2 {@include header_font(); font-size:16px; }
   }
 }
 nav:before { content: ''; display: inline-block; height: 100%; vertical-align: middle;  margin-right: -0.25em;}
@@ -69,6 +71,8 @@ nav ul h2 span {
   color: #ffffff;
   cursor: pointer;
 }
+
+.location_nav {font-size:14px; line-height:36px; }
 
 .telephone-number {
   h2 {position:absolute; z-index:2; right:100px; color:#ffffff; margin:20px 0 0 0; line-height:22px;}
@@ -147,7 +151,7 @@ nav ul h2 span {
 
 #welcome-locations,#welcome-accommodation {padding:50px 0 70px 0;
   .locations {padding-bottom:30px;}
-    h2 {font-size:20px; margin:20px 0 50px 0;}
+    h2 {font-size:20px; margin:50px 0;}
     .slide {@include header_font(); font-size:12px; letter-spacing:1px; text-transform: uppercase; 
       a {
         img {margin:0 auto;}
@@ -158,6 +162,7 @@ nav ul h2 span {
     .bx-prev,.bx-next { background: url(/assets/controls.png) no-repeat; width: 13px!important; height:25px!important; top:45%!important; }
     .bx-prev {left: -50px; background-position:top left!important;}
     .bx-next {right: -50px; background-position:top right!important;}
+    .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
 }
 
 #locations-blog-container {padding:50px 0 70px 0; background:#f4f4f4; text-align:center;
@@ -182,11 +187,12 @@ nav ul h2 span {
 }
   .accommodation {padding:50px 0 87px 0;
     .accommodation-container { margin-top: -170px; background: #ffffff; position: relative;
-      h2 {font-size:20px; padding:20px 0 50px 0; margin:0;}
+      h2 {font-size:20px; padding:50px 0; margin:0;}
       ul.amenities {list-style:none; margin:0 auto; padding:0; width:740px; text-align:left;
       li {display:inline-block; margin:0 10px 13px 0;}
       li:nth-child(8) {margin-right:0;}
     }
+        .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
   }
 }
 
@@ -284,7 +290,7 @@ nav ul h2 span {
   .accommodation ul.amenities li:nth-child(8) {margin-right:10px;}
   .accommodation ul.amenities li {margin:0 5px 10px 5px;}
   .blog_locations {margin-top:30px;}
-  #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:0 0 30px 0;}
+  #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:30px 0;}
   .blog_show {padding:30px 0 0 0;}
   .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }

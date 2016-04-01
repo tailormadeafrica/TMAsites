@@ -40,7 +40,7 @@
               <%=raw @location.description %>
           </div>
           <div class="col-xs-12">
-            <%= link_to 'Start Your Journey', '#contact', :class=>"contact_btn" %>
+            <%= link_to 'Start Your Journey', '#contact', :class=>"btn btn-default btn-custom" %>
           </div>
         </div>
         <% child_locations = Refinery::Locations::Location.where(:parent_id => @location.id) %>
@@ -128,7 +128,7 @@
               <%=raw @location.description %>
           </div>
           <div class="col-xs-12">
-            <%= link_to 'Start Your Journey', '#contact', :class=>"contact_btn" %>
+            <%= link_to 'Start Your Journey', '#contact', :class=>"btn btn-default btn-custom" %>
           </div>
         </div>
       <% accommodations = Refinery::Accommodations::Accommodation.all %>
