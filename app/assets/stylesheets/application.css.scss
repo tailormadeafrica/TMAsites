@@ -27,7 +27,7 @@
 
 .clear {clear:both;}
 
-.div1,.div2,.div3,.div4,.div5,.div6 { opacity:0; filter:alpha(opacity=0); }
+.div1,.div2,.div3 { opacity:0; filter:alpha(opacity=0); }
 
 body { @include main_font(); font-size:14px; line-height:28px; overflow-x:hidden; text-align:center;}
 
@@ -38,8 +38,6 @@ h3 {@include header_font(); font-size:14px; letter-spacing:2px; text-transform: 
 a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
 p {width:740px; text-align:justify; margin:0 auto 30px auto;}
-
-p img {margin:0 auto;}
 
 hr {margin:50px 0; border-top:1px solid #e7e7e7;}
 
@@ -74,7 +72,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #masterslider {
   h2 {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px;}
-  h1 {@include slider_font(); font-size:120px; margin:45px 0 30px 0; letter-spacing:13px;}
+  h1 {@include slider_font(); font-size:120px; margin:45px 0 30px 0; letter-spacing:13px; line-height:50px;}
   h3 {@include header_font(300); font-size:14px; color:#ffffff; letter-spacing:0;}
   .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
   .logo,.banner-text {top:50%; margin-top:-100px; position:relative;}
@@ -100,15 +98,18 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     .fa {margin:20px 0; color:#000000; font-size:20px;}
     h3 {margin:0;}
   }
+  .team-member {padding-bottom:10px;
+    img {margin:0 auto;}
+  }
 }
 
 #welcome strong {color: #777777;}
-#welcome ul {width:740px; margin:0 auto 30px auto; text-align:left;}
+#welcome ul, #welcome-locations ul, .accommodation ul {width:740px; margin:0 auto 30px auto; text-align:left;}
 
-#people {background: url("/assets/bg-people.jpg") bottom center no-repeat; padding:100px 0 20px 0;
-  .content-container .content {position:initial; transform:none; top:initial;
+#people {background: url("/assets/bg-people.jpg") 0 0 no-repeat; padding:85px 0 10px 0;
+  .content-container .content {transform:none;
     h2 {font-size:15px; line-height:24px;}
-    .street-child {padding:5px 0; width:740px; margin:0 auto;
+    .street-child {width:740px; margin:0 auto; padding: 50px 0 0 0;
       img {float:left; margin-right:20px;}
       p {font-size:10px; line-height:16px; color:#000000; margin:0; width:auto;}
     }
@@ -131,29 +132,34 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   span, a {color:#ffffff; font-size:8px; font-size:8px; text-transform:uppercase;}
 }
 
-.bio-pic {margin:0 auto 30px auto;}
-
 /*** LOCATIONS ***/
 
-#welcome-locations,#welcome-accommodation {padding:50px 0 100px 0;
-  h2 {font-size:20px; margin:20px 0 50px 0;}
-  .slide {@include header_font(); font-size:12px; letter-spacing:1px; text-transform: uppercase; 
-    a {
-      img {margin:0 auto;}
-      .name {margin-top:10px;}
-    }
+#locations {
+  ul {list-style:none; margin:0 0 50px 0; padding:0; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; background:#e8e8e8; padding:15px 30px; text-align:left;
+    li {padding:10px 0;}
   }
-  .bx-wrapper {padding:0 auto 100px auto;}
-  .bx-prev,.bx-next { background: url(/assets/controls.png) no-repeat; width: 13px!important; height:25px!important; top:45%!important; }
-  .bx-prev {left: -50px; background-position:top left!important;}
-  .bx-next {right: -50px; background-position:top right!important;}
 }
 
-#locations-blog-container {padding:50px 0 100px 0; background:#f4f4f4; text-align:center;
-  .blog-post {width:360px; position:relative;
+#welcome-locations,#welcome-accommodation {padding:50px 0 70px 0;
+  .locations {padding-bottom:30px;}
+    h2 {font-size:20px; margin:20px 0 50px 0;}
+    .slide {@include header_font(); font-size:12px; letter-spacing:1px; text-transform: uppercase; 
+      a {
+        img {margin:0 auto;}
+        .name {margin-top:10px; line-height:18px;}
+      }
+    }
+    .bx-viewport {height:151px!important;}
+    .bx-prev,.bx-next { background: url(/assets/controls.png) no-repeat; width: 13px!important; height:25px!important; top:45%!important; }
+    .bx-prev {left: -50px; background-position:top left!important;}
+    .bx-next {right: -50px; background-position:top right!important;}
+}
+
+#locations-blog-container {padding:50px 0 70px 0; background:#f4f4f4; text-align:center;
+  .blog-post {width:360px; position:relative; margin-bottom:30px;
     h2 {margin:0; font-size:14px;}
     .content {background:#ffffff; padding:20px;
-      .date {    font-size: 12px; font-style: italic; padding-bottom: 10px; }
+      .date {    font-size: 12px; font-style: italic;}
       p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
     }
   }
@@ -169,28 +175,26 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .ms-skin-default .ms-nav-prev {left:40px!important;}
   .ms-skin-default .ms-nav-next {right:40px!important}
 }
-.accommodation {padding-bottom:70px;
-  ul {list-style:none; margin:100px auto 50px auto; padding:0; width:740px; text-align:left;
-    li {display:inline-block; margin:0 10px 13px 0;}
-    li:nth-child(8) {margin-right:0;}
-  }
-}
-
-#activities,#locations {
-  ul {list-style:none; margin:0 0 50px 0; padding:0; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; background:#e8e8e8; padding:15px 30px; text-align:left;
-    li {padding:10px 0;}
+  .accommodation {padding:50px 0 87px 0;
+    .accommodation-container { margin-top: -170px; background: #ffffff; position: relative;
+      h2 {font-size:20px; padding:20px 0 50px 0; margin:0;}
+      ul.amenities {list-style:none; margin:0 auto; padding:0; width:740px; text-align:left;
+      li {display:inline-block; margin:0 10px 13px 0;}
+      li:nth-child(8) {margin-right:0;}
+    }
   }
 }
 
 /*** BLOG ***/
-.blog_list {background:#F4F4F4; padding:50px 0 100px 0;}
-.blog_show {padding:50px 0 100px 0;}
 
+.blog_list {background:#F4F4F4; padding:50px 0 70px 0;}
+.blog_show {padding:50px 0 100px 0;}
+.blog_show_container { margin-top: -170px; background: #ffffff; position: relative; padding:0 30px;}
 .blog_post {
-  .blog_post_pod {width:360px; position:relative;
-    h2 {margin:0; font-size:14px;}
+  .blog_post_pod {width:360px; position:relative; margin-bottom:30px;
+    h2 {margin:0; font-size:14px; line-height:20px;}
     .content {background:#ffffff; padding:20px;
-      .date {font-size: 12px; font-style: italic; padding-bottom: 10px; }
+      .date {font-size: 12px; font-style: italic;}
       p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
     }
   }
@@ -198,6 +202,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 #blog_post {
+  img {margin-bottom:30px;}
   p {width:auto;}
   .share {padding-top:10px;}
   .stButton {width:83px!important;
@@ -223,77 +228,84 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     p {width:auto;}
 }
 
-.blog_locations { border:1px solid #e7e7e7; padding:20px 20px 10px 20px; margin-bottom:20px;
-  h2 {margin:0 0 20px 0; text-align:left; line-height:16px;}
+.blog_locations { border:1px solid #e7e7e7; padding:20px 20px 10px 20px; margin-bottom:30px;
+  h2 {margin:0 0 5px 0; text-align:left; line-height:16px;}
   ul {list-style:none; margin:0; padding:0; text-align:left;
-    li {line-height:20px;}
-    li img {margin:0 15px 10px 0; float:left;}
+    li {border-bottom: 1px solid #efefef;  padding: 10px 0;}
+    li:last-child {border-bottom:0;}
+    a {line-height:34px;}
+    li img {margin:0 15px 0 0; float:left;}
   }
   .details,.description {font-size:11px; line-height:30px;
     h1 {display:none;}
-    p {width:auto; line-height:16px; margin:0;}
+    p {width:auto; line-height:16px; margin:0!important; text-align:left;}
   }
 }
 
 
 
 /*** xs ***/
+
 @media (max-width:767px) {
   .container {max-width:320px;}
   .logo {position: absolute; width: 220px; left: 50%; margin-left: -110px; top:50%; margin-top:-36px; }
   .navbar-hamburger {top:10px; right:10px;}
   nav ul h2 {margin:30px 0!important;}
   .banner {position:relative;}
-  .banner .banner-text {position: absolute; top:50%; margin-top:-33px; width:100%;}
+  .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
   .banner .banner-text h2 {@include slider_font(); margin:0!important;}
   .banner .banner-text h1 {@include slider_font(); font-size:36px;}
-  #welcome,#locations,#contact,#people,#countries {padding:35px 0 0 0;}
-  .div1,.div2,.div3,.div4,.div5,.div6 {opacity:1;}
-  h1,h2,p {margin:0 0 30px 0!important; width:100%!important;}
+  h1 {line-height:30px; margin:30px 0;}
+  h2 {line-height:24px; margin:30px 0;}
+  h3 {line-height:24px; margin:30px 0;}
+  .div1,.div2,.div3 {opacity:1;}
+  h1,h2,p,ul {width:100%!important;}
+  #welcome, #locations, #contact, #people, #countries, #locations-blog-container, #welcome-locations, #welcome-accomodation,.accommodation {padding:0;}
+  .content-container .content h1, .content-container .content h2 {margin:30px 0;}
   #people { background: #489AF0;}
-  #people .street-child,form { width:100%!important;}
-  #people .street-child img {float:none!important; margin:0 auto 30px auto;}
+  #people .street-child,form { width:100%!important; padding:0!important;}
+  #people .street-child img {float:none!important; margin:0 auto 30px auto!important;}
   #countries {background: #000000;}
   #countries .content-container{ height: auto;}
   #countries .content-container .content {transform: none;}
-  .contact-form span, #welcome ul  {width:100%!important;}
+  .contact-form span {width:100%!important;}
   .captcha {margin-bottom:5px;}
   .content-container .content img.logo {position:relative; left:0;}
-  #activities ul, #locations ul { -webkit-column-count: 1;}
-  .activities .bx-wrapper,.accommodations .bx-wrapper, .locations .bx-wrapper {max-width:620px!important;}
-  .activities h1,.accommodations h1, .locations h1 {margin:30px 0!important;}
+  #locations ul { -webkit-column-count: 1;}
+  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:108px!important;}
+  #welcome-locations .bx-viewport, #welcome-accommodation .bx-viewport {height:138px!important;}
+  #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:218px;}
+  .accommodation ul.amenities li:nth-child(8) {margin-right:10px;}
+  .accommodation ul.amenities li {margin:0 5px 10px 5px;}
+  .blog_locations {margin-top:30px;}
+  #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:0 0 30px 0;}
+  .blog_show {padding:30px 0 0 0;}
+  .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }
 
 /*** sm ***/
 
 @media (min-width:768px) and (max-width: 991px) {
   .container {width: 750px;}
-  #people {background-position:1140px 0; padding:100px 0;}
-  p,form,.street-child, .contact-form span, #welcome ul {width:100%!important;}
-  #masterslider h2 {font-size:28px;}
-  #masterslider h1 {font-size:70px; letter-spacing:8px; margin:20px 0 15px 0;}
-  #masterslider h3 {font-size:12px;}
-  #masterslider .about {margin-left:-205px;}
-  #masterslider .sierra-leone {margin-left:-270px;}
-  #masterslider .ghana {margin-left:-161px;}
-  #masterslider .ethiopia {margin-left:-225px;}
-  #masterslider .madagascar {margin-left:-282px;}
-  #masterslider .rwanda {margin-left:-230px;}
-  .activities .bx-wrapper,.accommodations .bx-wrapper, .locations .bx-wrapper {max-width:620px!important;}
+  p,form,#people .content-container .content h2, .street-child, .contact-form span, #welcome ul {width:100%!important;}
+  #people .content-container .content .street-child {padding: 30px 0 0 0;}
+  #people .content-container .content .street-child img {margin-right:13px;}
+  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:610px!important;}
+  .amenities img {width:78px; height:78px;}
+  #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px;}
+  .blog_locations img {display:none;}
+  .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }
 
 /*** md ***/
 
 @media (min-width:992px) and (max-width:1199px) {
   .container {width: 970px;}
-  #masterslider h2 {font-size:36px;}
-  #masterslider h1 {font-size:90px; letter-spacing:10px; margin:30px 0 20px 0;}
-  #masterslider .about {margin-left:-257px;}
-  #masterslider .sierra-leone {margin-left:-346px;}
-  #masterslider .ghana {margin-left:-188px;}
-  #masterslider .ethiopia {margin-left:-262px;}
-  #masterslider .madagascar {margin-left:-371px;}
-  #masterslider .rwanda {margin-left:-361px;}
+  #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px;}
+  .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
 }
 
 /*** lg ***/

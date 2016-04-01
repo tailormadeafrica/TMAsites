@@ -1,10 +1,10 @@
 <% if @accommodation.present? %>
-  <div class="master-slider ms-skin-default hidden-xs" id="masterslider2">
+  <div class="master-slider ms-skin-default" id="masterslider2">
     <% @accommodation.gallery.items.each do |banner| %>
       <div class="ms-slide slide-1" data-delay="6">
-        <h1><%= @accommodation.name %></h1>
+        <!-- <h1><%= @accommodation.name %></h1> -->
         <div class="overlay"></div>
-        <%= image_fu(banner.image, "1920x500#c") %>
+        <%= image_fu(banner.image, "1920x935#c") %>
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
         </div>
       </div>
@@ -12,18 +12,22 @@
   </div>
   <div class="accommodation">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <% if @accommodation.amenities.present? %>
-            <ul>
-              <% @accommodation.amenities.each do |amenity| %>
-                <li>
-                  <%= image_fu amenity.image, "80x80#c", :title => amenity.name %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
-          <%= raw @accommodation.description %>
+      <div class="accommodation-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= raw @accommodation.description %>
+            <% if @accommodation.amenities.present? %>
+              <h2>Activities & Facilities</h2>
+              <ul class="amenities">
+              
+                <% @accommodation.amenities.each do |amenity| %>
+                  <li>
+                    <%= image_fu amenity.image, "80x80#c", :title => amenity.name, :class => "img-responsive"%>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
         </div>
         <div class="col-xs-12">
           <%= link_to 'Start Your Journey', '#contact', :class=>"contact_btn" %>
@@ -38,7 +42,7 @@
 
   slider2.setup('masterslider2' , {
     width:1920,
-    height:500,
+    height:935,
     space:1,
     layout:'fullwidth',
     loop:true,

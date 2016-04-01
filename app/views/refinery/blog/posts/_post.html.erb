@@ -5,8 +5,7 @@
 <% end %>
 <article id="blog_post">
   <header>
-    <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>
-    <h1><%= @post.title %></h1>
+    <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>    
   </header>
   <%= @post.body.html_safe %>
 <div class="share">
@@ -22,37 +21,14 @@
 
 <% content_for :right do %>
   <% if @post.locations.present? %>
-    <div class="blog_locations">
+<div class="blog_locations">
       <h2>Location</h2>
       <ul>
         <% @post.locations.each do |location| %>
-          <li><%= link_to (image_fu location.cover_image, "75x75#c") + location.name, refinery.locations_location_path(location) %></li>
-          <div class="description"><%=raw truncate(location.description, :length => 110) %></div></li>
-          <div class="clear"></div>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <% if @post.accommodations.present? %>
-    <div class="blog_locations">
-      <h2>Accommodation</h2>
-      <ul>
-        <% @post.accommodations.each do |accommodation| %>
-          <li><%= link_to (image_fu accommodation.cover_image, "75x75#c") + accommodation.name, refinery.accommodations_accommodation_path(accommodation) %>
-          <div class="description"><%=raw truncate(accommodation.description, :length => 110) %></div></li>
-          <div class="clear"></div>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <% if @post.activities.present? %>
-    <div class="blog_locations">
-      <h2>Experience</h2>
-      <ul>
-        <% @post.activities.each do |activity| %>
-          <li><%= link_to (image_fu activity.cover_image, "75x75#c") + activity.name, refinery.activities_activity_path(activity) %></li>
-          <div class="description"><%=raw truncate(activity.description, :length => 110) %></div></li>
-          <div class="clear"></div>
+          <li class='clearfix'>
+          <%= link_to (image_fu location.cover_image, "105x80#c") + location.name, refinery.locations_location_path(location) %>          
+          <div class="description"><%=raw truncate(location.description, :length => 70) %></div>
+          </li>
         <% end %>
       </ul>
     </div>
@@ -61,4 +37,9 @@
 
 
 <%= render :partial => '/refinery/draft_page_message' unless @post.nil? or @post.live? -%>
+
+ 
+
+
+
 
