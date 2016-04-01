@@ -43,6 +43,14 @@
       </div>
     <% end %>
   </div>
+<% elsif @post.present? and @post.banners.published.present? %>
+  <div class="master-slider ms-skin-default hidden-xs" id="post_masterslider">
+    <% @post.banners.published.each do |banner| %>
+      <div class="ms-slide slide-1" data-delay="6">
+        <%= image_fu(banner.image, "1920x500#c") %>
+      </div>
+    <% end %>
+  </div>
 <% elsif @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
       <% @page.banners.published.each do |banner| %>

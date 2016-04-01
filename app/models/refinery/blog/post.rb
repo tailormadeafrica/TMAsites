@@ -39,6 +39,7 @@ module Refinery
       has_and_belongs_to_many :accommodations, :class_name => 'Refinery::Accommodations::Accommodation', :join_table => 'refinery_accommodations_posts'
       has_and_belongs_to_many :locations, :class_name => 'Refinery::Locations::Location', :join_table => 'refinery_locations_posts'
       has_and_belongs_to_many :activities, :class_name => 'Refinery::Activities::Activity', :join_table => 'refinery_activities_posts'
+      has_and_belongs_to_many :banners, :class_name => '::Refinery::Banners::Banner', :join_table => 'refinery_banners_posts'
 
       self.per_page = Refinery::Blog.posts_per_page
 

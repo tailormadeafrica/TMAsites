@@ -4,6 +4,7 @@
                :include_object_name => true %>
 
     <%= hidden_field_tag 'banner[page_ids][]' %>
+    <%= hidden_field_tag 'banner[post_ids][]' %>
 
     <div class='field'>
       <%= f.label :name -%>
@@ -79,6 +80,16 @@
       <%= f.label :expiry_date -%>
       <%= f.date_select :expiry_date  -%>
 
+    </div>
+
+    <div class="field">
+      <%= f.label :posts %>
+      <% ::Refinery::Blog::Post.all.each do |post| %>
+        <div>
+          <%= check_box_tag "banner[post_ids][]", post.id, @banner.posts.include?(post) %>
+          <%= post.title %>
+        </div>
+      <% end %>
     </div>
 
     <section id="records" class="tree">

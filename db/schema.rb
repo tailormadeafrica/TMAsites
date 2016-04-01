@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160318090646) do
+ActiveRecord::Schema.define(:version => 20160331134811) do
 
   create_table "refinery_accommodations", :force => true do |t|
     t.string   "name"
@@ -118,6 +118,14 @@ ActiveRecord::Schema.define(:version => 20160318090646) do
 
   add_index "refinery_banners_pages", ["banner_id"], :name => "index_refinery_banners_pages_on_banner_id"
   add_index "refinery_banners_pages", ["page_id"], :name => "index_refinery_banners_pages_on_page_id"
+
+  create_table "refinery_banners_posts", :id => false, :force => true do |t|
+    t.integer "banner_id"
+    t.integer "post_id"
+  end
+
+  add_index "refinery_banners_posts", ["banner_id"], :name => "index_refinery_banners_posts_on_banner_id"
+  add_index "refinery_banners_posts", ["post_id"], :name => "index_refinery_banners_posts_on_post_id"
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"

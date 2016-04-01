@@ -5,7 +5,7 @@ module Refinery
 
       acts_as_indexed :fields => [:name, :url, :title, :description]
 
-      attr_accessible :name, :title, :description, :image_id, :url, :is_active, :start_date, :expiry_date, :position, :page_ids
+      attr_accessible :name, :title, :description, :image_id, :url, :is_active, :start_date, :expiry_date, :position, :page_ids, :post_ids
 
       validates :name, :presence => true
       validates_presence_of :start_date
@@ -14,6 +14,7 @@ module Refinery
           
       belongs_to :image, :class_name => '::Refinery::Image'
       has_and_belongs_to_many :pages, :class_name => '::Refinery::Page', :join_table => 'refinery_banners_pages'
+      has_and_belongs_to_many :posts, :class_name => '::Refinery::Blog::Post', :join_table => 'refinery_banners_posts'
 
       scope :not_expired, lambda {
         banners = Arel::Table.new(::Refinery::Banners::Banner.table_name)
