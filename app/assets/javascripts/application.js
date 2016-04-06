@@ -89,8 +89,8 @@ $(document).ready(function() {
     });
 
     $('#accommodations_slider').bxSlider({
-        slideWidth: 110,
-        slideMargin: 15,
+        slideWidth: 165,
+        slideMargin: 25,
         minSlides: 2,
         maxSlides: 6,
         moveSlides: 1,
@@ -102,8 +102,8 @@ $(document).ready(function() {
     });
 
     $('#locations_slider').bxSlider({
-        slideWidth: 110,
-        slideMargin: 15,
+        slideWidth: 165,
+        slideMargin: 25,
         minSlides: 2,
         maxSlides: 6,
         moveSlides: 1,
@@ -113,36 +113,12 @@ $(document).ready(function() {
         speed: 1000,
         pause: 6000
     });
-
-    $('#activities_slider').bxSlider({
-        slideWidth: 110,
-        slideMargin: 15,
-        minSlides: 2,
-        maxSlides: 6,
-        moveSlides: 1,
-        infiniteLoop: false,
-        auto: false,
-        pager: false,
-        speed: 1000,
-        pause: 6000
-    });
-
-    $(".location_nav").hide();
 
     $('.location_btn').click(function() {
-        var clicks = $(this).data('clicks');
-        if (clicks) {
-            $(".location_nav").slideUp("slow");
-        } else {
-            $(".location_nav").slideDown("slow");
-        }
-        $(this).data("clicks", !clicks);
+        $('.location_nav').toggleClass('open');
     });
 
-
     ///////////////////////////////////////////
-
-
 
     WaterMark('input#inquiry_name','Name');
     WaterMark('input#inquiry_email','Email');
@@ -181,37 +157,5 @@ $(window).load(function() {
     });
 });
 
-//$(window).scroll( function() {
-//    console.dir($(window).scrollTop());
-//
-//    if ( $(window).scrollTop() > 200 ) {
-//        loadDiv('.div1');
-//    }
-//
-//    if ( $(window).scrollTop() > 700 ) {
-//        loadDiv('.div2');
-//    }
-//
-//    if ( $(window).scrollTop() > 1100 ) {
-//        loadDiv('.div3');
-//    }
-//
-//    if ( $(window).scrollTop() > 1500 ) {
-//        loadDiv('.div4');
-//    }
-//
-//    if ( $(window).scrollTop() > 2000 ) {
-//        loadDiv('.div5');
-//    }
-//
-//    if ( $(window).scrollTop() > 2300 ) {
-//        loadDiv('.div6');
-//    }
-//
-//});
-//
-//function loadDiv(element) {
-//    $(element).fadeIn('slow', function() {
-//        $(this).fadeTo("slow", 1);
-//    });
-//}
+new UISearch( document.getElementById( 'sb-search' ) );
+

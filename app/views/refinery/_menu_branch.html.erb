@@ -26,6 +26,7 @@
   <% if ( (children = menu_branch.children unless hide_children).present? &&
           (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
     <ul class='clearfix'>
+    
       <%= render :partial => '/refinery/menu_branch', :collection => children,
                  :locals => {
                    :apply_css => local_assigns[:apply_css],
@@ -35,3 +36,6 @@
     </ul>
   <% end -%>
 </li>
+
+
+

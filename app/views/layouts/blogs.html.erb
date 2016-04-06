@@ -43,6 +43,22 @@
       </div> 
     </div> 
   <% end %>
+
+  <div id="countries">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="content-container">
+              <div class="content">
+                <h1><%= copywriting('Countries Title', {:phrase_type => 'string', :scope => 'Footer', :default => 'In depth knowledge of 16 countries' }) %></h1>
+                <p><%= copywriting('Countries Text', {:phrase_type => 'text', :scope => 'Footer', :default => 'Over many years of experience in our industry the founders and directors of Tailormade Africa have built up a detailed, in depth knowledge of 16 countries on the African continent. Not only do we offer the better known destinations in Africa but we actively promote and support the countries where the tourism infrastructure is not as advanced or, dare we say, compromised by over-commercialization. Including some of these less well-known regions in your Tailormade Africa itinerary is highly rewarding. As well as recapturing that sense of exploration you will be making a positive and long lasting impact on the development of local tourism, conservation and job creation.' }) %></p>
+                <img src="/assets/countries.png" class="img-responsive hidden-xs flags">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
    
     <%= render '/refinery/footer' -%>
 
