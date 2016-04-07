@@ -325,3 +325,5 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     }
   }
 }
+
+body.modal-open {overflow:auto; margin-right:0!important;}
