@@ -27,6 +27,16 @@
                :toggle_image_display => false %>
 
   </div>
+
+  <div class='field'>
+    <%= f.label :flag_image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :flag_image_id,
+               :image => @location.flag_image,
+               :toggle_image_display => false %>
+
+  </div>
   
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
@@ -67,7 +77,7 @@
 
   <div class='field'>
     <%= f.label :parent_id -%>
-    <%= f.collection_select :parent_id, ::Refinery::Locations::Location.where("parent_id IS NULL").order(:name), :id, :name, {:prompt => "-- Please Select --"}  -%>
+    <%= f.collection_select :parent_id, ::Refinery::Locations::Location.where("depth <= 1").order(:name), :id, :name, {:prompt => "-- Please Select --"}  -%>
 
   </div>
 

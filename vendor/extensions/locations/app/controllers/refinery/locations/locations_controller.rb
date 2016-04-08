@@ -6,6 +6,10 @@ module Refinery
       before_filter :find_page
 
       def index
+        if params[:search].present?
+          @all_locations = ::Refinery::Locations::Location.where("UPPER(description) LIKE '%#{params[:search].upcase}%' or UPPER(name) LIKE '%#{params[:search].upcase}%'")
+          @all_accommodations = ::Refinery::Accommodations::Accommodation.where("UPPER(description) LIKE '%#{params[:search].upcase}%' or UPPER(name) LIKE '%#{params[:search].upcase}%'")
+        end
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @location in the line below:
         present(@page)

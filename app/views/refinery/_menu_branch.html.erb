@@ -12,7 +12,10 @@
       <ul class="location_nav">
         <% @menu_locations.each do |location| %>
           <li>
-            <%= link_to location.name, refinery.locations_location_path(location) %>
+            <%= link_to refinery.locations_location_path(location) do %>
+            <%= image_fu location.flag_image, '20x20#c', :class=>"img-circle" %>
+            <%= location.name %>
+            <% end %>
           </li>
         <% end %>
       </ul>

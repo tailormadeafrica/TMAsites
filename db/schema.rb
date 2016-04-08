@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160331134811) do
+ActiveRecord::Schema.define(:version => 20160407141232) do
 
   create_table "refinery_accommodations", :force => true do |t|
     t.string   "name"
@@ -245,6 +245,7 @@ ActiveRecord::Schema.define(:version => 20160331134811) do
     t.integer  "rgt"
     t.integer  "depth"
     t.text     "side_body"
+    t.integer  "flag_image_id"
   end
 
   create_table "refinery_locations_posts", :id => false, :force => true do |t|
