@@ -52,7 +52,7 @@ nav {position: fixed; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 1
     a, a:hover, a:focus {color:#ffffff;}
     h2 {@include header_font(); font-size:16px; margin:0; padding:25px 0;}
     h2 span { color: #ffffff; cursor: pointer;}
-    .location_nav {font-size:14px; line-height:36px; height:215px; text-align:left;
+    .location_nav {font-size:14px; line-height:36px; text-align:left;
       img {margin-right:15px;}
     }
   }
@@ -316,7 +316,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 .location_nav {height:0; transition:height 0.5s; overflow: hidden;}
-.location_nav.open {height:190px;}
+.location_nav.open {height:215px;}
 
 .modal-dialog {width:940px;
   .modal-content {border-radius:0; box-shadow: none;
