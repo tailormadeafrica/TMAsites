@@ -52,7 +52,9 @@ nav {position: fixed; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 1
     a, a:hover, a:focus {color:#ffffff;}
     h2 {@include header_font(); font-size:16px; margin:0; padding:25px 0;}
     h2 span { color: #ffffff; cursor: pointer;}
-    .location_nav {font-size:14px; line-height:36px; }
+    .location_nav {font-size:14px; line-height:36px; height:215px; text-align:left;
+      img {margin-right:15px;}
+    }
   }
 }
 nav:before { content: ''; display: inline-block; height: 100%; vertical-align: middle;  margin-right: -0.25em;}
