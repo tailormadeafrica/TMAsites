@@ -10,7 +10,41 @@
 
     <%= render '/shared/banner' %>
 
-    <% if action_name == "index" %>
+    <% if params[:search].present? %>
+      <div id="locations">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 div1">
+              <h1>Search Results for: <%= params[:search] %></h1>
+              <% if @all_locations.present? and @all_accommodations.present? %>
+                <% if @all_locations.present? %>
+                  <h3>Locations</h3>
+                  <ul>
+                    <% @all_locations.each do |location| %>
+                      <li>
+                        <%= link_to location.name, refinery.locations_location_path(location) %>
+                      </li>
+                    <% end %>
+                  </ul>
+                <% end %>
+                <% if @all_accommodations.present? %>
+                  <h3>Accommodations</h3>
+                  <ul>
+                    <% @all_locations.each do |accommodation| %>
+                      <li>
+                        <%= link_to accommodation.name, refinery.accommodations_accommodation_path(accommodation) %>
+                      </li>
+                    <% end %>
+                  </ul>
+                <% end %>
+              <% else %>
+                Sorry, no search results was found.
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% elsif action_name == "index" %>
 
       <% if @locations.present? %>
         <div id="locations">
@@ -31,7 +65,7 @@
         </div>
       <% end %>
 
-    <% elsif @location.present? and @location.parent_id == nil %>
+    <% elsif @location.present? and @location.depth >= 1 %>
 
     <div id="welcome">
       <div class="container">
