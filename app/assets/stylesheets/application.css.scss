@@ -52,7 +52,9 @@ nav {position: fixed; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 1
     a, a:hover, a:focus {color:#ffffff;}
     h2 {@include header_font(); font-size:16px; margin:0; padding:25px 0;}
     h2 span { color: #ffffff; cursor: pointer;}
-    .location_nav {font-size:14px; line-height:36px; }
+    .location_nav {font-size:14px; line-height:36px; text-align:left;
+      img {margin-right:15px;}
+    }
   }
 }
 nav:before { content: ''; display: inline-block; height: 100%; vertical-align: middle;  margin-right: -0.25em;}
@@ -179,7 +181,6 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
       h2 {font-size:20px; padding:50px 0; margin:0;}
       ul.amenities {padding:0; margin-bottom:0;
         li {display:inline-block; margin:0 10px 13px 0;}
-        li img { border-radius:50%; border:1px solid #e7e7e7;}
         li:nth-child(8) {margin-right:0;}
       }
       .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
@@ -314,7 +315,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 .location_nav {height:0; transition:height 0.5s; overflow: hidden;}
-.location_nav.open {height:190px;}
+.location_nav.open {height:215px;}
 
 .modal-dialog {width:940px;
   .modal-content {border-radius:0; box-shadow: none;
