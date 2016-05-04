@@ -80,8 +80,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #masterslider,#post_masterslider {
   .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
-  .banner-overlay {position:absolute; z-index:10; width:100%; bottom:0;
-    img {margin:0 auto;}
+  .banner-overlay {position:absolute; z-index:10;  bottom:0;
+    img { width:100%;}
   }
   .logo,.banner-text {top:50%; margin-top:-100px; position:relative;
     h2 {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px;}
