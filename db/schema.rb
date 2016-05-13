@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160407141232) do
+ActiveRecord::Schema.define(:version => 20160512135113) do
 
   create_table "refinery_accommodations", :force => true do |t|
     t.string   "name"
@@ -179,6 +179,31 @@ ActiveRecord::Schema.define(:version => 20160407141232) do
   add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"
   add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
+
+  create_table "refinery_bookings", :force => true do |t|
+    t.string   "full_name"
+    t.string   "email"
+    t.string   "telephone"
+    t.string   "cellphone"
+    t.text     "address"
+    t.boolean  "dont_get_newsletters"
+    t.string   "insurance_company"
+    t.string   "policy_number"
+    t.string   "emergency_number"
+    t.boolean  "certify_personal_insurance"
+    t.boolean  "honeymoon"
+    t.boolean  "birthday"
+    t.boolean  "anniversary"
+    t.string   "birthday_who_and_when"
+    t.string   "anniversary_who_and_where"
+    t.text     "emergency_contacts"
+    t.boolean  "i_accept"
+    t.string   "i_accept_name"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "refinery_bookings", ["id"], :name => "index_refinery_bookings_on_id"
 
   create_table "refinery_copywriting_phrase_translations", :force => true do |t|
     t.integer  "refinery_copywriting_phrase_id"

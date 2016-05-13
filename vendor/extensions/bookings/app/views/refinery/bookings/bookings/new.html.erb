@@ -1,0 +1,100 @@
+<% content_for :body_content_left do %>
+  <div class='bookings'>
+    <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
+
+    <%= form_for [refinery, :bookings, @booking] do |f| %>
+      <%= render '/refinery/admin/error_messages',
+                 :object => @booking,
+                 :include_object_name => true  %>
+      
+      <div class='field full_name_field string_field'>
+        <%= f.required_label :full_name %>
+        <%= f.text_field :full_name %>
+      </div>
+      
+      <div class='field email_field string_field'>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+      
+      <div class='field telephone_field string_field'>
+        <%= f.label :telephone %>
+        <%= f.text_field :telephone %>
+      </div>
+      
+      <div class='field cellphone_field string_field'>
+        <%= f.label :cellphone %>
+        <%= f.text_field :cellphone %>
+      </div>
+      
+      <div class='field address_field text_field'>
+        <%= f.label :address %>
+        <%= f.text_area :address, :rows => 8 %>
+      </div>
+      
+      <div class='field dont_get_newsletters_field boolean_field'>
+        <%= f.label :dont_get_newsletters %>
+      </div>
+      
+      <div class='field insurance_company_field string_field'>
+        <%= f.label :insurance_company %>
+        <%= f.text_field :insurance_company %>
+      </div>
+      
+      <div class='field policy_number_field string_field'>
+        <%= f.label :policy_number %>
+        <%= f.text_field :policy_number %>
+      </div>
+      
+      <div class='field emergency_number_field string_field'>
+        <%= f.label :emergency_number %>
+        <%= f.text_field :emergency_number %>
+      </div>
+      
+      <div class='field certify_personal_insurance_field boolean_field'>
+        <%= f.label :certify_personal_insurance %>
+      </div>
+      
+      <div class='field honeymoon_field boolean_field'>
+        <%= f.label :honeymoon %>
+      </div>
+      
+      <div class='field birthday_field booleon_field'>
+        <%= f.label :birthday %>
+      </div>
+      
+      <div class='field anniversary_field boolean_field'>
+        <%= f.label :anniversary %>
+      </div>
+      
+      <div class='field birthday_who_and_when_field string_field'>
+        <%= f.label :birthday_who_and_when %>
+        <%= f.text_field :birthday_who_and_when %>
+      </div>
+      
+      <div class='field anniversary_who_and_where_field string_field'>
+        <%= f.label :anniversary_who_and_where %>
+        <%= f.text_field :anniversary_who_and_where %>
+      </div>
+      
+      <div class='field emergency_contacts_field text_field'>
+        <%= f.label :emergency_contacts %>
+        <%= f.text_area :emergency_contacts, :rows => 8 %>
+      </div>
+      
+      <div class='field i_accept_field boolean_field'>
+        <%= f.label :i_accept %>
+      </div>
+      
+      <div class='field i_accept_name_field string_field'>
+        <%= f.label :i_accept_name %>
+        <%= f.text_field :i_accept_name %>
+      </div>
+      
+      <div class='actions'>
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= render '/refinery/content_page' %>

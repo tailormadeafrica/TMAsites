@@ -41,3 +41,5 @@ Refinery::Teams::Engine.load_seed
 
 # Added by Refinery CMS Amenities extension
 Refinery::Amenities::Engine.load_seed
+
+Refinery::Bookings::Engine.load_seed
