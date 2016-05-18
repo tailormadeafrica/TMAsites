@@ -14,6 +14,8 @@ module Refinery
 
       def new
         @booking = Booking.new
+        # 1.times { @booking.passports.build }
+        # 1.times { @booking.flights.build }
       end
 
       def create

@@ -1,0 +1,37 @@
+<p class="fields">
+  <%= item.label :title %>
+  <%= item.text_field :title %>
+
+  <%= item.label :first_name %>
+  <%= item.text_field :first_name %>
+
+  <%= item.label :surname %>
+  <%= item.text_field :surname %>
+
+  <%= item.label :date_of_birth %>
+  <%= item.date_select(:date_of_birth, :order => [:month, :day, :year]) %>
+
+  <%= item.label :passport_no %>
+  <%= item.text_field :passport_no %>
+
+  <%= item.label :issue_date %>
+  <%= item.date_select(:issue_date, :order => [:month, :day, :year]) %>
+
+  <%= item.label :expiry_date %>
+  <%= item.date_select(:expiry_date, :order => [:month, :day, :year]) %>
+
+  <%= item.label :place_of_issue %>
+  <%= item.text_field :place_of_issue %>
+
+  <%= item.label :weight, 'Weight(kgs)' %>
+  <%= item.text_field :weight %>
+
+
+  <%= item.label :diet_req %>
+  <%= item.select :diet_req, Refinery::Bookings::Booking::DIETS, {:prompt => true} %>
+
+  <%= item.link_to_remove "Remove" %>
+</p>
+
+
+

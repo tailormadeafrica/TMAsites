@@ -1,0 +1,22 @@
+<p class="fields">
+  <%= item.label :airline_and_flight_no %>
+  <%= item.text_field :airline_and_flight_no %>
+
+  <%= item.label :departure_airport %>
+  <%= item.text_field :departure_airport %>
+
+  <%= item.label :departure %>
+  <%= item.date_select(:departure, :order => [:month, :day, :year]) %>
+
+  <%= item.label :arrival_airport %>
+  <%= item.text_field :arrival_airport %>
+
+  <%= item.label :arrival %>
+  <%= item.date_select(:arrival, :order => [:month, :day, :year]) %>
+
+
+  <%= item.link_to_remove "Remove" %>
+</p>
+
+
+

@@ -44,6 +44,7 @@ gem 'json', '1.8.1'
 gem 'babosa', '0.3.11'
 gem 'net-ssh', '2.9.2'
 gem 'rack-cache', '1.2'
+gem 'bootstrap-datepicker-rails'
 
 
 
@@ -106,7 +107,7 @@ group :production do
   gem 'thin'
 end
 
-
+gem "nested_form"
 
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'

@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require refinerycms-pods
 //= require jquery.colorbox
+//= require jquery_nested_form
+//= require bootstrap-datepicker
 //= require_tree .
 
 $(document).ready(function() {
@@ -23,9 +25,20 @@ $(document).ready(function() {
         maxHeight: "90%"
     });
 
+    //$(".datepicker_it").datepicker({ format: "yyyy-mm-dd", autoclose: true });
+
 //  $(".activity_video_url").colorbox({iframe:true, innerWidth:640, innerHeight:390, transition:"elastic"});
 
     $('.carousel').carousel();
+
+    $('.submit_booking').on('click', function(){
+        if ($('.accept').is(":checked")) {
+        }
+        else {
+            alert('Please checked the Acceptance Box');
+            return false;
+        }
+    });
 
 
     //////////////////////////////////////////

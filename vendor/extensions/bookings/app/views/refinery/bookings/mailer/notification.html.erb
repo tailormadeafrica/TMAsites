@@ -11,6 +11,29 @@
 <%= t('.address', :default => t('activerecord.attributes.booking.address')) %>: 
 <%= @booking.address %>
 <%= t('.dont_get_newsletters', :default => t('activerecord.attributes.booking.dont_get_newsletters')) %>: <%= @booking.dont_get_newsletters %><br/>
+<% if @booking.passports.present? %>
+  <% @booking.passports.each do |passport| %>
+    Title: <%= passport.title %>
+    First Name: <%= passport.first_name %>
+    Surname: <%= passport.surname %>
+    D.o.Birth: <%= passport.date_of_birth %>
+    Passport Number: <%= passport.passport_no %>
+    Issue Date: <%= passport.issue_date %>
+    Expiry Date: <%= passport.expiry_date %>
+    Place of Issue: <%= passport.place_of_issue %>
+    Weight(kgs): <%= passport.weight %>
+    Diet Req: <%= passport.diet_req %><br/>
+  <% end %><br/><br/>
+<% end %>
+<% if @booking.flights.present? %>
+  <% @booking.flights.each do |flight| %>
+    Airline & Flight Number: <%= flight.airline_and_flight_no %>
+    Departure Airport: <%= flight.departure_airport %>
+    Depart Time: <%= flight.departure %>
+    Arrival Airport: <%= flight.arrival_airport %>
+    Arrive Time: <%= flight.arrival %><br/>
+  <% end %><br/><br/>
+<% end %>
 <%= t('.insurance_company', :default => t('activerecord.attributes.booking.insurance_company')) %>: <%= @booking.insurance_company %><br/>
 <%= t('.policy_number', :default => t('activerecord.attributes.booking.policy_number')) %>: <%= @booking.policy_number %><br/>
 <%= t('.emergency_number', :default => t('activerecord.attributes.booking.emergency_number')) %>: <%= @booking.emergency_number %><br/>

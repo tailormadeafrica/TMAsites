@@ -2,7 +2,7 @@
   <div class='bookings'>
     <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
 
-    <%= form_for [refinery, :bookings, @booking] do |f| %>
+    <%= nested_form_for [refinery, :bookings, @booking] do |f| %>
       <%= render '/refinery/admin/error_messages',
                  :object => @booking,
                  :include_object_name => true  %>
@@ -31,70 +31,92 @@
         <%= f.label :address %>
         <%= f.text_area :address, :rows => 8 %>
       </div>
-      
+
       <div class='field dont_get_newsletters_field boolean_field'>
+        <%= f.check_box :dont_get_newsletters %>
         <%= f.label :dont_get_newsletters %>
       </div>
-      
+
+      ---------------------------------------------------
+      <%= f.fields_for :passports do |builder| %>
+        <%= render 'passport_fields', item: builder %>
+      <% end %>
+      <p><%= f.link_to_add "Add a Passport", :passports %></p>
+      ---------------------------------------------------
+
+      ---------------------------------------------------
+      <%= f.fields_for :flights do |builder| %>
+        <%= render 'flight_fields', item: builder %>
+      <% end %>
+      <p><%= f.link_to_add "Add a Flight", :flights %></p>
+      ---------------------------------------------------
+
       <div class='field insurance_company_field string_field'>
         <%= f.label :insurance_company %>
         <%= f.text_field :insurance_company %>
       </div>
-      
+
       <div class='field policy_number_field string_field'>
         <%= f.label :policy_number %>
         <%= f.text_field :policy_number %>
       </div>
-      
+
       <div class='field emergency_number_field string_field'>
         <%= f.label :emergency_number %>
         <%= f.text_field :emergency_number %>
       </div>
-      
+
       <div class='field certify_personal_insurance_field boolean_field'>
+        <%= f.check_box :certify_personal_insurance %>
         <%= f.label :certify_personal_insurance %>
       </div>
-      
+
       <div class='field honeymoon_field boolean_field'>
+        <%= f.check_box :honeymoon %>
         <%= f.label :honeymoon %>
       </div>
-      
+
       <div class='field birthday_field booleon_field'>
+        <%= f.check_box :birthday %>
         <%= f.label :birthday %>
       </div>
-      
+
       <div class='field anniversary_field boolean_field'>
+        <%= f.check_box :anniversary %>
         <%= f.label :anniversary %>
       </div>
-      
+
       <div class='field birthday_who_and_when_field string_field'>
         <%= f.label :birthday_who_and_when %>
         <%= f.text_field :birthday_who_and_when %>
       </div>
-      
+
       <div class='field anniversary_who_and_where_field string_field'>
         <%= f.label :anniversary_who_and_where %>
         <%= f.text_field :anniversary_who_and_where %>
       </div>
-      
+
       <div class='field emergency_contacts_field text_field'>
         <%= f.label :emergency_contacts %>
         <%= f.text_area :emergency_contacts, :rows => 8 %>
       </div>
-      
+
       <div class='field i_accept_field boolean_field'>
+        <%= f.check_box :i_accept, :class=>"accept" %>
         <%= f.label :i_accept %>
       </div>
-      
+
       <div class='field i_accept_name_field string_field'>
         <%= f.label :i_accept_name %>
         <%= f.text_field :i_accept_name %>
       </div>
-      
+
+
       <div class='actions'>
-        <%= f.submit t('.send') %>
+        <input type="submit" value="Submit Booking Form" class="submit_booking" />
       </div>
     <% end %>
   </div>
 <% end %>
 <%= render '/refinery/content_page' %>
+

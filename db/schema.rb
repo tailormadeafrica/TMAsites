@@ -11,7 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160512135113) do
+ActiveRecord::Schema.define(:version => 20160517081911) do
+
+  create_table "flights", :force => true do |t|
+    t.string   "airline_and_flight_no"
+    t.string   "departure_airport"
+    t.datetime "departure"
+    t.string   "arrival_airport"
+    t.datetime "arrival"
+    t.integer  "booking_id"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
+  create_table "passports", :force => true do |t|
+    t.integer  "booking_id"
+    t.string   "title"
+    t.string   "first_name"
+    t.string   "surname"
+    t.date     "date_of_birth"
+    t.string   "passport_no"
+    t.date     "issue_date"
+    t.date     "expiry_date"
+    t.string   "place_of_issue"
+    t.string   "weight"
+    t.string   "diet_req"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "refinery_accommodations", :force => true do |t|
     t.string   "name"
