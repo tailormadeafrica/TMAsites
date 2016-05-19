@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-bookings'
+  s.authors            = 'Tailor Made Africa'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Bookings forms-extension for Refinery CMS'
   s.date              = '2016-05-12'
