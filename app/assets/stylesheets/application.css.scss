@@ -333,3 +333,42 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 body.modal-open {overflow:auto; margin-right:0!important;}
+
+
+.bookings {font-size:13px; line-height:24px;
+  .row {margin:0;}
+  .no-gutter {padding:0 1px;}
+  .personal,.passport,.flights,.insurance,.requests,.emergency,.acceptance {background:#f4f4f4; padding:25px 15px; margin-bottom:30px; text-align:left;}
+  .passport, .flights {
+    .fields {position:relative; margin-bottom:20px;
+      .select {background:#ffffff; margin-bottom:2px;}
+      label {background:#ffffff; height:43px; line-height:43px; width:49%; padding:0 10px;}
+      .diet {width:100%;}
+      .arrival,.departure {width:49%; }
+      span {width:20px; height:20px; line-height:17px; text-align:center; background:#a30000; border-radius:50%; position: absolute; top: -10px; right: -10px;
+        a {color:#ffffff; display:block;}
+      }
+    }
+    .link {background: #000; color: #fff; height: 30px; margin-bottom: 5px; display: inline-block; width: 130px; text-align: center; line-height: 30px;}
+  }
+
+  h2 {margin:20px 0 30px 0; text-align:center;}
+  p {width:auto;}
+  form {width:740px; margin:0 auto;
+    h2 {margin:20px 0 30px 0; text-align:center;}
+    p {width:auto;}
+    label {font-weight:400; margin-bottom:2px;}
+    input,textarea {width:100%; padding:10px; margin-bottom:2px!important;}
+    input[type="checkbox"] {float: left; width: auto; margin: 0 10px 0 0;}
+    textarea {height:90px;}
+    select {height:43px; border:none; font-size:13px; padding:0 4px;}
+    .dont_get_newsletters_field label, .certify_personal_insurance_field label, .i_accept_field label, {width:95%; margin-top:9px;}
+    .honeymoon_field label, .birthday_field label,.anniversary_field label  {margin-top:9px;}
+    .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; margin-top:0!important;}
+    ::-webkit-input-placeholder {font-weight: 400; color: #999999; font-size: 13px!important;}
+    :-moz-placeholder {font-weight: 400; color: #999999; font-size: 13px!important;}
+    ::-moz-placeholder {font-weight: 400; color: #999999; font-size: 13px!important;}
+    :-ms-input-placeholder {font-weight: 400; color: #999999; font-size: 13px!important;}
+  }
+}
+

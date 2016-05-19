@@ -1,22 +1,25 @@
-<p class="fields">
-  <%= item.label :airline_and_flight_no %>
-  <%= item.text_field :airline_and_flight_no %>
 
-  <%= item.label :departure_airport %>
-  <%= item.text_field :departure_airport %>
+  <div class="row">
+    <div class="col-xs-12 no-gutter">
+      <%= item.text_field :airline_and_flight_no, :label => false, :placeholder => "Airline & Flight Number"  %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 no-gutter select">
+      <%= item.text_field :departure_airport, :label => false, :placeholder => "Departure Airport", :class => "departure"  %>
+      <%= item.date_select(:departure, :order => [:month, :day, :year], use_short_month: true) %>
+    </div>
+    <div class="col-xs-12 col-md-6 no-gutter select">
+      <%= item.text_field :arrival_airport, :label => false, :placeholder => "Arrival Airport", :class => "arrival"  %>
+      <%= item.date_select(:arrival, :order => [:month, :day, :year], use_short_month: true) %>
+    </div>
+  </div>
+  <span><%= item.link_to_remove "x" %></span>
 
-  <%= item.label :departure %>
-  <%= item.date_select(:departure, :order => [:month, :day, :year]) %>
-
-  <%= item.label :arrival_airport %>
-  <%= item.text_field :arrival_airport %>
-
-  <%= item.label :arrival %>
-  <%= item.date_select(:arrival, :order => [:month, :day, :year]) %>
 
 
-  <%= item.link_to_remove "Remove" %>
-</p>
+
+
 
 
 

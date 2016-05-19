@@ -1,37 +1,56 @@
-<p class="fields">
-  <%= item.label :title %>
-  <%= item.text_field :title %>
+<div class="passport-details">
+  <div class="row">
+    <div class="col-xs-12 col-md-1 no-gutter">
+      <%= item.text_field :title, :placeholder => "Title"  %>
+    </div>
+    <div class="col-xs-12 col-md-4 no-gutter">
+      <%= item.text_field :first_name, :placeholder => "Name"  %>
+    </div>
+    <div class="col-xs-12 col-md-4 no-gutter">
+      <%= item.text_field :surname, :placeholder => "Surname"  %>
+    </div>
+    <div class="col-xs-12 col-md-3 no-gutter select">
+      <%= item.date_select(:date_of_birth, :order => [:month, :day, :year], use_short_month: true) %>
+    </div>
+  </div>
 
-  <%= item.label :first_name %>
-  <%= item.text_field :first_name %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 no-gutter">
+      <%= item.text_field :passport_no, :placeholder => "Passport Number"  %>
+    </div>
+    <div class="col-xs-12 col-md-6 no-gutter">
+      <%= item.text_field :place_of_issue, :placeholder => "Place of issue"  %>
+    </div>
+  </div>
 
-  <%= item.label :surname %>
-  <%= item.text_field :surname %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 no-gutter select">
+      <%= item.label :expiry_date %>
+      <%= item.date_select(:expiry_date, :order => [:month, :day, :year], use_short_month: true) %>
+    </div>
+    <div class="col-xs-12 col-md-6 no-gutter select">
+      <%= item.label :issue_date %>
+      <%= item.date_select(:issue_date, :order => [:month, :day, :year], use_short_month: true) %>
+    </div>
+  </div>
 
-  <%= item.label :date_of_birth %>
-  <%= item.date_select(:date_of_birth, :order => [:month, :day, :year]) %>
-
-  <%= item.label :passport_no %>
-  <%= item.text_field :passport_no %>
-
-  <%= item.label :issue_date %>
-  <%= item.date_select(:issue_date, :order => [:month, :day, :year]) %>
-
-  <%= item.label :expiry_date %>
-  <%= item.date_select(:expiry_date, :order => [:month, :day, :year]) %>
-
-  <%= item.label :place_of_issue %>
-  <%= item.text_field :place_of_issue %>
-
-  <%= item.label :weight, 'Weight(kgs)' %>
-  <%= item.text_field :weight %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 no-gutter">
+      <%= item.text_field :weight, :placeholder => "Weight (kg)*"  %>
+    </div>
+    <div class="col-xs-12 col-md-6 no-gutter">
+      <%= item.select :diet_req, Refinery::Bookings::Booking::DIETS, {:prompt => "Diet requirements"}, :class => "diet" %>
+    </div>
+  </div>
+  <p>* Body weights only required for certain destinations. Unless requested please leave blank.</p>
 
 
-  <%= item.label :diet_req %>
-  <%= item.select :diet_req, Refinery::Bookings::Booking::DIETS, {:prompt => true} %>
-
-  <%= item.link_to_remove "Remove" %>
+    <span><%= item.link_to_remove "x" %></span>
 </p>
+
+
+
+
 
 
 
