@@ -17,7 +17,7 @@
       <div class="personal">
         <div class="row">
           <div class="col-xs-12">
-            <h2>Personal Details</h2>
+            <h2>Party Leader Contact Details</h2>
           </div>
         </div>
         <div class="row">
@@ -60,8 +60,8 @@
       <div class="passport">
         <div class="row">
           <div class="col-xs-12">
-            <h2>Passport Details</h2>
-            <p>Party leader first. Names as written on passport: Please note this is vital for aircraft ticketing. Incorrect first and last names or spellings can result in the need to rebuy full fare tickets with no refund of incorrect tickets.</p>
+            <h2>Passenger & Passport Details</h2>
+            <p>Party leader first. <strong style="color:#a30000;">Names as written on passport:</strong> Please note this is vital for aircraft ticketing. Incorrect first and last names or spellings can result in the need to rebuy full fare tickets with no refund of incorrect tickets.</p>
           </div>
         </div>
         <%= f.fields_for :passports do |builder| %>
@@ -69,7 +69,7 @@
         <% end %>
         <div class="row">
           <div class="col-xs-12">
-            <%= f.link_to_add "Add a Passport", :passports, :class => "link" %>
+            <%= f.link_to_add "Add a Passenger", :passports, :class => "link" %>
           </div>
         </div>
       </div>
