@@ -185,8 +185,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
       h1 {margin:0 0 50px 0;}
       h2 {font-size:20px; padding:50px 0; margin:0;}
       ul.amenities {padding:0; margin-bottom:0;
-        li {display:inline-block; margin:0 10px 13px 0;}
-        li:nth-child(8) {margin-right:0;}
+        li {display:inline-block; margin:0 10px 10px 0;}
       }
       .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
     }
@@ -375,5 +374,6 @@ body.modal-open {overflow:auto; margin-right:0!important;}
     ::-moz-placeholder {font-weight: 400; color: #999999; font-size: 13px!important;}
     :-ms-input-placeholder {font-weight: 400; color: #999999; font-size: 13px!important;}
   }
+  .uppercase {width: 100%!important; text-transform: uppercase;}
 }
 
