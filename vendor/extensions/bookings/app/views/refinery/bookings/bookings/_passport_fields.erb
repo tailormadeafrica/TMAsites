@@ -6,11 +6,14 @@
     <div class="col-xs-12 col-md-4 no-gutter">
       <%= item.text_field :first_name, :placeholder => "Name"  %>
     </div>
-    <div class="col-xs-12 col-md-4 no-gutter">
+    <div class="col-xs-12 col-md-3 no-gutter">
       <%= item.text_field :surname, :placeholder => "Surname"  %>
     </div>
+    <div class="col-xs-12 col-md-1 no-gutter">
+      <%= item.label :DOB, :class => "uppercase" %>
+    </div>
     <div class="col-xs-12 col-md-3 no-gutter select">
-      <%= item.date_select(:date_of_birth, :order => [:month, :day, :year], use_short_month: true) %>
+      <%= item.date_select(:date_of_birth, :order => [:month, :day, :year], :start_year => 1920, use_short_month: true) %>
     </div>
   </div>
 
