@@ -85,9 +85,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #masterslider,#post_masterslider {
   .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
-  .banner-overlay {position:absolute; z-index:10;  bottom:0;
-    img { width:100%;}
+  .banner-overlay {position:absolute; z-index:10;  bottom:0; left: 50%; margin-left: -960px;
+    img {width:100%; position: relative;}
   }
+  .banner-overlay::before, .banner-overlay::after {content: ''; position: absolute; width: 100%; background-color: #fff; left: -100%; bottom: 0; height: 30px;}
+  .banner-overlay::after {left: auto; right: -100%;}
   .logo,.banner-text {top:50%; margin-top:-100px; position:relative;
     h2 {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px;}
     h1 {@include slider_font(); font-size:120px; margin:45px 0 30px 0; letter-spacing:13px; line-height:50px;}
@@ -140,7 +142,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #contact {background:#f4f4f4;}
 
-#people {background: url("/assets/bg-people.jpg") 0 0 no-repeat; padding:85px 0 10px 0;
+#people {background: url("/assets/bg-people.jpg") top center no-repeat; padding:85px 0 10px 0;
   .content-container .content {transform:none;
     h2 {font-size:15px; line-height:24px;}
     .street-child {width:740px; margin:0 auto; padding: 50px 0 0 0;
@@ -259,7 +261,13 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .container {max-width:320px;}
   .logo {position: absolute; width: 220px; left: 50%; margin-left: -110px; top:50%; margin-top:-36px; }
   .navbar-hamburger {top:10px; right:10px;}
-  nav ul h2 {margin:30px 0!important;}
+  nav ul {margin-top:100px;}
+  nav ul h2 {margin:0!important; padding:10px 0;}
+  nav ul a,nav ul h2 span {font-size:12px;}
+  nav ul li.parent ul { margin-top:0;}
+  nav ul .location_nav {margin-left:0; text-align:center;}
+  nav ul .location_nav.open {height:auto;}
+  nav ul .location_nav li {float:none; width:100%;}
   .banner {position:relative;}
   .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
   .banner .banner-text h2 {@include slider_font(); margin:0!important;}
@@ -295,6 +303,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .bookings form .dont_get_newsletters_field label, .bookings form .certify_personal_insurance_field label, .bookings form .i_accept_field label {width:90%!important;}
   .bookings .passport .fields label, .bookings .flights .fields label {width:100%!important;}
   .bookings .passport .fields .arrival, .bookings .passport .fields .departure, .bookings .flights .fields .arrival, .bookings .flights .fields .departure {width:100%!important;}
+  nav:before {display: initial;}
 }
 
 /*** sm ***/

@@ -54,7 +54,8 @@ $(document).ready(function() {
     layout:'fullscreen',
     loop:true,
     preload:0,
-    autoplay:true
+    autoplay:true,
+    view:'fade'
   });
 
     var post_slider = new MasterSlider();
@@ -68,7 +69,8 @@ $(document).ready(function() {
         layout:'fullwidth',
         loop:true,
         preload:0,
-        autoplay:true
+        autoplay:true,
+        view:'fade'
     });
 
     $(function(){
