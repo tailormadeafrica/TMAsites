@@ -119,7 +119,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
   .locations,.accommodations {padding-bottom:20px;
     h2 {font-size:20px; margin:50px 0;}
-    .bx-viewport {height:213px!important;
+    .bx-viewport {height:212px!important;
       .slide {font-size:12px; letter-spacing:1px; text-transform: uppercase; 
         a {
           img {border-radius:50%;}
@@ -309,8 +309,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .bookings .passport .fields .arrival, .bookings .passport .fields .departure, .bookings .flights .fields .arrival, .bookings .flights .fields .departure {width:100%!important;}
   nav:before {display: initial;}
   .modal-dialog {width: auto!important;}
+  .modal-dialog .modal-content .modal-body {padding: 0 30px 50px 30px!important;}
   .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
-  .accommodation_item .accommodation .accommodation-container ul.amenities li {margin:0 4px 4px 4px;}
+  .accommodation_item .accommodation .accommodation-container ul.amenities li {margin:0 9px 4px 10px; width:50px; height:50px;}
   .accommodation_item .accommodation .accommodation-container h1 {margin:30px 0;}
 }
 
@@ -318,11 +319,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 @media (min-width:768px) and (max-width: 991px) {
   .container {width: 750px;}
-  p,form,#people .content-container .content h2, .street-child, .contact-form span, #welcome ul {width:100%!important;}
+  p,form,#people .content-container .content h2, .street-child, .contact-form span, #welcome ul,.content-container .content h1 {width:100%!important;}
   #people .content-container .content .street-child {padding: 30px 0 0 0;}
   #people .content-container .content .street-child img {margin-right:13px;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:546px!important;}
-  .amenities img {width:78px; height:78px;}
+
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px;}
   .blog_locations img {display:none;}
@@ -330,6 +331,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .modal-dialog {width: 700px!important;}
   .modal-dialog .modal-content .modal-body {padding:0 40px 50px 40px!important;}
   .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
+  #countries h1 {margin:0 auto 35 auto;}
 }
 
 /*** md ***/
@@ -340,6 +342,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px;}
   .blog_list .blog_post .blog_post_pod {width:auto;}
   .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
+  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:926px!important;}
 }
 
 /*** lg ***/
