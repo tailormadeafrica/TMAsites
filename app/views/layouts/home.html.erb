@@ -65,7 +65,7 @@
                     <li>
                       <%= link_to refinery.locations_location_path(location) do %>
                         <%= image_fu location.flag_image, '35x35#c', :class=>"img-circle" %><br>
-                        <%= location.name %>
+                        <span><%= location.name %></span>
                       <% end %>
                     </li>
                   <% end %>
