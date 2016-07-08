@@ -323,7 +323,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #people .content-container .content .street-child {padding: 30px 0 0 0;}
   #people .content-container .content .street-child img {margin-right:13px;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:546px!important;}
-
+.blog_list .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px;}
   .blog_locations img {display:none;}
@@ -331,7 +331,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .modal-dialog {width: 700px!important;}
   .modal-dialog .modal-content .modal-body {padding:0 40px 50px 40px!important;}
   .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
-  #countries h1 {margin:0 auto 35 auto;}
+  #countries h1 {margin:0 auto 35px auto;}
 }
 
 /*** md ***/
