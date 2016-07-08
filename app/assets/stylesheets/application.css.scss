@@ -117,9 +117,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .team-member {padding-bottom:10px;}
   img {margin:0 auto;}
   .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
-  .locations,.accommodations {padding-bottom:30px;
+  .locations,.accommodations {padding-bottom:20px;
     h2 {font-size:20px; margin:50px 0;}
-    .bx-viewport {height:213px!important; padding-top:20px!important;
+    .bx-viewport {height:213px!important;
       .slide {font-size:12px; letter-spacing:1px; text-transform: uppercase; 
         a {
           img {border-radius:50%;}
@@ -128,8 +128,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
       }
     }
     .bx-prev,.bx-next { background: url(/assets/controls.png) no-repeat; width: 13px!important; height:25px!important; top:45%!important; }
-    .bx-prev {left: -50px; background-position:top left!important;}
-    .bx-next {right: -50px; background-position:top right!important;}
+    .bx-prev {left: -50px; background-position:top left!important; z-index: 0;}
+    .bx-next {right: -50px; background-position:top right!important; z-index: 0;}
   }
 }
 
@@ -187,11 +187,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     img { width:100%;}
   }
   #masterslider2 .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
-  .accommodation {padding:50px 0 87px 0;
+  .accommodation {padding:50px 0 70px 0;
     .accommodation-container {
       h1 {margin:0 0 50px 0;}
       h2 {font-size:20px; padding:50px 0; margin:0;}
-      ul.amenities {padding:0; margin-bottom:0;
+      ul.amenities {padding:0 0 10px 0; margin-bottom:0;
         li {display:inline-block; margin:0 10px 10px 0;}
       }
       .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
@@ -291,12 +291,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .captcha {margin-bottom:5px;}
   .content-container .content img.logo {position:relative; left:0;}
   #locations ul { -webkit-column-count: 1;}
-  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:108px!important;}
+  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:165px!important;}
   #welcome-locations .bx-viewport, #welcome-accommodation .bx-viewport {height:138px!important;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:218px;}
   .accommodation ul.amenities li:nth-child(8) {margin-right:10px;}
-  .accommodation ul.amenities li {margin:0 5px 10px 5px;}
   .blog_list {padding:0;}
   .blog_locations {margin-top:30px;}
   #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:30px 0;}
@@ -308,6 +307,10 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .bookings .passport .fields label, .bookings .flights .fields label {width:100%!important;}
   .bookings .passport .fields .arrival, .bookings .passport .fields .departure, .bookings .flights .fields .arrival, .bookings .flights .fields .departure {width:100%!important;}
   nav:before {display: initial;}
+  .modal-dialog {width: auto!important;}
+  .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
+  .accommodation_item .accommodation .accommodation-container ul.amenities li {margin:0 4px 4px 4px;}
+  .accommodation_item .accommodation .accommodation-container h1 {margin:30px 0;}
 }
 
 /*** sm ***/
@@ -317,12 +320,15 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   p,form,#people .content-container .content h2, .street-child, .contact-form span, #welcome ul {width:100%!important;}
   #people .content-container .content .street-child {padding: 30px 0 0 0;}
   #people .content-container .content .street-child img {margin-right:13px;}
-  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:610px!important;}
+  .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:546px!important;}
   .amenities img {width:78px; height:78px;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px;}
   .blog_locations img {display:none;}
   .accommodation-container,.blog_show_container { margin-top:0; padding:0;}
+  .modal-dialog {width: 700px!important;}
+  .modal-dialog .modal-content .modal-body {padding:0 40px 50px 40px!important;}
+  .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
 }
 
 /*** md ***/

@@ -93,6 +93,7 @@
                             <h2>Fill in the form below and we'll get back to you asap</h2>
                             <% @inquiry ||= ::Refinery::Inquiries::Inquiry.new %>
                             <%= simple_form_for [refinery, :inquiries, @inquiry], :html => {:class => 'form-vertical'} do |f| %>
+                            <div class="row">
                               <div class="col-xs-12 col-sm-6">
                                 <%= f.input :name, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>
                                 <%= f.input :email, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' }%>
@@ -110,6 +111,7 @@
                               <div class="col-xs-12">
                                 <%= f.submit 'Submit', :class=>"btn btn-default btn-custom", :data => {:disable_with => "Saving..."} %>
                               </div>
+                            </div>
                             <% end %>
                           </div>
                         </div>
@@ -216,6 +218,7 @@
                           <h2>Fill in the form below and we'll get back to you asap</h2>
                           <% @inquiry ||= ::Refinery::Inquiries::Inquiry.new %>
                           <%= simple_form_for [refinery, :inquiries, @inquiry], :html => {:class => 'form-vertical'} do |f| %>
+                          <div class="row">
                             <div class="col-xs-12 col-sm-6">
                               <%= f.input :name, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>
                               <%= f.input :email, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' }%>
@@ -232,6 +235,7 @@
                             </div>
                             <div class="col-xs-12">
                               <%= f.submit 'Submit', :class=>"btn btn-default btn-custom", :data => {:disable_with => "Saving..."} %>
+                            </div>
                             </div>
                           <% end %>
                         </div>

@@ -106,7 +106,7 @@ $(document).ready(function() {
     $('#accommodations_slider').bxSlider({
         slideWidth: 165,
         slideMargin: 25,
-        minSlides: 2,
+        minSlides: 1,
         maxSlides: 6,
         moveSlides: 1,
         auto: false,
@@ -119,7 +119,7 @@ $(document).ready(function() {
     $('#locations_slider').bxSlider({
         slideWidth: 165,
         slideMargin: 25,
-        minSlides: 2,
+        minSlides: 1,
         maxSlides: 6,
         moveSlides: 1,
         auto: false,
