@@ -244,7 +244,7 @@
             <%#= link_to 'Start Your Journey', '#contact', :class=>"btn btn-default btn-custom" %>
           </div>
         </div>
-        <% accommodations = Refinery::Accommodations::Accommodation.all %>
+        <% accommodations = @location.accommodations %>
         <% if accommodations.present? %>
           <div class="accommodations">
             <div class="row">
