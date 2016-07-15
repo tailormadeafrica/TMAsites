@@ -64,14 +64,13 @@
                   <% @menu_locations.each do |location| %>
                     <li>
                       <%= link_to refinery.locations_location_path(location) do %>
-                        <%= image_fu location.flag_image, '50x50#c', :class=>"img-circle" %><br>
-                        <%= location.name %>
+                        <%= image_fu location.flag_image, '35x35#c', :class=>"img-circle" %><br>
+                        <span><%= location.name %></span>
                       <% end %>
                     </li>
                   <% end %>
                 </ul>
               <% end %>
-              <!--<img src="/assets/countries.png" class="img-responsive hidden-xs flags">-->
             </div>
 
           </div>

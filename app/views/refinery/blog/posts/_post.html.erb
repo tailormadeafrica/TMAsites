@@ -25,8 +25,8 @@
       <h2>Location</h2>
       <ul>
         <% @post.locations.each do |location| %>
-          <li class='clearfix'>
-          <%= link_to (image_fu location.cover_image, "105x80#c") + location.name, refinery.locations_location_path(location) %>          
+          <li class='clearfix'>     
+          <%= link_to(image_fu(location.cover_image, "105x80#c", :class=>"hidden-sm") + location.name, refinery.locations_location_path(location)) %> 
           <div class="description"><%=raw truncate(location.description, :length => 70) %></div>
           </li>
         <% end %>

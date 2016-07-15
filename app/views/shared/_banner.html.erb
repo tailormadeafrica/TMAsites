@@ -68,6 +68,7 @@
 <% elsif @page.link_url.present? and @page.link_url == '/bookings/new' and @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="post_masterslider">
     <% @page.banners.published.each do |banner| %>
+      <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
       <div class="ms-slide slide-1" data-delay="6">
         <%= image_fu(banner.image, "1920x500#c") %>
       </div>
