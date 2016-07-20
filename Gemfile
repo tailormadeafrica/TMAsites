@@ -108,7 +108,6 @@ group :production do
 end
 
 gem "nested_form"
-gem 'refinerycms-imajax'
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'
