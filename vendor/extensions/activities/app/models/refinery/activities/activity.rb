@@ -15,7 +15,9 @@ module Refinery
       has_and_belongs_to_many :accommodations, :class_name => '::Refinery::Accommodations::Accommodation', :join_table => 'refinery_activities_accommodations'
       has_and_belongs_to_many :locations, :class_name => '::Refinery::Locations::Location', :join_table => 'refinery_activities_locations'
       has_and_belongs_to_many :posts, :class_name => 'Refinery::Blog::Post', :join_table => 'refinery_activities_posts'
-        
+
+      default_scope { order(:position) }
+
     end
   end
 end

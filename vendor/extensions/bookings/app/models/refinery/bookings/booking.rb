@@ -25,6 +25,8 @@ module Refinery
       validates :full_name, :presence => true
       validates :i_accept_name, :presence => true
       validates :email, :presence => true, :format=> { :with =>  /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+
+
     end
   end
 end
