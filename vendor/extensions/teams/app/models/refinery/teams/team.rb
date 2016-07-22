@@ -10,7 +10,9 @@ module Refinery
       attr_accessible :name, :title, :image_id, :body, :position
           
       belongs_to :image, :class_name => '::Refinery::Image'
-        
+
+      default_scope { order(:position) }
+
     end
   end
 end

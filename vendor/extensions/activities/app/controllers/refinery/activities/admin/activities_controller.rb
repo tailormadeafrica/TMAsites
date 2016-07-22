@@ -4,7 +4,7 @@ module Refinery
       class ActivitiesController < ::Refinery::AdminController
 
         crudify :'refinery/activities/activity',
-                :title_attribute => 'name', :xhr_paging => true
+                :title_attribute => 'name', :xhr_paging => true, :per_page => 10000
 
       end
     end

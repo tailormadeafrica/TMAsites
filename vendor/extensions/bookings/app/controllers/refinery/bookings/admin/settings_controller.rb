@@ -6,7 +6,8 @@ module Refinery
         crudify :'refinery/setting',
                 :title_attribute => 'name',
                 :order => 'name ASC',
-                :redirect_to_url => 'refinery.bookings_admin_bookings_path'
+                :redirect_to_url => 'refinery.bookings_admin_bookings_path',
+                :per_page => 10000
 
         before_filter :redirect_back_to_bookings?, :only => [:index]
         before_filter :set_url_override?, :only => [:edit, :update]
