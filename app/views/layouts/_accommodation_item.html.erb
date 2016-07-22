@@ -1,13 +1,14 @@
 <% if @accommodation.present? %>
   <div class="master-slider ms-skin-default" id="masterslider2">
     <% @accommodation.gallery.items.each do |banner| %>
-    <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
-      <div class="ms-slide slide-1" data-delay="6">
+    <a href="#banner-overlay"><div class="banner-overlay" id="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png">SCROLL</div></a>
+      <div class="ms-slide slide-1" data-delay="2">
         <!-- <h1><%= @accommodation.name %></h1> -->
         <div class="overlay"></div>
         <%= image_fu(banner.image, "1920x935#c") %>
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
         </div>
+        
       </div>
     <% end %>
   </div>
@@ -17,6 +18,29 @@
         <div class="row">
           <div class="col-xs-12">
             <%= raw @accommodation.description %>
+          </div>
+          <div class="col-xs-12">
+            <% if @accommodation.amenities.present? %>
+              <h2 class="amenities">Facilities</h2>
+              <ul class="amenities">
+                <% @accommodation.amenities.each do |amenity| %>
+                  <li>
+                    <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+            <% if @accommodation.activities.present? %>
+                <h2 class="activities">Activities</h2>
+                <ul class="amenities">
+                  <% @accommodation.activities.each do |amenity| %>
+                    <li>
+                      <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
+                    </li>
+                  <% end %>
+                </ul>
+                        <% end %>
+                <a href="#camps">Back to Camp Selection</a>            
           </div>
           <div class="col-xs-12">
             <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Start Your Journey</a>
@@ -67,19 +91,6 @@
             </div>
             <%#= link_to 'Start Your Journey', '#contact', :class=>"btn btn-default btn-custom" %>
           </div>
-          <div class="col-xs-12">
-            <% if @accommodation.amenities.present? %>
-              <h2>Activities & Facilities</h2>
-              <ul class="amenities">
-              
-                <% @accommodation.amenities.each do |amenity| %>
-                  <li>
-                    <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
-                  </li>
-                <% end %>
-              </ul>
-            <% end %>
-          </div>
         </div>
       </div>
     </div>
@@ -87,23 +98,8 @@
 <% end %>
 
 <script>
-  var slider2 = new MasterSlider();
 
-  slider2.setup('masterslider2' , {
-    width:1920,
-    height:935,
-    space:1,
-    layout:'fullwidth',
-    loop:true,
-    preload:0,
-    autoplay:true,
-    overPause:false,
-    shuffle:false,
-    instantStartLayers: true,
-    view:"fade"
-  });
-  slider2.control('bullets');
-  slider2.control('arrows');
+
 
   $(function() {
     $('.contact_btn').click(function() {
@@ -119,4 +115,13 @@
       }
     });
   });
+
+
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
 </script>

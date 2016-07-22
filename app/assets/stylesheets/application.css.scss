@@ -184,18 +184,20 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 .accommodation_item {
-  .banner-overlay {position:absolute; z-index:10;  bottom:0;
+  .banner-overlay {position:absolute; z-index:10;  bottom:-28px; font-size:11px;
     img { width:100%;}
   }
   #masterslider2 .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
-  .accommodation {padding:50px 0 70px 0;
+  .accommodation {padding:50px 0 100px 0;
     .accommodation-container {
       h1 {margin:0 0 50px 0;}
-      h2 {font-size:20px; padding:50px 0; margin:0;}
-      ul.amenities {padding:0 0 10px 0; margin-bottom:0;
+      h2 {font-size:20px; padding:50px 0; margin:0; text-align:center;}
+      h2.amenities {padding-top:10px;}
+      h2.activities {padding-top:0;}
+      ul.amenities {margin-bottom:30px;
         li {display:inline-block; margin:0 10px 10px 0;}
       }
-      .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0;}
+      .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0; margin-top:40px;}
     }
   }
 }
