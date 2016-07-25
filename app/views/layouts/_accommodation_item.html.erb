@@ -24,9 +24,11 @@
               <h2 class="amenities">Facilities</h2>
               <ul class="amenities">
                 <% @accommodation.amenities.each do |amenity| %>
-                  <li>
-                    <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
-                  </li>
+                  <% if amenity.image.present? %>
+                    <li>
+                      <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
+                    </li>
+                  <% end %>
                 <% end %>
               </ul>
             <% end %>
@@ -34,9 +36,11 @@
                 <h2 class="activities">Activities</h2>
                 <ul class="amenities">
                   <% @accommodation.activities.each do |amenity| %>
-                    <li>
-                      <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
-                    </li>
+                    <% if amenity.image.present? %>
+                      <li>
+                        <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
+                      </li>
+                    <% end %>
                   <% end %>
                 </ul>
                         <% end %>
