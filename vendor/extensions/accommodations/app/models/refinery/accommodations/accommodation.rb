@@ -5,9 +5,15 @@ module Refinery
     
       acts_as_indexed :fields => [:name, :rating, :description]
 
-      attr_accessible :name, :cover_image_id, :rating, :description, :position, :activity_ids, :location_id, :latitude, :longitude, :address, :gallery_id, :sub_name, :location_ids, :amenity_ids
+      attr_accessible :name, :cover_image_id, :rating, :description, :position, :activity_ids, :location_id, :latitude, :longitude, :address, :gallery_id, :sub_name, :location_ids, :amenity_ids,
+      :low_rate, :mid_rate, :high_rate, :jan, :feb, :marc, :apr, :may, :jun, :jul, :aug, :sept, :oct, :nov, :dec
 
       validates :name, :presence => true, :uniqueness => true
+      validates :low_rate, :presence => true
+      validates :high_rate, :presence => true
+      validates :mid_rate, :presence => true
+
+      RATES = %w(Low Mid High)
           
       belongs_to :cover_image, :class_name => '::Refinery::Image'
       belongs_to :gallery, :class_name => '::Refinery::Portfolio::Gallery'

@@ -78,6 +78,84 @@
 
   </div>
 
+  <div class='field'>
+    <%= f.label :low_rate -%>
+    <%= f.text_field :low_rate  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :mid_rate -%>
+    <%= f.text_field :mid_rate  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :high_rate -%>
+    <%= f.text_field :high_rate  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :jan, 'January' -%>
+    <%= f.select :jan, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :feb, 'February' -%>
+    <%= f.select :feb, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :marc, 'March' -%>
+    <%= f.select :marc, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :apr, 'April' -%>
+    <%= f.select :apr, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :may, 'May' -%>
+    <%= f.select :may, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :jun, 'June' -%>
+    <%= f.select :jun, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :jul, 'July' -%>
+    <%= f.select :jul, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :aug, 'August' -%>
+    <%= f.select :aug, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :sept, 'September' -%>
+    <%= f.select :sept, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :oct, 'October' -%>
+    <%= f.select :oct, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :nov, 'November' -%>
+    <%= f.select :nov, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :dec, 'December' -%>
+    <%= f.select :dec, ::Refinery::Accommodations::Accommodation::RATES, {:include_blank => true} %>
+  </div>
+
   <div class="field">
     <%= f.label :amenities %>
     <% ::Refinery::Amenities::Amenity.all.each do |amenity| %>
