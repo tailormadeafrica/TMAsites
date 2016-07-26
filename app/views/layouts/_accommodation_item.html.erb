@@ -35,10 +35,10 @@
             <% if @accommodation.activities.present? %>
                 <h2 class="activities">Activities</h2>
                 <ul class="amenities">
-                  <% @accommodation.activities.each do |amenity| %>
-                    <% if amenity.image.present? %>
+                  <% @accommodation.activities.each do |activity| %>
+                    <% if activity.cover_image.present? %>
                       <li>
-                        <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
+                        <%= image_fu activity.cover_image, "60x60#c", :title => activity.name, :class => "img-responsive"%>
                       </li>
                     <% end %>
                   <% end %>
