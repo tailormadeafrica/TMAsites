@@ -19,7 +19,7 @@ module Refinery
       has_and_belongs_to_many :posts, :class_name => 'Refinery::Blog::Post', :join_table => 'refinery_locations_posts'
       has_and_belongs_to_many :accommodations, :class_name => '::Refinery::Accommodations::Accommodation', :join_table => 'refinery_accommodations_locations'
 
-      default_scope { order(:position) }
+      default_scope { order('lft') }
 
     end
   end
