@@ -13,7 +13,7 @@ module Refinery
       validates :high_rate, :presence => true
       validates :mid_rate, :presence => true
 
-      RATES = %w(Low Mid High)
+      RATES = %w(Low Mid High Closed)
           
       belongs_to :cover_image, :class_name => '::Refinery::Image'
       belongs_to :gallery, :class_name => '::Refinery::Portfolio::Gallery'
