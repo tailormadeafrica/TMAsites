@@ -18,6 +18,43 @@
         <div class="row">
           <div class="col-xs-12">
             <%= raw @accommodation.description %>
+
+            <% if @accommodation.low_rate.present? and @accommodation.mid_rate and @accommodation.high_rate %>
+              <div class="rates">
+                <h2 class="amenities">Rates</h2>
+                <div class="monthbar">
+                  <div class="month <%= @accommodation.jan.downcase %>">JAN</div>
+                  <div class="month <%= @accommodation.feb.downcase %>">FEB</div>
+                  <div class="month <%= @accommodation.marc.downcase %>">MAR</div>
+                  <div class="month <%= @accommodation.apr.downcase %>">APR</div>
+                  <div class="month <%= @accommodation.may.downcase %>">MAY</div>
+                  <div class="month <%= @accommodation.jun.downcase %>">JUN</div>
+                  <div class="month <%= @accommodation.jul.downcase %>">JUL</div>
+                  <div class="month <%= @accommodation.aug.downcase %>">AUG</div>
+                  <div class="month <%= @accommodation.sept.downcase %>">SEP</div>
+                  <div class="month <%= @accommodation.oct.downcase %>">OCT</div>
+                  <div class="month <%= @accommodation.nov.downcase %>">NOV</div>
+                  <div class="month <%= @accommodation.dec.downcase %>">DEC</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="prices">
+                  <div class="price-low">
+                    <img src="https://s31.postimg.org/5n3znglln/Web3_01.png">
+                    $<%= @accommodation.low_rate %><span>pppn</span>
+                  </div>
+                  <div class="price-mid">
+                    <img src="https://s32.postimg.org/ek6alrzyd/Web2_01.png">
+                    $<%= @accommodation.mid_rate %><span>pppn</span>
+                  </div>
+                  <div class="price-high">
+                    <img src="https://s32.postimg.org/wo5jcwk2t/Web1_01_01_01.png">
+                    $<%= @accommodation.high_rate %><span>pppn</span>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            <% end %>
+
           </div>
           <div class="col-xs-12">
             <% if @accommodation.amenities.present? %>
@@ -43,42 +80,6 @@
                     <% end %>
                   <% end %>
                 </ul>
-            <% end %>
-
-            <% if @accommodation.low_rate.present? and @accommodation.mid_rate and @accommodation.high_rate %>
-              <div class="rates">
-                <h2>Rates</h2>
-                <div class="monthbar">
-                  <div class="month <%= @accommodation.jan.downcase %>">JAN</div>
-                  <div class="month <%= @accommodation.feb.downcase %>">FEB</div>
-                  <div class="month <%= @accommodation.marc.downcase %>">MAR</div>
-                  <div class="month <%= @accommodation.apr.downcase %>">APR</div>
-                  <div class="month <%= @accommodation.may.downcase %>">MAY</div>
-                  <div class="month <%= @accommodation.jun.downcase %>">JUN</div>
-                  <div class="month <%= @accommodation.jul.downcase %>">JUL</div>
-                  <div class="month <%= @accommodation.aug.downcase %>">AUG</div>
-                  <div class="month <%= @accommodation.sept.downcase %>">SEP</div>
-                  <div class="month <%= @accommodation.oct.downcase %>">OCT</div>
-                  <div class="month <%= @accommodation.nov.downcase %>">NOV</div>
-                  <div class="month <%= @accommodation.dec.downcase %>">DEC</div>
-                  <div class="clear"></div>
-                </div>
-                <div class="prices">
-                  <div class="price-low">
-                    <img src="https://s31.postimg.org/5n3znglln/Web3_01.png">
-                    $<%= @accommodation.low_rate %>
-                  </div>
-                  <div class="price-mid">
-                    <img src="https://s32.postimg.org/ek6alrzyd/Web2_01.png">
-                    $<%= @accommodation.mid_rate %>
-                  </div>
-                  <div class="price-high">
-                    <img src="https://s32.postimg.org/wo5jcwk2t/Web1_01_01_01.png">
-                    $<%= @accommodation.high_rate %>
-                  </div>
-                </div>
-              </div>
-              <div class="clear"></div>
             <% end %>
 
             <a href="#camps">Back to Camp Selection</a>

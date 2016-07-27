@@ -208,13 +208,17 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .mid { background:#ffd351; }
 .high { background:#fca938; }
 .clear { clear:both; }
-.prices {width: 100%; Padding-top: 30px; text-align: center; font-family:roboto; font-size: 15px; color: #58595b; margin-bottom: 60px;}
+.prices {width: 100%; Padding-top: 30px; text-align: center; font-family:roboto; font-size: 15px; color: #58595b; margin-bottom: 80px;}
 .price-low {width: 33.33333%; float: left; text-align: right}
 .price-low img {vertical-align: middle;}
 .price-mid {width: 33.33333%; float: left;}
 .price-mid img {vertical-align: middle;}
 .price-high {width: 33.3333%; float: left; text-align: left}
 .price-high img {vertical-align: middle;}
+.prices span{
+  margin-left: 3px;
+  font-size: 11px;
+}
 
 /*** BLOG ***/
 
