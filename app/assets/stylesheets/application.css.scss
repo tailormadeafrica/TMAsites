@@ -187,7 +187,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 }
 
 .accommodation_item {
-  .banner-overlay {position:absolute; z-index:10;  bottom:-28px; font-size:11px;
+  .banner-overlay {position:absolute; z-index:10;  bottom:0px; 
     img { width:100%;}
   }
   #masterslider2 .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
