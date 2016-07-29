@@ -3,7 +3,7 @@
     <% @accommodation.gallery.items.each do |banner| %>
     <a href="#banner-overlay"><div class="banner-overlay" id="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png">SCROLL</div></a>
       <div class="ms-slide slide-1" data-delay="2">
-        <!-- <h1><%= @accommodation.name %></h1> -->
+        <h1 class="accommodation-name"><%= @accommodation.name %></h1>
         <div class="overlay"></div>
         <%= image_fu(banner.image, "1920x935#c") %>
         <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
@@ -21,7 +21,7 @@
 
             <% if @accommodation.low_rate.present? and @accommodation.mid_rate and @accommodation.high_rate %>
               <div class="rates">
-                <h2 class="amenities">Rates</h2>
+                <h2 class="amenities">Prices & Seasons</h2>
                 <div class="monthbar">
                   <div class="month <%= @accommodation.jan.downcase %>">JAN</div>
                   <div class="month <%= @accommodation.feb.downcase %>">FEB</div>
@@ -50,6 +50,10 @@
                     <img src="https://s32.postimg.org/wo5jcwk2t/Web1_01_01_01.png">
                     $<%= @accommodation.high_rate %><span>pppn</span>
                   </div>
+                  <div class="price-closed">
+                  <img src="https://s32.postimg.org/80isxqjj9/Web4_01.png">
+                  Closed
+                  </div>
                 </div>
               </div>
               <div class="clear"></div>
@@ -63,7 +67,7 @@
                 <% @accommodation.amenities.each do |amenity| %>
                   <% if amenity.image.present? %>
                     <li>
-                      <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive"%>
+                      <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive", :data =>{:placement => "bottom", :toggle => "tooltip"}  %>
                     </li>
                   <% end %>
                 <% end %>
@@ -75,14 +79,15 @@
                   <% @accommodation.activities.each do |activity| %>
                     <% if activity.cover_image.present? %>
                       <li>
-                        <%= image_fu activity.cover_image, "60x60#c", :title => activity.name, :class => "img-responsive"%>
+                        <%= image_fu activity.cover_image, "60x60#c", :title => activity.name, :class => "img-responsive" %>
                       </li>
                     <% end %>
                   <% end %>
                 </ul>
             <% end %>
 
-            <a href="#camps">Back to Camp Selection</a>
+
+          <a href="#camps">Back to Camp Selection</a>
           </div>
           <div class="col-xs-12">
             <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Start Your Journey</a>
@@ -141,8 +146,6 @@
 
 <script>
 
-
-
   $(function() {
     $('.contact_btn').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -158,12 +161,16 @@
     });
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
-$(document).on('click', 'a', function(event){
-    event.preventDefault();
+  $(document).on('click', 'a', function(event){
+      event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+  });
+
 </script>

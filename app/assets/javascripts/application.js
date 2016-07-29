@@ -20,6 +20,7 @@
 
 $(document).ready(function() {
 
+
     $(".cboxElement").colorbox({
         maxWidth: "90%",
         maxHeight: "90%"
@@ -55,7 +56,8 @@ $(document).ready(function() {
     loop:true,
     preload:0,
     autoplay:true,
-    view:'fade'
+    view:'fade',
+    overPause:false
   });
 
     var post_slider = new MasterSlider();
@@ -64,13 +66,14 @@ $(document).ready(function() {
 
     post_slider.setup('post_masterslider' , {
         width:1920,
-        height:500,
+        height:935,
         space:0,
         layout:'fullwidth',
         loop:true,
         preload:0,
         autoplay:true,
-        view:'fade'
+        view:'fade',
+        overPause:false
     });
 
     $(function(){
