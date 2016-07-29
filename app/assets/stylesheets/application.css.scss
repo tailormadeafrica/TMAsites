@@ -364,6 +364,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 /*** md ***/
 
 @media (min-width:992px) and (max-width:1199px) {
+  #container {transform:none!important;}
   .container {width: 970px;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px!important;}
@@ -372,6 +373,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 /*** lg ***/
 @media (min-width: 1200px) {
+    #container {transform:none!important;}
   .container {width: 1170px;}
 }
 
@@ -411,7 +413,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   }
 }
 
-body.modal-open {overflow:auto; margin-right:0!important;}
+body.modal-open {overflow:auto; margin-right:0!important; transform:none!important;}
 
 
 .bookings {font-size:13px; line-height:24px;
