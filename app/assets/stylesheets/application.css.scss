@@ -36,7 +36,7 @@ h1 {@include header_font(); font-size:24px; letter-spacing:2px; text-transform: 
 h2 {@include header_font(); font-size:16px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:16px;}
 h3 {@include header_font(); font-size:14px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:30px;}
 
-h1.accommodation-name {position: absolute; z-index: 5; color: #fff; width: 100%; bottom: 100px; font-size: 120px;}
+h1.accommodation-name {position: absolute; z-index: 6; color: #fff; width: 100%; bottom: 100px; font-size: 120px;}
 
 a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
@@ -45,6 +45,11 @@ p,ul,ol {width:740px; text-align:justify; margin:0 auto 30px auto;}
 ul {text-align:left;}
 
 hr {margin:50px 0; border-top:1px solid #e7e7e7;}
+
+table {width: 65%; margin: 0 auto; border: 1px solid #eeeeee; margin-bottom: 30px;
+  th {border-bottom: 1px solid #eeeeee; border-right: 1px solid #eeeeee; font-weight:normal; text-align:center;}
+  td {border-right: 1px solid #eeeeee;}
+}
 
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
 
@@ -197,7 +202,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
       h2 {font-size:20px; padding:50px 0; margin:0; text-align:center;}
       h2.amenities {padding-top:10px;}
       h2.activities {padding-top:0;}
-      ul.amenities {margin-bottom:30px;
+      ul.amenities {margin-bottom:30px;text-align:center; padding:0;
         li {display:inline-block; margin:0 10px 10px 0;}
       }
       .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; line-height:44px; padding:0; margin-top:40px;}
@@ -288,17 +293,19 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 /*** xs ***/
 
 @media (max-width:767px) {
-  // .container {max-width:320px;}
+  h1.accommodation-name {font-size:24px; bottom:30px;}
+  table {width: 100%;}
   .logo {position: absolute; width: 220px; left: 50%; margin-left: -110px; top:50%; margin-top:-36px; }
   .navbar-hamburger {top:10px; right:10px;}
   nav ul {margin-top:50px;}
+
   nav ul h2 {margin:0!important; padding:5px 0;}
   nav ul h2 a,nav ul h2 span {font-size:12px;}  
   nav ul li.parent ul { margin-top:0;}
   nav ul .location_nav {margin-left:0; text-align:center;}
   nav ul .location_nav li {line-height:24px;}
   nav ul .location_nav img {display:none;}
-  nav ul .location_nav.open {height:auto;}  
+  nav ul .location_nav.open {height:auto;column-count:1;}  
   nav ul .location_nav.open li a span { font-size: 11px;}
   .banner {position:relative;}
   .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
@@ -344,6 +351,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
   .accommodation_item .accommodation .accommodation-container ul.amenities li {margin:0 9px 4px 10px; width:50px; height:50px;}
   .accommodation_item .accommodation .accommodation-container h1 {margin:30px 0;}
+  .accommodation_item .accommodation .accommodation-container .btn-custom {margin:40px 0 50px 0;}
+  #welcome form .btn-custom {margin-bottom:30px!important;}
+  .rates {width:auto;}
 }
 
 /*** sm ***/
