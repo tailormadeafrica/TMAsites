@@ -79,7 +79,7 @@
                   <% @accommodation.activities.each do |activity| %>
                     <% if activity.cover_image.present? %>
                       <li>
-                        <%= image_fu activity.cover_image, "60x60#c", :title => activity.name, :class => "img-responsive" %>
+                        <%= image_fu activity.cover_image, "60x60#c", :title => activity.name, :class => "img-responsive", :data =>{:placement => "bottom", :toggle => "tooltip"}  %>
                       </li>
                     <% end %>
                   <% end %>
