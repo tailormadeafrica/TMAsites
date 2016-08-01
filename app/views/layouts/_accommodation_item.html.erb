@@ -61,10 +61,10 @@
 
           </div>
           <div class="col-xs-12">
-            <% if @accommodation.amenities.uniq.present? %>
+            <% if @accommodation.amenities.present? %>
               <h2 class="amenities">Facilities</h2>
               <ul class="amenities">
-                <% @accommodation.amenities.each do |amenity| %>
+                <% @accommodation.amenities.uniq.each do |amenity| %>
                   <% if amenity.image.present? %>
                     <li>
                       <%= image_fu amenity.image, "60x60#c", :title => amenity.name, :class => "img-responsive", :data =>{:placement => "bottom", :toggle => "tooltip"}  %>
@@ -73,10 +73,10 @@
                 <% end %>
               </ul>
             <% end %>
-            <% if @accommodation.activities.uniq.present? %>
+            <% if @accommodation.activities.present? %>
                 <h2 class="activities">Activities</h2>
                 <ul class="amenities">
-                  <% @accommodation.activities.each do |activity| %>
+                  <% @accommodation.activities.uniq.each do |activity| %>
                     <% if activity.cover_image.present? %>
                       <li>
                         <%= image_fu activity.cover_image, "60x60#c", :title => activity.name, :class => "img-responsive", :data =>{:placement => "bottom", :toggle => "tooltip"}  %>
