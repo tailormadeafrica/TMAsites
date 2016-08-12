@@ -1,7 +1,7 @@
 <% if @location.present? and @location.gallery.present? and @location.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
     <% @location.gallery.items.each do |item| %>
-    <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div></a>
+    <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="4">
         <div class="overlay"></div>        
         <%= image_fu(item.image, "1920x935#c") %>
@@ -19,7 +19,7 @@
 <% elsif @accommodation.present? and @accommodation.gallery.present? and @accommodation.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
     <% @accommodation.gallery.items.each do |item| %>
-    <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
+    <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="4">
         <div class="overlay"></div>
         <%= image_fu(item.image, "1920x935#c") %>
@@ -78,7 +78,7 @@
 <% elsif @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
       <% @page.banners.published.each do |banner| %>
-        <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
+        <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
         <div class="ms-slide slide-1" data-delay="4">
           <div class="overlay"></div>
           <%= image_fu(banner.image, "1920x935#c") %>
