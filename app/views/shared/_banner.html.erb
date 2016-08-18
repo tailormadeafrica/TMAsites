@@ -1,6 +1,6 @@
 <% if @location.present? and @location.gallery.present? and @location.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
-    <% @location.gallery.items.each do |item| %>
+    <% @location.gallery.items.reorder('position ASC').each do |item| %>
     <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="4">
         <div class="overlay"></div>        
@@ -18,7 +18,7 @@
   </div>
 <% elsif @accommodation.present? and @accommodation.gallery.present? and @accommodation.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
-    <% @accommodation.gallery.items.each do |item| %>
+    <% @accommodation.gallery.items.reorder('position ASC').each do |item| %>
     <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="4">
         <div class="overlay"></div>
@@ -34,7 +34,7 @@
   </div>
 <% elsif @activity.present? and @activity.gallery.present? and @activity.gallery.items.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
-    <% @activity.gallery.items.each do |item| %>
+    <% @activity.gallery.items.reorder('position ASC').each do |item| %>
       <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
       <div class="ms-slide slide-1" data-delay="4">
         <div class="overlay"></div>
@@ -50,7 +50,7 @@
   </div>
 <% elsif @post.present? and @post.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="post_masterslider">
-    <% @post.banners.published.each do |banner| %>
+    <% @post.banners.published.reorder('position ASC').each do |banner| %>
       <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
       <div class="ms-slide slide-1" data-delay="4">
         <%= image_fu(banner.image, "1920x935#c") %>
@@ -59,7 +59,7 @@
   </div>
 <% elsif @page.link_url.present? and @page.link_url == '/blog' and @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="post_masterslider">
-    <% @page.banners.published.each do |banner| %>
+    <% @page.banners.published.reorder('position ASC').each do |banner| %>
             <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-cream.png"></div>
       <div class="ms-slide slide-1" data-delay="4">
         <%= image_fu(banner.image, "1920x935#c") %>
@@ -68,7 +68,7 @@
   </div>
 <% elsif @page.link_url.present? and @page.link_url == '/bookings/new' and @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="post_masterslider">
-    <% @page.banners.published.each do |banner| %>
+    <% @page.banners.published.reorder('position ASC').each do |banner| %>
       <div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay.png"></div>
       <div class="ms-slide slide-1" data-delay="4">
         <%= image_fu(banner.image, "1920x935#c") %>
@@ -77,7 +77,7 @@
   </div>
 <% elsif @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default hidden-xs" id="masterslider">
-      <% @page.banners.published.each do |banner| %>
+      <% @page.banners.published.reorder('position ASC').each do |banner| %>
         <a href="#welcome"><div class="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
         <div class="ms-slide slide-1" data-delay="4">
           <div class="overlay"></div>
