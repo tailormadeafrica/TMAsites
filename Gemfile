@@ -65,7 +65,7 @@ gem 'bcrypt-ruby', '3.0.1'
 
 gem "refinerycms-pods", "~> 2.1.0"
 gem "refinerycms-videos", "~> 2.0.1"
-gem "refinerycms-portfolio", :git => "git://github.com/refinery/refinerycms-portfolio.git", :branch => "2-0-stable"
+gem "refinerycms-portfolio", :git => "git://github.com/perfectcircledesign/refinerycms-portfolio.git", :branch => "2-0-stable"
 gem "refinerycms-blog", "~> 2.0.0"
 gem "acts-as-taggable-on", "3.0.1"
 gem "rails_autolink", "1.1.4"
@@ -117,3 +117,4 @@ gem 'refinerycms-teams', :path => 'vendor/extensions'
 gem 'coffee-script-source', '1.8.0'
 gem 'refinerycms-amenities', :path => 'vendor/extensions'
 gem 'refinerycms-bookings', :path => 'vendor/extensions'
+
