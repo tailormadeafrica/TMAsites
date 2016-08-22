@@ -135,7 +135,7 @@
                     <div class="slide">
                       <%= link_to refinery.locations_location_path(child)  do %>
                         <%= image_fu child.cover_image, "165x165#c" if child.cover_image.present? %>
-                        <div class="name"><%= child.name %></div>
+                        <div class="name"><%= raw child.name %></div>
                       <% end %>
                     </div>
                   <% end %>
