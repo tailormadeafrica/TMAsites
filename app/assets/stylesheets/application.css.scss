@@ -36,7 +36,9 @@ h1 {@include header_font(); font-size:24px; letter-spacing:2px; text-transform: 
 h2 {@include header_font(); font-size:16px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:16px;}
 h3 {@include header_font(); font-size:14px; letter-spacing:2px; text-transform: uppercase; margin:50px 0; line-height:30px;}
 
-h1.accommodation-name {position: absolute; z-index: 6; width: 100%; bottom: 100px; @include slider_font(); font-size:100px; margin:0; letter-spacing:13px; line-height:normal;}
+h1.accommodation-name {position: absolute; z-index: 6; width: 100%; bottom: 100px; @include slider_font(); font-size:100px; margin:0; letter-spacing:13px; line-height:normal;
+        span {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px; display:block; line-height:0;}
+}
 
 a,a:hover,a:focus {color:#000000; text-decoration:none;}
 
