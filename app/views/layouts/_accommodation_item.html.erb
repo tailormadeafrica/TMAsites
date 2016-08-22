@@ -1,6 +1,6 @@
 <% if @accommodation.present? %>
   <div class="master-slider ms-skin-default" id="masterslider2">
-    <% @accommodation.gallery.items.each do |banner| %>
+    <% @accommodation.gallery.items.reorder('position ASC').each do |banner| %>
     <a href="#banner-overlay"><div class="banner-overlay" id="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="2">
         <h1 class="accommodation-name"><%= @accommodation.name %></h1>
