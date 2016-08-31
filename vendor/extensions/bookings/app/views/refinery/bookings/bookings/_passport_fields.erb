@@ -29,11 +29,11 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 no-gutter select">
       <%= item.label :expiry_date %>
-      <%= item.date_select(:expiry_date, :order => [:month, :day, :year], use_short_month: true) %>
+      <%= item.date_select(:expiry_date, :order => [:month, :day, :year], :end_year => 2099, use_short_month: true) %>
     </div>
     <div class="col-xs-12 col-md-6 no-gutter select">
       <%= item.label :issue_date %>
-      <%= item.date_select(:issue_date, :order => [:month, :day, :year], use_short_month: true) %>
+      <%= item.date_select(:issue_date, :order => [:month, :day, :year], :start_year => 2000, use_short_month: true) %>
     </div>
   </div>
 
