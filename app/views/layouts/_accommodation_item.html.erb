@@ -1,7 +1,7 @@
 <% if @accommodation.present? %>
   <div class="master-slider ms-skin-default" id="masterslider2">
     <% @accommodation.gallery.items.reorder('position ASC').each do |banner| %>
-    <a href="#banner-overlay"><div class="banner-overlay" id="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
+    <a href="#banner-overlay" class="lodge_btn"><div class="banner-overlay" id="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="2">
         <h1 class="accommodation-name"><%= raw @accommodation.name %></h1>
         <div class="overlay"></div>
@@ -143,8 +143,7 @@
     </div>
   </div>
 <% end %>
-
-<script>
+<script type="application/javascript">
 
   $(function() {
     $('.contact_btn').click(function() {
@@ -163,14 +162,14 @@
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-  })
+  });
 
-  $(document).on('click', 'a', function(event){
-      event.preventDefault();
-
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 500);
+  $(document).on('click', '.lodge_btn',function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
   });
 
 </script>
+

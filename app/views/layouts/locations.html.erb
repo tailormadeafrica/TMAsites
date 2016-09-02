@@ -147,9 +147,8 @@
         </div>
       </div>
 
-      <%# blogs = @location.posts.live.first(3) %>
-      <% blogs = 1 %>
-      <% if blogs == 2 %>
+      <% blogs = @location.posts.live.first(3) %>
+      <% if blogs.present? %>
         <div id="locations-blog-container">
           <div class="container">
             <div class="location_blogs">
@@ -280,5 +279,6 @@
     <%= render '/refinery/footer' -%>
 
     <%= render '/refinery/javascripts' %>
+
   </body>
 </html>

@@ -1,5 +1,7 @@
+$(".header-partial").html("<%= j render :partial => '/refinery/header' %>")
+
 $(".accommodation_item").html("");
-$(".accommodation_item").append("<%= j render :partial => 'layouts/accommodation_item' %>");
+$(".accommodation_item").html("<%= j render :partial => 'layouts/accommodation_item' %>");
 
 $('html,body').animate({
   scrollTop: $('#accommodation_item').offset().top
