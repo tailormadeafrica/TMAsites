@@ -138,8 +138,7 @@ GEM
     paper_trail (2.7.2)
       activerecord (~> 3.0)
       railties (~> 3.0)
-    pg (0.18.4)
-    pg (0.18.4-x86-mingw32)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
     puma (3.5.0)
     rack (1.4.7)
@@ -293,7 +292,7 @@ DEPENDENCIES
   nested_form
   net-ssh (= 2.9.2)
   newrelic_rpm
-  pg
+  pg (= 0.17.1)
   puma
   rack-cache (= 1.2)
   rails (= 3.2.13)
