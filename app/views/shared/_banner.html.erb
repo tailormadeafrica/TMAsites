@@ -92,12 +92,12 @@
           <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
-  </div>git pull site5 master
+  </div>
 <% end %>
 
 
 
-<div class="breadcrumb">
+<div class="breadcrumb" style="position: relative; z-index: 100; margin-bottom: -63px;">
 <% items = request.fullpath.downcase.split('/') %>
 <% items = items.reject { |c| c.empty? } %>
 <% if items.present? %>
@@ -107,3 +107,4 @@
   <% end %>
 <% end %>
 </div>
+
