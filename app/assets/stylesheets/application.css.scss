@@ -304,7 +304,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   }
 }
 
-.content img.bottom-logo
+.content img.bottom-logo {margin:0 auto 40px auto;}
 
 /*** xs ***/
 @media (max-width:767px) {
