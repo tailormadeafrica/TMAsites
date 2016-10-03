@@ -97,7 +97,7 @@
 
 
 
-<div class="breadcrumb">
+<div class="breadcrumb" style="position: relative; z-index: 100; margin-bottom: -63px;">
 <% items = request.fullpath.downcase.split('/') %>
 <% items = items.reject { |c| c.empty? } %>
 <% if items.present? %>
@@ -107,3 +107,4 @@
   <% end %>
 <% end %>
 </div>
+
