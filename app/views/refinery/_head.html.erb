@@ -16,7 +16,7 @@
   
   <%= yield :meta %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <%= stylesheet_link_tag "application", "formatting", "theme" %>
   <%= stylesheet_link_tag "home" if home_page? %>
@@ -47,8 +47,10 @@ function checkLandscape() {
 
 $( document ).ready(function() {
   checkLandscape();
-  $( window ).resize(function() { checkLandscape(); });
 });
+
+$( window ).resize(function() { checkLandscape(); });
+
 
 </script>
 
