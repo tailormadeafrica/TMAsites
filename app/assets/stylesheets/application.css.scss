@@ -73,7 +73,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .nav-hide {display: none;}
 
 .navbar-hamburger { position: fixed; top: 20px; right: 20px; width: 30px; height: 22px; z-index: 20; cursor: pointer;
-  .bar1, .bar2, .bar3 { width: 100%; height: 3px; margin-bottom: 6px; background-color: #ffffff; transition: all 0.3s ease-in-out;}
+  .bar1, .bar2, .bar3 { width: 100%; height: 3px; margin-bottom: 6px; background-color: #ffffff; transition: all 0.3s ease-in-out; box-shadow:rgba(0,0,0,0.40) 1px 1px 2px}
   span {color:#ffffff; margin-left:-1px; font-size:11px;}
 }
 
@@ -113,7 +113,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .ms-skin-default .ms-nav-prev {left:40px!important;}
 .ms-skin-default .ms-nav-next {right:40px!important}
 
-.breadcrumb { padding: 0; margin-bottom: 0; list-style: none; border-radius: 0; font-size: 11px; text-transform: uppercase; position: absolute; width: 100%; margin-top: 35px; background:transparent;color: #404040;
+.breadcrumb { padding: 0; margin-bottom: -60px; list-style: none; border-radius: 0; font-size: 11px; text-transform: uppercase; position: absolute; width: 100%; margin-top: 35px; background:transparent;color: #404040;
     a {color: #404040;}
 }
 
@@ -183,7 +183,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #footer {background: url("/assets/bg-footer.jpg") top center no-repeat; height:450px;
   .content-container {height: 450px;}
-  span {display:block; line-height:12px;}
+  span {display:block; line-height:18px;}
 }
 
 .content-container .content {@include vertical-align(); color:#ffffff;
@@ -305,13 +305,14 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   }
 }
 
-.content img.bottom-logo {margin:20px auto 40px auto;}
+.content img.bottom-logo {margin:40px auto;}
 
 /*** xs ***/
 @media (max-width:767px) {
+  .container { width:85%; }
   #masterslider .banner-text h2 {font-size:17px!important; letter-spacing:3px!important;}
   #masterslider .banner-text h1 {font-size:28px!important; letter-spacing:5px!important; line-height:29px!important;}
-  .breadcrumb {margin-top: 10px;}
+  .breadcrumb {margin-top: 30px; margin-bottom:-30px; }
   .social_links {right: 10px;}
   h1.accommodation-name {font-size:24px; bottom:30px;}
   table {width: 100%;}
