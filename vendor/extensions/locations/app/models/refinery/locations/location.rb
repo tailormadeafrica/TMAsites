@@ -4,6 +4,8 @@ module Refinery
       self.table_name = 'refinery_locations'
       acts_as_nested_set
 
+      after_save :remove_span
+
       extend FriendlyId
       friendly_id :name, :use => [:slugged]
     
@@ -24,6 +26,10 @@ module Refinery
 
       default_scope { order('lft') }
 
+      def remove_span
+        new_slug = self.slug.gsub("-span-","-").gsub("-span","")
+        self.update_column(:slug, new_slug)
+      end
     end
   end
 end
