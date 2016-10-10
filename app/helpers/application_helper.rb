@@ -23,11 +23,11 @@ module ApplicationHelper
     if location.present?
       if location.parent.present?
         if location.parent.parent.present?
-          links << link_to(location.parent.parent.name, refinery.locations_location_path(location.parent.parent))
+          links << link_to(strip_tags(location.parent.parent.name), refinery.locations_location_path(location.parent.parent))
         end
-        links << link_to(location.parent.name, refinery.locations_location_path(location.parent))
+        links << link_to(strip_tags(location.parent.name), refinery.locations_location_path(location.parent))
       end
-      links << link_to(location.name, refinery.locations_location_path(location))
+      links << link_to(strip_tags(location.name), refinery.locations_location_path(location))
     end
     if post.present?
       links << link_to(post.title, refinery.blog_post_url(post))
