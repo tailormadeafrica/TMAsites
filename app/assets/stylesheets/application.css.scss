@@ -56,7 +56,7 @@ table {width: 65%; margin: 0 auto; border: 1px solid #eeeeee; margin-bottom: 30p
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
 
 nav {position: fixed; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 100%; height: 100%;
-  ul {list-style:none; margin:0; padding:0; vertical-align: middle; display:inline-block; text-align:center; width:auto;
+  ul {list-style:none; margin:0; padding:0; vertical-align: middle; display:inline-block; text-align:center; width:740px;
     li.first {padding-top:25px;}
     li.parent {line-height:0;}
     a, a:hover, a:focus {color:#ffffff;}
@@ -113,7 +113,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .ms-skin-default .ms-nav-prev {left:40px!important;}
 .ms-skin-default .ms-nav-next {right:40px!important}
 
-.breadcrumb { padding: 0; margin-bottom: -60px; list-style: none; border-radius: 0; font-size: 11px; text-transform: uppercase; position: absolute; width: 100%; margin-top: 35px; background:transparent;color: #404040;
+.breadcrumb { padding: 0; margin-bottom: -60px; list-style: none; border-radius: 0; font-size: 11px; text-transform: uppercase; position: absolute; width: 100%; margin-top: 32px; background:transparent;color: #404040;
     a {color: #404040;}
 }
 
@@ -327,6 +327,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   nav ul .location_nav img {display:none;}
   nav ul .location_nav.open {height:auto;column-count:1;}  
   nav ul .location_nav.open li a span { font-size: 11px;}
+  nav {overflow: auto;}
+  #sb-search {display: none;}
   .banner {position:relative;}
   .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
   .banner .banner-text h2 {@include slider_font(); margin:0!important;}
@@ -374,7 +376,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .accommodation_item .accommodation .accommodation-container .btn-custom {margin:40px 0 50px 0;}
   #welcome form .btn-custom {margin-bottom:30px!important;}
   .rates {width:auto;}
-  .content img.bottom-logo {position:relative; margin:0 auto;}
+  .content img.bottom-logo {position:relative;}
+  .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {display:none;}
+  .social_links {right:0; position:static;}
 }
 
 /*** sm ***/
@@ -386,6 +390,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #people .content-container .content .street-child img {margin-right:13px;}
   #countries h1 {margin:0 auto 35px auto;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
+  .blog_list .blog_post .blog_post_pod h2 {height: 40px; overflow: hidden;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px!important;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:546px!important;}
   .blog_locations img {display:none;}
@@ -400,7 +405,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #container {transform:none!important;}
   .container {width: 970px;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
-  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px!important;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:221px!important;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:926px!important;}
 }
 
