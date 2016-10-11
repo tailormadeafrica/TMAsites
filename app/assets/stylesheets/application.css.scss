@@ -312,7 +312,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .container { width:85%; }
   #masterslider .banner-text h2 {font-size:17px!important; letter-spacing:3px!important;}
   #masterslider .banner-text h1 {font-size:28px!important; letter-spacing:5px!important; line-height:29px!important;}
-  .breadcrumb {margin-top: 30px; margin-bottom:-30px; }
+  .breadcrumb {margin-top: 0; margin-bottom: -30px; padding-top: 30px; background: #F4F4F4;}
   .social_links {right: 10px;}
   h1.accommodation-name {font-size:24px; bottom:30px;}
   table {width: 100%;}
