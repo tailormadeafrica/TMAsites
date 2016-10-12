@@ -196,7 +196,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #locations-blog-container {padding:50px 0 70px 0; background:#999999; text-align:center;
   h1 {color:#ffffff;}
-  .blog-post {width:360px; position:relative; margin-bottom:30px;
+  .blog-post {width:auto; position:relative; margin-bottom:30px;
     h2 {margin:0; font-size:14px;}
     .content {background:#ffffff; padding:20px;
       .date {font-size: 12px; font-style: italic;}
@@ -252,7 +252,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 .blog_list {background:#F4F4F4; padding:20px 0 70px 0;
   .blog_post {
-    .blog_post_pod {width:360px; position:relative; margin-bottom:30px;
+    .blog_post_pod {width:350px; position:relative; margin:0 auto 30px auto;
       h2 {margin:0; font-size:14px; line-height:20px;}
       .content {background:#ffffff; padding:20px;
         .date {font-size: 12px; font-style: italic;}
