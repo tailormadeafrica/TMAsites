@@ -123,6 +123,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   form {width:740px; margin:0 auto;
     input {border-radius:0; box-shadow:none; margin-bottom:5px; height:43px; color:#999999; border:none;}
     textarea {border-radius:0; box-shadow:none; margin-bottom:5px; padding:10px 12px; border:none;}
+    .captcha {background: url(/assets/captcha.png) top center no-repeat; height:44px;}
     .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; margin-top:30px;}
     ::-webkit-input-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
     :-moz-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
