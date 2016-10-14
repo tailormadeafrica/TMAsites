@@ -56,7 +56,7 @@ table {width: 65%; margin: 0 auto; border: 1px solid #eeeeee; margin-bottom: 30p
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
 
 nav {position: fixed; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 100%; height: 100%;
-  ul {list-style:none; margin:0; padding:0; vertical-align: middle; display:inline-block; text-align:center; width:auto;
+  ul {list-style:none; margin:0; padding:0; vertical-align: middle; display:inline-block; text-align:center; width:740px;
     li.first {padding-top:25px;}
     li.parent {line-height:0;}
     a, a:hover, a:focus {color:#ffffff;}
@@ -113,7 +113,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 .ms-skin-default .ms-nav-prev {left:40px!important;}
 .ms-skin-default .ms-nav-next {right:40px!important}
 
-.breadcrumb { padding: 0; margin-bottom: -60px; list-style: none; border-radius: 0; font-size: 11px; text-transform: uppercase; position: absolute; width: 100%; margin-top: 35px; background:transparent;color: #404040;
+.breadcrumb { padding: 0; margin-bottom: -60px; list-style: none; border-radius: 0; font-size: 11px; text-transform: uppercase; position: absolute; width: 100%; margin-top: 32px; background:transparent;color: #404040;
     a {color: #404040;}
 }
 
@@ -123,6 +123,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   form {width:740px; margin:0 auto;
     input {border-radius:0; box-shadow:none; margin-bottom:5px; height:43px; color:#999999; border:none;}
     textarea {border-radius:0; box-shadow:none; margin-bottom:5px; padding:10px 12px; border:none;}
+    .captcha {background: url(/assets/captcha.png) top center no-repeat; height:44px;}
     .btn-custom {background: #000; border-radius: 0; border: 0; height: 44px; width:200px; color: #fff; margin-top:30px;}
     ::-webkit-input-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
     :-moz-placeholder {font-weight: 400; color: #999999; font-size: 14px;}
@@ -196,7 +197,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #locations-blog-container {padding:50px 0 70px 0; background:#999999; text-align:center;
   h1 {color:#ffffff;}
-  .blog-post {width:360px; position:relative; margin-bottom:30px;
+  .blog-post {width:auto; position:relative; margin-bottom:30px;
     h2 {margin:0; font-size:14px;}
     .content {background:#ffffff; padding:20px;
       .date {font-size: 12px; font-style: italic;}
@@ -252,7 +253,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 .blog_list {background:#F4F4F4; padding:20px 0 70px 0;
   .blog_post {
-    .blog_post_pod {width:360px; position:relative; margin-bottom:30px;
+    .blog_post_pod {width:350px!important; position:relative; margin:0 auto 30px auto;
       h2 {margin:0; font-size:14px; line-height:20px;}
       .content {background:#ffffff; padding:20px;
         .date {font-size: 12px; font-style: italic;}
@@ -312,7 +313,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .container { width:85%; }
   #masterslider .banner-text h2 {font-size:17px!important; letter-spacing:3px!important;}
   #masterslider .banner-text h1 {font-size:28px!important; letter-spacing:5px!important; line-height:29px!important;}
-  .breadcrumb {margin-top: 30px; margin-bottom:-30px; }
+  .breadcrumb {margin-top: 0; margin-bottom: -30px; padding-top: 30px;}
   .social_links {right: 10px;}
   h1.accommodation-name {font-size:24px; bottom:30px;}
   table {width: 100%;}
@@ -327,6 +328,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   nav ul .location_nav img {display:none;}
   nav ul .location_nav.open {height:auto;column-count:1;}  
   nav ul .location_nav.open li a span { font-size: 11px;}
+  nav {overflow: auto;}
+  #sb-search {display: none;}
   .banner {position:relative;}
   .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
   .banner .banner-text h2 {@include slider_font(); margin:0!important;}
@@ -354,7 +357,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:165px!important;}
   #welcome-locations .bx-viewport, #welcome-accommodation .bx-viewport {height:138px!important;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
-  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:248px!important;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {display:none;}
   .blog_list {padding:0;}  
   .blog_locations {margin-top:30px;}
   #welcome-locations h2, #welcome-accommodation h2,.accommodation h2 {margin:30px 0;}
@@ -374,7 +377,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .accommodation_item .accommodation .accommodation-container .btn-custom {margin:40px 0 50px 0;}
   #welcome form .btn-custom {margin-bottom:30px!important;}
   .rates {width:auto;}
-  .content img.bottom-logo {position:relative; margin:0 auto;}
+  .content img.bottom-logo {position:relative;}
+  .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {display:none;}
+  .social_links {right:0; position:static;}
 }
 
 /*** sm ***/
@@ -386,6 +391,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #people .content-container .content .street-child img {margin-right:13px;}
   #countries h1 {margin:0 auto 35px auto;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
+  .blog_list .blog_post .blog_post_pod h2 {height: 40px; overflow: hidden;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:260px!important;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:546px!important;}
   .blog_locations img {display:none;}
@@ -400,7 +406,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #container {transform:none!important;}
   .container {width: 970px;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
-  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:220px!important;}
+  #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:221px!important;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:926px!important;}
 }
 
