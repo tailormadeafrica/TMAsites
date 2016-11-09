@@ -4,8 +4,15 @@ TailorMadeAfrica::Application.routes.draw do
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
+  authenticate :refinery_user do
+    require 'sidekiq/web'
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
