@@ -121,3 +121,4 @@ gem 'coffee-script-source', '1.8.0'
 gem 'refinerycms-amenities', :path => 'vendor/extensions'
 gem 'refinerycms-bookings', :path => 'vendor/extensions'
 
+
