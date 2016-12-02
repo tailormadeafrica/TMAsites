@@ -21,7 +21,7 @@ module Refinery
             redirect_to refinery.portfolio_admin_galleries_path and return
           end
 
-          @items = @items.all
+          @items = @items.page(params[:page])
         end
 
         def new
