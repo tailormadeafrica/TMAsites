@@ -14,7 +14,7 @@ module ApplicationHelper
 
     if page.present?
       if page.link_url.present? and ['/locations'].include? page.link_url
-        links << page.title
+        # links << page.title
       else
         links << link_to(page.title, refinery.url_for(page))
       end
@@ -33,5 +33,16 @@ module ApplicationHelper
       links << link_to(post.title, refinery.blog_post_url(post))
     end
     raw links.join('&nbsp;&nbsp;>&nbsp;&nbsp;')
+  end
+
+
+  def location_link(child)
+    if child.parent.present? and child.parent.parent.present?
+      refinery.locations_location_path(child.parent.parent, child.parent, child)
+    elsif child.parent.present?
+      refinery.locations_location_path(child.parent, child)
+    else
+      refinery.locations_location_path(child)
+    end
   end
 end
