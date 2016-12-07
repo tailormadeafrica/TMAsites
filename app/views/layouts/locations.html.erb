@@ -136,7 +136,7 @@
                 <div id="locations_slider">
                   <% child_locations.each do |child| %>
                     <div class="slide">
-                      <%= link_to refinery.locations_location_path(child)  do %>
+                      <%= link_to location_link(child)  do %>
                         <%= image_fu child.cover_image, "165x165#c", :alt => child.cover_image.alt_tag if child.cover_image.present? %>
                         <div class="name"><%= raw child.name %></div>
                       <% end %>
