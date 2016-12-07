@@ -5,9 +5,7 @@
   <body id="container">
 
 
-    <div id="mobile-port">
-      <img src="/assets/landscape.png" />
-    </div>
+
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
@@ -79,7 +77,7 @@
                 <%=raw @location.description %>
             </div>
             <div class="col-xs-12">
-              <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Start Your Journey</a>
+              <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Enquire Now</a>
               <!-- Modal -->
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
@@ -108,7 +106,7 @@
                                 <%= f.input :message, :wrapper => :bootstrap_12,:input_html  => {:rows=>6, :class => 'form-control' } %>
                               </div>
                               <div class="col-xs-12 col-sm-6">
-                                <img src="/assets/captcha.png" class="img-responsive captcha">
+                                <div class="captcha"></div>
                               </div>
                               <div class="col-xs-12 col-sm-6">
                                 <%= f.input :captcha, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>

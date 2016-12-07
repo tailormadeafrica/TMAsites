@@ -52,10 +52,10 @@ $(document).ready(function() {
     width:1920,
     height:935,
     space:0,
-    layout:'fullscreen',
+    layout:'fullwidth',
     loop:true,
     preload:0,
-    autoplay:false,
+    autoplay:true,
     view:'fade',
     overPause:false
   });
@@ -71,7 +71,7 @@ $(document).ready(function() {
         layout:'fullwidth',
         loop:true,
         preload:0,
-        autoplay:false,
+        autoplay:true,
         view:'fade',
         overPause:false
     });
@@ -82,6 +82,15 @@ $(document).ready(function() {
             $('nav').fadeToggle();
             $('nav').removeClass('nav-hide');
         });
+    });
+
+        $(".read_more").click(function() {
+
+        $(this).parent().parent().css("display", "none");
+        $(".more_text").slideDown(600,"easeInOutQuad");
+
+        return false;
+
     });
 
 
