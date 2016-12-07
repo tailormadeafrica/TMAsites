@@ -30,7 +30,33 @@ module Refinery
         
 
         if !@location.present?
-          redirect_to refinery.page_path(params[:id])
+          if request.url.include? 'accommodations'
+            @accommodation = Refinery::Accommodations::Accommodation.find_by_slug(params[:id])
+            if @accommodation.present?
+              redirect_to refinery.accommodations_accommodations_path
+            else
+              redirect_to refinery.accommodations_accommodation_path(@accommodation)
+            end
+          else
+           fallback_to_404 = true
+            @new_page ||= case action_name
+                  when "home"
+                    Refinery::Page.where(:link_url => '/').first
+                  when "show", "preview"
+                    begin
+                      Refinery::Page.find_by_path_or_id(params[:path], params[:id])
+                    rescue Exception => e
+                      
+                    end
+                  end
+            unless @new_page.present?
+              @new_page = Refinery::Page.find_by_link_url("/#{params[:id]}")
+            end
+            @new_page || (error_404 if fallback_to_404)
+            redirect_to refinery.page_url(@new_page) 
+          end
+          
+
         elsif request.url.include? 'locations'
           if @location.parent.present? and @location.parent.parent.present?
             redirect_to refinery.locations_location_path(@location.parent.parent, @location.parent, @location), :status => :moved_permanently
