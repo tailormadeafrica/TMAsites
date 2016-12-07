@@ -5,13 +5,16 @@ module Refinery
     
       acts_as_indexed :fields => [:name, :rating, :description]
 
+      extend FriendlyId
+      friendly_id :name, :use => [:slugged]
+
       attr_accessible :name, :cover_image_id, :rating, :description, :position, :activity_ids, :location_id, :latitude, :longitude, :address, :gallery_id, :sub_name, :location_ids, :amenity_ids,
-      :low_rate, :mid_rate, :high_rate, :jan, :feb, :marc, :apr, :may, :jun, :jul, :aug, :sept, :oct, :nov, :dec
+      :low_rate, :mid_rate, :high_rate, :jan, :feb, :marc, :apr, :may, :jun, :jul, :aug, :sept, :oct, :nov, :dec, :slug
 
       validates :name, :presence => true, :uniqueness => true
-      validates :low_rate, :presence => true
-      validates :high_rate, :presence => true
-      validates :mid_rate, :presence => true
+      # validates :low_rate, :presence => true
+      # validates :high_rate, :presence => true
+      # validates :mid_rate, :presence => true
 
       RATES = %w(Low Mid High Closed)
           

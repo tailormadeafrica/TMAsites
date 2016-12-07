@@ -76,6 +76,24 @@ $(document).ready(function() {
         overPause:false
     });
 
+    var slider2 = new MasterSlider();
+
+    slider2.control('arrows');
+
+    slider2.setup('masterslider2' , {
+        width:1920,
+        height:935,
+        space:1,
+        layout:'fullwidth',
+        loop:true,
+        preload:0,
+        autoplay:false,
+        overPause:false,
+        shuffle:false,
+        instantStartLayers: true,
+        view:"fade"
+    });
+
     $(function(){
         $('.navbar-hamburger').click(function(){
             $('.navbar-hamburger').toggleClass('navbar-on');
