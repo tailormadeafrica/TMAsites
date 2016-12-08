@@ -55,14 +55,14 @@ table {width: 65%; margin: 0 auto; border: 1px solid #eeeeee; margin-bottom: 30p
 
 nav, .navbar-hamburger {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;text-align: center;}
 
-nav {position: fixed; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 100%; height: 100%;
-  ul {list-style:none; margin:0; padding:0; vertical-align: middle; display:inline-block; text-align:center; width:740px;
+nav {position:absolute; z-index: 15; background-color: rgba(0,0,0, 0.85); width: 100%; min-height: 100%;
+  ul {list-style:none; margin:0; padding:150px 0 0 0; vertical-align: middle; display:inline-block; text-align:center; width:740px;
     li.first {padding-top:25px;}
     li.parent {line-height:0;}
     a, a:hover, a:focus {color:#ffffff;}
     h2 {margin:0; padding:25px 0;}
     h2 span { color: #ffffff; cursor: pointer;}
-    .location_nav {line-height:36px; text-align:left; width: 740px; margin-left: 80px; height:0; transition:height 0.5s; overflow: hidden;
+    .location_nav {line-height:36px; text-align:left; width: 740px; margin-left: 80px; height:0; transition:height 0.5s; overflow: hidden; padding:30px 0 0 0;
       img {margin-right:15px;}
     }
     .location_nav.open {height:215px; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4;}
@@ -72,8 +72,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 .nav-hide {display: none;}
 
-.navbar-hamburger { position: fixed; top: 20px; right: 20px; width: 30px; height: 22px; z-index: 20; cursor: pointer;
-  .bar1, .bar2, .bar3 { width: 100%; height: 3px; margin-bottom: 6px; background-color: #ffffff; transition: all 0.3s ease-in-out; box-shadow:rgba(0,0,0,0.40) 1px 1px 2px}
+.navbar-hamburger { position: fixed; top: 0; right: 0; width: 70px; height: 70px; z-index: 20; cursor: pointer; background:rgba(0, 0, 0, 0.85); padding:10px 20px 20px 20px;
+  .bar1, .bar2, .bar3 { width: 100%; height: 3px; margin-top: 6px; background-color: #ffffff; transition: all 0.3s ease-in-out;}
   span {color:#ffffff; margin-left:-1px; font-size:11px;}
 }
 
@@ -84,8 +84,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .bar2 { background-color: transparent; }
 }
 
-.telephone-number {
-  h2 {position:absolute; z-index:2; right:100px; color:#ffffff; margin:20px 0 0 0; line-height:22px;}
+.top-nav {position: fixed; z-index:20; right:100px; margin:12px 0 0 0;
+  .btn-custom,.btn-custom:hover { background:rgba(0, 0, 0, 0.85); border-radius:0; border:0; color:#ffffff; margin-left:10px; font-size:11px; text-transform:uppercase; line-height:18px;
+    .fa {margin-right:10px;}
+  }
+
   .fa {font-size:18px;}
 }
 
@@ -117,7 +120,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
     a {color: #404040;}
 }
 
-#welcome, #contact {padding:50px 0 70px 0;
+#welcome, #contact, .modal {padding:50px 0 70px 0;
   .contact-form span {width: 740px; margin: 0 auto!important; background-color: #FFFFFF; border: 1px solid red; padding: 0; display: block; margin: 15px; color: red; line-height:18px; padding:5px;}
   .contact-form span.success { border: 1px solid green; color: green; }
   form {width:740px; margin:0 auto;
@@ -191,7 +194,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   h1,h2 {width:740px; color:#ffffff; margin:0 auto 50px auto;}
   h2 { margin-bottom:30px;}
   img.logo {display:block; margin:50px auto 80px auto;}
-  img.logos {display:block; margin:10px auto 0 auto;}
+  img.logos {display:block; margin:30px auto 0 auto;}
   span, a {color:#ffffff; font-size:8px; font-size:8px; text-transform:uppercase;}
 }
 
@@ -253,7 +256,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 .blog_list {background:#F4F4F4; padding:20px 0 70px 0;
   .blog_post {
-    .blog_post_pod {width:350px!important; position:relative; margin:0 auto 30px auto;
+    .blog_post_pod {width:350px; position:relative; margin:0 auto 30px auto;
       h2 {margin:0; font-size:14px; line-height:20px;}
       .content {background:#ffffff; padding:20px;
         .date {font-size: 12px; font-style: italic;}
@@ -310,25 +313,35 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 /*** xs ***/
 @media (max-width:767px) {
-  .container { width:85%; }
+  .container {max-width:340px;}
+  .header-partial {background: #000; border-bottom: 1px solid #666;
+    .top-nav-container {width: 340px; margin: 0 auto;
+      .navbar-hamburger {position:static; width:21%; height:50px; padding:10px 20px 0 20px;
+          .bar1,.bar2,.bar3 {height:2px; margin-top:5px; width:25px;}
+      }
+      .top-nav {position:static; width:79%; right:0; margin:0; float:right;
+        a,a:hover {margin:0; line-height:50px; width:50%; padding:0;
+          .fa {margin:0;}
+        }
+        a:first-child {border-right:1px solid #666666;border-left:1px solid #666666;}
+      }
+    }
+  }
   #masterslider .banner-text h2 {font-size:17px!important; letter-spacing:3px!important;}
   #masterslider .banner-text h1 {font-size:28px!important; letter-spacing:5px!important; line-height:29px!important;}
   .breadcrumb {margin-top: 0; margin-bottom: -30px; padding-top: 30px;}
-  .social_links {right: 10px;}
   h1.accommodation-name {font-size:24px; bottom:30px;}
   table {width: 100%;}
-  .logo {position: absolute!important; width: 220px; left: 50%; margin-left: -110px; top:50%; margin-top:-36px; }
-  .navbar-hamburger {top:10px; right:10px;}
-  nav ul {margin-top:50px;}
+  .logo {position: absolute!important; width: 220px; left: 50%; margin-left: -110px; }
+  nav ul {padding-top:50px;}
   nav ul h2 {margin:0!important; padding:5px 0;}
   nav ul h2 a,nav ul h2 span {font-size:12px;}  
   nav ul li.parent ul { margin-top:0;}
-  nav ul .location_nav {margin-left:0; text-align:center;}
-  nav ul .location_nav li {line-height:24px;}
-  nav ul .location_nav img {display:none;}
-  nav ul .location_nav.open {height:auto;column-count:1;}  
+  nav ul .location_nav {margin-left:0; padding:0; max-width:100px; padding:20px 0;}
+  nav ul .location_nav img {margin-right:5px;}
+  nav ul .location_nav li {line-height:30px;}
+  nav ul .location_nav.open {height:auto;-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}  
   nav ul .location_nav.open li a span { font-size: 11px;}
-  nav {overflow: auto;}
   #sb-search {display: none;}
   .banner {position:relative;}
   .banner .banner-text {position: absolute; top:50%; margin-top:-40px; width:100%;}
@@ -339,6 +352,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   h3 {line-height:24px; margin:30px 0;}
   .div1,.div2,.div3 {opacity:1;}
   h1,h2,p,ul {width:100%!important;}
+  .read_more {margin: 30px 55px 0 55px;}
   #welcome, #locations, #contact, #people, #countries, #locations-blog-container, #welcome-locations, #welcome-accomodation,.accommodation {padding:0!important;}
   .content-container .content h1, .content-container .content h2 {margin:30px 0;}
   #people { background: #489AF0;}
@@ -355,7 +369,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #locations .streetchild {width:auto;}
   #locations ul { -webkit-column-count: 1;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:165px!important;}
-  #welcome-locations .bx-viewport, #welcome-accommodation .bx-viewport {height:138px!important;}
+  #welcome .locations .bx-viewport, #welcome .accommodations .bx-viewport, #contact .locations .bx-viewport, #contact .accommodations .bx-viewport, .modal .locations .bx-viewport, .modal .accommodations .bx-viewport {height:auto!important;}
+  .bx-viewport .slide {margin-right:0!important;}
+  .bx-viewport .slide a .name {margin:10px 0!important;}
+  #locations_slider,#accommodations_slider {width:auto!important;}
+  .bx-prev,.bx-next {display:none;}
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {display:none;}
   .blog_list {padding:0;}  
@@ -380,6 +398,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .content img.bottom-logo {position:relative;}
   .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {display:none;}
   .social_links {right:0; position:static;}
+  .streetchild a {float: none!important; margin: 0 0 20px 0!important; display: block;}
 }
 
 /*** sm ***/
@@ -412,7 +431,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 /*** lg ***/
 @media (min-width: 1200px) {
-    #container {transform:none!important;}
+  #container {transform:none!important;}
   .container {width: 1170px;}
 }
 
@@ -433,10 +452,6 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 body.modal-open {overflow:auto; margin-right:0!important; transform:none!important;}
 body { margin:0px; padding:0px; } 
-
-
-#mobile-port { position:fixed; top:0px; left:0px; width:100%; height:100%; background:#222; text-align:center; z-index:1000; display:none;}
-#mobile-port img { max-width:90%; position:absolute; top:50%; left:5%; transform:translateY(-50%); }
 
 .bookings {font-size:13px; line-height:24px;
   .row {margin:0;}

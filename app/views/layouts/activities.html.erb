@@ -5,9 +5,7 @@
   <body id="container">
   
 
-    <div id="mobile-port">
-      <img src="/assets/landscape.png" />
-    </div>
+
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
@@ -83,7 +81,7 @@
               <div id="locations_slider">
                 <% locations.each do |location| %>
                     <div class="slide">
-                      <%= link_to refinery.locations_location_path(location)  do %>                        
+                      <%= link_to location_link(location)  do %>                        
                         <%= image_fu location.cover_image, "300x175#c", :alt => location.cover_image.alt_tag if location.cover_image.present? %>
                         <%= location.name %>
                       <% end %>

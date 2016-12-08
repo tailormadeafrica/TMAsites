@@ -26,7 +26,7 @@ PATH
       refinerycms-core (~> 2.0.3)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
@@ -369,6 +369,3 @@ DEPENDENCIES
   simple_form (~> 2.0.2)
   sinatra
   uglifier (>= 1.0.3)
-
-BUNDLED WITH
-   1.13.3

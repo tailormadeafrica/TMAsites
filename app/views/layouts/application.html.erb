@@ -5,9 +5,7 @@
   <body id="container">
   
 
-    <div id="mobile-port">
-      <img src="/assets/landscape.png" />
-    </div>
+
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
@@ -38,7 +36,7 @@
                 <ul class="footer_location_nav">
                   <% @menu_locations.each do |location| %>
                     <li>
-                      <%= link_to refinery.locations_location_path(location) do %>
+                      <%= link_to location_link(location) do %>
                         <%= image_fu location.flag_image, '35x35#c', :alt => location.flag_image.alt_tag, :class=>"img-circle" %><br>
                         <span><%= location.name %></span>
                       <% end %>
