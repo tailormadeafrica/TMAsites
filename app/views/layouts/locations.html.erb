@@ -27,7 +27,7 @@
                   <ul>
                     <% @all_locations.each do |location| %>
                       <li>
-                        <%= link_to location.name, refinery.locations_location_path(location) %>
+                        <%= link_to location.name, location_link(location) %>
                       </li>
                     <% end %>
                   </ul>
@@ -60,7 +60,7 @@
                 <ul>
                   <% @locations.each do |location| %>
                     <li>
-                      <%= link_to location.name, refinery.locations_location_path(location) %>
+                      <%= link_to location.name, location_link(location) %>
                     </li>
                   <% end %>
                 </ul>

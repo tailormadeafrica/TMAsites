@@ -23,12 +23,23 @@ module ApplicationHelper
     if location.present?
       if location.parent.present?
         if location.parent.parent.present?
-          links << link_to(strip_tags(location.parent.parent.name), refinery.locations_location_path(location.parent.parent))
+          links << link_to(strip_tags(location.parent.parent.name), "/#{location.parent.parent.slug}")
+          links << link_to(strip_tags(location.parent.name), "/#{location.parent.parent.slug}/#{location.parent.slug}")
+        else
+          links << link_to(strip_tags(location.parent.name), "/#{location.parent.slug}")
         end
-        links << link_to(strip_tags(location.parent.name), refinery.locations_location_path(location.parent))
+
+
       end
-      links << link_to(strip_tags(location.name), refinery.locations_location_path(location))
+      if location.parent.present? and location.parent.parent.present?
+        links << link_to(strip_tags(location.name), "/#{location.parent.parent.slug}/#{location.parent.slug}/#{location.slug}")
+      elsif location.parent.present?
+        links << link_to(strip_tags(location.name), "/#{location.parent.slug}/#{location.slug}")
+      else
+        links << link_to(strip_tags(location.name), "/#{location.slug}")
+      end
     end
+
     if post.present?
       links << link_to(post.title, refinery.blog_post_url(post))
     end
@@ -38,11 +49,11 @@ module ApplicationHelper
 
   def location_link(child)
     if child.parent.present? and child.parent.parent.present?
-      refinery.locations_location_path(child.parent.parent, child.parent, child)
+      "/#{child.parent.parent.slug}/#{child.parent.slug}/#{child.slug}"
     elsif child.parent.present?
-      refinery.locations_location_path(child.parent, child)
+      "/#{child.parent.slug}/#{child.slug}"
     else
-      refinery.locations_location_path(child)
+      "/#{child.slug}"
     end
   end
 end

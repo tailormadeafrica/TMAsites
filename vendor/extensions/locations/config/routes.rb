@@ -1,9 +1,14 @@
 Refinery::Core::Engine.routes.append do
 
   # Frontend routes
-  namespace :locations, :path => '' do
-    # resources :locations, :path => '', :only => [:show]
-    match '/:id(/:first_child)(/:second_child)(/:third_child)' => 'locations#show', via: :get, :as => :location
+  Refinery::Locations::Location.roots.each do |parent|
+    match "/#{parent.slug}" => "locations/locations#show" 
+    parent.children.each do |child|
+      match "/#{parent.slug}/#{child.slug}" => "locations/locations#show" 
+      child.children.each do |grand|
+      match "/#{parent.slug}/#{child.slug}/#{grand.slug}" => "locations/locations#show" 
+    end
+    end
   end
 
   namespace :locations do

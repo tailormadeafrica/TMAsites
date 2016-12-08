@@ -30,6 +30,11 @@ module Refinery
         new_slug = self.slug.gsub("-span-","-").gsub("-span","")
         self.update_column(:slug, new_slug)
       end
+
+      def roots
+        where(:parent_id => 'NULL')
+      end
+
     end
   end
 end
