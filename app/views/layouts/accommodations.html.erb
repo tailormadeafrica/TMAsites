@@ -3,9 +3,6 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body id="container">
-
-
-
     
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
@@ -39,6 +36,11 @@
               </div>
             <% end %>
           </div>
+          <% unless home_page? %>
+            <div class="breadcrumb" style="position: relative; z-index: 100; margin-bottom: -40px;">
+              <%= breadcrumbs(@page, @location, @post, @accommodation) %>
+            </div>
+          <% end %>
           <div class="accommodation">
             <div class="container">
               <div class="accommodation-container">
@@ -46,7 +48,7 @@
                   <div class="col-xs-12">
                     <%= raw @accommodation.description %>
 
-                    <% if @accommodation.low_rate.present? and @accommodation.mid_rate and @accommodation.high_rate %>
+                    <% if @accommodation.low_rate.present? and @accommodation.mid_rate.present? and @accommodation.high_rate.present? %>
                       <div class="rates">
                         <h2 class="amenities">Prices & Seasons</h2>
                         <div class="monthbar">
