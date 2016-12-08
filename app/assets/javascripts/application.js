@@ -84,7 +84,7 @@ $(document).ready(function() {
         });
     });
 
-        $(".read_more").click(function() {
+    $(".read_more").click(function() {
 
         $(this).parent().parent().css("display", "none");
         $(".more_text").slideDown(600,"easeInOutQuad");
