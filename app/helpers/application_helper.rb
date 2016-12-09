@@ -46,25 +46,25 @@ module ApplicationHelper
 
     if accommodation.present?
 
-      # if accommodation.locations.first.parent.present?
-      #   if accommodation.locations.first.parent.parent.present?
-      #     links << link_to(strip_tags(accommodation.locations.first.parent.parent.name), "/#{accommodation.locations.first.parent.parent.slug}")
-      #     links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{location.parent.parent.slug}/#{accommodation.locations.first.parent.slug}")
-      #   else
-      #     links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{accommodation.locations.first.parent.slug}")
-      #   end
-      # end
-      #
-      # if accommodation.locations.first.present?
-      #   if accommodation.locations.first.parent.present? and accommodation.locations.first.parent.parent.present?
-      #     links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.parent.parent.slug}/#{accommodation.locations.first.parent.slug}/#{accommodation.locations.first.slug}")
-      #   elsif accommodation.locations.first.parent.present?
-      #     links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.parent.slug}/#{accommodation.locations.first.slug}")
-      #   else
-      #     links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.slug}")
-      #   end
-      # end
-      #
+      if accommodation.locations.first.present? and accommodation.locations.first.parent.present?
+        if accommodation.locations.first.parent.parent.present?
+          links << link_to(strip_tags(accommodation.locations.first.parent.parent.name), "/#{accommodation.locations.first.parent.parent.slug}")
+          links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{location.parent.parent.slug}/#{accommodation.locations.first.parent.slug}")
+        else
+          links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{accommodation.locations.first.parent.slug}")
+        end
+      end
+
+      if accommodation.locations.first.present?
+        if accommodation.locations.first.parent.present? and accommodation.locations.first.parent.parent.present?
+          links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.parent.parent.slug}/#{accommodation.locations.first.parent.slug}/#{accommodation.locations.first.slug}")
+        elsif accommodation.locations.first.parent.present?
+          links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.parent.slug}/#{accommodation.locations.first.slug}")
+        else
+          links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.slug}")
+        end
+      end
+
       links << link_to(strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation))
     end
     raw links.join('&nbsp;&nbsp;>&nbsp;&nbsp;')
