@@ -49,7 +49,7 @@ module ApplicationHelper
       if accommodation.locations.first.present? and accommodation.locations.first.parent.present?
         if accommodation.locations.first.parent.parent.present?
           links << link_to(strip_tags(accommodation.locations.first.parent.parent.name), "/#{accommodation.locations.first.parent.parent.slug}")
-          links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{location.parent.parent.slug}/#{accommodation.locations.first.parent.slug}")
+          links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{accommodation.locations.first.parent.parent.slug}/#{accommodation.locations.first.parent.slug}")
         else
           links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{accommodation.locations.first.parent.slug}")
         end
