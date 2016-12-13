@@ -5,6 +5,8 @@ module Refinery
     
       acts_as_indexed :fields => [:name, :rating, :description]
 
+      after_save :remove_span
+
       extend FriendlyId
       friendly_id :name, :use => [:slugged]
 
@@ -27,6 +29,11 @@ module Refinery
       has_and_belongs_to_many :amenities, :class_name => '::Refinery::Amenities::Amenity', :join_table => 'refinery_accommodations_amenities'
 
       default_scope { order(:position) }
+
+      def remove_span
+        new_slug = self.slug.gsub("-span-","-").gsub("-span","")
+        self.update_column(:slug, new_slug)
+      end
 
     end
   end
