@@ -5,14 +5,14 @@ Refinery::Core::Engine.routes.append do
     match "/#{parent.slug}" => "locations/locations#show" 
       if parent.accommodations.present?
         parent.accommodations.each do |acc|
-          match "/#{parent.slug}/#{acc.name}" => "accommodations/accommodations#show" 
+          match "/#{parent.slug}/#{acc.slug}" => "accommodations/accommodations#show" 
         end
       end
       parent.children.each do |child|
         match "/#{parent.slug}/#{child.slug}" => "locations/locations#show" 
         if child.accommodations.present?
           child.accommodations.each do |acc|
-            match "/#{parent.slug}/#{child.slug}/#{acc.name}" => "accommodations/accommodations#show" 
+            match "/#{parent.slug}/#{child.slug}/#{acc.slug}" => "accommodations/accommodations#show" 
           end
         end
         child.children.each do |grand|
@@ -20,7 +20,7 @@ Refinery::Core::Engine.routes.append do
 
           if grand.accommodations.present?
             grand.accommodations.each do |acc|
-              match "/#{parent.slug}/#{child.slug}/#{grand.slug}#{acc.name}" => "accommodations/accommodations#show" 
+              match "/#{parent.slug}/#{child.slug}/#{grand.slug}#{acc.slug}" => "accommodations/accommodations#show" 
             end
           end
         end
