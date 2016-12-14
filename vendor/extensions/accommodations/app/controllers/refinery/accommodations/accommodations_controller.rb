@@ -12,7 +12,11 @@ module Refinery
       end
 
       def show
-        @accommodation = Accommodation.find(params[:id])
+        if params[:id].present?
+           accommodation = Accommodation.find_by_slug(params[:id])         
+        else
+          @accommodation = Accommodation.find_by_slug(request.path.split('/').last)
+        end
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @accommodation in the line below:
