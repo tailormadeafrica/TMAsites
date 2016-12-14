@@ -14,12 +14,24 @@
   </div>
   <%= render '/shared/banner' %>
 
-  <div id="welcome">
+  <div id="welcome" class="hidden-xs">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 div1">
           <h1><%= @page.title %></h1>
           <%= raw @page.content_for(:body) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="welcome" class="visible-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 div1">
+          <h1><%= @page.title %></h1>
+          <div class="hide_this_text"><%= raw(truncate(@page.content_for(:body), :length => 250, :omission => " ...<a href='#' class='btn btn-custom read_more'>Show More</a>")) %></div>
+          <div class="more_text" style="display:none;"><%= raw @page.content_for(:body) %></div>
         </div>
       </div>
     </div>

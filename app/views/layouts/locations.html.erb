@@ -153,7 +153,7 @@
       <% blogs = @location.posts.live.first(3) %>
       <% if blogs.present? %>
         <div id="locations-blog-container">
-          <div class="container">
+
             <div class="location_blogs">
               <div class="container">
                 <div class="row">
@@ -190,7 +190,7 @@
                 </div>
               </div>
             </div>
-          </div>
+
         </div>
       <% end %>
 
@@ -202,7 +202,7 @@
             <%=raw @location.description %>
           </div>
           <div class="col-xs-12">
-            <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Start Your Journey</a>
+            <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Enquire Now</a>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">

@@ -1,8 +1,8 @@
 <% content_for :body_content_left do %>
-  <ul id="accommodations">
+  <ul style="list-style: none;" id="accommodations">
     <% @accommodations.each do |accommodation| %>
       <li>
-        <%= link_to accommodation.name, refinery.accommodations_accommodation_path(accommodation) %>
+        <%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %>
       </li>
     <% end %>
   </ul>

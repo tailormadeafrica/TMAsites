@@ -7,13 +7,13 @@ module ApplicationHelper
     end
   end
 
-  def breadcrumbs(page=nil,location=nil,post=nil)
+  def breadcrumbs(page=nil,location=nil,post=nil,accommodation=nil)
     links = []
     links << link_to('Home', '/')
 
 
     if page.present?
-      if page.link_url.present? and ['/locations'].include? page.link_url
+      if page.link_url.present? and (['/locations'].include? page.link_url or ['/accommodations'].include? page.link_url)
         # links << page.title
       else
         links << link_to(page.title, refinery.url_for(page))
@@ -42,6 +42,30 @@ module ApplicationHelper
 
     if post.present?
       links << link_to(post.title, refinery.blog_post_url(post))
+    end
+
+    if accommodation.present?
+
+      if accommodation.locations.first.present? and accommodation.locations.first.parent.present?
+        if accommodation.locations.first.parent.parent.present?
+          links << link_to(strip_tags(accommodation.locations.first.parent.parent.name), "/#{accommodation.locations.first.parent.parent.slug}")
+          links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{accommodation.locations.first.parent.parent.slug}/#{accommodation.locations.first.parent.slug}")
+        else
+          links << link_to(strip_tags(accommodation.locations.first.parent.name), "/#{accommodation.locations.first.parent.slug}")
+        end
+      end
+
+      if accommodation.locations.first.present?
+        if accommodation.locations.first.parent.present? and accommodation.locations.first.parent.parent.present?
+          links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.parent.parent.slug}/#{accommodation.locations.first.parent.slug}/#{accommodation.locations.first.slug}")
+        elsif accommodation.locations.first.parent.present?
+          links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.parent.slug}/#{accommodation.locations.first.slug}")
+        else
+          links << link_to(strip_tags(accommodation.locations.first.name), "/#{accommodation.locations.first.slug}")
+        end
+      end
+
+      links << link_to(strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation))
     end
     raw links.join('&nbsp;&nbsp;>&nbsp;&nbsp;')
   end
