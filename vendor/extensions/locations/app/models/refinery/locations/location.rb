@@ -7,13 +7,13 @@ module Refinery
       after_save :remove_span
 
       extend FriendlyId
-      friendly_id :name, :use => [:slugged]
+      friendly_id :title, :use => [:slugged]
     
       acts_as_indexed :fields => [:name, :description]
 
       validates :name, :presence => true, :uniqueness => true
 
-      attr_accessible :name, :flag_image_id, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name, :parent_id, :lft, :rgt, :depth, :accommodation_ids, :side_body
+      attr_accessible :name, :flag_image_id, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name, :parent_id, :lft, :rgt, :depth, :accommodation_ids, :side_body, :url_title
 
       belongs_to :parent, :class_name => '::Refinery::Locations::Location'
       belongs_to :cover_image, :class_name => '::Refinery::Image'
@@ -33,6 +33,14 @@ module Refinery
 
       def roots
         where(:parent_id => 'NULL')
+      end
+
+      def title
+        if url_title.present?
+          url_title
+        else
+          name
+        end
       end
 
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161207125703) do
+ActiveRecord::Schema.define(:version => 20161215112014) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -316,6 +316,7 @@ ActiveRecord::Schema.define(:version => 20161207125703) do
     t.text     "side_body"
     t.integer  "flag_image_id"
     t.string   "slug"
+    t.string   "url_title"
   end
 
   create_table "refinery_locations_posts", :id => false, :force => true do |t|
