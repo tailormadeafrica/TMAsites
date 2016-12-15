@@ -20,7 +20,7 @@ Refinery::Core::Engine.routes.append do
 
           if grand.accommodations.present?
             grand.accommodations.each do |acc|
-              match "/#{parent.slug}/#{child.slug}/#{grand.slug}#{acc.slug}" => "accommodations/accommodations#show" 
+              match "/#{parent.slug}/#{child.slug}/#{grand.slug}/#{acc.slug}" => "accommodations/accommodations#show" 
             end
           end
         end
