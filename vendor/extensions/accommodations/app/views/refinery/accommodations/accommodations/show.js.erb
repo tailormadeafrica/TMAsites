@@ -24,3 +24,32 @@ shuffle:false,
 instantStartLayers: true,
 view:"fade"
 });
+
+$('.navbar-hamburger').click(function(){
+  if (!$('.navbar-hamburger').hasClass('navbar-on')) {
+    $('html, body').animate({scrollTop : 0},500);
+    return false;
+  }
+});
+
+$(function(){
+  $('.navbar-hamburger').click(function(){
+    $('.navbar-hamburger').toggleClass('navbar-on');
+    $('nav').fadeToggle();
+    $('nav').removeClass('nav-hide');
+  });
+});
+
+$('a[href*=#]:not([href=#])').click(function() {
+  $('.navbar-on').click();
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});

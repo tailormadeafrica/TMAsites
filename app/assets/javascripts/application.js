@@ -126,6 +126,13 @@ $(document).ready(function() {
         }
     });
 
+    $('.navbar-hamburger').click(function(){
+        if (!$('.navbar-hamburger').hasClass('navbar-on')) {
+            $('html, body').animate({scrollTop : 0},500);
+            return false;
+        }
+    });
+
     $('.arrow').click(function() {
         $('html,body').animate({
             scrollTop: $('#welcome').offset().top
