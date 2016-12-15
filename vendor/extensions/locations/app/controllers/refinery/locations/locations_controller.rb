@@ -19,19 +19,18 @@ module Refinery
         if params[:id].present?
            @location = Location.find_by_slug(params[:id])         
         else
-
           @location = Location.find_by_slug(request.path.split('/').last)
         end
 
-          if @location.present? and params[:id].present?
-            if @location.parent.present? and @location.parent.parent.present? 
-              redirect_to "/#{@location.parent.parent.slug}/#{@location.parent.slug}/#{@location.slug}", :status => :moved_permanently 
-            elsif @location.parent.present? 
-              redirect_to  "/#{@location.parent.slug}/#{@location.slug}", :status => :moved_permanently 
-            else 
-              redirect_to "/#{@location.slug}", :status => :moved_permanently 
-            end 
-          end
+        if @location.present? and params[:id].present?
+          if @location.parent.present? and @location.parent.parent.present? 
+            redirect_to "/#{@location.parent.parent.slug}/#{@location.parent.slug}/#{@location.slug}", :status => :moved_permanently 
+          elsif @location.parent.present? 
+            redirect_to  "/#{@location.parent.slug}/#{@location.slug}", :status => :moved_permanently 
+          else 
+            redirect_to "/#{@location.slug}", :status => :moved_permanently 
+          end 
+        end
         
 
         # you can use meta fields from your model instead (e.g. browser_title)
