@@ -97,6 +97,8 @@ gem 'fog', '~> 0.8.1'
 #Monitoring
 gem 'newrelic_rpm'
 
+gem 'nokogiri', '1.6.8.1'
+
 group :development do
      gem 'better_errors', '1.1.0'
      gem "binding_of_caller"
