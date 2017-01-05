@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161215112014) do
+ActiveRecord::Schema.define(:version => 20161221091623) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(:version => 20161215112014) do
     t.string   "rating"
     t.text     "description"
     t.integer  "position"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "location_id"
     t.integer  "gallery_id"
     t.string   "latitude"
@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(:version => 20161215112014) do
     t.float    "mid_rate"
     t.float    "high_rate"
     t.string   "slug"
+    t.string   "browser_title"
+    t.string   "meta_description"
   end
 
   create_table "refinery_accommodations_amenities", :id => false, :force => true do |t|
@@ -303,8 +305,8 @@ ActiveRecord::Schema.define(:version => 20161215112014) do
     t.integer  "cover_image_id"
     t.text     "description"
     t.integer  "position"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "gallery_id"
     t.string   "latitude"
     t.string   "longitude"
@@ -317,6 +319,8 @@ ActiveRecord::Schema.define(:version => 20161215112014) do
     t.integer  "flag_image_id"
     t.string   "slug"
     t.string   "url_title"
+    t.string   "browser_title"
+    t.string   "meta_description"
   end
 
   create_table "refinery_locations_posts", :id => false, :force => true do |t|
