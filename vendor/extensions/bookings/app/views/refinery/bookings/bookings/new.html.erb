@@ -192,6 +192,10 @@
             <div class='field i_accept_name_field string_field'>
               <%= f.text_field :i_accept_name, :label => false, :placeholder => "Full Name"  %>
             </div>
+            <img src="/assets/captcha.jpg" style="float: right;">
+            <div class='field string_field' style="float: left;">
+              <%= f.text_field :human_answer, :label => false, :placeholder => "Retype Captcha"  %>
+            </div>
           </div>
         </div>
       </div>
