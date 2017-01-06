@@ -47,7 +47,7 @@ p,ul,ol {width:740px; text-align:justify; margin:0 auto 30px auto;}
 
 ul {text-align:left;}
 
-hr {margin:50px 0; border-top:1px solid #e7e7e7;}
+hr {margin:50px 0; border-top:1px solid #e7e7e7; max-width:740px; margin:50px auto;}
 
 table {width: 65%; margin: 0 auto; border: 1px solid #eeeeee; margin-bottom: 30px;
   th {border-bottom: 1px solid #eeeeee; border-right: 1px solid #eeeeee; font-weight:normal; text-align:center;}
@@ -420,7 +420,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #locations .streetchild {width:auto;}
   #locations ul { -webkit-column-count: 1;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:165px!important;}
-  
+
   #welcome .locations .bx-viewport, #welcome .accommodations .bx-viewport, #contact .locations .bx-viewport, #contact .accommodations .bx-viewport, .modal .locations .bx-viewport, .modal .accommodations .bx-viewport {height:auto!important;}
   .bx-viewport .slide {margin-right:0!important;}
   .bx-viewport .slide a .name {margin:10px 0!important;}
