@@ -403,7 +403,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   h3 {line-height:24px; margin:30px 0;}
   .div1,.div2,.div3 {opacity:1;}
   h1,h2,p,ul {width:100%!important;}
-  .read_more {margin: 30px 55px 0 55px;}
+  .read_more {margin: 30px auto; display: block;} 
   #welcome, #locations, #contact, #people, #countries, #locations-blog-container, #welcome-locations, #welcome-accomodation,.accommodation {padding:0!important;}
   .content-container .content h1, .content-container .content h2 {margin:30px 0;}
   #people { background: #489AF0;}
