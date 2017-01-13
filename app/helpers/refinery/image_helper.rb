@@ -30,7 +30,7 @@ module Refinery
 
         # coverted_image = image.thumbnail(geometry).encode('jpg', '-quality 55')
 
-        image_tag(coverted_image.url, {
+        image_tag(image.thumbnail(geometry).url, {
           :alt => image.respond_to?(:title) ? image.title : image.image_name,
         }.merge(dimensions).merge(options))
       end
