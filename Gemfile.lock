@@ -138,6 +138,8 @@ GEM
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
+    heroku-deflater (0.6.2)
+      rack (>= 1.4.5)
     hike (1.2.3)
     hitimes (1.2.4)
     hitimes (1.2.4-x86-mingw32)
@@ -337,6 +339,7 @@ DEPENDENCIES
   commands
   dragonfly (= 0.9.12)
   fog (~> 0.8.1)
+  heroku-deflater
   i18n (= 0.6.1)
   jquery-colorbox-rails (= 0.1.4)
   jquery-rails (~> 2.0.0)
