@@ -61,5 +61,11 @@ module TailorMadeAfrica
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #PERFECT COMPRESSTION
+    config.middleware.use Rack::Deflater
+    config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
+
+
   end
 end
