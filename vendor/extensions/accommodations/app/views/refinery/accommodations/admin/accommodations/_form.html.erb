@@ -181,7 +181,7 @@
     <% ::Refinery::Locations::Location.where("parent_id IS NOT NULL").all.each do |location| %>
       <div>
         <%= check_box_tag "accommodation[location_ids][]", location.id, @accommodation.locations.include?(location) %>
-        <%= location.name %>
+        <%= strip_tags(location.name) %>
       </div>
     <% end %>
   </div>

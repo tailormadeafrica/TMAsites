@@ -35,6 +35,9 @@ module Refinery
         self.update_column(:slug, new_slug)
       end
 
+      def is_valid?
+        gallery.present? and gallery.items.present?
+      end
     end
   end
 end
