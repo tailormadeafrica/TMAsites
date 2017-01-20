@@ -361,6 +361,18 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   }
 }
 
+#locations.search {
+  .search-item {width: 48%; float: left; margin: 0 10px 20px 10px; border: 1px solid #e7e7e7; padding: 10px 10px 0 10px;
+    h1 {display:none;}
+    h3 {margin:0; height:30px; overflow:hidden;}
+    p,ul { margin-bottom:20px; height:40px; overflow:hidden;}
+    img {margin-right:10px; float:left;}
+    .search-item-body {float:left; width:70%;}
+    a {float:none;}
+  }
+  ul,p {width:auto; font-size: 12px; line-height: 20px;}
+}
+
 /*** xs ***/
 @media (max-width:767px) {
   .container {max-width:340px;}
@@ -451,6 +463,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {display:none;}
   .social_links {right:0; position:static;}
   .streetchild a {float: none!important; margin: 0 0 20px 0!important; display: block;}
+  #locations.search .search-item {width:100%;}
+  #locations.search .search-item a {margin:0;}
+  #locations.search .search-item .search-item-body {width:60%;}
 }
 
 /*** sm ***/
@@ -468,6 +483,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .modal-dialog {width: 700px!important;}
   .modal-dialog .modal-content .modal-body {padding:0 40px 50px 40px!important;}
   .modal-dialog .modal-content .modal-body h1 {margin: 30px 0 50px 0;}
+  #locations.search .search-item {width:47%;}
+  #locations.search .search-item a {margin:0;}
+  #locations.search .search-item .search-item-body {width:63%;}
 }
 
 /*** md ***/
@@ -477,6 +495,8 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   #locations-blog-container .blog-post , .blog_post .blog_post_pod {width:auto!important;}
   #locations-blog-container .banner-arrow, .blog_post .banner-arrow {top:221px!important;}
   .accommodations .bx-wrapper, .locations .bx-wrapper {max-width:926px!important;}
+   #locations.search .search-item {width:47%;}
+   #locations.search .search-item a {margin:0;}
 }
 
 /*** lg ***/

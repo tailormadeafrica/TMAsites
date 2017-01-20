@@ -14,29 +14,38 @@
     <%= render '/shared/banner' %>
 
     <% if params[:search].present? %>
-      <div id="locations">
+      <div id="locations" class="search">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 div1">
               <h1>Search Results for: <%= params[:search] %></h1>
               <% if @all_locations.present? and @all_accommodations.present? %>
                 <% if @all_locations.present? %>
-                  <h3>Locations</h3>
-                  <ul>
+                  <h2>Locations</h2>
+                  <ul class=" list-inline list-unstyled">
                     <% @all_locations.each do |location| %>
-                      <li>
-                        <%= link_to strip_tags(location.name), location_link(location) %>
+                      <li class="search-item">
+                        <%= link_to(image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag),refinery.locations_location_path(location)) if location.cover_image.present? %>
+                        <div class="search-item-body">
+                          <h3><%= link_to location.name, refinery.locations_location_path(location) %></h3>
+                          <div class="description"><%=raw truncate(location.description, :length => 120) %></div>
+                        </div>
                       </li>
                     <% end %>
                   </ul>
                 <% end %>
+                <div class="clear"></div>
                 <% if @all_accommodations.present? %>
-                  <h3>Accommodations</h3>
-                  <ul>
+                  <h2>Accommodation</h2>
+                  <ul class=" list-inline list-unstyled">
                     <% @all_accommodations.each do |accommodation| %>
                       <% if accommodation.is_valid? %>
-                        <li>
-                          <%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %>
+                        <li class="search-item">    
+                          <%= link_to(image_fu(accommodation.cover_image, "105x80#c", :alt => accommodation.cover_image.alt_tag),refinery.accommodations_accommodation_path(accommodation)) if accommodation.cover_image.present? %>               
+                          <div class="search-item-body">
+                            <h3><%= link_to accommodation.name, refinery.accommodations_accommodation_path(accommodation) %></h3>
+                            <div class="description"><%=raw truncate(accommodation.description, :length => 120) %></div>
+                          </div>
                         </li>
                       <% end %>
                     <% end %>
