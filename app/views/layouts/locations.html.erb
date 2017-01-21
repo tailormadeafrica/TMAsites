@@ -19,7 +19,7 @@
           <div class="row">
             <div class="col-xs-12 div1">
               <h1>Search Results for: <%= params[:search] %></h1>
-              <% if @all_locations.present? and @all_accommodations.present? %>
+              <% if @all_locations.present? or @all_accommodations.present? %>
                 <% if @all_locations.present? %>
                   <h2>Locations</h2>
                   <ul class=" list-inline list-unstyled">
