@@ -117,8 +117,20 @@
   <div class='field'>
     <%= f.label :meta_description -%>
     <%= f.text_area :meta_description, :class => 'widest', :rows => 7  -%>
-
   </div>
+
+  <h1>Search(Comma Separated)</h1>
+  <div class='field'>
+    <%= f.label :inclusion -%>
+    <%= f.text_area :inclusion, :class => 'widest', :rows => 7  -%>
+  </div>
+  <div class='field'>
+    <%= f.label :exclusion -%>
+    <%= f.text_area :exclusion, :class => 'widest', :rows => 7  -%>
+  </div>
+  
+
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.locations.admin.locations.location'),

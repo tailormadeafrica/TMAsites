@@ -13,7 +13,7 @@ module Refinery
 
       validates :name, :presence => true, :uniqueness => true
 
-      attr_accessible :name, :flag_image_id, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name, :parent_id, :lft, :rgt, :depth, :accommodation_ids, :side_body, :url_title, :browser_title, :meta_description
+      attr_accessible :name, :flag_image_id, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name, :parent_id, :lft, :rgt, :depth, :accommodation_ids, :side_body, :url_title, :browser_title, :meta_description, :exclusion, :inclusion
 
       belongs_to :parent, :class_name => '::Refinery::Locations::Location'
       belongs_to :cover_image, :class_name => '::Refinery::Image'
