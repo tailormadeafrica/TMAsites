@@ -7,8 +7,8 @@ module Refinery
 
       def index
         if params[:search].present?
-          @all_locations = ::Refinery::Locations::Location.where("(description LIKE :search or name iLIKE :search or inclusion iLIKE :search) or exclusion NOT iLIKE :search", search: "%#{params[:search]}%")
-          @all_accommodations = ::Refinery::Accommodations::Accommodation.where("(description iLIKE :search or name iLIKE :search or inclusion iLIKE :search) or exclusion NOT iLIKE :search", search: "%#{params[:search]}%")
+          @all_locations = ::Refinery::Locations::Location.where("COALESCE(exclusion, '') NOT iLIKE :search AND (description iLIKE :search OR name iLIKE :search OR inclusion iLIKE :search)", search: "%#{params[:search]}%")
+          @all_accommodations = ::Refinery::Accommodations::Accommodation.where("COALESCE(exclusion, '') NOT iLIKE :search AND (description iLIKE :search OR name iLIKE :search OR inclusion iLIKE :search)", search: "%#{params[:search]}%")
         end
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @location in the line below:
