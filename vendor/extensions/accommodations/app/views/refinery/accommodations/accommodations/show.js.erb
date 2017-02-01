@@ -53,3 +53,22 @@ $('a[href*=#]:not([href=#])').click(function() {
     }
   }
 });
+
+var count = $('.lodge_truncate_text').children('p').length;
+if (count > 2){
+    $( ".lodge_truncate_text > p:nth-child(3)").nextAll().addClass('hide_this_tag');
+    $(".hide_this_tag").hide();
+    $( ".lodge_truncate_text").append("<p style='text-align: center;'><a href='#' class='read_more_content2 btn btn-custom'>Read More</a></p>");
+}
+
+$('.read_more_content2').click(function () {
+    $(this).parent().siblings('.hide_this_tag').slideToggle();
+    var $this = $(this);
+    $this.toggleClass('.link');
+    if($this.hasClass('.link')){
+        $this.text('Read Less');
+    } else {
+        $this.text('Read More');
+    }
+    return false
+});

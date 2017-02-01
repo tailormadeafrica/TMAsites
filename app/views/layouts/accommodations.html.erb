@@ -46,8 +46,9 @@
               <div class="accommodation-container">
                 <div class="row">
                   <div class="col-xs-12">
-                    <%= raw @accommodation.description %>
-
+                    <div class='truncate_text'>
+                      <%= raw @accommodation.description %>
+                    </div>
                     <% if @accommodation.low_rate.present? and @accommodation.mid_rate.present? and @accommodation.high_rate.present? %>
                       <div class="rates">
                         <h2 class="amenities">Prices & Seasons</h2>

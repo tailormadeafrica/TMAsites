@@ -170,6 +170,25 @@ $(document).ready(function() {
         $('.location_nav').toggleClass('open');
     });
 
+    var count = $('.truncate_text').children('p').length;
+    if (count > 2){
+        $( ".truncate_text > p:nth-child(3)").nextAll().addClass('hide_this_tag');
+        $(".hide_this_tag").hide();
+        $( ".truncate_text").append("<p style='text-align: center;'><a href='#' class='read_more_content btn btn-custom'>Read More</a></p>");
+    }
+
+    $('.read_more_content').click(function () {
+        $(this).parent().siblings('.hide_this_tag').slideToggle();
+        var $this = $(this);
+        $this.toggleClass('.link');
+        if($this.hasClass('.link')){
+            $this.text('Read Less');
+        } else {
+            $this.text('Read More');
+        }
+        return false
+    });
+
     ///////////////////////////////////////////
 
     WaterMark('input#inquiry_name','Name');
