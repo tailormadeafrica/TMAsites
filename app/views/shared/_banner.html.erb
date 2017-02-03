@@ -2,11 +2,7 @@
   <div class="master-slider ms-skin-default" id="masterslider">
     <% @location.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
-        <a href="#welcome">
-          <div class="banner-overlay hidden-xs">
-            <img class="img-responsive" src="/assets/banner-overlay-scrollOLD.png">
-          </div>
-        </a>
+        <a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
         <div class="ms-slide slide-1" data-delay="4">
           <div class="overlay"></div>
           <%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>
@@ -26,7 +22,7 @@
   <div class="master-slider ms-skin-default" id="masterslider">
     <% @accommodation.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
-        <a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scrollOLD.png"></div></a>
+        <a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
         <div class="ms-slide slide-1" data-delay="4">
           <div class="overlay"></div>
           <%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>
@@ -104,7 +100,7 @@
   <div class="master-slider ms-skin-default" id="masterslider">
       <% @page.banners.published.reorder('position ASC').each do |banner| %>
         <% if banner.image.present? %>
-          <a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scrollOLD.png"></div></a>
+          <a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
           <div class="ms-slide slide-1" data-delay="4">
             <div class="overlay"></div>
             <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>

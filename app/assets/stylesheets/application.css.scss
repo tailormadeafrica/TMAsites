@@ -98,10 +98,11 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
 
 #masterslider,#post_masterslider {
   .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url("../assets/overlay.png") repeat;}
-  .banner-overlay {position:absolute; z-index:10;  bottom:0;
-    img {width:100%;}
+  .banner-overlay {position:absolute; z-index:10;  bottom:0; left: 50%; margin-left: -960px;
+    img {position: relative;}
   }
-
+  .banner-overlay::before, .banner-overlay::after {content: ''; position: absolute; width: 100%; background-color: #fff; left: -100%; bottom: 0; height: 30px;}
+  .banner-overlay::after {left: auto; right: -100%;}
   .logo,.banner-text {@include vertical-align();
     h2 {@include slider_font(); font-size:48px; margin:0; letter-spacing:5px;}
     h1 {@include slider_font(); font-size:95px; margin:0; letter-spacing:13px; line-height:normal;
