@@ -13,19 +13,19 @@
           <% @inquiry ||= ::Refinery::Inquiries::Inquiry.new %>
           <%= simple_form_for [refinery, :inquiries, @inquiry], :html => {:class => 'form-vertical'} do |f| %>
             <div class="row"><div class="col-xs-12 col-sm-6">
-              <%= f.input :name, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>
-              <%= f.input :email, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' }%>
-              <%= f.input :phone, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>
+              <%= f.input :name, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control', :required => true  } %>
+              <%= f.input :email, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control', :required => true  }%>
+              <%= f.input :phone, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control', :required => true  } %>
             </div>
             <div class="col-xs-12 col-sm-6">
-              <%= f.input :message, :wrapper => :bootstrap_12,:input_html  => {:rows=>6, :class => 'form-control' } %>
+              <%= f.input :message, :wrapper => :bootstrap_12,:input_html  => {:rows=>6, :class => 'form-control', :required => true  } %>
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="captcha">
               </div>
             </div>
             <div class="col-xs-12 col-sm-6">
-              <%= f.input :captcha, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>
+              <%= f.input :captcha, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control', :required => true } %>
             </div>
             <div class="col-xs-12">
               <%= f.submit 'Submit', :class=>"btn btn-default btn-custom", :data => {:disable_with => "Saving..."} %>
