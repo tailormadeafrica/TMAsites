@@ -6,7 +6,7 @@
 <li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %> class="parent">
 
   <% if menu_branch.url.include? '/locations' %>
-    <h2><span  class="location_btn">Locations</span></h2>
+    <h2><span  class="location_btn">Destinations</span></h2>
     <% @menu_locations = Refinery::Locations::Location.order("position ASC").where('parent_id IS null') %>
     <% if @menu_locations.present? %>
       <ul class="location_nav open">
