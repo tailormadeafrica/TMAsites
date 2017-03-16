@@ -79,7 +79,7 @@
       <% end %>
 
     <% if @activity.locations.present? %>
-      <div class="locations">
+      <div class="locations-activities">
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
@@ -89,7 +89,7 @@
                 <% @activity.locations.each do |location| %>
                     <div class="slide">
                       <%= link_to location_link(location)  do %>                        
-                        <%= image_fu location.cover_image, "300x175#c", :alt => location.cover_image.alt_tag if location.cover_image.present? %>
+                        <%= image_fu location.cover_image, "165x165#c", :alt => location.cover_image.alt_tag if location.cover_image.present? %>
                         <%= location.name %>
                       <% end %>
                     </div>
