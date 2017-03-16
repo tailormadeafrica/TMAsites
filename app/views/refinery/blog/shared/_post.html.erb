@@ -5,7 +5,7 @@
 
       <%= link_to(image_fu(post.image, "490x380#c", :alt => post.image.alt_tag, :class=>"img-responsive"), refinery.blog_post_path(post)) %>
       <div class="banner-arrow"><img class="img-responsive" src="/assets/arrow.png"></div>
-      <div class="content">
+      <div class="content cf">
         <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
         <div class="date"><%= post.published_at.strftime("%d %B %Y") %></div>
         <% if blog_post_teaser_enabled? %>

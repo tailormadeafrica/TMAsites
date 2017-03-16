@@ -296,7 +296,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   .blog_post {
     .blog_post_pod {width:350px; position:relative; margin:0 auto 30px auto;
       h2 {margin:0; font-size:14px; line-height:20px; height:40px; overflow:hidden;}
-      .content {background:#ffffff; padding:20px;
+      .content {background:#ffffff; padding:20px 20px 0 20px;
         .date {font-size: 12px; font-style: italic;}
         p {width:auto; font-size:12px; line-height:18px; height:36px; overflow:hidden;}
       }
