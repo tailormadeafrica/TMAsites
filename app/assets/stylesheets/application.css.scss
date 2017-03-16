@@ -372,8 +372,9 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
   ul,p {width:auto; font-size: 12px; line-height: 20px;}
 }
 
-.locations-activities {background: #808080; padding-bottom: 50px;color:#ffffff;
-    h2 {color:#ffffff;}
+.locations-activities,.accommodations-activities {background: #808080; padding-bottom: 50px;color:#ffffff;
+    .bx-wrapper .bx-viewport {background: #808080;}
+    h1 {color:#ffffff;}
     a {color:#ffffff;}
     img {border-radius:50%;}
 }
