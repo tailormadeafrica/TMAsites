@@ -16,23 +16,29 @@
     <% if action_name == "index" %>
 
       <% if @activities.present? %>
-      <div id="activities">
+      <div id="activities" class="search">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 div1">
-                <h1>Experiences</h1>
-                <ul>
-                  <% @activities.each do |activity| %>
-                  <li>
-                    <%= link_to activity.name, refinery.activities_activity_path(activity) %>
-                  </li>
-                  <% end %>
-                </ul>
+                  <ul class=" list-inline list-unstyled">
+                    <% @activities.each do |activity| %>
+                      <li class="search-item">
+                        <%= link_to(image_fu(activity.cover_image, "105x80#c", :alt => activity.cover_image.alt_tag),refinery.activities_activity_path(activity)) if activity.cover_image.present? %>
+                        <div class="search-item-body">
+                          <h3><%= link_to strip_tags(activity.name), refinery.activities_activity_path(activity) %></h3>
+                          <div class="description"><%=raw truncate(activity.description, :length => 120) %></div>
+                        </div>
+                      </li>
+                    <% end %>
+                  </ul>
               </div>
             </div>
           </div>
         </div>
-      <% end %>
+      <% end %>   
+
+
+
 
     <% else %>
 
