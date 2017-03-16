@@ -298,7 +298,7 @@ nav:before { content: ''; display: inline-block; height: 100%; vertical-align: m
       h2 {margin:0; font-size:14px; line-height:20px; height:40px; overflow:hidden;}
       .content {background:#ffffff; padding:20px;
         .date {font-size: 12px; font-style: italic;}
-        p {width:auto; font-size:12px; line-height:18px; margin-bottom:0;}
+        p {width:auto; font-size:12px; line-height:18px; height:36px; overflow:hidden;}
       }
     }
     .banner-arrow {position: absolute; top:271px; z-index: 1;}
