@@ -5,11 +5,12 @@ module Refinery
     
       acts_as_indexed :fields => [:name, :description, :rating]
 
-      attr_accessible :name, :cover_image_id, :description, :rating, :position, :gallery_id, :sub_name, :location_ids, :accommodation_ids
+      attr_accessible :name, :cover_image_id, :description, :rating, :position, :gallery_id, :sub_name, :location_ids, :accommodation_ids, :image_id
 
       validates :name, :presence => true, :uniqueness => true
           
       belongs_to :cover_image, :class_name => '::Refinery::Image'
+      belongs_to :image, :class_name => '::Refinery::Image'
       belongs_to :gallery, :class_name => '::Refinery::Portfolio::Gallery'
 
       has_and_belongs_to_many :accommodations, :class_name => '::Refinery::Accommodations::Accommodation', :join_table => 'refinery_activities_accommodations'

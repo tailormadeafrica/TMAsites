@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170131145916) do
+ActiveRecord::Schema.define(:version => 20170410085727) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20170131145916) do
     t.datetime "updated_at",     :null => false
     t.integer  "gallery_id"
     t.string   "sub_name"
+    t.integer  "image_id"
   end
 
   create_table "refinery_activities_accommodations", :id => false, :force => true do |t|
