@@ -95,7 +95,7 @@ gem "jquery-colorbox-rails", "0.1.4"
 gem 'fog', '~> 0.8.1'
 
 #Monitoring
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '3.17.2.327'
 
 gem 'nokogiri', '1.6.8.1'
 
