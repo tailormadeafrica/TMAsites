@@ -22,6 +22,16 @@ module Refinery
         @booking = Booking.new(params[:booking])
 
         if @booking.save
+
+          render :pdf => "cover.pdf",
+                 :layout => false,
+                 :template => 'refinery/bookings/bookings/template',
+                 :page_size => 'A4',
+                 margin:  { top: 0, bottom: 0, left: 0, right: 0 },
+                 :save_to_file => Rails.root.join('tmp', "cover.pdf"),
+                 :show_as_html => false, :dpi => '300', :save_only => true
+
+
           begin
             Mailer.notification(@booking, request).deliver
           rescue => e
@@ -43,6 +53,7 @@ module Refinery
           render :action => 'new'
         end
       end
+
 
     protected
 

@@ -12,9 +12,12 @@ module Refinery
 
       def notification(booking, request)
         @booking = booking
+
+        attachments['cover.pdf'] = File.read("#{Rails.root.join}/tmp/cover.pdf")
         mail :subject  => Refinery::Bookings::Setting.notification_subject,
              :to       => Refinery::Bookings::Setting.notification_recipients,
              :from     => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>"
+
       end
 
     end
