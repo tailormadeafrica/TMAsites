@@ -42,23 +42,85 @@ $(document).ready(function() {
     });
 
 
-    //////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+    $('.bxsliderSafari').bxSlider({
+        minSlides: 0,
+        maxSlides: 5,
+        slideWidth: 218,
+        slideMargin: 5,
+        auto: false,
+        moveSlides:1,
+        pager: false,
+        autoHover: true,
+        controls: true,
+        nextSelector: '.safari-slider-next',
+        prevSelector: '.safari-slider-prev',
+        nextText: ' ',
+        prevText: ' '
+    });
 
-  var slider = new MasterSlider();
+    $('.bxsliderExperience').bxSlider({
+        minSlides: 0,
+        maxSlides: 1,
+        slideWidth: 1110,
+        slideMargin: 5,
+        auto: false,
+        moveSlides:1,
+        pager: false,
+        autoHover: true,
+        controls: true,
+        nextSelector: '.experience-slider-next',
+        prevSelector: '.experience-slider-prev',
+        nextText: ' ',
+        prevText: ' '
+    });
 
-  slider.control('arrows');
+    var slider = new MasterSlider();
 
-  slider.setup('masterslider' , {
-    width:1920,
-    height:935,
-    space:0,
-    layout:'fullwidth',
-    loop:true,
-    preload:0,
-    autoplay:true,
-    view:'fade',
-    overPause:false
-  });
+    slider.control('arrows');
+
+    slider.setup('masterslider' , {
+        width:1920,
+        height:970,
+        space:0,
+        layout:'fullwidth',
+        loop:true,
+        preload:0,
+        autoplay:true,
+        view:'fade',
+        overPause:false
+    });
+
+    $('.navbar').scrollupbar();
+
+
+    $window = $(window);
+    $window.scroll(function() {
+        if ( $window.scrollTop() <= 120 ) {
+            $('.navbar').removeClass('navbar-scroll');
+        }
+        else {
+            $('.navbar').addClass('navbar-scroll');
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////
+
+  // var slider = new MasterSlider();
+  //
+  // slider.control('arrows');
+  //
+  // slider.setup('masterslider' , {
+  //   width:1920,
+  //   height:935,
+  //   space:0,
+  //   layout:'fullwidth',
+  //   loop:true,
+  //   preload:0,
+  //   autoplay:true,
+  //   view:'fade',
+  //   overPause:false
+  // });
 
     var post_slider = new MasterSlider();
 
@@ -228,6 +290,6 @@ $(window).load(function() {
     });
 });
 
-new UISearch( document.getElementById( 'sb-search' ) );
+// new UISearch( document.getElementById( 'sb-search' ) );
 
 

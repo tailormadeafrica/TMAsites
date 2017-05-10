@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170410085727) do
+ActiveRecord::Schema.define(:version => 20170427121138) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(:version => 20170410085727) do
     t.integer  "gallery_id"
     t.string   "sub_name"
     t.integer  "image_id"
+    t.string   "activity_type"
   end
 
   create_table "refinery_activities_accommodations", :id => false, :force => true do |t|
@@ -296,9 +297,13 @@ ActiveRecord::Schema.define(:version => 20170410085727) do
     t.string   "email"
     t.string   "phone"
     t.text     "message"
-    t.boolean  "spam",       :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "spam",        :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.string   "budget"
+    t.string   "destination"
+    t.string   "from"
+    t.boolean  "first_trip"
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
@@ -491,6 +496,15 @@ ActiveRecord::Schema.define(:version => 20170410085727) do
 
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
+
+  create_table "refinery_safari_types", :force => true do |t|
+    t.string   "name"
+    t.integer  "image_id"
+    t.text     "body"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"

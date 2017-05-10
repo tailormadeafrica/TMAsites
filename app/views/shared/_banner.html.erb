@@ -98,24 +98,64 @@
   </div>
 <% elsif @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
-      <% @page.banners.published.reorder('position ASC').each do |banner| %>
-        <% if banner.image.present? %>
-          <a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
-          <div class="ms-slide slide-1" data-delay="4">
-            <div class="overlay"></div>
-            <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
-            <% if home_page? %>
-              <img src="/assets/blank.gif" data-src="/assets/logo.png" class="ms-layer logo" data-type="image" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <% elsif banner.description.present? %>
-              <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-                <%= raw banner.description %>
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
               </div>
-            <% end %>
-            <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
           </div>
-        <% end %>
+        </div>
+      </div>
+    </div>
+    <% @page.banners.published.reorder('position ASC').each do |banner| %>
+      <% if banner.image.present? %>
+        <div class="ms-slide" data-delay="5">
+          <%= image_fu(banner.image, "1920x970#c", :alt => banner.image.alt_tag) %>
+          <div class="ms-layer" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo">
+            <img src="/assets/logo.png">
+            <div class="clear"></div>
+            <a href="<%= banner.url %>" class="btn btn-custom hidden-xs hidden-sm">Enquire Now</a>
+          </div>
+          <div class="overlay"></div>
+        </div>
       <% end %>
+    <% end %>
   </div>
+
+
+
+  <!--<div class="master-slider ms-skin-default" id="masterslider">-->
+      <!--<%# @page.banners.published.reorder('position ASC').each do |banner| %>-->
+        <!--<%# if banner.image.present? %>-->
+          <!--<a href="#welcome"><div class="banner-overlay hidden-xs"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>-->
+          <!--<div class="ms-slide slide-1" data-delay="4">-->
+            <!--<div class="overlay"></div>-->
+            <!--<%#= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>-->
+            <!--<%# if home_page? %>-->
+              <!--<img src="/assets/blank.gif" data-src="/assets/logo.png" class="ms-layer logo" data-type="image" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">-->
+            <!--<%# elsif banner.description.present? %>-->
+              <!--<div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">-->
+                <!--<%#= raw banner.description %>-->
+              <!--</div>-->
+            <!--<%# end %>-->
+            <!--<img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">-->
+          <!--</div>-->
+        <!--<%# end %>-->
+      <!--<%# end %>-->
+  <!--</div>-->
 <% end %>
 
 

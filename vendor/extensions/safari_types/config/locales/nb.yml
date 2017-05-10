@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      safari_types:
+        title: Safari Types
+    safari_types:
+      admin:
+        safari_types:
+          actions:
+            create_new: Lag en ny Safari Type
+            reorder: Endre rekkefølgen på Safari Types
+            reorder_done: Ferdig å endre rekkefølgen Safari Types
+          records:
+            title: Safari Types
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Safari Types enda. Klikk på "Lag en ny Safari Type" for å legge til din første safari type.
+          safari_type:
+            view_live_html: Vis hvordan denne safari type ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne safari type
+            delete: Fjern denne safari type permanent
+      safari_types:
+        show:
+          other: Andre Safari Types
+  activerecord:
+    attributes:
+      'refinery/safari_types/safari_type':
+        name: Name
+        image: Image
+        body: Body
