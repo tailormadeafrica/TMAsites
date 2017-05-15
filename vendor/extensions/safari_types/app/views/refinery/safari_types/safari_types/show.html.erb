@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @safari_type.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @safari_type.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @safari_type.image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Body</h1>
+    <p>
+      <%=raw @safari_type.body %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="safari_types">
+      <% @safari_types.each do |safari_type| %>
+        <li>
+          <%= link_to safari_type.name, refinery.safari_types_safari_type_path(safari_type) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

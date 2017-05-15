@@ -23,6 +23,8 @@ PATH
       refinerycms-settings (~> 2.0.0)
     refinerycms-locations (1.0)
       refinerycms-core (~> 2.0.3)
+    refinerycms-safari_types (1.0)
+      refinerycms-core (~> 2.0.3)
     refinerycms-teams (1.0)
       refinerycms-core (~> 2.0.3)
 
@@ -370,6 +372,7 @@ DEPENDENCIES
   refinerycms-pc_banners (~> 2.0.2)
   refinerycms-pods (~> 2.1.0)
   refinerycms-portfolio!
+  refinerycms-safari_types!
   refinerycms-settings (= 2.0.1)
   refinerycms-teams!
   refinerycms-videos (~> 2.0.1)

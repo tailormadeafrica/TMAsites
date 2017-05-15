@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      safari_types:
+        title: Safari Types
+#        article: masculino/femenino
+    safari_types:
+      admin:
+        safari_types:
+          actions:
+            create_new: Crear nuevo safari type
+            reorder: Reordenar safari types
+            reorder_done: Reordenación de safari types completada
+          records:
+            title: Safari Types
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay safari types todavía. Pulsa en "Crear nuevo Safari Type" para crear tu primer safari type.
+          safari_type:
+            view_live_html: Ver este safari type como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este safari type
+            delete: Borrar este safari type para siempre
+      safari_types:
+        show:
+          other: Otros safari types
+  activerecord:
+    attributes:
+      'refinery/safari_types/safari_type':
+        name: Name
+        image: Image
+        body: Body

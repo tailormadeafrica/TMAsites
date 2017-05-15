@@ -7,6 +7,7 @@
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
 
+<ul id='<%= dom_id %>' class='<%= css %>'>
   <%= render :partial => '/refinery/menu_branch', :collection => roots,
              :locals => {
                :hide_children => hide_children,
@@ -14,5 +15,5 @@
                :menu_levels => local_assigns[:menu_levels],
                :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
              } -%>
-
+</ul>
 <% end -%>

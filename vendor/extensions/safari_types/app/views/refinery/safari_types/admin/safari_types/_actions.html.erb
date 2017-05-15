@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::SafariTypes::Admin::SafariTypesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.safari_types_admin_safari_types_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_safari_types_admin_safari_type_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::SafariTypes::Admin::SafariTypesController.sortable? && ::Refinery::SafariTypes::SafariType.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Safari Types"),
+                 refinery.safari_types_admin_safari_types_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Safari Types"),
+                 refinery.safari_types_admin_safari_types_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

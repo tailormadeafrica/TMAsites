@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      safari_types:
+        title: Safari Types
+    safari_types:
+      admin:
+        safari_types:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Safari Type
+            reorder: Réordonner les Safari Types
+            reorder_done: Fin de réordonnancement des Safari Types
+          records:
+            title: Safari Types
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Safari Type. Cliquer sur "Créer un(e) nouve(au/l/lle) Safari Type" pour créer votre premi(er/ère) safari type.'
+          safari_type:
+            view_live_html: Voir ce(t/tte) safari type <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) safari type
+            delete: Supprimer définitivement ce(t/tte) safari type
+      safari_types:
+        show:
+          other: Autres Safari Types
+  activerecord:
+    attributes:
+      'refinery/safari_types/safari_type':
+        name: Name
+        image: Image
+        body: Body
