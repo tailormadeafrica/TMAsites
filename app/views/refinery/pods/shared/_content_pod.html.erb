@@ -6,7 +6,7 @@
           <%= image_fu pod.image, '85x85#c' %>
         <% end %>
         <h3><%= pod.name %></h3>
-          <%= raw pod.body %>
+          <%=raw truncate(pod.body, :length => 60, :omission => "...") %>
         <div>Find out more ></div>
       <% end %>
     </div>

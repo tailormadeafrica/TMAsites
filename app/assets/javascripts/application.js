@@ -83,7 +83,7 @@ $(document).ready(function() {
         width:1920,
         height:970,
         space:0,
-        layout:'fullwidth',
+        layout:'fullscreen',
         loop:true,
         preload:0,
         autoplay:true,
@@ -201,6 +201,16 @@ $(document).ready(function() {
         }, 1000);
         return false;
     });
+
+
+    $('.logo').click(function() {
+        $('html,body').animate({
+            scrollTop: $('#contact_area').offset().top
+        }, 1000);
+        return false;
+    });
+
+
 
     $('#accommodations_slider').bxSlider({
         slideWidth: 165,

@@ -1,11 +1,15 @@
 <% content_for :body_content_left do %>
-  <ul style="list-style: none;" id="accommodations">
+  <ul class="list-inline list-unstyled accommodations">
     <% @accommodations.each do |accommodation| %>
-      <li>
-        <%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %>
+      <li class="search-item">
+        <div class="search-item-body">
+          <h3><%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>
+          <div class="description"><%=raw truncate(accommodation.description, :length => 120) %></div>
+        </div>
       </li>
     <% end %>
   </ul>
 <% end %>
 
 <%= render '/refinery/content_page' %>
+ 
