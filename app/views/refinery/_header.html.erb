@@ -75,7 +75,7 @@
                   <div class="captcha"></div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                  <%= f.input :captcha, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control' } %>
+                  <%= f.input :captcha, :wrapper => :bootstrap_12, :input_html => { :class => 'form-control', :required => true, :pattern => "Y4X3B" } %>
                 </div>
                 <div class="col-xs-12">
                   <%= f.submit 'Submit', :class=>"btn btn-default btn-custom", :data => {:disable_with => "Saving..."} %>
