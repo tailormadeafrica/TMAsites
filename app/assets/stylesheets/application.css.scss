@@ -76,16 +76,16 @@ strong {font-weight:500;}
   ul {padding:15px 0;}
 }
 
-.overlay-hover {position: fixed; background: rgba(34,34,34,0.85); top: 0; left: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s, height .35s; overflow: hidden; z-index:3000;}
+.overlay-hover {position: absolute; background: rgba(34,34,34,0.85); top: 0; left: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s, height .35s; overflow: hidden; z-index:3000;}
 .overlay-hover.open {opacity: 1; visibility: visible; height: 100%; }
-.overlay-hover .nav-title {color: #fff; position: absolute; left: 50%; transform: translate(-50%); top: 8%;}
-.overlay-hover nav {position: relative; height: 50%; top: 43%; transform: translateY(-50%); text-align: center;}
-.overlay-hover ul {list-style: none; padding: 0; margin: 0; display: inline-block; height: 215px;
+.overlay-hover h2{color: #fff;}
+.overlay-hover nav {text-align: center;}
+.overlay-hover ul {list-style: none; padding: 0; margin: 50px 0 0 0; display: inline-block;
   li {position: relative; opacity: 0; margin-bottom: 10px;
     a,a:hover {color: #FFF;}
-    img {margin-right:20px;}
+    img {margin:0 20px;}
   }
-  li.close-image {text-align:center; margin:50px -20px 0 0;}
+  li.close-image {text-align:center; margin:50px -20px 0 -20px;}
   li.close-image:hover {cursor:pointer;}
 }
 

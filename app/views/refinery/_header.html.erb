@@ -39,9 +39,9 @@
 <% @all_locations = Refinery::Locations::Location.where("parent_id IS NULL").order('position ASC') %>
 <% if @all_locations.present? %>
   <div class="overlay-hover" id="overlay">
-    <h2 class="nav-title">Destinations</h2>
     <nav class="overlay-menu">
-      <ul>
+      
+      <ul><h2>Destinations</h2>
         <% @all_locations.each do |location| %>
           <li><%= link_to(image_fu(location.flag_image, '20x20#c') + location.name, refinery.locations_location_path(location)) %></li>
         <% end %>
