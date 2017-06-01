@@ -293,11 +293,8 @@ strong {font-weight:500;}
       p,ul {height:40px; overflow:hidden; font-size: 12px; line-height: 20px;}
     }
   }
-  .shell {
-    max-height: 300px;
-    max-width: 400px;
-}
-  .bx-wrapper { margin-bottom:20px auto 0 auto!important;}
+  
+  .bx-wrapper { margin-bottom:20px!important;}
   .slide img {margin-bottom:7px; border-radius:50%;}
   .slide .name {color:$color;}
 }
