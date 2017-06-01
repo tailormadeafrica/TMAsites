@@ -38,7 +38,7 @@
 
 <% @all_locations = Refinery::Locations::Location.where("parent_id IS NULL").order('position ASC') %>
 <% if @all_locations.present? %>
-  <div class="overlay" id="overlay">
+  <div class="overlay-hover" id="overlay">
     <h2 class="nav-title">Destinations</h2>
     <nav class="overlay-menu">
       <ul>
