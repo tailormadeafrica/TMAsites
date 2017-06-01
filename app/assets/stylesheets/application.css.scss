@@ -213,7 +213,7 @@ strong {font-weight:500;}
   form {background:rgba(0,0,0,0.7); padding:50px 90px;
     h1 {color:#ffffff; background:url(/assets/bg-h1.gif) bottom center no-repeat; padding-bottom:25px; margin:0;}
     p {margin:25px 0 10px 0;}
-    .form-control {color:#ffffff; background:transparent; border:0; border-radius:0; border-bottom:1px solid rgba(255,255,255,0.5); box-shadow:none; padding:25px 0;}
+    .form-control {color:#ffffff; background:transparent; border:0; border-radius:0; border-bottom:1px solid rgba(255,255,255,0.5); box-shadow:none; padding:25px 0; line-height:34px;}
     textarea {padding:15px 0!important;}
     .option-group {padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.5);
       label {font-weight:300; float:left; line-height:15px;  margin:0;}
@@ -293,7 +293,11 @@ strong {font-weight:500;}
       p,ul {height:40px; overflow:hidden; font-size: 12px; line-height: 20px;}
     }
   }
-  .bx-wrapper { margin-bottom:20px!important;}
+  .shell {
+    max-height: 300px;
+    max-width: 400px;
+}
+  .bx-wrapper { margin-bottom:20px auto 0 auto!important;}
   .slide img {margin-bottom:7px; border-radius:50%;}
   .slide .name {color:$color;}
 }

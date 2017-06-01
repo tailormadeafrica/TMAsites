@@ -52,6 +52,14 @@ $(document).ready(function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+    
+
+    var ss = $('.slideshow').bxSlider({
+        touchEnabled: false,
+        oneToOneTouch: false
+    });
+
     $('.bxsliderSafari').bxSlider({
         minSlides: 0,
         maxSlides: 5,
