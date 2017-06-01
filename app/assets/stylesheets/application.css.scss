@@ -443,7 +443,7 @@ strong {font-weight:500;}
       }
       li:first-child {border-left:1px solid rgba(255,255,255,0.3); border-right:1px solid rgba(255,255,255,0.3);}
     }
-    ul {padding:0 0 20px 0;
+    ul {padding:0 0 20px 0; text-align:center;
       li {display:block;
         a,a:hover {line-height:36px; color:#ffffff; margin-left:15px;}
       }
@@ -476,7 +476,7 @@ strong {font-weight:500;}
   .experience {padding:0 0 30px 0;
     h1 {font-size:24px; margin:0 0 30px 0;}
     .bx-wrapper { margin:0 auto!important;}
-    .bx-viewport {height:auto!important;
+    .bx-viewport {height:1170px!important;
       .experience-item,.main-item {margin:0 0 5px 0;
         a .caption {width:100px; top:50px;
           h3 {font-size:18px;}
@@ -533,6 +533,7 @@ strong {font-weight:500;}
   #welcome .modal .modal-dialog,#welcome .modal .modal-dialog .modal-body form {width:auto;}
   #welcome .modal .modal-dialog .modal-body {padding: 0 20px 20px 20px;}
   .accommodation ul.amenities {padding:0;}
+  .main-item {width: 217px; height: 162px; overflow: hidden;}
 }
 
 /*** sm ***/
