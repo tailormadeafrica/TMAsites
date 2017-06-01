@@ -51,11 +51,12 @@
                 <li>
                   <div class="safari-type-item">
                     <%= link_to refinery.activities_activity_path(item) do %>
-                      <%= image_fu item.image, "218x330#c" %>
                       <div class="caption">
                         <h3><%= item.name %></h3>
                         <div class="btn btn-custom">Read More</div>
                       </div>
+                      <div class="slider-overlay"></div>
+                      <%= image_fu item.image, "218x330#c" %>
                     <% end %>
                   </div>
                 </li>
@@ -88,19 +89,21 @@
                     <% if item == items.first %>
                       <div class="experience-item main-item">
                         <%= link_to refinery.activities_activity_path(item) do %>
-                          <%= image_fu item.image, '440x330#c' %>
                           <div class="caption">
                             <h3><%= item.name %></h3>
                           </div>
+                          <div class="slider-overlay"></div>
+                          <%= image_fu item.image, '440x330#c' %>
                         <% end %>
                       </div>
                     <% else %>
                       <div class="experience-item">
                         <%= link_to refinery.activities_activity_path(item) do %>
-                          <%= image_fu item.image, '217x162#c' %>
                           <div class="caption">
                             <h3><%= item.name %></h3>
                           </div>
+                          <div class="slider-overlay"></div>
+                          <%= image_fu item.image, '217x162#c' %>
                         <% end %>
                       </div>
                     <% end %>
