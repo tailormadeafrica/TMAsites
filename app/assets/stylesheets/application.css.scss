@@ -154,7 +154,7 @@ strong {font-weight:500;}
     .bx-viewport {background:#f4f4f4; box-shadow:none; border:0; height:330px!important;
       .safari-type-item,.experience-item {margin:0 0 20px; position: relative;
         a {display:block; width:100%; height:100%; position:relative;
-          .caption {width:100px; position: absolute; top: 100px; left:0; right:0; margin:0 auto; text-align:center; z-index:300;
+          .caption {width:60%; position: absolute; top: 100px; left:0; right:0; margin:0 auto; text-align:center; z-index:300;
             h3 {color:#ffffff; background:url(/assets/bg-h3.gif) bottom center no-repeat; padding-bottom:15px; margin:0; height:67px;}
             .btn-custom,.btn-custom:hover {@include button (25px,25px,#ffffff,1px solid #ffffff,transparent,20px,12px,0 10px);}
           }
