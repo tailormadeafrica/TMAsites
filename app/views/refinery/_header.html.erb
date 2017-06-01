@@ -32,6 +32,25 @@
         <li class="hidden-xs"><a href="tel:<%= number %>"><img src="/assets/phone.png"><%= number %></a></li>
       </ul>
     </div>
+
   </div>
 </nav>
+
+<% @all_locations = Refinery::Locations::Location.where("parent_id IS NULL").order('position ASC') %>
+<% if @all_locations.present? %>
+  <div class="overlay" id="overlay">
+    <h2 class="nav-title">Destinations</h2>
+    <nav class="overlay-menu">
+      <ul>
+        <% @all_locations.each do |location| %>
+          <li><%= link_to(image_fu(location.flag_image, '20x20#c') + location.name, refinery.locations_location_path(location)) %></li>
+        <% end %>
+          <li class="close-image"><img class="close-menu" src="/assets/close.png"/></li>
+      </ul>
+    </nav>
+  </div>
+<% end %>
+
+
+
 

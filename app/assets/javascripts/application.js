@@ -20,6 +20,15 @@
 
 $(document).ready(function() {
 
+      $('.open-menu').on('click', function() {        
+         $('#overlay').addClass('open');
+      });
+     
+      $('.close-menu').on('click', function() {
+        $('#overlay').removeClass('open');
+      });
+
+
 
     $(".cboxElement").colorbox({
         maxWidth: "90%",
@@ -83,7 +92,7 @@ $(document).ready(function() {
         width:1920,
         height:970,
         space:0,
-        layout:'fullscreen',
+        layout:'fullwidth',
         loop:true,
         preload:0,
         autoplay:true,

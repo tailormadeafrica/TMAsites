@@ -3,12 +3,16 @@
     css = "class='#{classes.join(' ')}'".html_safe
   end
 -%>
+
 <li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
   <% if menu_branch.title.downcase.include? 'contact' %>
     <%= link_to(menu_branch.title, '#contact_area', :class => 'contact_link') -%>
+  <% elsif menu_branch.title.downcase.include? 'destinations' %>
+    <%= link_to(menu_branch.title, '#', :class => 'open-menu') -%>
   <% else %>
     <%= link_to(menu_branch.title, refinery.url_for(menu_branch.url)) -%>
   <% end %>
+
 
   <% if ( (children = menu_branch.children unless hide_children).present? &&
           (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
@@ -21,7 +25,7 @@
                    :menu_levels => local_assigns[:menu_levels]
                  } -%>
     </ul>
-  <% end -%>
+  <% end %>
 </li>
 
 
