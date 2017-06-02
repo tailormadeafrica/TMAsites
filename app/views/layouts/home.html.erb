@@ -90,7 +90,7 @@
                       <div class="experience-item main-item">
                         <%= link_to refinery.activities_activity_path(item) do %>
                           <div class="caption">
-                            <h3><%= item.name %></h3>
+                            <h3><%= raw item.name %></h3>
                           </div>
                           <div class="slider-overlay"></div>
                           <%= image_fu item.image, '440x330#c' %>
