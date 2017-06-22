@@ -144,99 +144,101 @@
         </div>
       </div>
 
-      <div class="safari-experience">
-        <div class="container">
-          <% safaris = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'safari_type', 'both') %>
-          <% if safaris.present? %>
-            <div class="safari-type">
-              <div class="row">
-                <div class="col-xs-12">
-                  <h1>Safari Type</h1>
+      <% if @location.depth == 0 %>
+        <% safaris = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'safari_type', 'both') %>
+        <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both') %>      
+        <div class="safari-experience" style="margin-bottom:150px;">
+          <div class="container">          
+            <% if safaris.present? %>
+              <div class="safari-type">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h1>Safari Type</h1>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="controls">
+                      <span class="safari-slider-next"></span>
+                    </div>
+                    <ul class="bxsliderSafari">
+                      <% safaris.each do |item| %>
+                        <li>
+                          <div class="safari-type-item">
+                            <%= link_to refinery.activities_activity_path(item) do %>
+                              <%= image_fu item.image, "218x330#c" %>
+                              <div class="caption">
+                                <h3><%= raw item.name %></h3>
+                                <div class="btn btn-custom">Read More</div>
+                              </div>
+                            <% end %>
+                          </div>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="controls">
-                    <span class="safari-slider-next"></span>
+            <% end %>          
+            <% if activities.present? %>
+              <div class="experience white">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h1>Experience</h1>
                   </div>
-                  <ul class="bxsliderSafari">
-                    <% safaris.each do |item| %>
-                      <li>
-                        <div class="safari-type-item">
-                          <%= link_to refinery.activities_activity_path(item) do %>
-                            <%= image_fu item.image, "218x330#c" %>
-                            <div class="caption">
-                              <h3><%= raw item.name %></h3>
-                              <div class="btn btn-custom">Read More</div>
-                            </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="controls">
+                      <span class="experience-slider-next"></span>
+                    </div>
+                    <ul class="bxsliderExperience">
+                      <% activities.each_slice(7).each do |items| %>
+                        <li>
+                          <% items.each do |item| %>
+                            <% if item == items.first %>
+                              <div class="experience-item main-item">
+                                <%= link_to refinery.activities_activity_path(item) do %>
+                                  <%= image_fu item.image, '440x330#c' %>
+                                  <div class="caption">
+                                    <h3><%= raw item.name %></h3>
+                                  </div>
+                                <% end %>
+                              </div>
+                            <% else %>
+                              <div class="experience-item">
+                                <%= link_to refinery.activities_activity_path(item) do %>
+                                  <%= image_fu item.image, '217x162#c' %>
+                                  <div class="caption">
+                                    <h3><%= raw item.name %></h3>
+                                  </div>
+                                <% end %>
+                              </div>
+                            <% end %>
                           <% end %>
-                        </div>
-                      </li>
-                    <% end %>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          <% end %>
-          <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both') %>
-          <% if activities.present? %>
-            <div class="experience white">
-              <div class="row">
-                <div class="col-xs-12">
-                  <h1>Experience</h1>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="controls">
-                    <span class="experience-slider-next"></span>
+                        </li>
+                      <% end %>
+                    </ul>
                   </div>
-                  <ul class="bxsliderExperience">
-                    <% activities.each_slice(7).each do |items| %>
-                      <li>
-                        <% items.each do |item| %>
-                          <% if item == items.first %>
-                            <div class="experience-item main-item">
-                              <%= link_to refinery.activities_activity_path(item) do %>
-                                <%= image_fu item.image, '440x330#c' %>
-                                <div class="caption">
-                                  <h3><%= raw item.name %></h3>
-                                </div>
-                              <% end %>
-                            </div>
-                          <% else %>
-                            <div class="experience-item">
-                              <%= link_to refinery.activities_activity_path(item) do %>
-                                <%= image_fu item.image, '217x162#c' %>
-                                <div class="caption">
-                                  <h3><%= raw item.name %></h3>
-                                </div>
-                              <% end %>
-                            </div>
-                          <% end %>
-                        <% end %>
-                      </li>
-                    <% end %>
-                  </ul>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="experience-footer">
-                    <h3 class="hidden-xs">Tailormade Africa has something for everyone.</h3>
-                    <h2 class="hidden-xs">Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob)</h2>
-                    <a href="/activities" class="btn btn-custom">Browse All Experiences</a>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="experience-footer">
+                      <h3 class="hidden-xs">Tailormade Africa has something for everyone.</h3>
+                      <h2 class="hidden-xs">Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob)</h2>
+                      <a href="/activities" class="btn btn-custom">Browse All Experiences</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
-      </div>
+      <% end %>
 
       <% child_locations = Refinery::Locations::Location.where(:parent_id => @location.id) %>
       <% if child_locations.present? %>
-        <div class="locations">
+        <div class="locations" style="margin-top:-150px;">
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
@@ -350,104 +352,9 @@
         </div>
       </div>
 
-      <div class="safari-experience">
-        <div class="container">
-          <% safaris = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'safari_type', 'both') %>
-          <% if safaris.present? %>
-            <div class="safari-type">
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h1>Safari Type</h1>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="controls">
-                      <span class="safari-slider-next"></span>
-                    </div>
-                    <ul class="bxsliderSafari">
-                      <% safaris.each do |item| %>
-                        <li>
-                          <div class="safari-type-item">
-                            <%= link_to refinery.activities_activity_path(item) do %>
-                              <%= image_fu item.image, "218x330#c" %>
-                              <div class="caption">
-                                <h3><%= raw item.name %></h3>
-                                <div class="btn btn-custom">Read More</div>
-                              </div>
-                            <% end %>
-                          </div>
-                        </li>
-                      <% end %>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-
-          <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both') %>
-          <% if activities.present? %>
-            <div class="experience">
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h1>Experience</h1>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="controls">
-                      <span class="experience-slider-next"></span>
-                    </div>
-                    <ul class="bxsliderExperience">
-                      <% activities.each_slice(7).each do |items| %>
-                        <li>
-                          <% items.each do |item| %>
-                            <% if item == items.first %>
-                              <div class="experience-item main-item">
-                                <%= link_to refinery.activities_activity_path(item) do %>
-                                  <%= image_fu item.image, '440x330#c' %>
-                                  <div class="caption">
-                                    <h3><%= raw item.name %></h3>
-                                  </div>
-                                <% end %>
-                              </div>
-                            <% else %>
-                              <div class="experience-item">
-                                <%= link_to refinery.activities_activity_path(item) do %>
-                                  <%= image_fu item.image, '217x162#c' %>
-                                  <div class="caption">
-                                    <h3><%= raw item.name %></h3>
-                                  </div>
-                                <% end %>
-                              </div>
-                            <% end %>
-                          <% end %>
-                        </li>
-                      <% end %>
-                    </ul>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="experience-footer">
-                      <h3 class="hidden-xs">Tailormade Africa has something for everyone.</h3>
-                      <h2 class="hidden-xs">Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob)</h2>
-                      <a href="/activities" class="btn btn-custom">Browse All Experiences</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
           <% accommodations = @location.accommodations %>
           <% if accommodations.present? %>
-            <div class="accommodations">
+            <div class="accommodations" style="margin-top:-100px;">
               <div clas="container">
                 <div class="row">
                   <div class="col-xs-12">

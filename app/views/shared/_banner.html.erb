@@ -11,6 +11,7 @@
               <h2>Discover</h2>
             <% end %>
             <h1><%= raw @location.name %></h1>
+            <a href="#contact_area"><img src="/assets/banner-btn.png"></a>
           </div>
           <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
@@ -28,6 +29,7 @@
           <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
             <h2>Visit</h2>
             <h1><%= raw @accommodation.name %></h1>
+            <a href="#contact_area"><img src="/assets/banner-btn.png"></a>
           </div>
           <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
@@ -44,6 +46,7 @@
           <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
             <h2>Experience</h2>
             <h1><%= raw @activity.name %></h1>
+            <a href="#contact_area"><img src="/assets/banner-btn.png"></a>
           </div>
           <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
@@ -82,8 +85,7 @@
 <% elsif @post.present? and @post.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
     <% @post.banners.published.reorder('position ASC').each do |banner| %>
-      <% if banner.image.present? %>
-        
+      <% if banner.image.present? %>        
         <div class="ms-slide slide-1" data-delay="4">
           <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
           <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
@@ -154,6 +156,7 @@
             <% elsif banner.description.present? %>
               <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
                 <%= raw banner.description %>
+                <a href="#contact_area"><img src="/assets/banner-btn.png"></a>
               </div>
             <% end %>
             <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">

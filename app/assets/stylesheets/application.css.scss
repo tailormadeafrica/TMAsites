@@ -147,7 +147,7 @@ strong {font-weight:500;}
 }
 
   .safari-type,.experience {text-align:center; background:#f4f4f4; padding:100px 0;
-    h1 {margin:0 0 40px 0;}
+    h1 {margin:0 0 10px 0;}
     .controls {position:absolute; width:100%;
       .safari-slider-next a,.experience-slider-next a {background:url(../assets/control-right.gif) no-repeat; height:50px; width:50px; position:absolute; right:-5px; top:140px;}
     }
@@ -471,6 +471,7 @@ strong {font-weight:500;}
   .bx-wrapper,.bx-viewport {width:218px!important; left:0!important;}
   .safari-type {padding:30px 0;
     h1 {font-size:24px; margin:0 0 30px 0;}
+    p.click {margin-bottom: 20px; color:$color;}
     .bx-wrapper { margin:0 auto!important;}
     .bx-viewport {height:auto!important;
       li {float:none!important;}
@@ -478,6 +479,7 @@ strong {font-weight:500;}
   }
   .experience {padding:0 0 30px 0;
     h1 {font-size:24px; margin:0 0 30px 0;}
+    p.click {margin-bottom: 20px; color:$color;}
     .bx-wrapper { margin:0 auto!important;}
     .bx-viewport {height:1170px!important;
       .experience-item,.main-item {margin:0 0 5px 0;
