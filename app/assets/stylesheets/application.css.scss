@@ -427,6 +427,15 @@ strong {font-weight:500;}
   }
 }
 
+ul.links {list-style:none; margin:0; padding:0;
+  li {width: 49%; float: left; margin: 0 20px 10px 0; border: 1px solid #e7e7e7; padding: 20px; 
+    a {color: #282629; font-size: 16px; font-weight: 400;}
+    span {font-size:12px; line-height:20px; display: block; line-height: 20px;    height: 36px;
+    overflow: hidden;}
+  }
+  li:nth-child(2n+2) {margin-right:0;}
+}
+
 /*** xs ***/
 
 @media (max-width:767px) {
@@ -539,6 +548,7 @@ strong {font-weight:500;}
   #welcome .modal .modal-dialog .modal-body {padding: 0 20px 20px 20px;}
   .accommodation ul.amenities {padding:0;}
   .main-item {width: 217px; height: 162px; overflow: hidden;}
+  ul.links li {width: 100%;}
 }
 
 /*** sm ***/
@@ -582,6 +592,7 @@ strong {font-weight:500;}
   .bookings .passport select, .bookings .flights select {padding:0 2px;}
   .accommodations .bx-wrapper, .locations .bx-wrapper,.accommodations .bx-viewport, .locations .bx-viewport, .accommodations-locations .bx-wrapper,.accommodations-activities .bx-viewport,.accommodations-activities .bx-wrapper,.locations-activities .bx-viewport{max-width:547px!important;}
   #welcome .modal .modal-dialog,#welcome .modal .modal-dialog .modal-body form {width:auto;}
+  ul.links li {width: 48%;}
 }
 
 /*** md ***/
@@ -598,6 +609,7 @@ strong {font-weight:500;}
   .blog_show .blog_rhs .search-item .search-item-body h3 {font-size:14px; line-height:18px; width:auto; white-space:initial;}
   .blog_show .blog_rhs .search-item .search-item-body p {font-size:11px; line-height:18px;}
   .accommodations .bx-wrapper, .locations .bx-wrapper,.accommodations .bx-viewport, .locations .bx-viewport, .accommodations-locations .bx-wrapper,.accommodations-activities .bx-viewport,.accommodations-activities .bx-wrapper,.locations-activities .bx-viewport{max-width:737px!important;}
+  ul.links li {width: 48%;}
 }
 
 /*** lg ***/
