@@ -55,52 +55,50 @@
         </div>
       </div>
 
+      <% if @activity.locations.present? %>
+          <div class="locations-activities">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h1>Best Destinations </br><span>for <%= @activity.name %></span></h1>
+                  <ul class="list-inline list-unstyled">
+                    <% @activity.locations.each do |location| %>
+                      <li>
+                        <%= link_to(image_fu(location.cover_image, "80x80#c", :alt => location.cover_image.alt_tag), location_link(location)) if location.cover_image.present? %>
+                        <h3><%= link_to strip_tags(location.name), location_link(location) %></h3>
+                        <div class="description"><%=raw truncate(strip_tags(location.description), :length => 120) %></div>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+
       <% if @activity.accommodations.present? %>
         <div class="accommodations-activities">
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
-                <h1>Popular Lodges</h1>
-                <p class="click">Please click on each circle</p>
-                <div id="accommodations_slider">
+                <h1>Best Lodges </br><span>for <%= @activity.name %></span></h1>
+                <ul class="list-inline list-unstyled">
                   <% @activity.accommodations.each do |accommodation| %>
-                    <div class="slide">
-                      <%= link_to refinery.accommodations_accommodation_path(accommodation)  do %>                        
-                        <%= image_fu accommodation.cover_image, "165x165#c", :alt => accommodation.cover_image.alt_tag if accommodation.cover_image.present? %>
-                        <%= raw accommodation.name %>
-                      <% end %>
-                    </div>
+                    <li>
+                      <%= link_to(image_fu(accommodation.cover_image, "80x80#c", :alt => accommodation.cover_image.alt_tag), refinery.accommodations_accommodation_path(accommodation)) if accommodation.cover_image.present? %>
+                      <h3><%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>
+                      <div class="description"><%=raw truncate(strip_tags(accommodation.description), :length => 120) %></div>
+                    </li>
                   <% end %>
-                </div>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       <% end %>
 
-    <% if @activity.locations.present? %>
-      <div class="locations-activities">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <h1>Popular Places</h1>
-              <p class="click">Please click on each circle</p>
-              <div id="locations_slider">
-                <% @activity.locations.each do |location| %>
-                    <div class="slide">
-                      <%= link_to location_link(location)  do %>                        
-                        <%= image_fu location.cover_image, "165x165#c", :alt => location.cover_image.alt_tag if location.cover_image.present? %>
-                        <%= location.name %>
-                      <% end %>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     <% end %>
-  <% end %>
 
     <%= render '/refinery/footer' -%>
 

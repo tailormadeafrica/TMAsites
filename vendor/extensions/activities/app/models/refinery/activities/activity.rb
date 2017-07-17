@@ -1,7 +1,10 @@
 module Refinery
   module Activities
     class Activity < Refinery::Core::BaseModel
-      self.table_name = 'refinery_activities'      
+      self.table_name = 'refinery_activities'
+
+      extend FriendlyId
+      friendly_id :name, :use => [:slugged]
     
       acts_as_indexed :fields => [:name, :description, :rating]
 
