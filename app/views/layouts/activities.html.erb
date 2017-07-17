@@ -16,11 +16,11 @@
     <% if action_name == "index" %>
 
       <% if @activities.present? %>
-      <div id="activities" class="search">
+      <div id="welcome" class="search activities">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 div1">
-                <h1 style="padding-top:20px;">Experiences</h1>
+                <h1>Experiences</h1>
                   <ul class=" list-inline list-unstyled">
                     <% @activities.each do |activity| %>
                       <li class="search-item">

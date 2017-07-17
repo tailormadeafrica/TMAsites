@@ -20,6 +20,15 @@
 
 $(document).ready(function() {
 
+      $('.open-menu').on('click', function() {        
+         $('#overlay').addClass('open');
+      });
+     
+      $('.close-menu').on('click', function() {
+        $('#overlay').removeClass('open');
+      });
+
+
 
     $(".cboxElement").colorbox({
         maxWidth: "90%",
@@ -43,6 +52,8 @@ $(document).ready(function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+
     $('.bxsliderSafari').bxSlider({
         minSlides: 0,
         maxSlides: 5,
@@ -50,6 +61,7 @@ $(document).ready(function() {
         slideMargin: 5,
         auto: false,
         moveSlides:1,
+        infiniteLoop:false,
         pager: false,
         autoHover: true,
         controls: true,
@@ -66,6 +78,7 @@ $(document).ready(function() {
         slideMargin: 5,
         auto: false,
         moveSlides:1,
+        infiniteLoop:false,
         pager: false,
         autoHover: true,
         controls: true,
@@ -201,6 +214,16 @@ $(document).ready(function() {
         }, 1000);
         return false;
     });
+
+
+    $('.logo').click(function() {
+        $('html,body').animate({
+            scrollTop: $('#contact_area').offset().top
+        }, 1000);
+        return false;
+    });
+
+
 
     $('#accommodations_slider').bxSlider({
         slideWidth: 165,

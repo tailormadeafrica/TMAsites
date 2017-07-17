@@ -1,3 +1,58 @@
+<div class="contact" id="contact_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+        <form accept-charset="UTF-8" action="/contact" method="post">
+          <h1>Get In Touch</h1>
+          <p>Whether you are a seasoned Africa traveller or thinking about visiting<br/>the continent for the first time, we would love to speak to you.</p>
+          <input type="text" name="inquiry[name]" class="form-control" placeholder="Name*" required>
+          <input type="email" name="inquiry[email]" class="form-control" placeholder="Email*" required>
+          <input type="text" name="inquiry[phone]" class="form-control" placeholder="Phone*" required>
+          <input type="text" name="inquiry[destination]" class="form-control" placeholder="Destination*" required>
+          <input type="text" name="inquiry[budget]" class="form-control" placeholder="Budget*" required>
+          <input type="text" name="inquiry[from]" class="form-control" placeholder="From?*" required>
+          <div class="option-group cf">
+            <div class="row">
+              <div class="col-xs-12 col-sm-8">
+                <label>Is it your first trip to Africa?</label>
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="radio" class="form-control option-input" name="inquiry[first_trip]" value="1"><label>Yes</label>
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="radio" class="form-control option-input" name="inquiry[first_trip]" value="0"><label>No</label>
+              </div>
+            </div>
+          </div>
+          <textarea class="form-control" name="inquiry[message]" rows="3" placeholder="Message"></textarea>
+          <div class="captcha"></div>
+          <input type="text" name="inquiry[captcha]" class="form-control" placeholder="Retype Captcha*" required>
+          
+          <input class="btn btn-custom" type="submit" value="Send Message">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% face = copywriting('Facebook', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+<% twit = copywriting('Twitter', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+<% ins = copywriting('Instagram', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+
+<div class="social">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list list-inline">
+          <li><a href="<%= face %>" target="_blank"><img src="/assets/facebook.gif"></a></li>
+          <li><a href="<%= twit %>" target="_blank"><img src="/assets/twitter.gif"></a></li>
+          <li><a href="<%= ins %>" target="_blank"><img src="/assets/instagram.gif"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="footer">
   <div class="container">
     <div class="row">

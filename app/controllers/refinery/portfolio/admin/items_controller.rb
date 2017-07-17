@@ -108,8 +108,8 @@ module Refinery
           @gallery = Gallery.find(params[:gallery_id]) if params[:gallery_id]
         end
 
-         def set_s3_direct_post
-          @s3_direct_post = S3_BUCKET.presigned_post(key: "portfolio/#{@gallery.id}/${filename}", success_action_status: '201', acl: 'public-read')
+         def set_s3_direct_post          
+            @s3_direct_post = S3_BUCKET.presigned_post(key: "portfolio/#{@gallery.id}/${filename}", success_action_status: '201', acl: 'public-read') if S3_BUCKET.present?
          end
 
       end
