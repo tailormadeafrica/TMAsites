@@ -376,6 +376,7 @@ DEPENDENCIES
   refinerycms-settings (= 2.0.1)
   refinerycms-teams!
   refinerycms-videos (~> 2.0.1)
+  sass (= 3.4.23)
   sass-rails (~> 3.2.3)
   seed-fu (~> 2.2.0)
   sidekiq (= 3.0.0)
