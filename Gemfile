@@ -132,3 +132,4 @@ gem 'refinerycms-bookings', :path => 'vendor/extensions'
 
 
 gem 'refinerycms-safari_types', :path => 'vendor/extensions'
+gem 'refinerycms-back_links', :path => 'vendor/extensions'

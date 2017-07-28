@@ -46,3 +46,6 @@ Refinery::Bookings::Engine.load_seed
 
 # Added by Refinery CMS Safari Types extension
 Refinery::SafariTypes::Engine.load_seed
+
+# Added by Refinery CMS Back Links extension
+Refinery::BackLinks::Engine.load_seed

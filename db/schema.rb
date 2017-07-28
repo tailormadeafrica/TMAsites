@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170717081432) do
+ActiveRecord::Schema.define(:version => 20170728130055) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -142,6 +142,14 @@ ActiveRecord::Schema.define(:version => 20170717081432) do
   create_table "refinery_amenities", :force => true do |t|
     t.string   "name"
     t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_back_links", :force => true do |t|
+    t.string   "old_link"
+    t.string   "new_link"
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
