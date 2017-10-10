@@ -19,6 +19,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1><%= @page.title %></h1>
+          <h2>Tailormade Africa is a specialist tailor-made safari and Africa travel company. We are the industry leaders in customer care and bespoke itinerary design.</h2>
           <div class="text">
             <%= raw @page.content_for(:body) %>
           </div>
@@ -46,6 +47,7 @@
           <div class="col-xs-12">
             <div class="controls">
               <span class="safari-slider-next"></span>
+              <span class="safari-slider-prev"></span>
             </div>
             <ul class="bxsliderSafari">
               <% safaris.each do |item| %>
@@ -69,7 +71,7 @@
     </div>
   <% end %>
 
-  <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both') %>
+  <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both').order("RANDOM()").first(10) %>
   <% if activities.present? %>
     <div class="experience">
       <div class="container">
@@ -83,6 +85,7 @@
           <div class="col-xs-12">
             <div class="controls">
               <span class="experience-slider-next"></span>
+              <span class="experience-slider-prev"></span>
             </div>
             <ul class="bxsliderExperience">
               <% activities.each_slice(7).each do |items| %>

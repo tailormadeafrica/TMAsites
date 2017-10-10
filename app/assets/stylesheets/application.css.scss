@@ -116,7 +116,7 @@ strong {font-weight:500;}
 
 .master-slider {text-align:center;
   .overlay {position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 5; background: url(../assets/overlay.png) repeat;}
-  .search {background:rgba(0,0,0,0.6); padding:20px 0; position:absolute; width:100%; bottom:0; z-index:2000; text-align:left; color:#ffffff;
+  .search {background:rgba(0,0,0,0.6); padding:12px 0; position:absolute; width:100%; bottom:0; z-index:2000; text-align:left; color:#ffffff;
     h2 {margin:0; color:#ffffff; line-height:18px;}
     .form-control {width:100%; border: 0; border-radius: 0; height: 42px;}
     .btn-custom {@include button (42px,42px,#ffffff,1px solid $orange,$orange,0,16px,0); width:100%;}
@@ -140,6 +140,7 @@ strong {font-weight:500;}
 
 #home_page .welcome {padding:100px 0 80px 0; text-align:center;
   h1 {margin:0 0 40px 0;}
+  h2 {font-size:20px; line-height:28px;}
   .text {-webkit-column-count:2; -moz-column-count:2; column-count:2; -webkit-column-gap:30px; -moz-column-gap:30px; column-gap:30px;
     p {text-align:justify;}
   }
@@ -149,7 +150,8 @@ strong {font-weight:500;}
   .safari-type,.experience {text-align:center; background:#f4f4f4; padding:100px 0;
     h1 {margin:0 0 10px 0;}
     .controls {position:absolute; width:100%;
-      .safari-slider-next a,.experience-slider-next a {background:url(../assets/control-right.gif) no-repeat; height:50px; width:50px; position:absolute; right:-5px; top:140px;}
+      .safari-slider-next a,.experience-slider-next a {background:url(../assets/control-right.gif) no-repeat; height:50px; width:50px; position:absolute; right:-55px; top:140px;}
+      .safari-slider-prev a,.experience-slider-prev a {background:url(../assets/control-left.gif) no-repeat; height:50px; width:50px; position:absolute; right:-5px; top:140px;}
     }
     .bx-wrapper {margin:0!important;}
     .bx-viewport {background:#f4f4f4; box-shadow:none; border:0; height:330px!important;
@@ -442,7 +444,6 @@ strong {font-weight:500;}
   .bottom {padding:90px 0!important;
     h1 {margin:0 0 30px 0!important;}
   }
-
 
 /*** xs ***/
 
