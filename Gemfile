@@ -46,6 +46,7 @@ gem 'babosa', '0.3.11'
 gem 'net-ssh', '2.9.2'
 gem 'rack-cache', '1.2'
 gem 'bootstrap-datepicker-rails'
+gem 'sass', '3.4.23'
 
 
 
@@ -111,8 +112,8 @@ end
 
 group :production do
   gem 'pg', '0.17.1'
-  gem 'puma'
-  # gem 'heroku-deflater'
+  gem 'puma', '3.8.2'
+  gem 'heroku-deflater'
 end
 
 gem "nested_form"
@@ -129,3 +130,6 @@ gem 'refinerycms-amenities', :path => 'vendor/extensions'
 gem 'refinerycms-bookings', :path => 'vendor/extensions'
 
 
+
+gem 'refinerycms-safari_types', :path => 'vendor/extensions'
+gem 'refinerycms-back_links', :path => 'vendor/extensions'

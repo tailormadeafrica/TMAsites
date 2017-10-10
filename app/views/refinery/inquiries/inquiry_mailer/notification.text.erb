@@ -1,0 +1,30 @@
+<%=raw t('.greeting') %>,
+
+<%=raw t('.you_recieved_new_inquiry') %>
+
+<%=raw t('.inquiry_starts') %>
+
+<%=raw t('.from') %>: <%= @inquiry.name %>
+<%=raw t('.email') %>: <%= @inquiry.email %>
+<%=raw t('.phone') %>: <%= @inquiry.phone %>
+<% unless @inquiry.destination.blank? %>
+Destination: <%= @inquiry.destination %>
+<% end %>
+<% unless @inquiry.budget.blank? %>
+Budget: <%= @inquiry.budget %>
+<% end %>
+<% unless @inquiry.from.blank? %>
+From: <%= @inquiry.from %>
+<% end %>
+<% unless @inquiry.first_trip.blank? %>
+Is it your first trip to Africa?: <%= @inquiry.first_trip %>
+<% end %>
+<%=raw t('.message') %>:
+<%=strip_tags(@inquiry.message) %>
+
+<%=raw t('.inquiry_ends') %>
+
+<%=raw t('.closing_line') %>,
+<%=raw Refinery::Core.site_name %>
+
+<%=raw t('.ps') %>

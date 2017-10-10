@@ -20,6 +20,15 @@
 
 $(document).ready(function() {
 
+      $('.open-menu').on('click', function() {        
+         $('#overlay').addClass('open');
+      });
+     
+      $('.close-menu').on('click', function() {
+        $('#overlay').removeClass('open');
+      });
+
+
 
     $(".cboxElement").colorbox({
         maxWidth: "90%",
@@ -42,23 +51,89 @@ $(document).ready(function() {
     });
 
 
-    //////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 
-  var slider = new MasterSlider();
 
-  slider.control('arrows');
+    $('.bxsliderSafari').bxSlider({
+        minSlides: 0,
+        maxSlides: 5,
+        slideWidth: 218,
+        slideMargin: 5,
+        auto: false,
+        moveSlides:1,
+        infiniteLoop:true,
+        pager: false,
+        autoHover: true,
+        controls: true,
+        nextSelector: '.safari-slider-next',
+        prevSelector: '.safari-slider-prev',
+        nextText: ' ',
+        prevText: ' '
+    });
 
-  slider.setup('masterslider' , {
-    width:1920,
-    height:935,
-    space:0,
-    layout:'fullwidth',
-    loop:true,
-    preload:0,
-    autoplay:true,
-    view:'fade',
-    overPause:false
-  });
+    $('.bxsliderExperience').bxSlider({
+        minSlides: 0,
+        maxSlides: 1,
+        slideWidth: 1110,
+        slideMargin: 5,
+        auto: false,
+        moveSlides:1,
+        infiniteLoop:true,
+        pager: false,
+        autoHover: true,
+        controls: true,
+        nextSelector: '.experience-slider-next',
+        prevSelector: '.experience-slider-prev',
+        nextText: ' ',
+        prevText: ' '
+    });
+
+    var slider = new MasterSlider();
+
+    slider.control('arrows');
+
+    slider.setup('masterslider' , {
+        width:1920,
+        height:970,
+        space:0,
+        layout:'fullwidth',
+        loop:true,
+        preload:0,
+        autoplay:true,
+        view:'fade',
+        overPause:false
+    });
+
+    $('.navbar').scrollupbar();
+
+
+    $window = $(window);
+    $window.scroll(function() {
+        if ( $window.scrollTop() <= 120 ) {
+            $('.navbar').removeClass('navbar-scroll');
+        }
+        else {
+            $('.navbar').addClass('navbar-scroll');
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////
+
+  // var slider = new MasterSlider();
+  //
+  // slider.control('arrows');
+  //
+  // slider.setup('masterslider' , {
+  //   width:1920,
+  //   height:935,
+  //   space:0,
+  //   layout:'fullwidth',
+  //   loop:true,
+  //   preload:0,
+  //   autoplay:true,
+  //   view:'fade',
+  //   overPause:false
+  // });
 
     var post_slider = new MasterSlider();
 
@@ -140,6 +215,16 @@ $(document).ready(function() {
         return false;
     });
 
+
+    $('.logo').click(function() {
+        $('html,body').animate({
+            scrollTop: $('#contact_area').offset().top
+        }, 1000);
+        return false;
+    });
+
+
+
     $('#accommodations_slider').bxSlider({
         slideWidth: 165,
         slideMargin: 25,
@@ -189,6 +274,40 @@ $(document).ready(function() {
         return false
     });
 
+    var showChar = 250;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+
     ///////////////////////////////////////////
 
     WaterMark('input#inquiry_name','Name');
@@ -228,6 +347,42 @@ $(window).load(function() {
     });
 });
 
-new UISearch( document.getElementById( 'sb-search' ) );
+
+// $(document).ready(function() {
+//     // Configure/customize these variables.
+//     var showChar = 100;  // How many characters are shown by default
+//     var ellipsestext = "...";
+//     var moretext = "Show more >";
+//     var lesstext = "Show less";
+    
+
+//     $('.more').each(function() {
+//         var content = $(this).html();
+ 
+//         if(content.length > showChar) {
+ 
+//             var c = content.substr(0, showChar);
+//             var h = content.substr(showChar, content.length - showChar);
+ 
+//             var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+//             $(this).html(html);
+//         }
+ 
+//     });
+ 
+//     $(".morelink").click(function(){
+//         if($(this).hasClass("less")) {
+//             $(this).removeClass("less");
+//             $(this).html(moretext);
+//         } else {
+//             $(this).addClass("less");
+//             $(this).html(lesstext);
+//         }
+//         $(this).parent().prev().toggle();
+//         $(this).prev().toggle();
+//         return false;
+//     });
+// });
 
 

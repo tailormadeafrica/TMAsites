@@ -2,99 +2,179 @@
 <%= render '/refinery/html_tag' %>
 <% site_bar = render('/refinery/site_bar', :head => true) -%>
 <%= render '/refinery/head' %>
-  <body>
+  <body id="home_page">
 
 
     
   <%= site_bar -%>
   <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
-  <div class="header-partial">
-    <%= render '/refinery/header' -%>
-  </div>
+
+  <%= render '/refinery/header' -%>
+
   <%= render '/shared/banner' %>
 
-  <div id="welcome" class="hidden-xs">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 div1">
-          <h1><%= @page.title %></h1>
-          <%= raw @page.content_for(:body) %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="welcome" class="visible-xs">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 div1">
-          <h1><%= @page.title %></h1>
-          <div class="hide_this_text"><%= raw(truncate(@page.content_for(:body), :length => 250, :omission => " ...<a href='#' class='btn btn-custom read_more'>Show More</a>")) %></div>
-          <div class="more_text" style="display:none;"><%= raw @page.content_for(:body) %></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="countries">
+  <div id="welcome" class="welcome">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <div class="content-container">
-            <div class="content">
-              <h1><%= copywriting('Countries Title', {:phrase_type => 'string', :scope => 'Footer', :default => 'In depth knowledge of 16 countries' }) %></h1>
-              <p><%= copywriting('Countries Text', {:phrase_type => 'text', :scope => 'Footer', :default => 'Over many years of experience in our industry the founders and directors of Tailormade Africa have built up a detailed, in depth knowledge of 16 countries on the African continent. Not only do we offer the better known destinations in Africa but we actively promote and support the countries where the tourism infrastructure is not as advanced or, dare we say, compromised by over-commercialization. Including some of these less well-known regions in your Tailormade Africa itinerary is highly rewarding. As well as recapturing that sense of exploration you will be making a positive and long lasting impact on the development of local tourism, conservation and job creation.' }) %></p>
-              <% @menu_locations = Refinery::Locations::Location.where('parent_id IS null') %>
-              <% if @menu_locations.present? %>
-                <ul class="footer_location_nav">
-                  <% @menu_locations.each do |location| %>
-                    <li>
-                      <%= link_to location_link(location) do %>
-                        <%= image_fu location.flag_image, '35x35#c', :alt => location.flag_image.alt_tag, :class=>"img-circle" %><br>
-                        <span><%= location.name %></span>
-                      <% end %>
-                    </li>
-                  <% end %>
-                </ul>
-              <% end %>
-            </div>
-
+          <h1><%= @page.title %></h1>
+          <h2>Tailormade Africa is a specialist tailor-made safari and Africa travel company. We are the industry leaders in customer care and bespoke itinerary design.</h2>
+          <div class="text">
+            <%= raw @page.content_for(:body) %>
           </div>
-
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="#contact_area" class="btn btn-custom">Enquire Now</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="locations">
-    <div class="container">
+  <% safaris = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'safari_type', 'both') %>
+  <% if safaris.present? %>
+    <div class="safari-type">
+      <div class="container">
         <div class="row">
-          <div class="col-xs-12 div3"> 
-          <div class="streetchild">      
-            <a href="http://www.street-child.co.uk" target="_blank"><img src="/assets/download.jpg"></a>
-            <p>Street Child is a UK education and child welfare organisation that has worked with over 30,000 street children in Sierra Leone, Liberia and Nepal since 2008. Street Child empowers children by providing education opportunities and income-generating initiatives to enable families to build a sustainable future. Furthermore, they have been at the forefront of the ebola crisis: providing care for over 13,000 children orphaned by the virus by resettling them within a safe and secure family home and enrolling them in school. We have a strong relationship with Street Child and have been lucky enough to see the amazing work they do on the ground in Sierra Leone first hand. Every trip booked with us will directly support their work.</p>
-          </div>
+          <div class="col-xs-12">
+            <h1>Best For ...</h1>
+            <p class="click">Please click on the options below</p>
           </div>
         </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="controls">
+              <span class="safari-slider-next"></span>
+              <span class="safari-slider-prev"></span>
+            </div>
+            <ul class="bxsliderSafari">
+              <% safaris.each do |item| %>
+                <li>
+                  <div class="safari-type-item">
+                    <%= link_to refinery.activities_activity_path(item) do %>
+                      <div class="caption">
+                        <h3><%= raw item.name %></h3>
+                        <div class="btn btn-custom">Read More</div>
+                      </div>
+                      <div class="slider-overlay"></div>
+                      <%= image_fu item.image, "218x330#c" %>
+                    <% end %>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  <% end %>
 
-  <div id="people">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="content-container">
-            <div class="content div2">
-              <h2><%= copywriting('Street Child First Text', {:phrase_type => 'text', :scope => 'Home Page', :default => '"WE STRONGLY BELIEVE THAT TRAVELLING TO AFRICA SHOULD MAKE A DIFFERENCE NOT JUST TO TRAVELLERS, BUT TO THE COUNTRIES AND PEOPLES OF THAT VAST AND BEAUTIFUL CONTINENT – THAT THE JOURNEY BENEFITS ALL INVOLVED."' }) %></h2>
-              <p><%= copywriting('Street Child Second Text', {:phrase_type => 'text', :scope => 'Home Page', :default => 'With this in mind, we work with top-level local guides and hosts, and only use on-the-ground partners that we have long-standing relationships with and who share our values. We directly support our charity partners that make lasting and worthwhile contributions to the countries they work in.' }) %></p>
+  <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both').order("RANDOM()").first(10) %>
+  <% if activities.present? %>
+    <div class="experience">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Africa Experiences</h1>
+            <p class="click">Please click on the options below</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="controls">
+              <span class="experience-slider-next"></span>
+              <span class="experience-slider-prev"></span>
+            </div>
+            <ul class="bxsliderExperience">
+              <% activities.each_slice(7).each do |items| %>
+                <li>
+                  <% items.each do |item| %>
+                    <% if item == items.first %>
+                      <div class="experience-item main-item">
+                        <%= link_to refinery.activities_activity_path(item) do %>
+                          <div class="caption">
+                            <h3><%= raw item.name %></h3>
+                          </div>
+                          <div class="slider-overlay"></div>
+                          <%= image_fu item.image, '440x330#c' %>
+                        <% end %>
+                      </div>
+                    <% else %>
+                      <div class="experience-item">
+                        <%= link_to refinery.activities_activity_path(item) do %>
+                          <div class="caption">
+                            <h3><%= raw item.name %></h3>
+                          </div>
+                          <div class="slider-overlay"></div>
+                          <%= image_fu item.image, '217x162#c' %>
+                        <% end %>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="experience-footer">
+              <h3 class="hidden-xs">Tailormade Africa has something for everyone.</h3>
+              <h2 class="hidden-xs">Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob)</h2>
+              <a href="/activities" class="btn btn-custom">Browse All Experiences</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  <% end %>
+
+  <div class="why-tma">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Why Tailormade Africa?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <%= render '/refinery/pods/shared/pods', :pod_types => ['content'], :limit => 4 -%>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="#contact_area" class="btn btn-custom">Enquire Now</a>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <% blogs = Refinery::Blog::Post.live.first(3) %>
+  <% if blogs.present? %>
+    <div class="recent-blogs">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Recent Blogs</h1>
+          </div>
+        </div>
+        <div class="row">
+          <% blogs.each do |post| %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="recent-blog-item">
+                <%= link_to(image_fu(post.image, '360x272#c', :class=>"img-responsive"), refinery.blog_post_path(post)) %>
+                <div class="caption cf">
+                  <div class="title"><%= link_to post.title, refinery.blog_post_path(post) %></div>
+                  <div class="date"><%= post.published_at.strftime('%B %e, %Y') %></div>
+                  <div class="comment"><a><i class="fa fa-comment-o"></i><%= post.comments.count %></a></div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
   <%= render '/refinery/footer' -%>
 

@@ -1,7 +1,6 @@
 <% if @accommodation.present? %>
   <div class="master-slider ms-skin-default" id="masterslider2">
     <% @accommodation.gallery.items.reorder('position ASC').each do |banner| %>
-    <a href="#banner-overlay" class="lodge_btn"><div class="banner-overlay" id="banner-overlay"><img class="img-responsive" src="/assets/banner-overlay-scroll.png"></div></a>
       <div class="ms-slide slide-1" data-delay="2">
         <h1 class="accommodation-name"><%= raw @accommodation.name %></h1>
         <div class="overlay"></div>
@@ -17,12 +16,12 @@
       <div class="accommodation-container">
         <div class="row">
           <div class="col-xs-12">
-            <div class="lodge_truncate_text">
+            <div class="lodge_truncate_text camp">
               <%= raw @accommodation.description %>
             </div>
             <% if @accommodation.low_rate.present? and @accommodation.mid_rate and @accommodation.high_rate %>
               <div class="rates">
-                <h2 class="amenities">Prices & Seasons</h2>
+                <h2>Prices & Seasons</h2>
                 <div class="monthbar">
                   <div class="month <%= @accommodation.jan.downcase %>">JAN</div>
                   <div class="month <%= @accommodation.feb.downcase %>">FEB</div>
@@ -88,10 +87,10 @@
             <% end %>
 
 
-          <a href="#camps">Back to Camp Selection</a>
+          <a href="#camps" class="back">Back to Camp Selection</a>
           </div>
           <div class="col-xs-12">
-            <a type="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#myModal">Enquire Now</a>
+            <a type="button" class="btn btn-enquire btn-custom" data-toggle="modal" data-target="#myModal">Enquire Now</a>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">

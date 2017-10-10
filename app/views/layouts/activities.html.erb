@@ -16,11 +16,11 @@
     <% if action_name == "index" %>
 
       <% if @activities.present? %>
-      <div id="activities" class="search">
+      <div id="welcome" class="search activities">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 div1">
-                <h1 style="padding-top:20px;">Experiences</h1>
+                <h1>Experiences</h1>
                   <ul class=" list-inline list-unstyled">
                     <% @activities.each do |activity| %>
                       <li class="search-item">
@@ -55,52 +55,56 @@
         </div>
       </div>
 
+      <% if @activity.locations.present? %>
+          <div id="welcome" class="locations search best top">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h1>Best Destinations <span>for <%= @activity.name %></span></h1>
+                  <ul class=" list-inline list-unstyled cf">
+                    <% @activity.locations.each do |location| %>
+                      <li class="search-item">
+                        <%= link_to(image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag),refinery.locations_location_path(location)) if location.cover_image.present? %>
+                        <div class="search-item-body">
+                          <h3><%= link_to strip_tags(location.name), refinery.locations_location_path(location) %></h3>
+                          <div class="description"><%=raw truncate(location.description, :length => 120) %></div>
+                        </div>
+                      </li>
+                    <% end %>
+                  </ul>                 
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+
       <% if @activity.accommodations.present? %>
-        <div class="accommodations-activities">
+        <div id="welcome" class="locations search best bottom">
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
-                <h1>Popular Lodges</h1>
-                <p class="click">Please click on each circle</p>
-                <div id="accommodations_slider">
+                <h1>Best Lodges <span>for <%= @activity.name %></span></h1>
+                <ul class=" list-inline list-unstyled cf">
                   <% @activity.accommodations.each do |accommodation| %>
-                    <div class="slide">
-                      <%= link_to refinery.accommodations_accommodation_path(accommodation)  do %>                        
-                        <%= image_fu accommodation.cover_image, "165x165#c", :alt => accommodation.cover_image.alt_tag if accommodation.cover_image.present? %>
-                        <%= raw accommodation.name %>
-                      <% end %>
-                    </div>
+                    <% if accommodation.is_valid? %>
+                      <li class="search-item">    
+                        <%= link_to(image_fu(accommodation.cover_image, "105x80#c", :alt => accommodation.cover_image.alt_tag),refinery.accommodations_accommodation_path(accommodation)) if accommodation.cover_image.present? %>               
+                        <div class="search-item-body">
+                          <h3><%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>
+                          <div class="description"><%=raw truncate(accommodation.description, :length => 120) %></div>
+                        </div>
+                      </li>
+                    <% end %>
                   <% end %>
-                </div>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       <% end %>
 
-    <% if @activity.locations.present? %>
-      <div class="locations-activities">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <h1>Popular Places</h1>
-              <p class="click">Please click on each circle</p>
-              <div id="locations_slider">
-                <% @activity.locations.each do |location| %>
-                    <div class="slide">
-                      <%= link_to location_link(location)  do %>                        
-                        <%= image_fu location.cover_image, "165x165#c", :alt => location.cover_image.alt_tag if location.cover_image.present? %>
-                        <%= location.name %>
-                      <% end %>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     <% end %>
-  <% end %>
 
     <%= render '/refinery/footer' -%>
 

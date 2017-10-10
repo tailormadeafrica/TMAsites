@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(safari_type) -%>">
+  <span class='title'>
+    <%= safari_type.name %>
+
+  </span>
+  <span class='actions'>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.safari_types_safari_type_path(safari_type),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_safari_types_admin_safari_type_path(safari_type),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.safari_types_admin_safari_type_path(safari_type),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => safari_type.name),
+        :method => :delete %>
+  </span>
+</li>

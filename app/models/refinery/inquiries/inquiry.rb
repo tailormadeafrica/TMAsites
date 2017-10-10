@@ -11,6 +11,7 @@ module Refinery
       validates :name, :presence => true
       # validates :message, :presence => true
       validates :email, :format=> { :with =>  /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+      validates :phone, :presence => true
 
       attr_accessor :captcha
       validates :captcha, :presence => true, inclusion: { in: %w(y4x3b Y4X3B y4x3B), :message => 'Invalid Captcha' }
@@ -19,7 +20,7 @@ module Refinery
 
       default_scope :order => 'created_at DESC'
 
-      attr_accessible :name, :phone, :message, :email, :service_name, :captcha
+      attr_accessible :name, :phone, :message, :email, :service_name, :destination, :from, :first_trip, :budget, :captcha
 
       def self.latest(number = 7, include_spam = false)
         include_spam ? limit(number) : ham.limit(number)

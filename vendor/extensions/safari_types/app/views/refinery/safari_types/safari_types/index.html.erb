@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="safari_types">
+    <% @safari_types.each do |safari_type| %>
+      <li>
+        <%= link_to safari_type.name, refinery.safari_types_safari_type_path(safari_type) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

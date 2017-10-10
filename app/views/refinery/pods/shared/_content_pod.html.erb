@@ -1,13 +1,15 @@
 <% if home_page? %>
-  <div class="col-xs-12 col-sm-6 col-md-3">
-    <%= link_to pod.url, :class=>"home-pod" do %>
-      <%= image_fu pod.image, "262x242#c", :alt => pod.image.alt_tag, :class=>"img-responsive" %>
-      <div class="home-pod-text">
+  <div class="col-xs-12 col-sm-3">
+    <div class="why-tma-item">
+      <%= link_to pod.url do %>
+        <% if pod.image.present? %>
+          <%= image_fu pod.image, '85x85#c' %>
+        <% end %>
         <h3><%= pod.name %></h3>
-        <hr>
-        <%= raw pod.body %>
-      </div>
-    <% end %>
+          <%=raw truncate(pod.body, :length => 60, :omission => "...") %>
+        <div>Find out more ></div>
+      <% end %>
+    </div>
   </div>
 <% else %>
   <div class="side-pod content-pod">

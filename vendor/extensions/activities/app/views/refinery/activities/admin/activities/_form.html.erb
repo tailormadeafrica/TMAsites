@@ -18,6 +18,11 @@
     <%= f.text_field :sub_name, :class => 'larger widest'  -%>
 
   </div>
+
+  <div class='field'>
+    <%= f.label :activity_type -%>
+    <%= f.select :activity_type, ::Refinery::Activities::Activity::TYPES, {:include_blank => true} %>
+  </div>
   
   <div class='field'>
     <%= f.label :cover_image, 'Icon' -%>

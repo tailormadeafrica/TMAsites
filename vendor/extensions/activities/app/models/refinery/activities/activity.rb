@@ -1,13 +1,18 @@
 module Refinery
   module Activities
     class Activity < Refinery::Core::BaseModel
-      self.table_name = 'refinery_activities'      
+      self.table_name = 'refinery_activities'
+
+      extend FriendlyId
+      friendly_id :name, :use => [:slugged]
     
       acts_as_indexed :fields => [:name, :description, :rating]
 
-      attr_accessible :name, :cover_image_id, :description, :rating, :position, :gallery_id, :sub_name, :location_ids, :accommodation_ids, :image_id
+      attr_accessible :name, :cover_image_id, :description, :rating, :position, :gallery_id, :sub_name, :location_ids, :accommodation_ids, :image_id, :activity_type
 
       validates :name, :presence => true, :uniqueness => true
+
+      TYPES = %w(experience safari_type both)
           
       belongs_to :cover_image, :class_name => '::Refinery::Image'
       belongs_to :image, :class_name => '::Refinery::Image'

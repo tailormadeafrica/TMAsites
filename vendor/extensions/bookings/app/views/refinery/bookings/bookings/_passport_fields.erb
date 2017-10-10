@@ -1,47 +1,47 @@
 <div class="passport-details">
   <div class="row">
-    <div class="col-xs-12 col-md-1 no-gutter">
+    <div class="col-xs-12 col-sm-1 no-gutter">
       <%= item.text_field :title, :placeholder => "Title"  %>
     </div>
-    <div class="col-xs-12 col-md-4 no-gutter">
+    <div class="col-xs-12 col-sm-4 no-gutter">
       <%= item.text_field :first_name, :placeholder => "Name"  %>
     </div>
-    <div class="col-xs-12 col-md-3 no-gutter">
+    <div class="col-xs-12 col-sm-3 no-gutter">
       <%= item.text_field :surname, :placeholder => "Surname"  %>
     </div>
-    <div class="col-xs-12 col-md-1 no-gutter">
-      <%= item.label :DOB, :class => "uppercase" %>
+    <div class="col-xs-12 col-sm-1 no-gutter">
+      <%= item.label :DOB, :class => "dob" %>
     </div>
-    <div class="col-xs-12 col-md-3 no-gutter select">
+    <div class="col-xs-12 col-sm-3 no-gutter select">
       <%= item.date_select(:date_of_birth, :order => [:month, :day, :year], :start_year => 1920, use_short_month: true) %>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-md-6 no-gutter">
+    <div class="col-xs-12 col-sm-6 no-gutter">
       <%= item.text_field :passport_no, :placeholder => "Passport Number"  %>
     </div>
-    <div class="col-xs-12 col-md-6 no-gutter">
+    <div class="col-xs-12 col-sm-6 no-gutter">
       <%= item.text_field :place_of_issue, :placeholder => "Place of issue"  %>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-md-6 no-gutter select">
+    <div class="col-xs-12 col-sm-6 no-gutter select">
       <%= item.label :expiry_date %>
       <%= item.date_select(:expiry_date, :order => [:month, :day, :year], :end_year => 2099, use_short_month: true) %>
     </div>
-    <div class="col-xs-12 col-md-6 no-gutter select">
+    <div class="col-xs-12 col-sm-6 no-gutter select">
       <%= item.label :issue_date %>
       <%= item.date_select(:issue_date, :order => [:month, :day, :year], :start_year => 2000, use_short_month: true) %>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-md-6 no-gutter">
+    <div class="col-xs-12 col-sm-6 no-gutter">
       <%= item.text_field :weight, :placeholder => "Weight (kg)*"  %>
     </div>
-    <div class="col-xs-12 col-md-6 no-gutter">
+    <div class="col-xs-12 col-sm-6 no-gutter">
       <%= item.select :diet_req, Refinery::Bookings::Booking::DIETS, {:prompt => "Diet requirements"}, :class => "diet" %>
     </div>
   </div>

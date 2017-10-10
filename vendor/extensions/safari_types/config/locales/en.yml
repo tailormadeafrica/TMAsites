@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      safari_types:
+        title: Safari Types
+    safari_types:
+      admin:
+        safari_types:
+          actions:
+            create_new: Add New Safari Type
+            reorder: Reorder Safari Types
+            reorder_done: Done Reordering Safari Types
+          records:
+            title: Safari Types
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Safari Types yet. Click "Add New Safari Type" to add your first safari type.
+          safari_type:
+            view_live_html: View this safari type live <br/><em>(opens in a new window)</em>
+            edit: Edit this safari type
+            delete: Remove this safari type forever
+      safari_types:
+        show:
+          other: Other Safari Types
+  activerecord:
+    attributes:
+      'refinery/safari_types/safari_type':
+        name: Name
+        image: Image
+        body: Body
