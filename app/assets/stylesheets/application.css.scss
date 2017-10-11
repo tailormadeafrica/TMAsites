@@ -228,6 +228,7 @@ strong {font-weight:500;}
     :-moz-placeholder {color: #ffffff;}
     .btn-custom {@include button (45px,45px,#ffffff,1px solid rgba(255,255,255,0.5),transparent,30px,16px,0 40px);}
   }
+  .captcha {background: url(/assets/captcha.png) top center no-repeat; height:44px;}
 }
 
 .social {text-align:center; padding:50px 0 0 0; background:#000000;

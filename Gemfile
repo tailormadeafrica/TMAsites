@@ -111,9 +111,6 @@ group :development do
 end
 
 
-
-
-
 group :production do
   gem 'pg', '0.17.1'
   gem 'puma', '3.8.2'
