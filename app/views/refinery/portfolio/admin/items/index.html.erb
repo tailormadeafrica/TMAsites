@@ -2,11 +2,8 @@
 <section id='records'>
 
 
-<%# if @s3_direct_post.present? %>
-   <%#= form_for [refinery, :portfolio_admin, Refinery::Portfolio::Item.new], authenticity_token: false, :html => {multiple: true, class: 'dropzone', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host }}  do |f| %>
- <%# else %>
-  <%= form_for [refinery, :portfolio_admin, Refinery::Portfolio::Item.new], authenticity_token: false, :html => {multiple: true} do |f| %>
- <%# end %>
+
+   <%= form_for [refinery, :portfolio_admin, Refinery::Portfolio::Item.new], authenticity_token: false, :html => {multiple: true, class: 'dropzone', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host }}  do |f| %>
       <div class="fallback">
           <%= f.file_field :image %>
           <%= f.submit 'Upload Image' %>
@@ -54,61 +51,60 @@
 <% content_for :stylesheets, stylesheet_link_tag('refinery/portfolio/admin/dropzone') %>
 <% content_for :javascripts, javascript_include_tag('refinery/portfolio/admin/dropzone') %>
 
-<% if @s3_direct_post.present? %>
-  <script>
+<script>
 
-    $(document).ready(function(){
-      var form = $('#new_item');
-      var app = {};
+  $(document).ready(function(){
+    var form = $('#new_item');
+    var app = {};
 
-      app._dropzoneSendingCallback = function(file, xhr, formData) {
-        console.dir(formData)
-        $.each(form.data('form-data'), function(k, v) {
-          formData.append(k, v);
-        });
-      };
+    app._dropzoneSendingCallback = function(file, xhr, formData) {
+      console.dir(formData)
+      $.each(form.data('form-data'), function(k, v) {
+        formData.append(k, v);
+      });
+    };
 
-      app._dropzoneCompleteCallback = function(file, data) {
-        $('.process').submit();
-      }
+    app._dropzoneCompleteCallback = function(file, data) {
+      $('.process').submit();
+    }
 
 
-      $( "[name='utf8']" ).remove();
-      // $( "[name='authenticity_token']" ).remove();
-
+    $( "[name='utf8']" ).remove();
+    // $( "[name='authenticity_token']" ).remove();
 
 
 
-    // disable auto discover
-    Dropzone.autoDiscover = false;
-   
 
-    var dropzone = new Dropzone (".dropzone", {
-      maxFilesize: 5, // Set the maximum file size to 256 MB
-      paramName: "item[image]", // Rails expects the file upload to be something like model[field_name]
-      addRemoveLinks: false, // Don't show remove links on dropzone itself.
-      url: form.data('url'),
-      method: "post",
-      acceptedMimeTypes: "image/bmp,image/gif,image/jpg,image/jpeg,image/png",
-      autoProcessQueue: true,
-      clickable: true,
-      parallelUploads: 3,
-      paramName: "file",
-      dataType: 'XML',
-      replaceFileInput: false,
-      formData: form.data('form-data'),
-      // accept: app._dropzoneAcceptCallback,÷
-      sending: app._dropzoneSendingCallback,
-      queuecomplete: app._dropzoneCompleteCallback
-    }); 
+  // disable auto discover
+  Dropzone.autoDiscover = false;
+ 
 
-    
-  });
+  var dropzone = new Dropzone (".dropzone", {
+    maxFilesize: 5, // Set the maximum file size to 256 MB
+    paramName: "item[image]", // Rails expects the file upload to be something like model[field_name]
+    addRemoveLinks: false, // Don't show remove links on dropzone itself.
+    url: form.data('url'),
+    method: "post",
+    acceptedMimeTypes: "image/bmp,image/gif,image/jpg,image/jpeg,image/png",
+    autoProcessQueue: true,
+    clickable: true,
+    parallelUploads: 3,
+    paramName: "file",
+    dataType: 'XML',
+    replaceFileInput: false,
+    formData: form.data('form-data'),
+    // accept: app._dropzoneAcceptCallback,÷
+    sending: app._dropzoneSendingCallback,
+    queuecomplete: app._dropzoneCompleteCallback
+  }); 
+
+  
+});
 
 
 
-  </script>
-<% end %>
+</script>
+
 
 
 
