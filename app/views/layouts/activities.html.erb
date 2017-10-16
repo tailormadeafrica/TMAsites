@@ -16,6 +16,7 @@
     <% if action_name == "index" %>
 
       <% if @activities.present? %>
+      <% @activities = Refinery::Activities::Activity.first(10) %>
       <div id="welcome" class="search activities">
         <div class="container">
           <div class="row">
