@@ -144,10 +144,35 @@
         </div>
       </div>
 
+      <% child_locations = Refinery::Locations::Location.where(:parent_id => @location.id) %>
+      <% if child_locations.present? %>
+        <div class="locations grey">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2 class="slider">Explore the regions below</h2>
+                <p class="click">Please click on each circle</p>
+                <p><%=raw @location.side_body %></p>
+                <div id="locations_slider">
+                  <% child_locations.each do |child| %>
+                    <div class="slide">
+                      <%= link_to location_link(child)  do %>
+                        <%= image_fu child.cover_image, "165x165#c", :alt => child.cover_image.alt_tag if child.cover_image.present? %>
+                        <div class="name"><%= raw child.name %></div>
+                      <% end %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
       <% if @location.depth == 0 %>
         <% safaris = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'safari_type', 'both') %>
         <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both') %>
-        <div class="safari-experience" style="margin-bottom:150px;">
+        <div class="safari-experience white">
           <div class="container">
             <% if safaris.present? %>
               <div class="safari-type">
@@ -236,31 +261,6 @@
                 </div>
               </div>
             <% end %>
-          </div>
-        </div>
-      <% end %>
-
-      <% child_locations = Refinery::Locations::Location.where(:parent_id => @location.id) %>
-      <% if child_locations.present? %>
-        <div class="locations" style="margin-top:-150px;">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <h2 class="slider">Explore the regions below</h2>
-                <p class="click">Please click on each circle</p>
-                <p><%=raw @location.side_body %></p>
-                <div id="locations_slider">
-                  <% child_locations.each do |child| %>
-                    <div class="slide">
-                      <%= link_to location_link(child)  do %>
-                        <%= image_fu child.cover_image, "165x165#c", :alt => child.cover_image.alt_tag if child.cover_image.present? %>
-                        <div class="name"><%= raw child.name %></div>
-                      <% end %>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       <% end %>
