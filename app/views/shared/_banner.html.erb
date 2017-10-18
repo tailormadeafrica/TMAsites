@@ -1,5 +1,27 @@
 <% if @location.present? and @location.gallery.present? and @location.gallery.items.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @location.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
 
@@ -20,6 +42,28 @@
   </div>
 <% elsif @accommodation.present? and @accommodation.gallery.present? and @accommodation.gallery.items.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @accommodation.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
 
@@ -38,6 +82,28 @@
   </div>
 <% elsif @activity.present? and @activity.gallery.present? and @activity.gallery.items.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @activity.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
@@ -55,6 +121,28 @@
   </div>
 <% elsif @post.present? and @post.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @post.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
@@ -70,6 +158,28 @@
   </div>
 <% elsif @page.link_url.present? and @page.link_url == '/blog' and @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @page.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
@@ -84,6 +194,28 @@
   </div>
 <% elsif @post.present? and @post.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @post.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>        
         <div class="ms-slide slide-1" data-delay="4">
@@ -97,6 +229,28 @@
   </div>
 <% elsif @page.link_url.present? and @page.link_url == '/blog' and @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @page.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
@@ -110,6 +264,28 @@
   </div>
 <% elsif @page.link_url.present? and @page.link_url == '/bookings/new' and @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
+    <div class="search hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
+              <div class="col-xs-12 col-md-2">
+                <div class="title">
+                  <span>Find your</span>
+                  <h2>Destination</h2>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <input type="text" name="search" class="form-control" placeholder="Search ...">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <input type="submit" class="btn btn-custom" value="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <% @page.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>        
         <div class="ms-slide slide-1" data-delay="4">
