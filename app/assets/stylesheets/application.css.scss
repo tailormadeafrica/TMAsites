@@ -201,7 +201,7 @@ strong {font-weight:500;}
   h1 {margin:0 0 40px 0;}
   .recent-blog-item {margin-bottom:20px; border-bottom:1px solid #b7b7b7;
     .caption {padding:15px; text-align:left; background:#ffffff;
-      .title {font-size:16px; margin:0 0 10px 0;
+      .title {font-size:16px; margin:0 0 10px 0; height:48px; overflow:hidden;
         a {color:$color;}
       }
       .date {font-size:12px; float:left;}
@@ -452,9 +452,16 @@ strong {font-weight:500;}
 /*** xs ***/
 
 @media (max-width:767px) {
+.locations, .activities, .accommodations, .locations { padding: 20px 0 10px 0;}
+  .locations h2.slider, .activities h2.slider, .accommodations h2.slider, .locations h2.slider {
+      margin: 10px 0 10px 0;
+      font-size: 24px;
+  }
+  h1 {font-size:24px; margin:20px 0;}
+  h2 {font-size:18px; margin:20px 0;}
   .container,.container-fluid {max-width:340px;}
   .navbar {position:static!important; background:#000000;
-    .navbar-toggle {width:72px; float:left; border:none; margin:0; padding:20px 25px;
+    .navbar-toggle {float:left; border:none; margin:0; padding:20px 35px;
       .icon-bar {background:#ffffff;}
     }
     .navbar-toggle:focus,.navbar-toggle:hover {background-color:transparent!important;}
@@ -465,16 +472,21 @@ strong {font-weight:500;}
       }
       li:first-child {border-left:1px solid rgba(255,255,255,0.3); border-right:1px solid rgba(255,255,255,0.3);}
     }
-    ul {padding:0 0 20px 0; text-align:center;
+    ul {padding:0; text-align:center;
       li {display:block;
         a,a:hover {line-height:36px; color:#ffffff; margin-left:15px;}
       }
     }
-    .social-media li {display:inline-block; padding:0 5px 0 0;}
+    .social-media {margin:0 0 10px 0!important;
+      li {display:inline-block; padding:0 5px 0 0;
+        a {margin: 0 7px!important;}
+      }
+    }
   }
   .navbar ul li {text-align:center;}
-  .navbar ul li a {margin:0;}
+  .navbar ul li a,.navbar ul li a:hover {margin:0;}
   .navbar ul.social-media {margin:0;}
+  .overlay-menu h2 {margin-top:0;}
   .master-slider {
     .logo {margin-left:auto; width:50%;}
     .banner-text h2 {font-size:17px!important; letter-spacing:3px!important;}
@@ -485,25 +497,26 @@ strong {font-weight:500;}
     span {font-size:17px!important; letter-spacing:3px!important;}
   }
   #home_page .welcome {padding:30px 0 10px 0;
-    h1 {font-size:24px; margin:0 0 30px 0;}
+    h1 {font-size:24px; line-height:30px; margin:0 0 20px 0;}
+    h2 {font-size:18px; line-height:24px; margin:0 0 20px 0;}
     .text {-webkit-column-count:1; -moz-column-count:1; column-count:1;}
     .btn-custom,.btn-custom:hover {font-size:14px!important; margin-top:0!important;}
   }
   .controls .bx-next,.controls .bx-prev {display:none;}
   .bx-wrapper,.bx-viewport {width:218px!important; left:0!important;}
-  .safari-type {padding:30px 0;
-    h1 {font-size:24px; margin:0 0 30px 0;}
+  .safari-type {padding:30px 0 15px 0;
+    h1 {font-size:24px; margin:0 0 10px 0;}
     p.click {margin-bottom: 20px; color:$color;}
     .bx-wrapper { margin:0 auto!important;}
-    .bx-viewport {height:auto!important;
+    .bx-viewport {height:2090px!important;
       li {float:none!important;}
     }
   }
   .experience {padding:0 0 30px 0;
-    h1 {font-size:24px; margin:0 0 30px 0;}
+    h1 {font-size:24px; margin:0 0 10px 0;}
     p.click {margin-bottom: 20px; color:$color;}
     .bx-wrapper { margin:0 auto!important;}
-    .bx-viewport {height:1170px!important;
+    .bx-viewport {height:1000px!important;
       .experience-item,.main-item {margin:0 0 5px 0;
         a .caption {width:100px; top:50px;
           h3 {font-size:18px;}
@@ -535,17 +548,23 @@ strong {font-weight:500;}
   }
   .social {padding:30px 0;}
   .footer {text-align:center; padding:0 0 28px 0;
-    img.logo {margin:30px auto; width:60%;}
+    img.logo {margin:0 auto; width:60%;}
     .copyright {font-size:8px;}
   }
-  #welcome {padding:0 0 30px 0;}
-  .breadcrumb{max-width:340px; margin:0 auto; padding:30px 0 0 0;}
+  #welcome {padding:0 0 20px 0;
+    h1 {font-size:24px; margin:20px 0;}
+  }
+  .breadcrumb{display:none;}
   .locations .search-item,.activities .search-item {width:100%;
     a {margin:0;}
     .search-item-body {width:60%;}
   }
   .accommodations .search-item{width:100%;}
+  .blog_list {padding: 30px 0 0 0; margin-top: 0;
+    h1 {display:none;}
+  }
   .blog_show {padding:0;
+    h1 {font-size:24px;}
     .blog_rhs {margin-top:30px;
       .search-item .search-item-body {width:55%;
         h3 {font-size:14px; line-height:18px; width:auto; white-space:initial;}
@@ -553,6 +572,8 @@ strong {font-weight:500;}
       }
     }
   }
+  .blog_show #comments .form-actions input {display:block; width:100%;}
+  .pagination {display: block; margin: 0 0 20px 0; text-align: center;}
   .bookings {width:100%;}
   .bookings form .dont_get_newsletters_field label, .bookings form .certify_personal_insurance_field label, .bookings form .i_accept_field label {width:90%!important;}
   .bookings .passport .fields label, .bookings .flights .fields label {width:100%;}

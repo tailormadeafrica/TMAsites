@@ -55,6 +55,8 @@ $(document).ready(function() {
 
 
     $('.bxsliderSafari').bxSlider({
+        touchEnabled: false,
+        oneToOneTouch: false,
         minSlides: 0,
         maxSlides: 5,
         slideWidth: 218,
@@ -72,6 +74,8 @@ $(document).ready(function() {
     });
 
     $('.bxsliderExperience').bxSlider({
+        touchEnabled: false,
+        oneToOneTouch: false,
         minSlides: 0,
         maxSlides: 1,
         slideWidth: 1110,
