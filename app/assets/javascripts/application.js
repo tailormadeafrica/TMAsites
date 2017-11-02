@@ -190,7 +190,6 @@ $(document).ready(function() {
 
     });
 
-
     $('a[href*=#]:not([href=#])').click(function() {
         $('.navbar-on').click();
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -319,6 +318,17 @@ $(document).ready(function() {
     WaterMark('input#inquiry_phone','Phone');
     WaterMark('input#inquiry_captcha','Enter code here');
     WaterMark('textarea#inquiry_message','Message');
+
+        function updateSymbol(e){
+      var selected = $(".currency-selector option:selected");
+      $(".currency-symbol").text(selected.data("symbol"))
+      $(".currency-amount").prop("placeholder", selected.data("placeholder"))
+      $('.currency-addon-fixed').text(selected.text())
+    }
+
+    $(".currency-selector").on("change", updateSymbol)
+
+    updateSymbol()
 
 });
 

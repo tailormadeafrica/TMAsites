@@ -8,9 +8,19 @@
           <input type="text" name="inquiry[name]" class="form-control" placeholder="Name*" required>
           <input type="email" name="inquiry[email]" class="form-control" placeholder="Email*" required>
           <input type="text" name="inquiry[phone]" class="form-control" placeholder="Phone*" required>
-          <input type="text" name="inquiry[destination]" class="form-control" placeholder="Destination*" required>
-          <input type="text" name="inquiry[budget]" class="form-control" placeholder="Budget*" required>
-          <input type="text" name="inquiry[from]" class="form-control" placeholder="From?*" required>
+          <input type="text" name="inquiry[destination]" class="form-control" placeholder="Travel Destination*" required>
+          <!--<input type="text" name="inquiry[budget]" class="form-control" placeholder="Budget*" required>-->
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <span class="input-group-addon currency-label">Budget*</span><div class="input-group-addon currency-symbol">$</div>
+            <input type="text" class="form-control currency-amount" id="inlineFormInputGroup" placeholder="0.00" size="8">
+            <div class="input-group-addon currency-addon">
+              <select class="currency-selector">
+                <option data-symbol="$" data-placeholder="0.00" selected>USD</option>
+                <option data-symbol="£" data-placeholder="0.00">GBP</option>
+              </select>
+            </div>
+          </div>
+          <input type="text" name="inquiry[from]" class="form-control" placeholder="Where are you from?*" required>
           <div class="option-group cf">
             <div class="row">
               <div class="col-xs-12 col-sm-8">
@@ -71,6 +81,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
