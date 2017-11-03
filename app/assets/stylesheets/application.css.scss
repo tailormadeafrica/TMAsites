@@ -519,6 +519,13 @@ strong {font-weight:500;}
       li {float:none!important;}
     }
   }
+  .locations,.accommodations {
+    .bx-viewport {height:auto!important;
+      #accommodations_slider,#locations_slider {width:auto!important;}
+    }
+            .bx-wrapper .bx-controls-direction a {display:none!important;}
+    .slide .name {margin:10px 0;}
+  }
   .experience {padding:0 0 30px 0;
     h1 {font-size:24px; margin:0 0 10px 0;}
     p.click {margin-bottom: 20px; color:$color;}
