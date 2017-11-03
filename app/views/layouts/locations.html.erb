@@ -356,32 +356,62 @@
         </div>
       </div>
 
-          <% accommodations = @location.accommodations %>
-          <% if accommodations.present? %>
-            <div class="accommodations" style="margin-top:-50px;">
-              <div clas="container">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h2 class="slider" id="camps">Explore the camps below</h2>
-                    <p class="click">Please click on each circle</p>
-                    <div id="accommodations_slider">
-                      <% accommodations.each do |accommodation| %>
-                        <div class="slide">
-                          <%= link_to refinery.accommodations_accommodation_path(accommodation), :remote => true do %>
-                            <%= image_fu accommodation.cover_image, "165x165#c", :alt => accommodation.cover_image.alt_tag if accommodation.cover_image.present? %>
-                            <div class="name"><%= raw accommodation.name %></div>
-                          <% end %>
-                        </div>
-                      <% end %>
-                    </div>
+        <% accommodations = @location.accommodations %>
+        <% if accommodations.present? %>
+          <div class="accommodations" style="margin-top:-50px;">
+            <div clas="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h2 class="slider" id="camps">Explore the camps below</h2>
+                  <p class="click">Please click on each circle</p>
+                  <div id="accommodations_slider">
+                    <% accommodations.each do |accommodation| %>
+                      <div class="slide">
+                        <%= link_to refinery.accommodations_accommodation_path(accommodation), :remote => true do %>
+                          <%= image_fu accommodation.cover_image, "165x165#c", :alt => accommodation.cover_image.alt_tag if accommodation.cover_image.present? %>
+                          <div class="name"><%= raw accommodation.name %></div>
+                        <% end %>
+                      </div>
+                    <% end %>
                   </div>
                 </div>
               </div>
             </div>
-          <% end %>
+          </div>
+        <% end %>
+
     <!--           start           -->
     <div class="accommodation_item" id="accommodation_item"></div>
     <!--            end             -->
+
+    <% blogs = @location.posts.live.first(3) %>
+    <% if blogs.present? %>
+        <div id="locations-blog-container">
+          <div class="recent-blogs">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h1>Recent <%= @location.name %> Posts</h1>
+                </div>
+              </div>
+              <div class="row">
+                <% blogs.each_with_index do |blog, index| %>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="recent-blog-item">
+                        <%= link_to(image_fu(blog.image, '490x380#c', :class=>"img-responsive"), refinery.blog_post_path(blog)) %>
+                        <div class="caption cf">
+                          <div class="title"><%= link_to blog.title, refinery.blog_post_path(blog) %></div>
+                          <div class="date"><%= blog.published_at.strftime('%B %e, %Y') %></div>
+                          <div class="comment"><a><i class="fa fa-comment-o"></i><%= blog.comments.count %></a></div>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
 
   <% end %>
 
