@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170728130055) do
+ActiveRecord::Schema.define(:version => 20171103083611) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -313,6 +313,7 @@ ActiveRecord::Schema.define(:version => 20170728130055) do
     t.string   "destination"
     t.string   "from"
     t.boolean  "first_trip"
+    t.string   "currency"
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"

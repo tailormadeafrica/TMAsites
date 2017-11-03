@@ -12,11 +12,11 @@
           <!--<input type="text" name="inquiry[budget]" class="form-control" placeholder="Budget*" required>-->
           <div class="input-group">
             <span class="input-group-addon currency-label">Budget*</span>
-            <input type="text" class="form-control currency-amount">
+            <input type="text" name="inquiry[budget]" class="form-control currency-amount">
             <div class="input-group-addon currency-addon">
-              <select class="currency-selector">
-                <option selected>USD</option>
-                <option>GBP</option>
+              <select name="inquiry[currency]" class="currency-selector">
+                <option value="USD" selected>USD</option>
+                <option value="GBP" >GBP</option>
               </select>
             </div>
           </div>

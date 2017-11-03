@@ -68,9 +68,19 @@
         <tr>
           <td>
             <strong>Budget</strong>
-          </td>
+          </td>currency
           <td>
             <%= @inquiry.budget %>
+          </td>
+        </tr>
+    <% end %>
+    <% unless @inquiry.currency.blank? %>
+        <tr>
+          <td>
+            <strong>Currency</strong>
+          </td>
+          <td>
+            <%= @inquiry.currency %>
           </td>
         </tr>
     <% end %>

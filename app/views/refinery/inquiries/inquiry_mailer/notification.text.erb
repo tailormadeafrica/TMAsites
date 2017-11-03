@@ -13,6 +13,9 @@ Destination: <%= @inquiry.destination %>
 <% unless @inquiry.budget.blank? %>
 Budget: <%= @inquiry.budget %>
 <% end %>
+<% unless @inquiry.currency.blank? %>
+Currency: <%= @inquiry.currency %>
+<% end %>
 <% unless @inquiry.from.blank? %>
 From: <%= @inquiry.from %>
 <% end %>
