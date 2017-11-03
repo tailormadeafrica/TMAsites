@@ -229,6 +229,7 @@ $(document).ready(function() {
 
 
     $('#accommodations_slider').bxSlider({
+        touchEnabled: false,
         slideWidth: 165,
         slideMargin: 25,
         minSlides: 1,
@@ -242,6 +243,7 @@ $(document).ready(function() {
     });
 
     $('#locations_slider').bxSlider({
+        touchEnabled: false,
         slideWidth: 165,
         slideMargin: 25,
         minSlides: 1,
