@@ -190,7 +190,6 @@ $(document).ready(function() {
 
     });
 
-
     $('a[href*=#]:not([href=#])').click(function() {
         $('.navbar-on').click();
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

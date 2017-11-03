@@ -219,6 +219,13 @@ strong {font-weight:500;}
     h1 {color:#ffffff; background:url(/assets/bg-h1.gif) bottom center no-repeat; padding-bottom:25px; margin:0;}
     p {margin:25px 0 10px 0;}
     .form-control {color:#ffffff; background:transparent; border:0; border-radius:0; border-bottom:1px solid rgba(255,255,255,0.5); box-shadow:none; padding:25px 0; line-height:34px;}
+    .currency-selector {width: 100%; border: 0 !important; background: none; background-position: 48px 4px; background-repeat: no-repeat;}
+    .currency-addon {width: 6em; text-align: left; position: relative; padding:0;}
+    .currency-label {padding: 6px 30px 6px 0;}
+    .currency-amount {padding: 6px 50px 6px 0;}
+    .input-group-addon {font-weight: 300; color: #fff; text-align: left; background-color: transparent; border:0; border-bottom: 1px solid rgba(255,255,255,0.5); border-radius: 0;
+      option {color:#000000;}
+    }
     textarea {padding:15px 0!important;}
     .option-group {padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.5);
       label {font-weight:300; float:left; line-height:15px;  margin:0;}
@@ -277,7 +284,7 @@ strong {font-weight:500;}
     .link {background: #000; color: #fff; height: 38px; display: inline-block; width: 150px; text-align: center; line-height: 38px;}
     select {height: 43px; border: none; font-size: 13px; padding: 0 4px;}
   }
-  .captcha {background: url(/assets/captcha.png) top center no-repeat; height:44px;}
+  .captcha {background: url(/assets/captcha-booking.png) top center no-repeat; height:44px;}
   .btn-custom {margin:0 0 20px 0!important;}
 }
 
@@ -459,7 +466,7 @@ strong {font-weight:500;}
   }
   h1 {font-size:24px; margin:20px 0;}
   h2 {font-size:18px; margin:20px 0;}
-  .container,.container-fluid {max-width:340px;}
+  .container,.container-fluid {max-width:360px;}
   .navbar {position:static!important; background:#000000;
     .navbar-toggle {float:left; border:none; margin:0; padding:20px 35px;
       .icon-bar {background:#ffffff;}
