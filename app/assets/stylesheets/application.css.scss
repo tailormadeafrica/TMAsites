@@ -152,7 +152,7 @@ strong {font-weight:500;}
 
   .safari-type,.experience {text-align:center; background:#f4f4f4; padding:50px 0;
     h1 {margin:0 0 10px 0;}
-    .controls {position:absolute; width:100%;
+    .controls {width:100%;
       .safari-slider-next a,.experience-slider-next a {background:url(../assets/control-right.png) no-repeat; height:40px; width:40px; position:absolute; right:-5px; top:120px;}
       .safari-slider-prev a,.experience-slider-prev a {background:url(../assets/control-left.png) no-repeat; height:40px; width:40px; position:absolute; right:-5px; top:165px;}
     }
@@ -597,6 +597,8 @@ strong {font-weight:500;}
   .accommodation ul.amenities {padding:0;}
   .main-item {width: 217px; height: 162px; overflow: hidden;}
   ul.links li {width: 100%;}
+  .locations .search-item .search-item-body h3, .activities .search-item .search-item-body h3, .accommodations .search-item .search-item-body h3, .locations .search-item .search-item-body h3 {width:auto!important;}
+
 }
 
 /*** sm ***/
@@ -606,9 +608,9 @@ strong {font-weight:500;}
   h1.accommodation-name {font-size:70px; letter-spacing:5px!important;
     span {font-size:36px; letter-spacing:3px!important;}
   }
-  .navbar ul li a, .navbar ul li a:hover {margin-left:15px; font-size:12px;}
-  .navbar ul.social-media {margin-right:15px;
-    li a {margin-left:10px!important;}
+  .navbar ul li a, .navbar ul li a:hover {margin: 0 10px 0 0; font-size:14px;}
+  .navbar ul.social-media {margin-right:0;
+    li a {margin-left:0!important;}
   }
   .master-slider {
     .logo {top: 50%!important; -webkit-transform: translateY(-50%)!important; -ms-transform: translateY(-50%)!important; transform: translateY(-50%)!important; width:40%;}
@@ -641,6 +643,8 @@ strong {font-weight:500;}
   .accommodations .bx-wrapper, .locations .bx-wrapper,.accommodations .bx-viewport, .locations .bx-viewport, .accommodations-locations .bx-wrapper,.accommodations-activities .bx-viewport,.accommodations-activities .bx-wrapper,.locations-activities .bx-viewport{max-width:547px!important;}
   #welcome .modal .modal-dialog,#welcome .modal .modal-dialog .modal-body form {width:auto;}
   ul.links li {width: 48%;}
+.locations .search-item .search-item-body h3, .activities .search-item .search-item-body h3, .accommodations .search-item .search-item-body h3, .locations .search-item .search-item-body h3 {width:auto!important;}
+
 }
 
 /*** md ***/
