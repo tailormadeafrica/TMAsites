@@ -117,6 +117,8 @@ group :production do
   gem 'heroku-deflater'
 end
 
+gem 'redis', '3.3.5'
+
 gem "nested_form"
 gem 'sidekiq', '3.0.0'
 gem 'sinatra', :require => nil    # For the sidekiq web UI
