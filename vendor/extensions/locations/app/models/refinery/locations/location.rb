@@ -13,7 +13,7 @@ module Refinery
 
       validates :name, :presence => true, :uniqueness => true
 
-      attr_accessible :name, :flag_image_id, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name, :parent_id, :lft, :rgt, :depth, :accommodation_ids, :side_body, :url_title, :browser_title, :meta_description, :exclusion, :inclusion
+      attr_accessible :name, :bread, :flag_image_id, :cover_image_id, :description, :position, :activity_ids, :gallery_id, :longitude, :latitude, :sub_name, :parent_id, :lft, :rgt, :depth, :accommodation_ids, :side_body, :url_title, :browser_title, :meta_description, :exclusion, :inclusion
 
       belongs_to :parent, :class_name => '::Refinery::Locations::Location'
       belongs_to :cover_image, :class_name => '::Refinery::Image'
@@ -29,6 +29,21 @@ module Refinery
       def remove_span
         new_slug = self.slug.gsub("-span-","-").gsub("-span","")
         self.update_column(:slug, new_slug)
+
+
+        # location = self
+        # links = ''
+        # if location.parent.present?
+        #   if location.parent.parent.present?
+        #     links << location.parent.parent.slug+ " "
+        #     links << location.parent.slug+ " "
+        #   else
+        #     links << location.parent.slug + " "
+        #   end
+        # end
+        # links << location.slug
+        #
+        # self.update_column(:bread, links.to_s)
       end
 
       def roots

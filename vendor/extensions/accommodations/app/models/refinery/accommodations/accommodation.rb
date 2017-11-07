@@ -10,7 +10,7 @@ module Refinery
       extend FriendlyId
       friendly_id :name, :use => [:slugged]
 
-      attr_accessible :name, :cover_image_id, :rating, :description, :position, :activity_ids, :location_id, :latitude, :longitude, :address, :gallery_id, :sub_name, :location_ids, :amenity_ids,
+      attr_accessible :name, :bread, :cover_image_id, :rating, :description, :position, :activity_ids, :location_id, :latitude, :longitude, :address, :gallery_id, :sub_name, :location_ids, :amenity_ids,
       :low_rate, :mid_rate, :high_rate, :jan, :feb, :marc, :apr, :may, :jun, :jul, :aug, :sept, :oct, :nov, :dec, :slug, :browser_title, :meta_description, :exclusion, :inclusion
 
       validates :name, :presence => true, :uniqueness => true
@@ -33,6 +33,24 @@ module Refinery
       def remove_span
         new_slug = self.slug.gsub("-span-","-").gsub("-span","")
         self.update_column(:slug, new_slug)
+
+        accommodation = self
+        links = ''
+
+        if accommodation.locations.first.present? and accommodation.locations.first.parent.present?
+          if accommodation.locations.first.parent.parent.present?
+            links << accommodation.locations.first.parent.parent.slug + " "
+            links << accommodation.locations.first.parent.slug + " "
+          else
+            links << accommodation.locations.first.parent.slug + " "
+          end
+        end
+        if accommodation.locations.first.present?
+            links << accommodation.locations.first.slug + " "
+        end
+        links << accommodation.slug
+
+        self.update_column(:bread, links.to_s)
       end
 
       def is_valid?

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20171103083611) do
+ActiveRecord::Schema.define(:version => 20171107145046) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20171103083611) do
     t.string   "meta_description"
     t.text     "inclusion"
     t.text     "exclusion"
+    t.string   "bread"
   end
 
   create_table "refinery_accommodations_amenities", :id => false, :force => true do |t|
@@ -341,6 +342,7 @@ ActiveRecord::Schema.define(:version => 20171103083611) do
     t.string   "meta_description"
     t.text     "inclusion"
     t.text     "exclusion"
+    t.string   "bread"
   end
 
   create_table "refinery_locations_posts", :id => false, :force => true do |t|
