@@ -7,7 +7,7 @@ module Refinery
 
       def index
         if params[:search].present?
-          @all_location_items = ::Refinery::Locations::Location.where("COALESCE(exclusion, '') NOT iLIKE :search AND (description iLIKE :search OR name iLIKE :search OR inclusion iLIKE :search)", search: "%#{params[:search]}%")
+          @all_location_items = ::Refinery::Locations::Location.where("COALESCE(exclusion, '') NOT iLIKE :search AND (bread iLIKE :search OR name iLIKE :search OR inclusion iLIKE :search)", search: "%#{params[:search]}%")
           @all_accommodation_items = ::Refinery::Accommodations::Accommodation.where("COALESCE(exclusion, '') NOT iLIKE :search AND (bread iLIKE :search OR name iLIKE :search OR inclusion iLIKE :search)", search: "%#{params[:search]}%")
           @all_activity_items = ::Refinery::Activities::Activity.where("name iLIKE :search", search: "%#{params[:search]}%")
         end

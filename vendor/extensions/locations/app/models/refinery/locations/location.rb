@@ -31,19 +31,19 @@ module Refinery
         self.update_column(:slug, new_slug)
 
 
-        # location = self
-        # links = ''
-        # if location.parent.present?
-        #   if location.parent.parent.present?
-        #     links << location.parent.parent.slug+ " "
-        #     links << location.parent.slug+ " "
-        #   else
-        #     links << location.parent.slug + " "
-        #   end
-        # end
-        # links << location.slug
-        #
-        # self.update_column(:bread, links.to_s)
+        location = self
+        links = ''
+        if location.parent.present?
+          if location.parent.parent.present?
+            links << location.parent.parent.slug+ " "
+            links << location.parent.slug+ " "
+          else
+            links << location.parent.slug + " "
+          end
+        end
+        links << location.slug
+
+        self.update_column(:bread, links.to_s)
       end
 
       def roots
