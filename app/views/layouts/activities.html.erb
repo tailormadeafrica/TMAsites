@@ -2,7 +2,7 @@
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
-  <body id="container">
+  <div id="container">
   
 
 
@@ -16,7 +16,6 @@
     <% if action_name == "index" %>
 
       <% if @activities.present? %>
-      <% @activities = Refinery::Activities::Activity.first(10) %>
       <div id="welcome" class="search activities">
         <div class="container">
           <div class="row">
@@ -37,11 +36,8 @@
             </div>
           </div>
         </div>
+      </div>
       <% end %>   
-
-
-
-
 
 
     <% else %>

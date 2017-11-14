@@ -36,7 +36,7 @@
           </div>
           <textarea class="form-control" name="inquiry[message]" rows="3" placeholder="Message"></textarea>
           <div class="captcha"></div>
-          <input type="text" name="inquiry[captcha]" class="form-control" placeholder="Retype Captcha*" required>
+          <input type="text" id="captcha" name="inquiry[captcha]" pattern="Y4X3B" class="form-control" placeholder="Retype Captcha*" required>
           
           <input class="btn btn-custom" type="submit" value="Send Message">
         </form>
@@ -44,6 +44,7 @@
     </div>
   </div>
 </div>
+
 
 <% face = copywriting('Facebook', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
 <% twit = copywriting('Twitter', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
