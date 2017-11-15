@@ -39,16 +39,16 @@ module Refinery
 
         if accommodation.locations.first.present? and accommodation.locations.first.parent.present?
           if accommodation.locations.first.parent.parent.present?
-            links << accommodation.locations.first.parent.parent.slug + " "
-            links << accommodation.locations.first.parent.slug + " "
+            links << accommodation.locations.first.parent.parent.slug.gsub('-',' ') + " "
+            links << accommodation.locations.first.parent.slug.gsub('-',' ') + " "
           else
-            links << accommodation.locations.first.parent.slug + " "
+            links << accommodation.locations.first.parent.slug.gsub('-',' ') + " "
           end
         end
         if accommodation.locations.first.present?
-            links << accommodation.locations.first.slug + " "
+            links << accommodation.locations.first.slug.gsub('-',' ') + " "
         end
-        links << accommodation.slug
+        links << accommodation.slug.gsub('-',' ')
 
         self.update_column(:bread, links.to_s)
       end

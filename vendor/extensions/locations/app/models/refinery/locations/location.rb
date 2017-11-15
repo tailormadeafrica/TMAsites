@@ -35,13 +35,13 @@ module Refinery
         links = ''
         if location.parent.present?
           if location.parent.parent.present?
-            links << location.parent.parent.slug+ " "
-            links << location.parent.slug+ " "
+            links << location.parent.parent.slug.gsub('-',' ') + " "
+            links << location.parent.slug.gsub('-',' ') + " "
           else
-            links << location.parent.slug + " "
+            links << location.parent.slug.gsub('-',' ') + " "
           end
         end
-        links << location.slug
+        links << location.slug.gsub('-',' ')
 
         self.update_column(:bread, links.to_s)
       end
