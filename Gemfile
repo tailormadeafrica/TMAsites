@@ -47,6 +47,8 @@ gem 'net-ssh', '2.9.2'
 gem 'rack-cache', '1.2'
 gem 'bootstrap-datepicker-rails'
 gem 'sass', '3.4.23'
+gem 'hitimes', '1.2.4'
+gem 'rake', '12.1.0'
 
 
 
