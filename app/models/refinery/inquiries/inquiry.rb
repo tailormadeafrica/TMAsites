@@ -22,7 +22,7 @@ module Refinery
 
       attr_accessible :name, :phone, :message, :email, :service_name, :destination, :from, :first_trip, :budget, :captcha, :currency
 
-      def self.latest(number = 7, include_spam = false)
+      def self.latest(number = 7, include_spam = true)
         include_spam ? limit(number) : ham.limit(number)
       end
 
