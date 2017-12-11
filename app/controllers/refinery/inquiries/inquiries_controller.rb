@@ -16,7 +16,7 @@ module Refinery
         @inquiry = ::Refinery::Inquiries::Inquiry.new(params[:inquiry])
 
         if @inquiry.save
-          if @inquiry.ham?
+          # if @inquiry.ham?
             begin
               ::Refinery::Inquiries::InquiryMailer.notification(@inquiry, request).deliver
             rescue
@@ -28,7 +28,7 @@ module Refinery
             rescue
               logger.warn "There was an error delivering an inquiry confirmation:\n#{$!}\n"
             end if ::Refinery::Inquiries::Setting.send_confirmation?
-          end
+          # end
 
           redirect_to refinery.thank_you_inquiries_inquiries_path
         else

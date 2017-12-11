@@ -12,7 +12,7 @@
           <!--<input type="text" name="inquiry[budget]" class="form-control" placeholder="Budget*" required>-->
           <div class="input-group">
             <span class="input-group-addon currency-label">Budget*</span>
-            <input type="text" name="inquiry[budget]" class="form-control currency-amount">
+            <input type="text" name="inquiry[budget]" class="form-control currency-amount" required>
             <div class="input-group-addon currency-addon">
               <select name="inquiry[currency]" class="currency-selector">
                 <option value="USD" selected>USD</option>
@@ -36,7 +36,7 @@
           </div>
           <textarea class="form-control" name="inquiry[message]" rows="3" placeholder="Message"></textarea>
           <div class="captcha"></div>
-          <input type="text" id="captcha" name="inquiry[captcha]" pattern="Y4X3B" class="form-control" placeholder="Retype Captcha*" required>
+          <input type="text" id="captcha" name="inquiry[captcha]" pattern="^.*\b(y4x3b|Y4X3B|y4x3B)\b.*$" class="form-control" placeholder="Retype Captcha*" required>
           
           <input class="btn btn-custom" type="submit" value="Send Message">
         </form>
