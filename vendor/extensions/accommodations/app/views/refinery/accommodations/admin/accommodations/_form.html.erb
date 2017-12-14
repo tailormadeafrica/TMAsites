@@ -3,7 +3,7 @@
               :object => @accommodation,
               :include_object_name => true %>
 
-  <%= hidden_field_tag 'accommodation[activity_ids][]' %>
+  <%#= hidden_field_tag 'accommodation[activity_ids][]' %>
   <%= hidden_field_tag 'accommodation[location_ids][]' %>
   <%= hidden_field_tag 'accommodation[amenity_ids][]' %>
   
@@ -166,15 +166,15 @@
     <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :activities %>
-    <% ::Refinery::Activities::Activity.all.each do |activity| %>
-      <div>
-        <%= check_box_tag "accommodation[activity_ids][]", activity.id, @accommodation.activities.include?(activity) %>
-        <%= activity.name %>
-      </div>
-    <% end %>
-  </div>
+  <!--<div class="field">-->
+    <!--<%#= f.label :activities %>-->
+    <!--<%# ::Refinery::Activities::Activity.all.each do |activity| %>-->
+      <!--<div>-->
+        <!--<%#= check_box_tag "accommodation[activity_ids][]", activity.id, @accommodation.activities.include?(activity) %>-->
+        <!--<%#= activity.name %>-->
+      <!--</div>-->
+    <!--<%# end %>-->
+  <!--</div>-->
 
   <div class="field">
     <%= f.label :locations %>

@@ -77,30 +77,30 @@
           </div>
       <% end %>
 
-      <% if @activity.accommodations.present? %>
-        <div id="welcome" class="locations search best bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <h1>Best Lodges <span>for <%= @activity.name %></span></h1>
-                <ul class=" list-inline list-unstyled cf">
-                  <% @activity.accommodations.each do |accommodation| %>
-                    <% if accommodation.is_valid? %>
-                      <li class="search-item">    
-                        <%= link_to(image_fu(accommodation.cover_image, "105x80#c", :alt => accommodation.cover_image.alt_tag),refinery.accommodations_accommodation_path(accommodation)) if accommodation.cover_image.present? %>               
-                        <div class="search-item-body">
-                          <h3><%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>
-                          <div class="description"><%=raw truncate(accommodation.description, :length => 120) %></div>
-                        </div>
-                      </li>
-                    <% end %>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
+      <%# if @activity.accommodations.present? %>
+        <!--<div id="welcome" class="locations search best bottom">-->
+          <!--<div class="container">-->
+            <!--<div class="row">-->
+              <!--<div class="col-xs-12">-->
+                <!--<h1>Best Lodges <span>for <%#= @activity.name %></span></h1>-->
+                <!--<ul class=" list-inline list-unstyled cf">-->
+                  <!--<%# @activity.accommodations.each do |accommodation| %>-->
+                    <!--<%# if accommodation.is_valid? %>-->
+                      <!--<li class="search-item">    -->
+                        <!--<%#= link_to(image_fu(accommodation.cover_image, "105x80#c", :alt => accommodation.cover_image.alt_tag),refinery.accommodations_accommodation_path(accommodation)) if accommodation.cover_image.present? %>               -->
+                        <!--<div class="search-item-body">-->
+                          <!--<h3><%#= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>-->
+                          <!--<div class="description"><%#=raw truncate(accommodation.description, :length => 120) %></div>-->
+                        <!--</div>-->
+                      <!--</li>-->
+                    <!--<%# end %>-->
+                  <!--<%# end %>-->
+                <!--</ul>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <%# end %>
 
 
     <% end %>
