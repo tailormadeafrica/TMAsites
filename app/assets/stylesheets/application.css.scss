@@ -20,7 +20,7 @@
 @mixin vertical-align ($position: relative) { position: $position!important; top: 50%!important; -webkit-transform: translateY(-50%)!important; -ms-transform: translateY(-50%)!important; transform: translateY(-50%)!important; }
 @mixin button ($height:50px,$line-height:50px,$color:$color,$border:1px solid $color,$background:transparent,$margin-top:20px,$font-size:14px,$padding:0 50px) {height:$height; line-height:$line-height; color:$color; background:$background; border:$border; margin-top:$margin-top;  font-size:$font-size; padding:$padding;border-radius:100px; font-weight:300;}
 
-$orange:#fb6733;
+$orange:#fb6733; 
 $color:#282629;
 
 /* For modern browsers */
