@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20180322085308) do
+ActiveRecord::Schema.define(:version => 20180322125619) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -233,6 +233,7 @@ ActiveRecord::Schema.define(:version => 20180322085308) do
     t.integer  "access_count",     :default => 0
     t.string   "slug"
     t.integer  "image_id"
+    t.string   "video_url"
   end
 
   add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"

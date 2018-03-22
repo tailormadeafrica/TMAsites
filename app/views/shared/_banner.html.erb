@@ -120,7 +120,7 @@
     <% end %>
   </div>
 <% elsif @post.present? and @post.banners.published.present? %>
-  <div class="master-slider ms-skin-default" id="post_masterslider">
+  <div class="master-slider ms-skin-default" id="post_masterslider2">
     <div class="search hidden-xs">
       <div class="container">
         <div class="row">
@@ -147,82 +147,11 @@
       <% if banner.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
         <div class="overlay"></div>
-          <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
+          <%= image_fu(banner.image, "1920x435#c", :alt => banner.image.alt_tag) %>
           <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
             <h1><%= raw banner.name %></h1>
           </div>
           <img src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-<% elsif @page.link_url.present? and @page.link_url == '/blog' and @page.present? and @page.banners.published.present? %>
-  <div class="master-slider ms-skin-default" id="post_masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% @page.banners.published.reorder('position ASC').each do |banner| %>
-      <% if banner.image.present? %>
-        <div class="ms-slide slide-1" data-delay="4">
-        <div class="overlay"></div>
-          <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h1><%= raw banner.name %></h1>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-<% elsif @post.present? and @post.banners.published.present? %>
-  <div class="master-slider ms-skin-default" id="post_masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% @post.banners.published.reorder('position ASC').each do |banner| %>
-      <% if banner.image.present? %>        
-        <div class="ms-slide slide-1" data-delay="4">
-          <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h1><%= raw banner.name %></h1>
-          </div>
         </div>
       <% end %>
     <% end %>

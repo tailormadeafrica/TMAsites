@@ -5,7 +5,12 @@
 <% end %>
 <article id="blog_post">
   <header>
-    <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>    
+    <% if  @post.video_url.present? %>
+      <iframe width="100%" height="425" src="<%=  @post.video_url.gsub("youtu.be/","www.youtube.com/embed/") %>?autoplay=1" allowfullscreen>
+      </iframe>
+    <% else %>
+      <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>
+    <% end %>
   </header>
   <%= @post.body.html_safe %>
 <div class="share">
@@ -22,21 +27,21 @@
 <% content_for :right do %>
   <% if @post.locations.present? %>
   <div class="blog_rhs">
-        <h2>Location</h2>
-        <ul class=" list-inline list-unstyled">
-          <% @post.locations.each do |location| %>
-            <li class="search-item">     
-            <%= link_to(image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag),refinery.locations_location_path(location)) if location.cover_image.present? %>
-            <div class="search-item-body">
-              <h3><%= link_to strip_tags(location.name), refinery.locations_location_path(location) %></h3>
-              <div class="description"><%=raw truncate(location.description, :length => 120) %></div>
-            </div>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+      <h2>Location</h2>
+      <ul class=" list-inline list-unstyled">
+        <% @post.locations.each do |location| %>
+          <li class="search-item">
+          <%= link_to(image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag),refinery.locations_location_path(location)) if location.cover_image.present? %>
+          <div class="search-item-body">
+            <h3><%= link_to strip_tags(location.name), refinery.locations_location_path(location) %></h3>
+            <div class="description"><%=raw truncate(location.description, :length => 120) %></div>
+          </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
+<% end %>
 
 
 
