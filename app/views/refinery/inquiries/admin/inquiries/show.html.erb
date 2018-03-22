@@ -90,15 +90,23 @@
         </tr>
     <% end %>
     <% unless @inquiry.first_trip.blank? %>
-        <tr>
-          <td>
-            <strong>Is it your first trip to Africa?</strong>
-          </td>
-          <td>
-            <%= @inquiry.first_trip %>
-          </td>
-        </tr>
+      <tr>
+        <td>
+          <strong>Is it your first trip to Africa?</strong>
+        </td>
+        <td>
+          <%= @inquiry.first_trip %>
+        </td>
+      </tr>
     <% end %>
+    <tr>
+      <td>
+        <strong>I except communication</strong>
+      </td>
+      <td>
+        <%=  @inquiry.except_communication ? 'Yes': 'No' %>
+      </td>
+    </tr>
     <tr>
       <td>
         <strong><%= t('.date') %></strong>
