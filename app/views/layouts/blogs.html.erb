@@ -3,9 +3,6 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body>
-
-
-
     
 
     <%= site_bar -%>
@@ -16,7 +13,7 @@
     <%= render '/shared/banner' %>
 
 
-  <% if action_name == "show" %>
+  <% if action_name == "show" and controller_name != 'categories' %>
     <div class="blog_show">         
       <div class="container">
         <div class="blog_show_container"> 

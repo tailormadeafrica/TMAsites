@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
       "activities"
     elsif controller_name == "posts"
       "blogs"
+    elsif controller_name == "categories" and action_name == "show"
+      "blogs"
     else
       "application"
     end

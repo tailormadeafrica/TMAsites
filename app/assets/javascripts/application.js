@@ -155,6 +155,22 @@ $(document).ready(function() {
         overPause:false
     });
 
+    var post_slider2 = new MasterSlider();
+
+    //slider.control('arrows');
+
+    post_slider2.setup('post_masterslider2' , {
+        width:1920,
+        height:435,
+        space:0,
+        layout:'fullwidth',
+        loop:true,
+        preload:0,
+        autoplay:true,
+        view:'fade',
+        overPause:false
+    });
+
     var slider2 = new MasterSlider();
 
     slider2.control('arrows');
