@@ -158,6 +158,7 @@
               <%#= link_to 'Start Your Journey', '#contact', :class=>"btn btn-default btn-custom" %>
             </div>
             <div class="col-xs-12 itineraries">
+            <% if @location.low.present? and @location.medium.present? and @location.high.present? %>
               <h2 class="itinerary">Travel Itinerary</h2>
               <p class="click">Click on one of the options below to browse a travel itinerary that suits your budget!</p>
               <% if @location.low.present? %>
@@ -181,6 +182,7 @@
                   </div>
                 </div>
               <% end %>
+            <% end %>
             </div>
 
           </div>
