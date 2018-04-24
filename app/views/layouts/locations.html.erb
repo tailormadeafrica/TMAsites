@@ -157,31 +157,31 @@
               </div>
               <%#= link_to 'Start Your Journey', '#contact', :class=>"btn btn-default btn-custom" %>
             </div>
-
-            <% if @location.low.present? %>
-                <div class="col-xs-12 col-sm-4">
-                  <div class="low">
-                    <h3>Low</h3>
-                    <a href="<%= @location.low %>" target="_blank">Click here</a>
+            <div class="col-xs-12 itineraries">
+              <h2 class="itinerary">Travel Itinerary</h2>
+              <p class="click">Click on one of the options below to browse a travel itinerary that suits your budget!</p>
+              <% if @location.low.present? %>
+                <div class="col-xs-12 col-sm-offset-3 col-sm-2">
+                  <div class="price-low">
+                    <a href="<%= @location.low %>" target="_blank"><img src="/assets/itinerary-low.png"><br/><h5>Cost-effective</h5></a>
                   </div>
                 </div>
-            <% end %>
-            <% if @location.medium.present? %>
-                <div class="col-xs-12 col-sm-4">
-                  <div class="medium">
-                    <h3>Medium</h3>
-                    <a href="<%= @location.medium %>" target="_blank">Click here</a>
+              <% end %>
+              <% if @location.medium.present? %>
+                <div class="col-xs-12 col-sm-2">
+                  <div class="price-medium">
+                    <a href="<%= @location.medium %>" target="_blank"><img src="/assets/itinerary-mid.png"><br/><h5>Mid-range</h5></a>                    
                   </div>
                 </div>
-            <% end %>
-            <% if @location.high.present? %>
-                <div class="col-xs-12 col-sm-4">
-                  <div class="high">
-                    <h3>High</h3>
-                    <a href="<%= @location.high %>" target="_blank">Click here</a>
+              <% end %>
+              <% if @location.high.present? %>
+                <div class="col-xs-12 col-sm-2">
+                  <div class="price-high">
+                    <a href="<%= @location.high %>" target="_blank"><img src="/assets/itinerary-high.png"><br/><h5>Luxury</h5></a>
                   </div>
                 </div>
-            <% end %>
+              <% end %>
+            </div>
 
           </div>
         </div>

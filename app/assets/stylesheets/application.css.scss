@@ -294,9 +294,14 @@ strong {font-weight:500;}
     a {color:$color;}
 }
 
-.locations,.activities,.accommodations,.locations {padding:20px 0 30px 0; text-align:center;
+.locations,.activities,.accommodations,.locations,.itineraries {padding:20px 0 30px 0; text-align:center;
   h1,h2 {text-align:center;}
   h2.slider {margin:30px 0 10px 0; font-size:36px;}
+  h2.itinerary {margin:0 0 10px 0; font-size:30px;}
+  .price-low,.price-medium,.price-high {margin-top:30px;}
+  .price-low h5 {font-family: 'Poppins', sans-serif; color:#b6c274; margin-bottom:10px; font-weight:400;}
+  .price-medium h5 {font-family: 'Poppins', sans-serif; color:#fac528; margin-bottom:10px; font-weight:400;}
+  .price-high h5 {font-family: 'Poppins', sans-serif; color:#d85f44; margin-bottom:10px; font-weight:400;}
   p {text-align:center;}
   .search-item {width: 48%; float: left; margin: 0 20px 10px 0; border: 1px solid #e7e7e7; padding: 10px 10px 0 10px; height:102px;
     h1,h2 {display:none;}  
