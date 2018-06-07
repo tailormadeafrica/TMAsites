@@ -63,9 +63,19 @@
         <tr>
           <td>
             <strong>Budget</strong>
-          </td>currency
+          </td>
           <td>
             <%= @inquiry.budget %>
+          </td>
+        </tr>
+    <% end %>
+    <% unless @inquiry.number_of_nights.blank? %>
+        <tr>
+          <td>
+            <strong>Number of nights</strong>
+          </td>
+          <td>
+            <%= @inquiry.number_of_nights %>
           </td>
         </tr>
     <% end %>

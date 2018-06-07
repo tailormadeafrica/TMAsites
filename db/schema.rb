@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20180423122802) do
+ActiveRecord::Schema.define(:version => 20180607144429) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -265,6 +265,24 @@ ActiveRecord::Schema.define(:version => 20180423122802) do
 
   add_index "refinery_bookings", ["id"], :name => "index_refinery_bookings_on_id"
 
+  create_table "refinery_college_enquires", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "email"
+    t.string   "contact_number"
+    t.date     "birth"
+    t.string   "home_language"
+    t.string   "education"
+    t.string   "nationality"
+    t.string   "gender"
+    t.string   "intrested_in"
+    t.text     "comments"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "refinery_college_enquires", ["id"], :name => "index_refinery_college_enquires_on_id"
+
   create_table "refinery_copywriting_phrase_translations", :force => true do |t|
     t.integer  "refinery_copywriting_phrase_id"
     t.string   "locale"
@@ -317,6 +335,7 @@ ActiveRecord::Schema.define(:version => 20180423122802) do
     t.boolean  "first_trip"
     t.string   "currency"
     t.boolean  "except_communication"
+    t.string   "number_of_nights"
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"

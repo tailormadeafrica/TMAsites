@@ -10,6 +10,9 @@
 <% unless @inquiry.destination.blank? %>
 Destination: <%= @inquiry.destination %>
 <% end %>
+<% if @inquiry.number_of_nights.present? %>
+Number of nights: <%= @inquiry.number_of_nights %>
+<% end %>
 <% unless @inquiry.budget.blank? %>
 Budget: <%= @inquiry.budget %>
 <% end %>
