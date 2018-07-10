@@ -77,6 +77,14 @@ module Refinery
         @posts = Post.tagged_with(@tag_name).page(params[:page])
       end
 
+      def find_all_blog_posts
+        if params[:vlog]
+          @posts = Refinery::Blog::Post.where("video_url != ?", "").live.includes(:comments, :categories)
+        else
+          @posts = Refinery::Blog::Post.where("video_url = ?", "").live.includes(:comments, :categories)
+        end
+      end
+
       def canonical?
         ::Refinery.i18n_enabled? && ::Refinery::I18n.default_frontend_locale != ::Refinery::I18n.current_frontend_locale
       end
