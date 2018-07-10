@@ -14,13 +14,13 @@ module Refinery
           end
         end
 
-        # def find_all_blog_posts
-        #   if params[:vlog]
-        #     @posts = Refinery::Blog::Post.where("video_url != ?", "").live.includes(:comments, :categories).page(params[:page])
-        #   else
-        #     @posts = Refinery::Blog::Post.where("video_url = ?", "").live.includes(:comments, :categories).page(params[:page])
-        #   end
-        # end
+        def find_all_blog_posts
+          if params[:vlog]
+            @posts = Refinery::Blog::Post.where("video_url != ?", "").live.includes(:comments, :categories).page(params[:page])
+          else
+            @posts = Refinery::Blog::Post.where("video_url = ?", "").live.includes(:comments, :categories).page(params[:page])
+          end
+        end
 
         def find_tags
           @tags = Refinery::Blog::Post.tag_counts_on(:tags)
