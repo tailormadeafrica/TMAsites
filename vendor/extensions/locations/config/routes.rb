@@ -2,25 +2,25 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   Refinery::Locations::Location.roots.each do |parent|
-    match "/#{parent.slug}" => "locations/locations#show" 
+    match "/#{parent.slug}" => "locations/locations#show"
       if parent.accommodations.present?
         parent.accommodations.each do |acc|
-          match "/#{parent.slug}/#{acc.slug}" => "accommodations/accommodations#show" 
+          match "/#{parent.slug}/#{acc.slug}" => "accommodations/accommodations#show"
         end
       end
       parent.children.each do |child|
-        match "/#{parent.slug}/#{child.slug}" => "locations/locations#show" 
+        match "/#{parent.slug}/#{child.slug}" => "locations/locations#show"
         if child.accommodations.present?
           child.accommodations.each do |acc|
-            match "/#{parent.slug}/#{child.slug}/#{acc.slug}" => "accommodations/accommodations#show" 
+            match "/#{parent.slug}/#{child.slug}/#{acc.slug}" => "accommodations/accommodations#show"
           end
         end
         child.children.each do |grand|
-         match "/#{parent.slug}/#{child.slug}/#{grand.slug}" => "locations/locations#show" 
+         match "/#{parent.slug}/#{child.slug}/#{grand.slug}" => "locations/locations#show"
 
           if grand.accommodations.present?
             grand.accommodations.each do |acc|
-              match "/#{parent.slug}/#{child.slug}/#{grand.slug}/#{acc.slug}" => "accommodations/accommodations#show" 
+              match "/#{parent.slug}/#{child.slug}/#{grand.slug}/#{acc.slug}" => "accommodations/accommodations#show"
             end
           end
         end
