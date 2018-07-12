@@ -130,7 +130,7 @@ $(document).ready(function() {
         limit: 5,
         resolution: 'standard_resolution',
         sortBy: "most-recent",
-        template: '<li style="display: inline-block; position: relative; width: 20%;"><div style="margin-top: 100%;"></div><a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0; background: url({{image}}) no-repeat center center / cover;" href="{{link}}" target="_blank"></a></li>'
+        template: '<li style="display: inline-block; position: relative; width: 20%;"><div style="margin-top: 100%;"></div><a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0; background: url({{image}}) no-repeat center center / cover;" href="{{link}}" title="{{caption}}" target="_blank"></a></li>'
         // template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" height="86px" width="86px"/></a></li>'
     });
     feed.run();
