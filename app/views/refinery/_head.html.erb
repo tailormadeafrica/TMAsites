@@ -7,6 +7,9 @@
   <% elsif @accommodation.present? and @accommodation.browser_title.present?  %>
     <title><%= browser_title(@accommodation.browser_title) %></title>
     <%= raw(%(<meta name="description" content="#{@accommodation.meta_description}" />)) if @accommodation.meta_description.present? -%>
+  <% elsif @activity.present? and @activity.browser_title.present?  %>
+    <title><%= browser_title(@activity.browser_title) %></title>
+    <%= raw(%(<meta name="description" content="#{@activity.meta_description}" />)) if @activity.meta_description.present? -%>
   <% else %>
     <title><%= browser_title(yield(:title)) %></title>
     <%= raw(%(<meta name="description" content="#{@meta.meta_description}" />)) if @meta.meta_description.present? -%>

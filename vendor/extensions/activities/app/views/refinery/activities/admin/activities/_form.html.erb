@@ -96,6 +96,18 @@
       </div>
     <% end %>
   </div>
+
+  <h1>SEO</h1>
+  <div class='field'>
+    <%= f.label :browser_title -%>
+    <%= f.text_field :browser_title  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :meta_description -%>
+    <%= f.text_area :meta_description, :class => 'widest', :rows => 7  -%>
+  </div>
   
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,

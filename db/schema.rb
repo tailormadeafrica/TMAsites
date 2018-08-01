@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20180607144429) do
+ActiveRecord::Schema.define(:version => 20180801131730) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -107,13 +107,15 @@ ActiveRecord::Schema.define(:version => 20180607144429) do
     t.text     "description"
     t.string   "rating"
     t.integer  "position"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "gallery_id"
     t.string   "sub_name"
     t.integer  "image_id"
     t.string   "activity_type"
     t.string   "slug"
+    t.string   "browser_title"
+    t.string   "meta_description"
   end
 
   create_table "refinery_activities_accommodations", :id => false, :force => true do |t|
