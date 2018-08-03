@@ -337,7 +337,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   acts-as-taggable-on (= 3.0.1)
