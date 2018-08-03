@@ -53,8 +53,8 @@ gem 'rake', '12.1.0'
 
 
 # Refinery CMS
-gem 'refinerycms', '2.0.3'
-gem 'refinerycms-core', '2.0.3'
+gem 'refinerycms',  :git => "git://github.com/perfectcircledesign/refinerycms.git", :branch => "feature/js_image_upload"
+gem 'refinerycms-core', '2.0.10'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'

@@ -59,7 +59,7 @@
                         <div class="btn btn-custom">Read More</div>
                       </div>
                       <div class="slider-overlay"></div>
-                      <%= image_fu item.image, "218x330#c" %>
+                      <%= image_fu item.image, "218x330#c", :alt => item.image.alt_tag if item.image.present? %>
                     <% end %>
                   </div>
                 </li>
@@ -98,7 +98,7 @@
                             <h3><%= raw item.name %></h3>
                           </div>
                           <div class="slider-overlay"></div>
-                          <%= image_fu item.image, '440x330#c' %>
+                          <%= image_fu item.image, '440x330#c', :alt => item.image.alt_tag if item.image.present? %>
                         <% end %>
                       </div>
                     <% else %>
@@ -108,7 +108,7 @@
                             <h3><%= raw item.name %></h3>
                           </div>
                           <div class="slider-overlay"></div>
-                          <%= image_fu item.image, '217x162#c' %>
+                          <%= image_fu item.image, '217x162#c', :alt => item.image.alt_tag if item.image.present? %>
                         <% end %>
                       </div>
                     <% end %>
@@ -201,7 +201,7 @@
           <% blogs.each do |post| %>
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="recent-blog-item">
-                <%= link_to(image_fu(post.image, '360x272#c', :class=>"img-responsive"), refinery.blog_post_path(post)) %>
+                <%= link_to(image_fu(post.image, '360x272#c', :class=>"img-responsive", :alt => post.image.alt_tag), refinery.blog_post_path(post)) %>
                 <div class="caption cf">
                   <div class="title"><%= link_to post.title, refinery.blog_post_path(post) %></div>
                   <div class="date"><%= post.published_at.strftime('%B %e, %Y') %></div>
