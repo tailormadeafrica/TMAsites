@@ -27,6 +27,43 @@ module Refinery
         render :layout => false
       end
 
+      def update
+        if @page.update_attributes(params[:page])
+          flash.notice = t(
+            'refinery.crudify.updated',
+            :what => "'#{@page.title}'"
+          )
+
+          unless from_dialog?
+            unless params[:continue_editing] =~ /true|on|1/
+              redirect_back_or_default(refinery.admin_pages_path)
+            else
+              unless request.xhr?
+                redirect_to :back
+              else
+                render :partial => 'save_and_continue_callback', :locals => {
+                  :new_refinery_page_path => refinery.admin_page_path(@page.uncached_nested_url),
+                  :new_page_path => refinery.preview_page_path(@page.uncached_nested_url)
+                }
+              end
+            end
+          else
+            self.index
+            @dialog_successful = true
+            render :index
+          end
+        else
+          unless request.xhr?
+            render :action => 'edit'
+          else
+            render :partial => '/refinery/admin/error_messages', :locals => {
+              :object => @page,
+              :include_object_name => true
+            }
+          end
+        end
+      end
+
     protected
 
       def find_page
@@ -37,21 +74,10 @@ module Refinery
       # We can safely assume ::Refinery::I18n is defined because this method only gets
       # Invoked when the before_filter from the plugin is run.
       def globalize!
-        unless action_name.to_s == 'index'
-          super
+        return super unless action_name.to_s == 'index'
 
-          # Needs to take into account that slugs are translated now
-          # # Check whether we need to override e.g. on the pages form.
-          # unless params[:switch_locale] || @page.nil? || @page.new_record? || @page.slugs.where({
-          #   :locale => Refinery::I18n.current_locale
-          # }).empty?
-          #   @page.slug = @page.slugs.first if @page.slug.nil? && @page.slugs.any?
-          #   Thread.current[:globalize_locale] = @page.slug.locale if @page.slug
-          # end
-        else
-          # Always display the tree of pages from the default frontend locale.
-          Thread.current[:globalize_locale] = params[:switch_locale].try(:to_sym) || Refinery::I18n.default_frontend_locale
-        end
+        # Always display the tree of pages from the default frontend locale.
+        Globalize.locale = params[:switch_locale].try(:to_sym) || Refinery::I18n.default_frontend_locale
       end
 
       def load_valid_templates
