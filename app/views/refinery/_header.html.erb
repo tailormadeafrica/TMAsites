@@ -15,8 +15,8 @@
         <span class="icon-bar"></span>
       </button>
       <ul class="top-menu list-inline visible-xs">
-        <li><a href="tel:+447809726266"><img src="/assets/phone.png"></a></li>
-        <li><a href="mailto:<%= email %>"><img src="/assets/envelope.png"></a></li>
+        <li><a href="tel:+447809726266"><img alt="phone" src="/assets/phone.png"></a></li>
+        <li><a href="mailto:<%= email %>"><img alt="envelope" src="/assets/envelope.png"></a></li>
       </ul>
       <!--     <a class="navbar-brand hidden-xs" href="#"><img src="images/logo.png" ></a> -->
     </div>
@@ -29,7 +29,7 @@
         <li><a href="<%= face %>" target="_blank"><img alt="facebook" title="facebook" src="/assets/facebook.png"></a></li>
         <li><a href="<%= twit %>" target="_blank"><img alt="twitter" title="twitter" src="/assets/twitter.png"></a></li>
         <li><a href="<%= ins %>" target="_blank"><img alt="instagram" title="instagram" src="/assets/instagram.png"></a></li>
-        <li class="hidden-xs"><a href="tel:<%= number %>"><img src="/assets/phone.png" class="hidden-sm"><%= number %></a></li>
+        <li class="hidden-xs"><a href="tel:<%= number %>"><img alt="phone" src="/assets/phone.png" class="hidden-sm"><%= number %></a></li>
       </ul>
     </div>
 
@@ -44,7 +44,7 @@
         <% @all_locations.each do |location| %>
           <li><%= link_to(image_fu(location.flag_image, '20x20#c') + location.name, refinery.locations_location_path(location)) %></li>
         <% end %>
-          <li class="close-image"><img class="close-menu" src="/assets/close.png"/></li>
+          <li class="close-image"><img alt="close" class="close-menu" src="/assets/close.png"/></li>
       </ul>
     </nav>
   </div>
