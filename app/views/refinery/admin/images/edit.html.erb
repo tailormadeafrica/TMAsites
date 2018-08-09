@@ -6,9 +6,17 @@
              :object => @image,
              :include_object_name => false %>
 
-  <div class="field">
-    <label for="image_alt_tag">Alt tag</label>    <input id="image_alt_tag" name="image[alt_tag]" size="30" type="text">
+  <div class='field'>
+    <%= f.label :alt_tag -%>
+    <%= f.text_field :alt_tag  -%>
+
   </div>
+
+<!--  <div class="field">-->
+
+<!--    <label for="image_alt_tag">Alt tag</label>    -->
+<!--    <input id="image_alt_tag" name="image[alt_tag]" size="30" type="text">-->
+<!--  </div>-->
 
   <input type="hidden" name="wymeditor" value="<%= params[:wymeditor] %>">
 
@@ -30,7 +38,7 @@
 
 <% if action_name =~ /(edit)|(update)/ %>
   <div id="existing_image">
-    <label><%=t('.current_image') %></label>
+    <label>Current Image</label>
     <%= image_fu @image, '225x255>', :class => "brown_border" %>
   </div>
 <% end %>
