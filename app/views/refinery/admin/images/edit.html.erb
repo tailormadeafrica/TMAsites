@@ -7,22 +7,7 @@
              :include_object_name => false %>
 
   <div class="field">
-    <% if action_name =~ /(edit)|(update)/ %>
-      <p>
-        <%= t('.use_current_image') %>
-        <em><%= t('.or') %></em><%= t('.replace_image') %>
-      </p>
-      <p>
-        <%= f.file_field :image %>
-      </p>
-    <% else %>
-      <% # we must only hint at multiple when it's a new record otherwise update fails. %>
-      <%= f.file_field :image, :multiple => true %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <label><%= t('.maximum_image_size', :bytes => number_to_human_size(Refinery::Images.max_image_size)) %></label>
+    <label for="image_alt_tag">Alt tag</label>    <input id="image_alt_tag" name="image[alt_tag]" size="30" type="text">
   </div>
 
   <input type="hidden" name="wymeditor" value="<%= params[:wymeditor] %>">
