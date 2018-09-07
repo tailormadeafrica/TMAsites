@@ -4,7 +4,7 @@
               :include_object_name => true %>
 
   <%= hidden_field_tag 'product[location_ids][]' %>
-  <%= hidden_field_tag 'product[accommodation_ids][]' %>
+  <%#= hidden_field_tag 'product[accommodation_ids][]' %>
 
   
   <div class='field'>
@@ -87,15 +87,15 @@
     <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :accommodations %>
-    <% ::Refinery::Accommodations::Accommodation.all.each do |accommodation| %>
-      <div>
-        <%= check_box_tag "activity[accommodation_ids][]", accommodation.id, @activity.accommodations.include?(accommodation) %>
-        <%= strip_tags(accommodation.name) %>
-      </div>
-    <% end %>
-  </div>
+  <!--<div class="field">-->
+    <!--<%#= f.label :accommodations %>-->
+    <!--<%# ::Refinery::Accommodations::Accommodation.all.each do |accommodation| %>-->
+      <!--<div>-->
+        <!--<%#= check_box_tag "activity[accommodation_ids][]", accommodation.id, @activity.accommodations.include?(accommodation) %>-->
+        <!--<%#= strip_tags(accommodation.name) %>-->
+      <!--</div>-->
+    <!--<%# end %>-->
+  <!--</div>-->
 
   <h1>SEO</h1>
   <div class='field'>
