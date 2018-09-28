@@ -44,7 +44,7 @@
                           <%= link_to(image_fu(accommodation.cover_image, "105x80#c", :alt => accommodation.cover_image.alt_tag),refinery.accommodations_accommodation_path(accommodation)) if accommodation.cover_image.present? %>               
                           <div class="search-item-body">
                             <h3><%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>
-                            <div class="description"><%=raw truncate(strip_tags(accommodation.description), :length => 120) %></div>
+                            <div class="description"><%=raw truncate(strip_tags(accommodation.description), :length => 80) %></div>
                           </div>
                         </li>
                       <% end %>
@@ -59,7 +59,7 @@
                           <%= link_to(image_fu(activity.image, "80x80#c", :alt => activity.image.alt_tag),refinery.activities_activity_path(activity)) if activity.image.present? %>
                           <div class="search-item-body">
                             <h3><%= link_to strip_tags(activity.name), refinery.activities_activity_path(activity) %></h3>
-                            <div class="description"><%=raw truncate(strip_tags(activity.description), :length => 120) %></div>
+                            <div class="description"><%=raw truncate(strip_tags(activity.description), :length => 80) %></div>
                           </div>
                         </li>
                     <% end %>
