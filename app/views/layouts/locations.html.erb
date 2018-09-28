@@ -28,7 +28,7 @@
                         <%= link_to(image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag), refinery.locations_location_path(location)) if location.cover_image.present? %>
                         <div class="search-item-body">
                           <h3><%= link_to strip_tags(location.name), refinery.locations_location_path(location) %></h3>
-                          <div class="description"><%=raw truncate(strip_tags(location.description), :length => 120) %></div>
+                          <div class="description"><%=raw truncate(strip_tags(location.description), :length => 80) %></div>
                         </div>
                       </li>
                     <% end %>
