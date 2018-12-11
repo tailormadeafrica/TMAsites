@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.2.5'
 
 gem 'rails', '3.2.13'
 
@@ -118,6 +118,8 @@ group :production do
   gem 'puma', '3.8.2'
   gem 'heroku-deflater'
 end
+
+gem "barnes"
 
 gem 'redis', '3.3.5'
 
