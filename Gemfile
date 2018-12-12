@@ -121,6 +121,8 @@ end
 
 gem "barnes"
 
+gem 'test-unit'
+
 gem 'redis', '3.3.5'
 
 gem "nested_form"
