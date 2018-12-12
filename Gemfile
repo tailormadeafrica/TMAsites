@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby '2.2.5'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.22'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -58,8 +58,7 @@ gem 'refinerycms-core', '2.0.10'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
-gem 'i18n', '0.6.1'
-
+gem 'i18n'
 #  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
