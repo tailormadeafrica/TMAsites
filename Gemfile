@@ -46,7 +46,7 @@ gem 'babosa', '0.3.11'
 gem 'net-ssh', '2.9.2'
 gem 'rack-cache', '1.2'
 gem 'bootstrap-datepicker-rails'
-gem 'sass', '3.4.23'
+gem 'sass', '3.7.2'
 gem 'hitimes', '1.2.4'
 gem 'rake', '12.1.0'
 

@@ -65,7 +65,7 @@ module TailorMadeAfrica
     #PERFECT COMPRESSTION
     # config.middleware.use Rack::Deflater
     # config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
-      config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
+
 
   end
 end
