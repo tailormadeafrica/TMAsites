@@ -240,6 +240,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-zippy (3.0.1)
     rails (3.2.22)
       actionmailer (= 3.2.22)
       actionpack (= 3.2.22)
@@ -376,6 +377,7 @@ DEPENDENCIES
   pg (= 0.17.1)
   puma (= 3.12.0)
   rack-cache (= 1.2)
+  rack-zippy
   rails (= 3.2.22)
   rails_autolink (= 1.1.4)
   rake (= 12.1.0)
