@@ -28,7 +28,7 @@ module Refinery
       if image.present?
         dimensions = (image.thumbnail_dimensions(geometry) rescue {})
 
-        coverted_image = image.thumbnail(geometry).encode("#{image.image_mime_type.split('/').last}", '-strip -quality 55')
+        coverted_image = image.thumbnail(geometry).encode("#{image.image_mime_type.split('/').last}", '-strip -interlace Plane -gaussian-blur 0.05 -quality 85%')
 
         image_tag(coverted_image.url, {
           :alt => image.respond_to?(:title) ? image.title : image.image_name,
