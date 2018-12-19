@@ -93,3 +93,6 @@ capybara-*html
 vendor/extensions/**/spec/dummy
 /vendor/bundle
 
+# database
+*.dump
+
