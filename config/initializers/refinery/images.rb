@@ -38,7 +38,7 @@ Refinery::Images.configure do |config|
   # config.dragonfly_secret = "b37ce8614195c944d12b2c96361b1b9748ad2fb74e38daa3"
   # If you decide to trust file extensions replace :ext below with :format
   # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
-    config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
+    config.dragonfly_url_format = "/images/:job/:basename.:ext"
     if Rails.env.production?
       config.dragonfly_url_host = ENV['CLOUDFRONT_ENDPOINT']
     end
