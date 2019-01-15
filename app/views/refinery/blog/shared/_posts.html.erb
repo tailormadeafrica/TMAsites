@@ -4,13 +4,14 @@
   <h2><%= t('.other') %></h2>
   <ul id="blog_posts" class=" list-inline list-unstyled">
     <% @posts.each do |blog_post| %>
+    <a href="<%=  refinery.blog_post_path(blog_post) %>">
       <li class="search-item">
-          <%= link_to(image_fu(blog_post.image, "105x80#c", :alt => blog_post.image.alt_tag),refinery.blog_post_path(blog_post)) %>
+          <%= image_fu(blog_post.image, "105x80#c", :alt => blog_post.image.alt_tag) %>
           <div class="search-item-body">
-            <h3><%= link_to strip_tags(blog_post.title), refinery.blog_post_path(blog_post) %></h3>
-            <div class="description hidden-xs hidden-md"><%=raw truncate(blog_post_teaser(blog_post), :length => 120) %></div>
+            <h3><%= strip_tags(blog_post.title) %></h3>
+            <div class="description hidden-xs hidden-md"><%=raw blog_post_teaser(blog_post) %></div>
           </div>
-      </li>
+      </li></a>
     <% end %>
   </ul>
   </div>

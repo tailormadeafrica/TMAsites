@@ -30,13 +30,14 @@
       <h2>Location</h2>
       <ul class=" list-inline list-unstyled">
         <% @post.locations.each do |location| %>
+        <a href="<%= refinery.locations_location_path(location) %>">
           <li class="search-item">
-          <%= link_to(image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag),refinery.locations_location_path(location)) if location.cover_image.present? %>
+          <%= image_fu(location.cover_image, "105x80#c", :alt => location.cover_image.alt_tag) %>
           <div class="search-item-body">
-            <h3><%= link_to strip_tags(location.name), refinery.locations_location_path(location) %></h3>
-            <div class="description"><%=raw truncate(strip_tags(location.description), :length => 50) %></div>
+            <h3><%= strip_tags(location.name)%></h3>
+            <div class="description"><%= strip_tags(location.description) %></div>
           </div>
-          </li>
+          </li></a>
         <% end %>
       </ul>
     </div>

@@ -14,7 +14,7 @@
  *= require_self
  */
 
-@mixin main_font ($weight:300,$color:$color){ font-family: 'Poppins', sans-serif; font-weight:$weight; color:$color;}
+@mixin main_font ($weight:400,$color:$color){ font-family: 'Poppins', sans-serif; font-weight:$weight; color:$color;}
 @mixin slider_font ($weight:400,$color:#ffffff){ font-family: 'Marcellus', serif; font-weight:$weight; color:$color;}
 @mixin animate (){-webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;}
 @mixin vertical-align ($position: relative) { position: $position!important; top: 50%!important; -webkit-transform: translateY(-50%)!important; -ms-transform: translateY(-50%)!important; transform: translateY(-50%)!important; }
@@ -48,6 +48,7 @@ h1.accommodation-name {@include slider_font ();position: absolute; z-index: 6; w
 h1.accommodation-name span {font-size: 48px; margin: 20px; letter-spacing: 5px; display: block; line-height: 0;}
 h2 {@include main_font (); font-size: 24px; margin: 30px 0; }
 h3 {@include main_font (); font-size: 18px; margin: 30px 0; line-height:26px;text-align: center;}
+h6 {@include main_font (); font-size: 18px; margin: 30px 0; line-height:26px;text-align: left;} 
 
 p,ol,ul,table {margin-bottom:20px;}
 
@@ -61,7 +62,7 @@ table {width: 100%; border: 1px solid #eeeeee; text-align:left;
   td {border-right: 1px solid #eeeeee; padding:5px 10px;}
 }
 
-strong {font-weight:500;}
+strong {font-weight:600;}
 
 .navbar {border:0; background:transparent; position:absolute; width:100%; z-index:10; margin:0; border-radius:0;
   ul {padding:20px 0; margin:0;
@@ -214,7 +215,7 @@ strong {font-weight:500;}
   }
 }
 
-.contact {background:#fca33b url(/assets/bg-contact.jpg) top center no-repeat; height:1020px; text-align:center; padding:50px 0; color:#ffffff;
+.contact {background:#fca33b url(/assets/bg-contact.jpg) top center no-repeat; height:1020px; text-align:center; padding:60px 0; color:#ffffff;
   form {background:rgba(0,0,0,0.7); padding:50px 90px;
     h1 {color:#ffffff; background:url(/assets/bg-h1.gif) bottom center no-repeat; padding-bottom:25px; margin:0;}
     p {margin:25px 0 10px 0;}
@@ -311,10 +312,11 @@ strong {font-weight:500;}
     h1,h2 {display:none;}  
     img {margin-right:10px; float:left;}
     .search-item-body {float:left; width:70%;
-      h3 {margin:0; width: 405px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height:30px; font-size:16px;
+      h3 {margin:0; width: 405px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height:30px; font-size:16px; text-align:left;
         a {color:$color;}
       }
       p,ul {height:40px; overflow:hidden; font-size: 12px; line-height: 20px;}
+      ul {list-style:none; margin-left:-40px;}
     }
   }
   
@@ -351,6 +353,7 @@ strong {font-weight:500;}
     }
   }
   .team-member img {margin:0 auto; border-radius:50%;}
+  .description {overflow:hidden; height:40px;}
   .description p {text-align:left;}
 }
 
@@ -416,7 +419,8 @@ strong {font-weight:500;}
 .blog_show {padding:0 0 50px 0;
   h1 {margin-left:15px;}
   #blog_post {
-    img {margin-bottom:30px;}
+    h1,h2 {margin-left:0; font-size:20px; line-height:28px;}
+    img {margin:0 auto 30px auto;}
     .share {padding:10px 0;}
     .stButton {width:83px!important;
       .twitter { background-image: url(/assets/tweet.gif)!important; width:83px!important; height:30px!important;}
@@ -439,16 +443,20 @@ strong {font-weight:500;}
   }
   .blog_rhs {
     h2 {margin:0 0 20px 0;}
-    .search-item {margin: 0; border: 1px solid #e7e7e7; padding:10px; height:102px; width:100%;
+    .search-item {margin: 0 0 5px 0; border: 1px solid #e7e7e7; padding:10px; height:102px; width:100%;background:#f1f1f1;
       h1,h2 {display:none;}  
       img {margin-right:10px; float:left;}
       .search-item-body {float:left; width:65%;
-        h3 {margin:0; width: 225px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height:30px; font-size:16px;
+        h3 {margin:0; width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height:30px; font-size:16px; text-align:left;
           a {color:$color;}
         }
-        p,ul {height:40px; overflow:hidden; font-size: 12px; line-height: 20px; margin-bottom:0;}
+        .description {height:40px; overflow:hidden; font-size: 12px; line-height: 20px; margin-bottom:0;color:#282629;
+            ul {list-style:none; margin-left:-40px;}
+            p,a,li,h1,h1,h3 {color:#282629;}
+        }
       }
     }
+    .search-item:hover {background:#e7e7e7; @include animate ();cursor:pointer;}
   }
 }
 
