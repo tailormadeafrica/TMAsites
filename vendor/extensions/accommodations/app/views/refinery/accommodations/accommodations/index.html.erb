@@ -4,7 +4,7 @@
       <li class="search-item">
         <div class="search-item-body">
           <h3><%= link_to strip_tags(accommodation.name), refinery.accommodations_accommodation_path(accommodation) %></h3>
-          <div class="description"><%=raw truncate(accommodation.description, :length => 120) %></div>
+          <div class="description"><%=raw accommodation.description %></div>
         </div>
       </li>
     <% end %>
