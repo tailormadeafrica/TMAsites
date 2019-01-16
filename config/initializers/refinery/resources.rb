@@ -21,10 +21,10 @@ Refinery::Resources.configure do |config|
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
   # config.dragonfly_secret = "b37ce8614195c944d12b2c96361b1b9748ad2fb74e38daa3"
   # config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
-    config.dragonfly_url_format = "/resources/:job/:basename.:format"
-    if Rails.env.production?
-      config.dragonfly_url_host = ENV['CLOUDFRONT_ENDPOINT']
-    end
+    # config.dragonfly_url_format = "/resources/:job/:basename.:format"
+    # if Rails.env.production?
+    #   config.dragonfly_url_host = ENV['CLOUDFRONT_ENDPOINT']
+    # end
   # config.datastore_root_path = "C:/Dev/Workspace/tailor_made_africa/tailor_made_africa/public/system/refinery/resources"
 
 end
