@@ -16,7 +16,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',   '3.2.6'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -46,7 +46,7 @@ gem 'babosa', '0.3.11'
 gem 'net-ssh', '2.9.2'
 gem 'rack-cache', '1.2'
 gem 'bootstrap-datepicker-rails'
-gem 'sass', '3.4.23'
+gem 'sass', '3.7.2'
 gem 'hitimes', '1.2.4'
 gem 'rake', '12.1.0'
 
@@ -116,6 +116,7 @@ group :production do
   gem 'pg', '0.17.1'
   gem 'puma', '3.12.0'
   gem 'heroku-deflater'
+  gem 'rack-zippy'
 end
 
 gem "barnes"
