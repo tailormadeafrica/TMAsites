@@ -119,6 +119,8 @@ group :production do
   gem 'rack-zippy'
 end
 
+gem 'rack-cors'
+
 gem "barnes"
 
 gem 'test-unit'
