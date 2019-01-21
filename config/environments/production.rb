@@ -13,6 +13,8 @@ TailorMadeAfrica::Application.configure do
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
+  config.assets.css_compressor = :yui
+  config.assets.js_compressor = :uglifier
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
@@ -47,7 +49,7 @@ TailorMadeAfrica::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
+  # config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
