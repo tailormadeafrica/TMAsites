@@ -3,15 +3,9 @@
 <% site_bar = render('/refinery/site_bar', :head => true) -%>
 <%= render '/refinery/head' %>
   <body id="home_page">
-
-
-    
   <%= site_bar -%>
   <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-
-
   <%= render '/refinery/header' -%>
-
   <%= render '/shared/banner' %>
 
   <div id="welcome" class="welcome">
@@ -141,50 +135,6 @@
       <div class="row">
         <%= render '/refinery/pods/shared/pods', :pod_types => ['content'], :limit => 4 -%>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <a id="myBtn" class="btn btn-custom">Newsletter Sign Up</a>
-          <div id="myModal" class="modal">
-            <div class="modal-content">
-              <h3>Receive News & Offers from Tailormade Africa</h3>
-              <!-- Begin MailChimp Signup Form -->
-              <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-              <style type="text/css">
-
-
-              </style>
-              <div id="mc_embed_signup">
-                <form action="https://tailormadeafrica.us12.list-manage.com/subscribe/post?u=491ef6008d7bbb6987ce4ea3d&amp;id=16b6d8760e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group">
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email address">
-                    </div>
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_491ef6008d7bbb6987ce4ea3d_16b6d8760e" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                  </div>
-                </form>
-              </div>
-              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-              <!--End mc_embed_signup-->
-
-              <!--<form>-->
-                <!--<input class="form-control" placeholder="Enter your email address">-->
-                <!--<a href="#" class="btn btn-custom">SUBMIT</a>-->
-              <!--</form>-->
-              <span class="close">&times;</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-                <a href="#contact_area" class="btn btn-custom">Enquire Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -194,7 +144,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Recent Blogs</h1>
+            <h1>Recent Stories</h1>
           </div>
         </div>
         <div class="row">
@@ -202,10 +152,12 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="recent-blog-item">
                 <%= link_to(image_fu(post.image, '360x272#c', :class=>"img-responsive", :alt => post.image.alt_tag), refinery.blog_post_path(post)) %>
+                <% if post.video_url.present? %>
+                  <div class='video_play'></div>
+                <% end %>
                 <div class="caption cf">
                   <div class="title"><%= link_to post.title, refinery.blog_post_path(post) %></div>
                   <div class="date"><%= post.published_at.strftime('%B %e, %Y') %></div>
-                  <div class="comment"><a><i class="fa fa-comment-o"></i><%= post.comments.count %></a></div>
                 </div>
               </div>
             </div>
@@ -215,27 +167,21 @@
     </div>
   <% end %>
 
-  <div class="container" style="text-align: center;">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>Instagram Feed</h1>
-      </div>
-    </div>
-  </div>
+  
+  
+  
+  
+  
 
-  <div class="instagram-feed" style="margin-bottom: 60px;">
-    <ul id="instafeed" class="list-inline" style="margin-bottom: -7px;">
-    </ul>
-  </div>
+  <!--<div class="container" style="text-align: center;">-->
+  <!--  <div class="row">-->
+  <!--    <div class="col-xs-12">-->
+  <!--      <h1>Instagram Feed</h1>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</div>-->
 
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-xs-12">-->
-<!--        <h3>Instagram</h3>-->
-<!--        <ul class="list-unstyled instagram" id="instafeed"></ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div id="instafeed"></div>
 
   <%= render '/refinery/footer' -%>
 

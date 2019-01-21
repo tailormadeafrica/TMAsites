@@ -122,18 +122,18 @@ $(document).ready(function() {
     });
 
 
-    var feed = new Instafeed({
+    var userFeed = new Instafeed({
         get: 'user',
         userId: '4158606615',
         accessToken: '4158606615.2d21024.925af79738bf440e9bb3785318afecd2',
         clientId: '2d210243e5fa4fa9b86944b079d87183',
-        limit: 5,
         resolution: 'standard_resolution',
-        sortBy: "most-recent",
-        template: '<li style="display: inline-block; position: relative; width: 20%;"><div style="margin-top: 100%;"></div><a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0; background: url({{image}}) no-repeat center center / cover;" href="{{link}}" title="{{caption}}" target="_blank"></a></li>'
-        // template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" height="86px" width="86px"/></a></li>'
+        template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div></div></a>',
+        sortBy: 'most-recent',
+        limit: 5,
+        links: false
     });
-    feed.run();
+    userFeed.run();
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -155,7 +155,7 @@ $(document).ready(function() {
 
     var post_slider = new MasterSlider();
 
-    //slider.control('arrows');
+zzzz
 
     post_slider.setup('post_masterslider' , {
         width:1920,
@@ -196,7 +196,7 @@ $(document).ready(function() {
         layout:'fullwidth',
         loop:true,
         preload:0,
-        autoplay:false,
+        autoplay:true,
         overPause:false,
         shuffle:false,
         instantStartLayers: true,
