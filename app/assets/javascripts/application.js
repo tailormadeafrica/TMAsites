@@ -91,6 +91,14 @@ $(document).ready(function() {
         nextText: ' ',
         prevText: ' '
     });
+    
+        $('.bxsliderReviews').bxSlider({
+  auto: false,
+  autoControls: true,
+  stopAutoOnClick: true,
+  pager: true,
+  slideWidth: 500
+    });
 
     var slider = new MasterSlider();
 
@@ -154,8 +162,6 @@ $(document).ready(function() {
   // });
 
     var post_slider = new MasterSlider();
-
-zzzz
 
     post_slider.setup('post_masterslider' , {
         width:1920,
@@ -265,7 +271,7 @@ zzzz
         minSlides: 1,
         maxSlides: 6,
         moveSlides: 1,
-        auto: false,
+        auto: true,
         pager: false,
         infiniteLoop: false,
         speed: 1000,
@@ -279,7 +285,7 @@ zzzz
         minSlides: 1,
         maxSlides: 6,
         moveSlides: 1,
-        auto: false,
+        auto: true,
         pager: false,
         infiniteLoop: false,
         speed: 1000,

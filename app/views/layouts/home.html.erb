@@ -26,6 +26,53 @@
       </div>
     </div>
   </div>
+  
+  <div id="reviews" class="reviews">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 lhs">
+          <img src="/assets/stars.png">
+          <h1>5 stars all round!</h1>
+          <p>Tailormade Africa is the safari industry leader in customer care.<br/>But, don't take our word for it, see why our clients roar about us.</p>
+          <a href="/reviews" class="btn btn-custom">View All Reviews</a>
+        </div>
+        <div class="col-xs-12 col-md-6 rhs">
+          <div class="bxsliderReviews">
+            <div>
+              <h2>Tailormade Africa designed and facilitated our dream trip!</h2>
+              <p>Clyde at Tailormade Africa was a delight to work with. From our initial phone conversation, Clyde was able to capture the exact experience we were looking for. We didn’t want a group tour and nor did we wish to travel during the busy season <a href="/reviews/#1">... Read more</a></p>
+              <em><strong>Kathleen B</strong><br/>Uganda & Tanzania, Nov 2018</em>
+            </div>
+            <div>
+              <h2>An unforgettable trip to Madagascar!</h2>
+              <p>This was our second time to Africa. Madagascar was different than mainland Africa and it exceeded our expectations! Rob's knowledge of Madagascar was valuable for all stages of planning. From the first telephone conversation, we knew we were with the right person <a href="/reviews/#2">... Read more</a></p>
+              <em><strong>Michelle & Phil</strong><br/>Madagascar, Oct 2018</em>
+            </div>
+            <div>
+              <h2>Clyde's expertise and efficiency gave me the confidence to pursue my dream journey.</h2>
+              <p>Although I had had some experience travelling in southern Africa this trip (a combo of work and fun) was much more complicated than usual - five countries, many organizations, and the potential for logistical disasters. Further, I was making the trip as a single white woman on her own. I was nervous <a href="/reviews/#3">... Read more</a></p>
+              <em><strong>Patrice R</strong><br/>Zimbabwe, Jul 2018</em>
+            </div>
+            <div>
+            <h2>Unforgettable 6-week African Honeymoon!</h2>
+              <p>After some Internet research and getting ourselves very overwhelmed with 'where to start planning this trip to Africa?!' we came across Tailormade Africa. From our first email response from Rob, it was clear this was a different service to the others. No generic email or pamphlets were sent to us. Straight away Rob really just wanted to get us on the phone to understand who we were and what we wanted out of our holiday. Our first phone call went for over an hour <a href="/reviews/#4">... Read more</a></p>
+              <em><strong>Sarah & Jonathon A</strong><br/>South Africa, Victoria Falls, Tanzania & Uganda, May 2018</em>
+            </div>
+            <div>
+              <h2>Excellent service, demonstrating a high level of knowledge and experience, delivering top quality.</h2>
+              <p>Our experience throughout with Tailormade Africa was excellent. We felt that Clyde understood our requirements and demonstrated a real interest in getting to know what we wanted and our level of safari experience. In putting together our trip we always felt that he was striving for something tailored to us and seeking the best of what was available <a href="/reviews/#5">... Read more</a></p>
+              <em><strong>Anne & Andrew B</strong><br/>South Africa & Botswana, Apr 2018</em>
+            </div>
+            <div>
+              <h2>We asked for a 'holiday of a lifetime' we got it and so much more.</h2>
+              <p>From the very first telephone conversation with Rob Morley at Tailormade Africa, he understood who we were and what we wanted. We were tourists but did not want a tourist holiday. We wanted to see the 'real africa' and meet and get to know its people <a href="/reviews/#6">... Read more</a></p>
+              <em><strong>Anne & Mal B</strong><br/>Uganda, Kenya & Pemba Island, Jul 2018</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <% safaris = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'safari_type', 'both') %>
   <% if safaris.present? %>
@@ -173,13 +220,13 @@
   
   
 
-  <!--<div class="container" style="text-align: center;">-->
-  <!--  <div class="row">-->
-  <!--    <div class="col-xs-12">-->
-  <!--      <h1>Instagram Feed</h1>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--</div>-->
+  <div class="container" style="text-align: center;">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Instagram Feed</h1>
+      </div>
+    </div>
+  </div>
 
   <div id="instafeed"></div>
 
