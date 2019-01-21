@@ -3,15 +3,9 @@
 <% site_bar = render('/refinery/site_bar', :head => true) -%>
 <%= render '/refinery/head' %>
   <body id="home_page">
-
-
-    
   <%= site_bar -%>
   <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-
-
   <%= render '/refinery/header' -%>
-
   <%= render '/shared/banner' %>
 
   <div id="welcome" class="welcome">
@@ -28,6 +22,53 @@
       <div class="row">
         <div class="col-xs-12">
           <a href="#contact_area" class="btn btn-custom">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="reviews" class="reviews">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 lhs">
+          <img src="/assets/stars.png">
+          <h1>5 stars all round!</h1>
+          <p>Tailormade Africa is the safari industry leader in customer care.<br/>But, don't take our word for it, see why our clients roar about us.</p>
+          <a href="/reviews" class="btn btn-custom">View All Reviews</a>
+        </div>
+        <div class="col-xs-12 col-md-6 rhs">
+          <div class="bxsliderReviews">
+            <div>
+              <h2>Tailormade Africa designed and facilitated our dream trip!</h2>
+              <p>Clyde at Tailormade Africa was a delight to work with. From our initial phone conversation, Clyde was able to capture the exact experience we were looking for. We didn’t want a group tour and nor did we wish to travel during the busy season <a href="/reviews/#1">... Read more</a></p>
+              <em><strong>Kathleen B</strong><br/>Uganda & Tanzania, Nov 2018</em>
+            </div>
+            <div>
+              <h2>An unforgettable trip to Madagascar!</h2>
+              <p>This was our second time to Africa. Madagascar was different than mainland Africa and it exceeded our expectations! Rob's knowledge of Madagascar was valuable for all stages of planning. From the first telephone conversation, we knew we were with the right person <a href="/reviews/#2">... Read more</a></p>
+              <em><strong>Michelle & Phil</strong><br/>Madagascar, Oct 2018</em>
+            </div>
+            <div>
+              <h2>Clyde's expertise and efficiency gave me the confidence to pursue my dream journey.</h2>
+              <p>Although I had had some experience travelling in southern Africa this trip (a combo of work and fun) was much more complicated than usual - five countries, many organizations, and the potential for logistical disasters. Further, I was making the trip as a single white woman on her own. I was nervous <a href="/reviews/#3">... Read more</a></p>
+              <em><strong>Patrice R</strong><br/>Zimbabwe, Jul 2018</em>
+            </div>
+            <div>
+            <h2>Unforgettable 6-week African Honeymoon!</h2>
+              <p>After some Internet research and getting ourselves very overwhelmed with 'where to start planning this trip to Africa?!' we came across Tailormade Africa. From our first email response from Rob, it was clear this was a different service to the others. No generic email or pamphlets were sent to us. Straight away Rob really just wanted to get us on the phone to understand who we were and what we wanted out of our holiday. Our first phone call went for over an hour <a href="/reviews/#4">... Read more</a></p>
+              <em><strong>Sarah & Jonathon A</strong><br/>South Africa, Victoria Falls, Tanzania & Uganda, May 2018</em>
+            </div>
+            <div>
+              <h2>Excellent service, demonstrating a high level of knowledge and experience, delivering top quality.</h2>
+              <p>Our experience throughout with Tailormade Africa was excellent. We felt that Clyde understood our requirements and demonstrated a real interest in getting to know what we wanted and our level of safari experience. In putting together our trip we always felt that he was striving for something tailored to us and seeking the best of what was available <a href="/reviews/#5">... Read more</a></p>
+              <em><strong>Anne & Andrew B</strong><br/>South Africa & Botswana, Apr 2018</em>
+            </div>
+            <div>
+              <h2>We asked for a 'holiday of a lifetime' we got it and so much more.</h2>
+              <p>From the very first telephone conversation with Rob Morley at Tailormade Africa, he understood who we were and what we wanted. We were tourists but did not want a tourist holiday. We wanted to see the 'real africa' and meet and get to know its people <a href="/reviews/#6">... Read more</a></p>
+              <em><strong>Anne & Mal B</strong><br/>Uganda, Kenya & Pemba Island, Jul 2018</em>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -141,50 +182,6 @@
       <div class="row">
         <%= render '/refinery/pods/shared/pods', :pod_types => ['content'], :limit => 4 -%>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <a id="myBtn" class="btn btn-custom">Newsletter Sign Up</a>
-          <div id="myModal" class="modal">
-            <div class="modal-content">
-              <h3>Receive News & Offers from Tailormade Africa</h3>
-              <!-- Begin MailChimp Signup Form -->
-              <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-              <style type="text/css">
-
-
-              </style>
-              <div id="mc_embed_signup">
-                <form action="https://tailormadeafrica.us12.list-manage.com/subscribe/post?u=491ef6008d7bbb6987ce4ea3d&amp;id=16b6d8760e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group">
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email address">
-                    </div>
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_491ef6008d7bbb6987ce4ea3d_16b6d8760e" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                  </div>
-                </form>
-              </div>
-              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-              <!--End mc_embed_signup-->
-
-              <!--<form>-->
-                <!--<input class="form-control" placeholder="Enter your email address">-->
-                <!--<a href="#" class="btn btn-custom">SUBMIT</a>-->
-              <!--</form>-->
-              <span class="close">&times;</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-                <a href="#contact_area" class="btn btn-custom">Enquire Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -194,7 +191,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Recent Blogs</h1>
+            <h1>Recent Stories</h1>
           </div>
         </div>
         <div class="row">
@@ -202,10 +199,12 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="recent-blog-item">
                 <%= link_to(image_fu(post.image, '360x272#c', :class=>"img-responsive", :alt => post.image.alt_tag), refinery.blog_post_path(post)) %>
+                <% if post.video_url.present? %>
+                  <div class='video_play'></div>
+                <% end %>
                 <div class="caption cf">
                   <div class="title"><%= link_to post.title, refinery.blog_post_path(post) %></div>
                   <div class="date"><%= post.published_at.strftime('%B %e, %Y') %></div>
-                  <div class="comment"><a><i class="fa fa-comment-o"></i><%= post.comments.count %></a></div>
                 </div>
               </div>
             </div>
@@ -215,6 +214,12 @@
     </div>
   <% end %>
 
+  
+  
+  
+  
+  
+
   <div class="container" style="text-align: center;">
     <div class="row">
       <div class="col-xs-12">
@@ -223,19 +228,7 @@
     </div>
   </div>
 
-  <div class="instagram-feed" style="margin-bottom: 60px;">
-    <ul id="instafeed" class="list-inline" style="margin-bottom: -7px;">
-    </ul>
-  </div>
-
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-xs-12">-->
-<!--        <h3>Instagram</h3>-->
-<!--        <ul class="list-unstyled instagram" id="instafeed"></ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div id="instafeed"></div>
 
   <%= render '/refinery/footer' -%>
 

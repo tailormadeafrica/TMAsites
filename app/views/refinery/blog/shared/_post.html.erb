@@ -11,7 +11,6 @@
       <div class="caption cf">
         <div class="title"><%= link_to post.title, refinery.blog_post_path(post) %></div>
         <div class="date"><%= post.published_at.strftime('%B %e, %Y') %></div>
-        <div class="comment"><a><i class="fa fa-comment-o"></i><%= post.comments.count %></a></div>
       </div>
 
     </div>

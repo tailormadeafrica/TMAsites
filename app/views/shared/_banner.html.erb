@@ -23,11 +23,12 @@
       </div>
     </div>
     <% @location.gallery.items.reorder('position ASC').each do |item| %>
-      <% if item.image.present? %>
+      <!--<#% if item.image.present? %>-->
 
         <div class="ms-slide slide-1" data-delay="4">
           <div class="overlay"></div>
-          <%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>
+          <!--<#%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>-->
+          <img src="https://www.tailormadeafrica.com/system/images/BAhbCFsHOgZmSSIiMjAxNi8wOC8xNy8xNC8xMi8yMS83NDAvMi5qcGcGOgZFVFsIOgZwOgp0aHVtYkkiDzE5MjB4OTM1I2MGOwZUWwg6BmVJIglqcGVnBjsGVEkiQC1zdHJpcCAtaW50ZXJsYWNlIFBsYW5lIC1zYW1wbGluZy1mYWN0b3IgNDoyOjAgLXF1YWxpdHkgODUlBjsGVA/2.jpg">
           <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
             <% if @location.depth == 0 %>
               <h2>Discover</h2>
@@ -37,7 +38,7 @@
           </div>
           <img alt="blank" src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
-      <% end %>
+      <!--<#% end %>-->
     <% end %>
   </div>
 <% elsif @accommodation.present? and @accommodation.gallery.present? and @accommodation.gallery.items.present? %>

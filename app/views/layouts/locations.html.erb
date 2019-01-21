@@ -317,7 +317,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-xs-12">
-                  <h1>Recent <%= @location.name %> Posts</h1>
+                  <h1>Recent <%= @location.name %> Stories</h1>
                 </div>
               </div>
               <div class="row">
@@ -330,7 +330,6 @@
                       <div class="caption cf">
                         <div class="title"><%= link_to blog.title, refinery.blog_post_path(blog) %></div>
                         <div class="date"><%= blog.published_at.strftime('%B %e, %Y') %></div>
-                        <div class="comment"><a><i class="fa fa-comment-o"></i><%= blog.comments.count %></a></div>
                       </div>
                     </div>
                   </div>
@@ -438,7 +437,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-xs-12">
-                  <h1>Recent <%= @location.name %> Posts</h1>
+                  <h1>Recent <%= @location.name %> Stories</h1>
                 </div>
               </div>
               <div class="row">
@@ -451,7 +450,6 @@
                         <div class="caption cf">
                           <div class="title"><%= link_to blog.title, refinery.blog_post_path(blog) %></div>
                           <div class="date"><%= blog.published_at.strftime('%B %e, %Y') %></div>
-                          <div class="comment"><a><i class="fa fa-comment-o"></i><%= blog.comments.count %></a></div>
                         </div>
                       </div>
                     </div>
