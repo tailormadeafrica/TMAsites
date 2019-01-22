@@ -184,11 +184,7 @@
         <div class="ms-slide slide-1" data-delay="4">
           <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
           <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <% if params[:vlog] %>
-              <h1>Vlog</h1>
-            <% else %>
-              <h1><%= raw banner.name %></h1>
-            <% end %>
+            <h1><%= raw banner.name %></h1>
           </div>
         </div>
       <% end %>
@@ -276,10 +272,6 @@
 
 <% unless home_page? %>
   <div class="breadcrumb" style="position: relative; z-index: 100;">
-    <% if params[:vlog] %>
-      <a href="/">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;Vlog
-    <% else %>
       <%= breadcrumbs(@page, @location, @post) %>
-    <% end %>
   </div>
 <% end %>
