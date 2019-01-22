@@ -19,6 +19,6 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: tma
-    # volumes:
-    #   - .docker-data/db:/var/lib/postgresql
+    volumes:
+      - .docker-data/db:/var/lib/postgresql
 

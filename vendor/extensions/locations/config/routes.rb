@@ -25,7 +25,7 @@ Refinery::Core::Engine.routes.append do
           end
         end
     end
-  end
+  end if ActiveRecord::Base.connection.table_exists? 'refinery_locations'
 
   namespace :locations do
     resources :locations, :path => '', :only => [:index, :show]
