@@ -9,5 +9,5 @@ Refinery::Blog.configure do |config|
 
   # config.share_this_key = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
-  config.page_url = "/stories"
+  # config.page_url = "/blog"
 end
