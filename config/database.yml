@@ -9,24 +9,11 @@
 #  pool: 5
 #  timeout: 5000
 
-# development:
-#    adapter: postgresql
-#    encoding: unicode
-#    database: tailor_made_africa
-#    pool: 5
-#    username: postgres
-#    password: postgres
-#    host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
-
-
 development:
-  url: <%= ENV['DATABASE_URL'].gsub('?', '_development?') %>
-
-test:
-  url: <%= ENV['DATABASE_URL'].gsub('?', '_test?') %>
-
-staging:
-  url: <%= ENV['DATABASE_URL'].gsub('?', '_staging?') %>
-
-production:
-  url: <%= ENV['DATABASE_URL'].gsub('?', '_production?') %>
+   adapter: postgresql
+   encoding: unicode
+   database: tailor_made_africa
+   pool: 5
+   username: postgres
+   password: postgres
+   host: <%= ENV['DATABASE_HOST'] || 'localhost' %>

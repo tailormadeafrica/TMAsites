@@ -15,7 +15,8 @@ services:
     tty: true
     command: "bundle exec rails server -p 1080 --pid /server.pid"
   db:
-    image: postgres:9-alpine
+    image: postgres:9.4-alpine
+    restart: always
     environment:
       POSTGRES_PASSWORD: tma
     # volumes:
