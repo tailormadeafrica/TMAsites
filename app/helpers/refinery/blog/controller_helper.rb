@@ -15,11 +15,7 @@ module Refinery
         end
 
         def find_all_blog_posts
-          if params[:vlog]
-            @posts = Refinery::Blog::Post.where("video_url != ?", "").live.includes(:comments, :categories).page(params[:page])
-          else
-            @posts = Refinery::Blog::Post.where("video_url = ? OR video_url IS ?", "",nil).live.includes(:comments, :categories).page(params[:page])
-          end
+          @posts = Refinery::Blog::Post.live.includes(:comments, :categories).page(params[:page])
         end
 
         def find_tags
