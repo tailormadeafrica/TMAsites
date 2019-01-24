@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.2.5'
+ruby '2.3.0'
 
 gem 'rails', '3.2.22'
 
@@ -41,7 +41,7 @@ gem 'jquery-rails', '~> 2.0.0'
 
 # To use debugger
 # gem 'debugger'
-gem 'json', '1.8.1'
+# gem 'json', '1.8.1'
 gem 'babosa', '0.3.11'
 gem 'net-ssh', '2.9.2'
 gem 'rack-cache', '1.2'
@@ -130,6 +130,8 @@ gem 'redis', '3.3.5'
 gem "nested_form"
 gem 'sidekiq', '3.0.0'
 gem 'sinatra', :require => nil    # For the sidekiq web UI
+
+gem "recaptcha"
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'
