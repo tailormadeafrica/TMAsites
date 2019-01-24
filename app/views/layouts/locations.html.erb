@@ -238,11 +238,12 @@
                         <li>
                           <div class="safari-type-item">
                             <%= link_to refinery.activities_activity_path(item) do %>
-                              <%= image_fu item.image, "218x330#c", :alt => item.image.alt_tag if item.image.present? %>
                               <div class="caption">
                                 <h3><%= raw item.name %></h3>
                                 <div class="btn btn-custom">Read More</div>
                               </div>
+                              <div class="slider-overlay"></div>
+                              <%= image_fu item.image, "218x330#c", :alt => item.image.alt_tag if item.image.present? %>
                             <% end %>
                           </div>
                         </li>
@@ -273,24 +274,26 @@
                             <% if item == items.first %>
                               <div class="experience-item main-item">
                                 <%= link_to refinery.activities_activity_path(item) do %>
-                                  <%= image_fu item.image, '440x330#c', :alt => item.image.alt_tag if item.image.present? %>
-                                  <div class="caption">
-                                    <h3><%= raw item.name %></h3>
-                                  </div>
+                                <div class="caption">
+                                  <h3><%= raw item.name %></h3>
+                                </div>
+                                <div class="slider-overlay"></div>
+                                <%= image_fu item.image, '440x330#c', :alt => item.image.alt_tag if item.image.present? %>
                                 <% end %>
                               </div>
                             <% else %>
                               <div class="experience-item">
                                 <%= link_to refinery.activities_activity_path(item) do %>
-                                  <%= image_fu item.image, '217x162#c', :alt => item.image.alt_tag if item.image.present? %>
                                   <div class="caption">
                                     <h3><%= raw item.name %></h3>
                                   </div>
+                                  <div class="slider-overlay"></div>
+                                  <%= image_fu item.image, '217x162#c', :alt => item.image.alt_tag if item.image.present? %>
                                 <% end %>
                               </div>
                             <% end %>
                           <% end %>
-                        </li>
+                        </li> 
                       <% end %>
                     </ul>
                   </div>

@@ -151,7 +151,7 @@ strong {font-weight:600;}
   .btn-custom,.btn-custom:hover {@include button (); margin:10px 0 20px 0;}
 }
 
- #reviews {background:#fca33b url(/assets/bg-testimonials.jpg) 0 -130px no-repeat; height:555px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+ #reviews {background:#f4f4f4 url(/assets/bg-testimonials.jpg) 0 -130px no-repeat; height:555px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
    .lhs {padding-top:130px;
      h1,p {text-align:left; color:#ffffff;}
      h1 {font-weight:600; font-size:50px;}
@@ -475,7 +475,7 @@ strong {font-weight:600;}
 .blog_show {padding:0 0 50px 0;
   h1 {margin-left:15px;}
   #blog_post {
-    h1,h2 {margin-left:0; font-size:20px; line-height:28px;}
+    h1,h2 {margin-left:0; font-size:20px; line-height:28px; margin:30px 0 20px 0;}
     img {margin:0 auto 30px auto;}
     .share {padding:10px 0;}
     .stButton {width:83px!important;
@@ -582,6 +582,15 @@ strong {font-weight:600;}
 /*** xs ***/
 
 @media (max-width:767px) {
+  #reviews {background:#f4f4f4 url(/assets/bg-testimonials.jpg) 0 0 no-repeat;}
+  #reviews .rhs {display:none;}
+  #reviews .lhs .btn-custom {margin-top:10px;}
+#newsletter-signup h3{text-align:center;}
+#instafeed {flex-direction:column;}
+#instafeed a {width:100%;}
+#instafeed a .caption {height:100%;}
+#mc_embed_signup .mc-field-group input {text-align: center;}
+#mc_embed_signup form {text-align:center!important;}
 .locations, .activities, .accommodations, .locations { padding: 20px 0 10px 0;}
   .locations h2.slider, .activities h2.slider, .accommodations h2.slider, .locations h2.slider {
       margin: 10px 0 10px 0;
@@ -685,7 +694,7 @@ strong {font-weight:600;}
   }
   .social {padding:30px 0;}
   .footer {text-align:center; padding:0 0 28px 0;
-    img.logo {margin:0 auto; width:60%;}
+    img.logo {display:none;}
     .copyright {font-size:8px;}
   }
   #welcome {padding:0 0 20px 0;
@@ -727,6 +736,15 @@ strong {font-weight:600;}
 /*** sm ***/
 
 @media (min-width:768px) and (max-width: 991px) {
+  #reviews {background:#f4f4f4 url(/assets/bg-testimonials.jpg) 0 0 no-repeat;}
+  #reviews .rhs {display:none;}
+  #reviews .lhs .btn-custom {margin-top:10px;}
+#newsletter-signup h3{text-align:center;}
+#instafeed {flex-wrap:wrap;}
+#instafeed a {width:50%;}
+#instafeed a .caption {height:100%;}
+#mc_embed_signup .mc-field-group input {text-align: center;}
+#mc_embed_signup form {text-align:center!important;}
   .container {width: 750px;}
   h1.accommodation-name {font-size:70px; letter-spacing:5px!important;
     span {font-size:36px; letter-spacing:3px!important;}
@@ -773,6 +791,12 @@ strong {font-weight:600;}
 /*** md ***/
 
 @media (min-width:992px) and (max-width:1199px) {
+  #reviews {background:#f4f4f4 url(/assets/bg-testimonials.jpg) 0 0 no-repeat;}
+  #reviews .rhs {display:none;}
+  #reviews .lhs .btn-custom {margin-top:10px;}
+#instafeed {flex-wrap:wrap;}
+#instafeed a {width:33%;}
+#instafeed a .caption {height:100%;}
   .container {width: 970px;}
   .navbar ul li a, .navbar ul li a:hover {margin-left:20px;}
   .navbar ul.social-media {margin-right:20px;}
