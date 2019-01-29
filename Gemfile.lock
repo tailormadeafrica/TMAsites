@@ -55,6 +55,18 @@ GIT
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.10)
 
+GIT
+  remote: git://github.com/tailormadeafrica/refinerycms-newsletter.git
+  revision: b1370feda597c31956a915f516c48c2b666988d7
+  specs:
+    refinerycms-newsletter (2.0.5)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      rails_autolink
+      refinerycms-core (~> 2.0.3)
+      refinerycms-settings (~> 2.0.1)
+      seo_meta (~> 1.3.0)
+
 PATH
   remote: vendor/extensions
   specs:
@@ -398,6 +410,7 @@ DEPENDENCIES
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-locations!
+  refinerycms-newsletter (~> 2.0.0)!
   refinerycms-page_seeder (~> 0.0.1)
   refinerycms-pc_banners (~> 2.0.2)
   refinerycms-pods (~> 2.1.0)

@@ -118,7 +118,7 @@
       <% end %>
     <% end %>
   </div>
-<% elsif @post.present? and @post.banners.published.present? %>
+<% elsif controller_path != 'refinery/newsletter/posts' and @post.present? and @post.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider2">
     <div class="search hidden-xs">
       <div class="container">

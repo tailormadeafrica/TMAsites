@@ -9,12 +9,10 @@ RUN apt-get update && apt-get install -qq -y build-essential git nodejs libpq-de
 
 # Ensure gems are cached and only get updated when they change. This will
 # drastically increase build times when your gems do not change.
-COPY Gemfile Gemfile
 
-WORKDIR /app
-
-COPY . /app
-
-RUN bundle config github.https true && bundle config git.allow_insecure true
-
-RUN bundle install --jobs=4
+ENV app /app/
+COPY Gemfile* .$app/
+WORKDIR $app
+ADD . $app
+RUN bundle config github.https true && bundle config git.allow_insecure true && bundle install --jobs 4
+# CMD rails s -b 0.0.0.0

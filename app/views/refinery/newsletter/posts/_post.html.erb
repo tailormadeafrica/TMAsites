@@ -1,0 +1,42 @@
+<% flash.each do |key, value| %>
+ <div id='flash' class="flash flash_<%= key %>">
+   <%= value %>
+ </div>
+<% end %>
+<article id="newsletter_post">
+  <header>
+    <% if  @post.video_url.present? %>
+      <iframe width="100%" height="425" src="<%=  @post.video_url.gsub("youtu.be/","www.youtube.com/embed/") %>?autoplay=1" allowfullscreen>
+      </iframe>
+    <% else %>
+      <%= image_fu(@post.image, "750x", :class=>"img-responsive") %>
+    <% end %>
+  </header>
+  <%= @post.body.html_safe %>
+<div class="share">
+  <span class='st_twitter'></span>
+  <span class='st_facebook'></span>
+  <span class='st_pinterest'></span>
+  <span class='st_linkedin'></span>
+  <span class='st_' displayText=''></span>
+</div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+<%= render :partial => '/refinery/draft_page_message' unless @post.nil? or @post.live? -%>
+
+ 
+
+
+
+

@@ -1,0 +1,27 @@
+
+<% if @posts.many? %>
+<div class="newsletter_rhs">
+  <h2><%= t('.other') %></h2>
+  <ul id="newsletter_posts" class=" list-inline list-unstyled">
+    <% @posts.each do |newsletter_post| %>
+    <a href="<%=  refinery.newsletter_post_path(newsletter_post) %>">
+      <li class="search-item">
+          <%= image_fu(newsletter_post.image, "105x80#c", :alt => newsletter_post.image.alt_tag) %>
+          <div class="search-item-body">
+            <h3><%= strip_tags(newsletter_post.title) %></h3>
+            <div class="description hidden-xs hidden-md"><%=raw newsletter_post_teaser(newsletter_post) %></div>
+          </div>
+      </li></a>
+    <% end %>
+  </ul>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+

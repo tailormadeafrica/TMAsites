@@ -49,3 +49,6 @@ Refinery::SafariTypes::Engine.load_seed
 
 # Added by Refinery CMS Back Links extension
 Refinery::BackLinks::Engine.load_seed
+
+# Added by Refinery CMS Newsletter engine
+Refinery::Newsletter::Engine.load_seed

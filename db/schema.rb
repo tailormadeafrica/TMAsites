@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20190122052240) do
+ActiveRecord::Schema.define(:version => 20190129170908) do
 
   create_table "flights", :force => true do |t|
     t.string   "airline_and_flight_no"
@@ -276,7 +276,7 @@ ActiveRecord::Schema.define(:version => 20190122052240) do
   end
 
   add_index "refinery_copywriting_phrase_translations", ["locale"], :name => "index_copywriting_phrase_translations_on_locale"
-  add_index "refinery_copywriting_phrase_translations", ["refinery_copywriting_phrase_id"], :name => "index_c8fbec01a288d0aef8ba987126084c4d06953304"
+  add_index "refinery_copywriting_phrase_translations", ["refinery_copywriting_phrase_id"], :name => "index_copywriting_phrase_translations_on_copywriting_phrase_id"
 
   create_table "refinery_copywriting_phrases", :force => true do |t|
     t.string   "name"
@@ -362,6 +362,60 @@ ActiveRecord::Schema.define(:version => 20190122052240) do
   add_index "refinery_locations_posts", ["location_id"], :name => "index_refinery_locations_posts_on_location_id"
   add_index "refinery_locations_posts", ["post_id"], :name => "index_refinery_locations_posts_on_post_id"
 
+  create_table "refinery_newsletter_categories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "cached_slug"
+    t.string   "slug"
+  end
+
+  add_index "refinery_newsletter_categories", ["id"], :name => "index_refinery_newsletter_categories_on_id"
+  add_index "refinery_newsletter_categories", ["slug"], :name => "index_refinery_newsletter_categories_on_slug"
+
+  create_table "refinery_newsletter_categories_newsletter_posts", :force => true do |t|
+    t.integer "newsletter_category_id"
+    t.integer "newsletter_post_id"
+  end
+
+  add_index "refinery_newsletter_categories_newsletter_posts", ["newsletter_category_id", "newsletter_post_id"], :name => "index_newsletter_categories_newsletter_posts_on_bc_and_bp"
+
+  create_table "refinery_newsletter_comments", :force => true do |t|
+    t.integer  "newsletter_post_id"
+    t.boolean  "spam"
+    t.string   "name"
+    t.string   "email"
+    t.text     "body"
+    t.string   "state"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "refinery_newsletter_comments", ["id"], :name => "index_refinery_newsletter_comments_on_id"
+
+  create_table "refinery_newsletter_posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.boolean  "draft"
+    t.datetime "published_at"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "user_id"
+    t.string   "cached_slug"
+    t.string   "custom_url"
+    t.text     "custom_teaser"
+    t.string   "source_url"
+    t.string   "source_url_title"
+    t.integer  "access_count",     :default => 0
+    t.string   "slug"
+    t.integer  "image_id"
+    t.integer  "video_url"
+  end
+
+  add_index "refinery_newsletter_posts", ["access_count"], :name => "index_refinery_newsletter_posts_on_access_count"
+  add_index "refinery_newsletter_posts", ["id"], :name => "index_refinery_newsletter_posts_on_id"
+  add_index "refinery_newsletter_posts", ["slug"], :name => "index_refinery_newsletter_posts_on_slug"
+
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"
     t.string   "locale"
@@ -371,7 +425,7 @@ ActiveRecord::Schema.define(:version => 20190122052240) do
   end
 
   add_index "refinery_page_part_translations", ["locale"], :name => "index_refinery_page_part_translations_on_locale"
-  add_index "refinery_page_part_translations", ["refinery_page_part_id"], :name => "index_f9716c4215584edbca2557e32706a5ae084a15ef"
+  add_index "refinery_page_part_translations", ["refinery_page_part_id"], :name => "index_refinery_page_part_translations_on_refinery_page_part_id"
 
   create_table "refinery_page_parts", :force => true do |t|
     t.integer  "refinery_page_id"
@@ -397,7 +451,7 @@ ActiveRecord::Schema.define(:version => 20190122052240) do
   end
 
   add_index "refinery_page_translations", ["locale"], :name => "index_refinery_page_translations_on_locale"
-  add_index "refinery_page_translations", ["refinery_page_id"], :name => "index_d079468f88bff1c6ea81573a0d019ba8bf5c2902"
+  add_index "refinery_page_translations", ["refinery_page_id"], :name => "index_refinery_page_translations_on_refinery_page_id"
 
   create_table "refinery_pages", :force => true do |t|
     t.integer  "parent_id"

@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
       "locations"
     elsif controller_name == "activities"
       "activities"
+    elsif controller_path == 'refinery/newsletter/posts'
+      'newsletters'
+    elsif controller_path == 'refinery/newsletter/categories' and action_name == "show"
+      'newsletters'
     elsif controller_name == "posts"
       "blogs"
     elsif controller_name == "categories" and action_name == "show"
