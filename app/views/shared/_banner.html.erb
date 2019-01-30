@@ -7,10 +7,14 @@
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-4">
-                  <img src="/assets/botswana.png" class="img-responsive">
+                  <% if item.country_image.present %>
+                    <%= image_fu(item.country_image, "519x168#c", :alt => item.country_image.alt_tag, class: "img-responsive") %>
+                  <% elsif item.parent.country_image.present? %>
+                    <%= image_fu(item.parent.country_image, "519x168#c", :alt => item.parent.country_image.alt_tag, class: "img-responsive") %>
+                  <% end %>
                 </div>
                 <div class="col-xs-12 hidden-sm col-md-8">
-                  <p>This text pulls from side body of /refinery/locations/botswana-safari/edit</p>
+                  <p><%=raw @location.side_body %></p>
                   <a href="#contact_area" class="arrow">Enquire Now</a>
                 </div>
               </div>
