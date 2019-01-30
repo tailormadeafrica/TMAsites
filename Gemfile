@@ -107,9 +107,9 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
 group :development do
-     gem 'better_errors', '1.1.0'
-     gem "binding_of_caller"
-     gem "commands"
+  gem 'better_errors', '1.1.0'
+  gem "binding_of_caller"
+  gem "commands"
 end
 
 
@@ -131,8 +131,6 @@ gem 'redis', '3.3.5'
 gem "nested_form"
 gem 'sidekiq', '3.0.0'
 gem 'sinatra', :require => nil    # For the sidekiq web UI
-
-gem "recaptcha"
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'
