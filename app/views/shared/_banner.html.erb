@@ -14,7 +14,7 @@
                   <% end %>
                 </div>
                 <div class="col-xs-12 hidden-sm col-md-8">
-                  <p><%=raw @location.side_body %></p>
+                  <p><%=raw item.side_body if item.side_body.present? %></p>
                   <a href="#contact_area" class="arrow">Enquire Now</a>
                 </div>
               </div>
@@ -38,7 +38,7 @@
                   <img src="/assets/main-logo.png" class="img-responsive">
                 </div>
                 <div class="col-xs-12 hidden-sm col-md-8">
-                  <p>This text pulls from side body of /refinery/acticities</p>
+                  <p><%=raw item.side_body if item.side_body.present? %></p>
                   <a href="#contact_area" class="arrow">Enquire Now</a>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                   <img src="/assets/main-logo.png" class="img-responsive">
                 </div>
                 <div class="col-xs-12 hidden-sm col-md-8">
-                  <p>This text pulls from side body of /refinery/accommodations</p>
+                  <p><%=raw item.side_body if item.side_body.present? %></p>
                   <a href="#contact_area" class="arrow">Enquire Now</a>
                 </div>
               </div>

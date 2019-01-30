@@ -11,7 +11,7 @@ module Refinery
       friendly_id :name, :use => [:slugged]
 
       attr_accessible :name, :bread, :cover_image_id, :rating, :description, :position, :activity_ids, :location_id, :latitude, :longitude, :address, :gallery_id, :sub_name, :location_ids, :amenity_ids,
-      :low_rate, :mid_rate, :high_rate, :jan, :feb, :marc, :apr, :may, :jun, :jul, :aug, :sept, :oct, :nov, :dec, :slug, :browser_title, :meta_description, :exclusion, :inclusion
+      :low_rate, :mid_rate, :high_rate, :jan, :feb, :marc, :apr, :may, :jun, :jul, :aug, :sept, :oct, :nov, :dec, :slug, :browser_title, :meta_description, :exclusion, :inclusion, :side_body
 
       validates :name, :presence => true, :uniqueness => true
       # validates :low_rate, :presence => true
