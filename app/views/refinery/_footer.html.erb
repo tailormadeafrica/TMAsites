@@ -120,23 +120,23 @@
 </div>
 
 
-<!--<%# face = copywriting('Facebook', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>-->
-<!--<%# twit = copywriting('Twitter', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>-->
-<!--<%# ins = copywriting('Instagram', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>-->
+<% face = copywriting('Facebook', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+<% twit = copywriting('Twitter', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+<% ins = copywriting('Instagram', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
 
-<!--<div class="social">-->
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-xs-12">-->
-<!--        <ul class="list list-inline">-->
-<!--          <li><a href="<%#= face %>" target="_blank"><img alt="facebook" src="/assets/facebook.gif"></a></li>-->
-<!--          <li><a href="<%#= twit %>" target="_blank"><img alt="twitter" src="/assets/twitter.gif"></a></li>-->
-<!--          <li><a href="<%#= ins %>" target="_blank"><img alt="instagram" src="/assets/instagram.gif"></a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+<div class="social">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list list-inline">
+          <li><a href="<%= face %>" target="_blank"><img alt="facebook" src="/assets/facebook.gif"></a></li>
+          <li><a href="<%= twit %>" target="_blank"><img alt="twitter" src="/assets/twitter.gif"></a></li>
+          <li><a href="<#= ins %>" target="_blank"><img alt="instagram" src="/assets/instagram.gif"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="footer">
   <div class="container">
@@ -146,7 +146,7 @@
             :dom_id => 'list list-inline hidden-xs',
             :css => 'list list-inline hidden-xs'
         }) %>
-        <img alt="logo" src="/assets/TMA-logo-grey.gif" class="logo">
+        <img alt="logo" src="/assets/main-logo-text-grey.png" class="logo">
         <!--<div class="hidden-xs"><img alt="atol" src="/assets/atol.gif"></div>-->
         <div class="copyright">
           © Tailormade Africa &bull; All Rights Reserved &bull; <a href="/terms-conditions">Terms & Conditions</a> &bull; <a href="/privacy-policy">Privacy Policy</a><br/>

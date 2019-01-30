@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1><%= @page.title %></h1>
-          <h2>Tailormade Africa is a specialist tailor-made safari and African travel company. We are the industry leaders in customer care and bespoke itinerary design.</h2>
+          <h2>Tailormade Africa gives honest advice on authentic African safari options that best suit your safari & holiday travel needs.  Our safari experts also have first hand experience on the best of each unique destination.</h2>
           <div class="text">
             <%= raw @page.content_for(:body) %>
           </div>
@@ -214,21 +214,14 @@
     </div>
   <% end %>
 
-  
-  
-  
-  
-  
-
-  <div class="container" style="text-align: center;">
-    <div class="row">
+  <div class="container-fluid instagram-feed">
+    <div class="row no-gutter">
       <div class="col-xs-12">
         <h1>Instagram Feed</h1>
+        <div id="instafeed"></div>
       </div>
     </div>
   </div>
-
-  <div id="instafeed"></div>
 
   <%= render '/refinery/footer' -%>
 
