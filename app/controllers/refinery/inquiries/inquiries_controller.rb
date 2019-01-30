@@ -14,8 +14,8 @@ module Refinery
 
       def create
         @inquiry = ::Refinery::Inquiries::Inquiry.new(params[:inquiry])
-
-        if @inquiry.save
+        
+        if NewGoogleRecaptcha.human?(params[:new_google_recaptcha_token], "inquire", ENV['GOOGLE_RECAPTCHA_MINIMUM_SCORE'], @inquiry) and @inquiry.save
           # if @inquiry.ham?
             begin
               ::Refinery::Inquiries::InquiryMailer.notification(@inquiry, request).deliver

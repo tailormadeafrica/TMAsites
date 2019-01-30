@@ -25,6 +25,9 @@ From: <%= @inquiry.from %>
 <% unless @inquiry.first_trip.blank? %>
 Is it your first trip to Africa?: <%= @inquiry.first_trip %>
 <% end %>
+<% unless @inquiry.hear.blank? %>
+Where did you hear about us?: <%= @inquiry.hear %>
+<% end %>
 I except communication: <%=  @inquiry.except_communication ? 'Yes': 'No' %>
 <%=raw t('.message') %>:
 <%=strip_tags(@inquiry.message) %>

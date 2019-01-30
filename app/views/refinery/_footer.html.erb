@@ -100,8 +100,6 @@
           </div>
           <input type="text" name="inquiry[hear]" class="form-control" placeholder="Where did you hear about us?*" required>
           <textarea class="form-control" name="inquiry[message]" rows="3" placeholder="Message"></textarea>
-          <div class="captcha"></div>
-          <input type="text" id="captcha" name="inquiry[captcha]" pattern="^.*\b(y4x3b|Y4X3B|y4x3B)\b.*$" class="form-control" placeholder="Retype Captcha*" required>
           <div class="option-group cf" style="border-bottom:none;">
             <div class="row">
               <div class="col-xs-12 col-sm-1">
@@ -113,6 +111,7 @@
               </div>
             </div>
           </div>
+          <%= recaptcha_action('inquire') %>
           <input class="btn btn-custom" type="submit" value="Send Message">
         </form>
       </div>
