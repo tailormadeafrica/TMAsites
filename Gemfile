@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.2.5'
 
 gem 'rails', '3.2.22'
 
@@ -132,7 +132,7 @@ gem "nested_form"
 gem 'sidekiq', '3.0.0'
 gem 'sinatra', :require => nil    # For the sidekiq web UI
 
-gem "recaptcha"
+#gem "recaptcha"
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'

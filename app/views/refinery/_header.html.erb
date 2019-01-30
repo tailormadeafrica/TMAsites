@@ -18,20 +18,26 @@
         <li><a href="tel:+447809726266"><img alt="phone" src="/assets/phone.png"></a></li>
         <li><a href="mailto:<%= email %>"><img alt="envelope" src="/assets/envelope.png"></a></li>
       </ul>
-      <!--     <a class="navbar-brand hidden-xs" href="#"><img src="images/logo.png" ></a> -->
+      <a class="navbar-brand hidden-xs hidden-md" href="#"><img src="/assets/main-logo-text.png" class="main-logo"></a>
     </div>
+		
     <div class="collapse navbar-collapse -nav">
+      <button id="btn-search" class="btn--search navbar-right hidden-xs hidden-sm"><img src="/assets/search-icon.png"></button>
       <%= render(:partial => "/refinery/menu", :locals => {
-          :dom_id => 'navbar-left list-inline',
-          :css => 'navbar-left list-inline'
+          :dom_id => 'navbar-right list-inline',
+          :css => 'navbar-right list-inline'
       }) %>
-      <ul class="navbar-right social-media list-inline">
-        <li><a href="<%= face %>" target="_blank"><img alt="facebook" title="facebook" src="/assets/facebook.png"></a></li>
-        <li><a href="<%= twit %>" target="_blank"><img alt="twitter" title="twitter" src="/assets/twitter.png"></a></li>
-        <li><a href="<%= ins %>" target="_blank"><img alt="instagram" title="instagram" src="/assets/instagram.png"></a></li>
-        <li class="hidden-xs"><a href="tel:<%= number %>"><img alt="phone" src="/assets/phone.png" class="hidden-sm"><%= number %></a></li>
-      </ul>
     </div>
+    
+		<div class="search">
+			<button id="btn-search-close" class="btn--search-close" aria-label="Close search form"><img src="/assets/close.png"></button>
+			<form accept-charset="UTF-8" action="/locations" method="get" class="search__form">
+				<input class="search__input" name="search" type="search" placeholder="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+				<span class="search__info">Hit enter to search or ESC to close</span>
+			</form>
+		</div>
+
+		<script src="javascripts/search.js"></script>
 
   </div>
 </nav>

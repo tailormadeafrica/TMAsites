@@ -1,269 +1,95 @@
 <% if @location.present? and @location.gallery.present? and @location.gallery.items.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <% @location.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
+          <div class="banner-strip hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 hidden-sm col-md-4">
+                  <img src="/assets/botswana.png" class="img-responsive">
+                </div>
+                <div class="col-xs-12 hidden-sm col-md-8">
+                  <p>This text pulls from side body of /refinery/locations/botswana-safari/edit</p>
+                  <a href="#contact_area" class="arrow">Enquire Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="overlay"></div>
           <%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <% if @location.depth == 0 %>
-              <h2>Discover</h2>
-            <% end %>
-            <h1><%= raw @location.name %></h1>
-            <a href="#contact_area" class="hidden-xs"><img alt="btn" src="/assets/banner-btn.png"></a>
-          </div>
-          <img alt="blank" src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
     <% end %>
   </div>
 <% elsif @accommodation.present? and @accommodation.gallery.present? and @accommodation.gallery.items.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <% @accommodation.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
-
         <div class="ms-slide slide-1" data-delay="4">
+          <div class="banner-strip hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 hidden-sm col-md-4">
+                  <img src="/assets/main-logo.png" class="img-responsive">
+                </div>
+                <div class="col-xs-12 hidden-sm col-md-8">
+                  <p>This text pulls from side body of /refinery/acticities</p>
+                  <a href="#contact_area" class="arrow">Enquire Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="overlay"></div>
           <%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h2>Visit</h2>
-            <h1><%= raw @accommodation.name %></h1>
-            <a href="#contact_area" class="hidden-xs"><img alt="btn" src="/assets/banner-btn.png"></a>
-          </div>
-          <img alt="blank" src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
     <% end %>
   </div>
 <% elsif @activity.present? and @activity.gallery.present? and @activity.gallery.items.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <% @activity.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
+          <div class="banner-strip hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 hidden-sm col-md-4">
+                  <img src="/assets/main-logo.png" class="img-responsive">
+                </div>
+                <div class="col-xs-12 hidden-sm col-md-8">
+                  <p>This text pulls from side body of /refinery/accommodations</p>
+                  <a href="#contact_area" class="arrow">Enquire Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="overlay"></div>
           <%= image_fu(item.image, "1920x935#c", :alt => item.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h2>Experience</h2>
-            <h1><%= raw @activity.name %></h1>
-            <a href="#contact_area" class="hidden-xs"><img alt="btn" src="/assets/banner-btn.png"></a>
-          </div>
-          <img alt="blank" src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
     <% end %>
   </div>
-<% elsif controller_path != 'refinery/newsletter/posts' and @post.present? and @post.banners.published.present? %>
-  <div class="master-slider ms-skin-default" id="post_masterslider2">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% @post.banners.published.reorder('position ASC').each do |banner| %>
-      <% if banner.image.present? %>
-        <div class="ms-slide slide-1" data-delay="4">
-        <div class="overlay"></div>
-          <%= image_fu(banner.image, "1920x435#c", :alt => banner.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h1><%= raw banner.name %></h1>
-          </div>
-          <img alt="blank" src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-<% elsif @page.link_url.present? and @page.link_url == '/blog' and @page.present? and @page.banners.published.present? %>
-  <div class="master-slider ms-skin-default" id="post_masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% @page.banners.published.reorder('position ASC').each do |banner| %>
-      <% if banner.image.present? %>
-        <div class="ms-slide slide-1" data-delay="4">
-          <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h1><%= raw banner.name %></h1>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-<% elsif @page.link_url.present? and @page.link_url == '/bookings/new' and @page.present? and @page.banners.published.present? %>
-  <div class="master-slider ms-skin-default" id="post_masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% @page.banners.published.reorder('position ASC').each do |banner| %>
-      <% if banner.image.present? %>        
-        <div class="ms-slide slide-1" data-delay="4">
-          <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
-          <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <h1><%= raw banner.name %></h1>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-
 <% elsif @page.present? and @page.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="masterslider">
-    <div class="search hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <form accept-charset="UTF-8" action="/locations" method="get" class="form-inline">
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <div class="title">
-                  <span>Find your</span>
-                  <h2>Destination</h2>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-8">
-                <input type="text" name="search" class="form-control" placeholder="Search ...">
-              </div>
-              <div class="col-xs-12 col-sm-3 col-md-2">
-                <input type="submit" class="btn btn-custom" value="Search">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <% @page.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>
         <div class="ms-slide" data-delay="4">
+          <div class="banner-strip hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 hidden-sm col-md-4">
+                  <img src="/assets/main-logo.png" class="img-responsive">
+                </div>
+                <div class="col-xs-12 hidden-sm col-md-8">
+                  <%= raw banner.description %>
+                  <a href="#contact_area" class="arrow">Enquire Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="overlay"></div>
           <%= image_fu(banner.image, "1920x935#c", :alt => banner.image.alt_tag) %>
-            <% if home_page? %>
-              <img alt="blank" title="blank" src="/assets/blank.gif" data-src="/assets/logo.png" class="ms-layer logo" data-type="image" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-            <% elsif banner.description.present? %>
-              <div class="ms-layer banner-text" data-type="text" data-delay="750" data-duration="2000" data-ease="easeOutExpo" data-resize="false">
-                <%= raw banner.description %>
-                <a href="#contact_area" class="hidden-xs"><img alt="btn" src="/assets/banner-btn.png"></a>
-              </div>
-            <% end %>
-            <img alt="blank" src="/assets/blank.gif" data-src="/assets/downarrow.png" class="ms-layer arrow hidden-xs hidden-sm" data-resize="false" data-type="image" data-delay="1500" data-duration="9000" data-ease="easeOutExpo" data-resize="false">
         </div>
       <% end %>
     <% end %>

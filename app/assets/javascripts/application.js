@@ -249,7 +249,7 @@ $(document).ready(function() {
 
     $('.arrow').click(function() {
         $('html,body').animate({
-            scrollTop: $('#welcome').offset().top
+            scrollTop: $('#contact_area').offset().top
         }, 1000);
         return false;
     });
