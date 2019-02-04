@@ -12,10 +12,10 @@
 
 	'use strict';
 
-	var openCtrl = document.getElementById('btn-search'),
-		closeCtrl = document.getElementById('btn-search-close'),
-		searchContainer = document.querySelector('.search'),
-		inputSearch = searchContainer.querySelector('.search__input');
+	var openCtrl = document.getElementById("btn-search"),
+    closeCtrl = document.getElementById("btn-search-close"),
+    searchContainer = document.querySelector(".searchContainer"),
+    inputSearch = searchContainer.querySelector(".search__input");
 
 	function init() {
 		initEvents();	

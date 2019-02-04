@@ -9,6 +9,7 @@
       <%= f.input :phone, :label => false, :placeholder => "Phone" %>
 
       <%= f.input :message ,:input_html  => {:rows=>6}, :label => false, :placeholder => "Message" %>
+      <%= recaptcha_action('inquire') %>
       <!--<div class="control">-->
         <!--<img src="/assets/captcha.jpg">-->
       <!--</div>-->
