@@ -57,6 +57,10 @@ ul li {text-align:left;}
 a {text-decoration:none; color:$orange;}
 a:hover, a:focus, a:active, a:focus:hover {text-decoration:none; color:$orange;}
 
+.grecaptcha-badge { 
+    visibility: hidden;
+}
+
 table {width: 100%; border: 1px solid #eeeeee; text-align:left;
   th {border-bottom: 1px solid #eeeeee; border-right: 1px solid #eeeeee; font-weight:normal; padding:5px 10px;}
   td {border-right: 1px solid #eeeeee; padding:5px 10px;}
@@ -64,24 +68,27 @@ table {width: 100%; border: 1px solid #eeeeee; text-align:left;
 
 strong {font-weight:600;}
 
-.navbar {border:0; background:transparent; position:absolute; width:100%; z-index:10; margin:0; border-radius:0;
-  ul {margin:0 28px 0 0;
+.navbar {border:0; position:absolute; width:100%; z-index:10; margin:0; border-radius:0; background:rgba(34,34,34,0.6);
+  .navbar-brand {padding:10px 15px;}
+    ul {margin:0;
     li {padding:0;
-      a,a:hover {color:#ffffff; font-size:16px; margin-left:28px; line-height:95px;}
+      a,a:hover {color:#ffffff; font-size:16px; margin-left:25px; line-height:80px;}
     }
-  }
-  ul.social-media {margin-right:40px;
-    li a {margin-left:15px!important;}
   }
   .navbar-collapse {padding:0;}
+  img.main-logo {height:60px;}
+  .call-us {font-size:16px; margin-right:28px; line-height:80px; color:#ffffff;
+    a {color:#ffffff;}
+  }
 }
 
-.navbar-scroll {z-index:999; background:rgba(34,34,34,0.6); height:90px;
-    li {padding:0;
-      a,a:hover {line-height:90px!important;}
-    }
-  img.main-logo {height:60px;}
-}
+// .navbar-scroll {z-index:999; background:rgba(34,34,34,0.6); height:80px;
+// .navbar-brand {padding:10px 15px;}
+//     li {padding:0;
+//       a,a:hover {line-height:80px!important;}
+//     }
+//   img.main-logo {height:60px;}
+// }
 
 
         /* search start  */
@@ -403,7 +410,7 @@ strong {font-weight:600;}
     ::-moz-placeholder {color: #ffffff;}
     :-ms-input-placeholder {color: #ffffff;}
     :-moz-placeholder {color: #ffffff;}
-    .btn-custom {@include button (45px,45px,#ffffff,1px solid rgba(255,255,255,0.5),transparent,30px,16px,0 40px);}
+    .btn-custom {@include button (45px,45px,#ffffff,1px solid rgba(255,255,255,0.5),transparent,30px,16px,0 40px); margin-top:10px;}
   }
   .captcha {background: url(/assets/captcha.png) top center no-repeat; height:44px;}
   .small-print { font-size: 10px; text-align: left; line-height: 14px;}
@@ -863,12 +870,13 @@ strong {font-weight:600;}
   h1.accommodation-name {font-size:70px; letter-spacing:5px!important;
     span {font-size:36px; letter-spacing:3px!important;}
   }
+  .navbar {}
   .navbar-collapse {text-align:center;}
   .navbar-header {width:100%; text-align:center;}
   .navbar-brand {width:100%!important;margin:0!important;}
     .navbar ul {margin-right:0;}
-    .navbar-right {float:none!important;}
-  .navbar ul li a, .navbar ul li a:hover {font-size:14px; margin:0 12px; line-height:155px;}
+    .navbar-left {float:none!important;}
+  .navbar ul li a, .navbar ul li a:hover {font-size:14px; margin:0 12px;}
 
   .controls .bx-next,.controls .bx-prev {right:20px!important;}
   .bx-wrapper,.bx-viewport {width:664px!important;}

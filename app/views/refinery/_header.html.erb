@@ -18,14 +18,15 @@
         <li><a href="tel:+447809726266"><img alt="phone" src="/assets/phone.png"></a></li>
         <li><a href="mailto:<%= email %>"><img alt="envelope" src="/assets/envelope.png"></a></li>
       </ul>
-      <a class="navbar-brand hidden-xs hidden-md" href="#"><img src="/assets/main-logo-text.png" class="main-logo"></a>
+      <a class="navbar-brand hidden-xs hidden-md" href="#"><img src="/assets/main-logo-top-small.png" class="main-logo"></a>
     </div>
 		
     <div class="collapse navbar-collapse -nav">
       <button id="btn-search" class="btn--search navbar-right hidden-xs hidden-sm"><img src="/assets/search-icon.png"></button>
+      <div class="call-us navbar-right hidden-xs hidden-sm hidden-md"><span>Call Us Today! </span><a href="tel:+447809726266">+44 7809 726266</a></div>
       <%= render(:partial => "/refinery/menu", :locals => {
-          :dom_id => 'navbar-right list-inline',
-          :css => 'navbar-right list-inline'
+          :dom_id => 'navbar-left list-inline',
+          :css => 'navbar-left list-inline'
       }) %>
     </div>
     

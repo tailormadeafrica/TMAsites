@@ -1,13 +1,15 @@
 /* Layout for search container */
-.btn--search {border:0; background:transparent; line-height:90px; padding:0!important;}
+.btn--search {border:0; background:transparent; line-height:80px; padding:0!important;}
+.btn--search img { height:25px;}
 .searchContainer {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(0, 0, 0, 0.65);}
 .js .searchContainer {position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100vh;	pointer-events: none; opacity: 0; transition: opacity 0.5s;}
 .js .search--open {pointer-events: auto; opacity: 1;}
-.btn--search-close {position: absolute; top: 2em; right: 1.25em; display: none; border:0; background:transparent;}
+.btn--search-close {position: absolute; top: 2em; right: 0.8em; display: none; border:0; background:transparent;}
+.btn--search-close img {height:25px;}
 .js .btn--search-close {display: block;}
-.search__input {background:transparent; font-size: 10vw; width: 75%; border:0; border-bottom: 2px solid #ffffff; color:#ffffff;}
+.search__input {background:transparent; font-size: 4vw; border:0; border-bottom: 2px solid #ffffff; color:#ffffff;}
 .search__input:focus {outline:0;}
-.search__info {display: block; width: 75%; margin: 0 auto; padding: 0.85em 0; text-align: right; color:#ffffff;}
+.search__info {display: block; width: 100%; margin: 0 auto; padding: 0.85em 0; text-align: right; color:#ffffff;}
 .js .search__form {opacity: 0; transform: scale3d(0.8, 0.8, 1); transition: opacity 0.5s, transform 0.5s;}
 .js .search--open .search__form {opacity: 1; transform: scale3d(1, 1, 1);}
 

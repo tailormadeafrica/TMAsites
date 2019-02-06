@@ -3,18 +3,18 @@
     <% @location.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
-          <div class="banner-strip hidden-xs">
+          <div class="banner-strip hidden-xs hidden-sm">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-4">
                   <% if @location.country_image.present? %>
-                    <%= image_fu(@location.country_image, "519x168#c", :alt => @location.country_image.alt_tag, class: "img-responsive") %>
+                    <%= image_fu(@location.country_image, "360x140#c", :alt => @location.country_image.alt_tag, class: "img-responsive") %>
                   <% elsif @location.parent.present? and @location.parent.country_image.present? %>
-                    <%= image_fu(@location.parent.country_image, "519x168#c", :alt => @location.parent.country_image.alt_tag, class: "img-responsive") %>
+                    <%= image_fu(@location.parent.country_image, "360x140#c", :alt => @location.parent.country_image.alt_tag, class: "img-responsive") %>
                   <% end %>
                 </div>
                 <div class="col-xs-12 hidden-sm col-md-8">
-                  <p><%=raw @location.side_body if @location.side_body.present? %></p>
+                  <%=raw @location.side_body if @location.side_body.present? %>
                   <a href="#contact_area" class="arrow">Enquire Now</a>
                 </div>
               </div>
@@ -31,14 +31,14 @@
     <% @accommodation.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
-          <div class="banner-strip hidden-xs">
+          <div class="banner-strip hidden-xs hidden-sm">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-4">
                   <img src="/assets/main-logo.png" class="img-responsive">
                 </div>
                 <div class="col-xs-12 hidden-sm col-md-8">
-                  <p><%=raw @accommodation.side_body if @accommodation.side_body.present? %></p>
+                  <%=raw @accommodation.side_body if @accommodation.side_body.present? %>
                   <a href="#contact_area" class="arrow">Enquire Now</a>
                 </div>
               </div>
@@ -55,7 +55,7 @@
     <% @activity.gallery.items.reorder('position ASC').each do |item| %>
       <% if item.image.present? %>
         <div class="ms-slide slide-1" data-delay="4">
-          <div class="banner-strip hidden-xs">
+          <div class="banner-strip hidden-xs hidden-sm">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-4">
@@ -79,7 +79,7 @@
     <% @page.banners.published.reorder('position ASC').each do |banner| %>
       <% if banner.image.present? %>
         <div class="ms-slide" data-delay="4">
-          <div class="banner-strip hidden-xs">
+          <div class="banner-strip hidden-xs hidden-sm">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-4">
