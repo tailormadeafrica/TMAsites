@@ -32,7 +32,7 @@ module Refinery
 
       attr_accessible :title, :body, :custom_teaser, :tag_list, :draft, :published_at, :custom_url, :author
       attr_accessible :browser_title, :meta_keywords, :meta_description, :user_id, :category_ids
-      attr_accessible :source_url, :source_url_title, :image_id, :activity_ids, :location_ids, :accommodation_ids, :video_url
+      attr_accessible :source_url, :source_url_title, :image_id, :video_url
 
       belongs_to :image, :class_name => "Refinery::Image"
 
