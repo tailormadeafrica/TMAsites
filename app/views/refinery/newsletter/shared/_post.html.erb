@@ -4,13 +4,9 @@
     <div class="newsletter_post_pod">
       <%= link_to refinery.newsletter_post_path(post) do %>
         <%= image_fu(post.image, '360x272#c', :class=>"img-responsive") %>
-      <% if post.video_url.present? %>
-        <div class='video_play'></div>
-      <% end %>
       <% end %>
       <div class="caption cf">
         <div class="title"><%= link_to post.title, refinery.newsletter_post_path(post) %></div>
-        <div class="date"><%= post.published_at.strftime('%B %e, %Y') %></div>
       </div>
 
     </div>
