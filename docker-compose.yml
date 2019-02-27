@@ -9,6 +9,7 @@ services:
       GOOGLE_RECAPTCHA_SITE_KEY: 6LcMxosUAAAAABCUfL8b5k1rlkzha75U0lgCOZxW
       GOOGLE_RECAPTCHA_SECRET_KEY: 6LcMxosUAAAAAPlC2r2b5PhlNdp8hY4ls03BKEfx
       GOOGLE_RECAPTCHA_MINIMUM_SCORE: 0.5
+      CLOUDFRONT_ENDPOINT: d3k53vojhyqy0e.cloudfront.net
     volumes:
       - .:/app
     ports:
