@@ -44,7 +44,6 @@ gem 'jquery-rails', '~> 2.0.0'
 # gem 'json', '1.8.1'
 gem 'babosa', '0.3.11'
 gem 'net-ssh', '2.9.2'
-gem 'rack-cache', '1.2'
 gem 'bootstrap-datepicker-rails'
 gem 'sass', '3.7.2'
 gem 'hitimes', '1.2.4'
@@ -70,7 +69,7 @@ gem "refinerycms-pods", "~> 2.1.0"
 gem "refinerycms-videos", "~> 2.0.1"
 gem "refinerycms-portfolio", :git => "git://github.com/perfectcircledesign/refinerycms-portfolio.git", :branch => "feature/aws"
 gem "refinerycms-blog", "~> 2.0.0"
-gem 'refinerycms-newsletter', '~> 2.0.0', :git => "git://github.com/tailormadeafrica/refinerycms-newsletter.git"    
+gem 'refinerycms-newsletter', '~> 2.0.0', :git => "git://github.com/tailormadeafrica/refinerycms-newsletter.git"
 gem "acts-as-taggable-on", "3.0.1"
 gem "rails_autolink", "1.1.4"
 gem "refinerycms-pc_banners", "~> 2.0.2"
@@ -88,17 +87,11 @@ gem 'seed-fu', '~> 2.2.0'
 # Make our RefineryCMS page seeding a bit eaiser
 gem 'refinerycms-page_seeder', '~> 0.0.1'
 
-# Send errors to our Errbit server
-gem 'airbrake', '~> 3.1.6'
-
 # Colorbox support for asset pipeline
 gem "jquery-colorbox-rails", "0.1.4"
 
 # Required to get Refinery working on Heroku
 gem 'fog', '~> 0.8.1'
-
-#Monitoring
-gem 'newrelic_rpm', '3.17.2.327'
 
 gem 'nokogiri', '1.6.8.1'
 
@@ -120,17 +113,18 @@ group :production do
   gem 'rack-zippy'
 end
 
-gem 'rack-cors'
-
 gem "barnes"
-
-gem 'test-unit'
 
 gem 'redis', '3.3.5'
 
 gem "nested_form"
 gem 'sidekiq', '3.0.0'
 gem 'sinatra', :require => nil    # For the sidekiq web UI
+
+gem 'dalli' # memcache client
+gem 'kgio' # non-blocking i/o gives dalli 10-20% speed boost
+gem 'rack-cache', :require => 'rack/cache'
+gem 'connection_pool'
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'

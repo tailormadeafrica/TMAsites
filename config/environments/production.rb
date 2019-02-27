@@ -68,6 +68,17 @@ TailorMadeAfrica::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.cache_store = :mem_cache_store,
+                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_faielure_delay => 0.2,
+                     :down_retry_delay => 60,
+                     :pool_size => 5
+                    }
+
 end
 
 ActionMailer::Base.smtp_settings = {
