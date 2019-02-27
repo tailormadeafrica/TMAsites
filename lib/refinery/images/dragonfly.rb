@@ -32,7 +32,7 @@ module Refinery
               s3.secret_access_key = Refinery::Images.s3_secret_access_key
               # S3 Region otherwise defaults to 'us-east-1'
               s3.region = Refinery::Images.s3_region if Refinery::Images.s3_region
-              s3.host_url = ENV['CLOUDFRONT_ENDPOINT'] if ENV['CLOUDFRONT_ENDPOINT'].present?
+              s3.url_host = ENV['CLOUDFRONT_ENDPOINT'] if ENV['CLOUDFRONT_ENDPOINT'].present?
             end
           end
         end
