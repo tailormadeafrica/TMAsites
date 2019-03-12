@@ -1,450 +1,593 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>https://www.tailormadeafrica.com/</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/whale-watching</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/big-five</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/aye-aye-lemurs-return-to-the-wild-in-anjajavy-madagascar</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/solo-traveller</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/horseback-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/bespoke-exciting-cycling-experiences-in-botswana-and-south-africa</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/consumer-financial-protection</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/wildlife-migrations</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/contact</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/hot-air-balloon</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/walking-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/fair-trade-tourism</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog?vlog=true</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/family-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/first-time-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/partnerships</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/reviews</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/luxury-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/botswana-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/group-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/chimpanzee-trekking</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/honeymoon-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/bookings/new</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/accommodations</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/malawi-holidays</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/seychelles-holidays</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/namibia-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/dreaming-of-a-rwanda-or-uganda-primate-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/gorilla-trekking</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/singita-kwitonda-lodge-embodying-the-spirit-of-rwanda</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/south-africa-holidays</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/privacy-policy</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/mashatu-game-reserve-botswana-a-candid-review</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/south-africa-holidays/the-winelands</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/madagascar-holidays</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/miavana-madagascar-celebrates-3-new-lemur-pups</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/madagascar-holidays/western-madagascar/anjajavy-lodge</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/system/resources/BAhbBlsHOgZmSSJEMjAxOC8xMi8xMC8xMy80Mi80MS81OTEvQ2FwZV9Ub3duX0N5Y2xlX1RvdXJfUk9VVEVfTUFQXzIwMTgucGRmBjoGRVQ/Cape Town Cycle Tour ROUTE MAP 2018.pdf</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/the-world-renowned-hermanus-whale-festival-in-south-africa</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/pages/consumer-financial-protection</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/singita-kwitonda-lodge-helping-the-future-of-rwanda-s-gorillas</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/a-rwanda-holiday-at-sabyinyo-silverback-lodge</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/madagascar-holidays/western-madagascar</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/botswana-safari/mashatu-game-reserve/mashatu-tented-camp</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/botswana-safari/mashatu-game-reserve/mashatu-lodge</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/tailormade-africa-explores-the-beauty-of-south-africa</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/terms-conditions</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/cultural-experience</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/south-africa-holidays/cape-town</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/african-parks-a-bright-future-for-rhinos</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/african-parks</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/kenya-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/botswana-safari/mashatu-game-reserve</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/teams</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/specialist-hides</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/celebrating-gorillas-and-the-communities-of-rwanda</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari/gonarezhou-national-park</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari/lake-kariba-matusadona-national-park</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari/matobo-hills-national-park</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/tanzania-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/49</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/ghana-holidays</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/activities/65</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/rwanda-safari</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/botswana-safari/mobile-safaris/letaka-safaris</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.tailormadeafrica.com/blog/posts/babylonstoren-in-franschhoek-with-monty-don</loc>
-    <lastmod>2018-12-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+<!-- Generated by Web-Site-Map.com -->
+<url><loc>https://www.tailormadeafrica.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
+<url><loc>https://www.tailormadeafrica.com/teams</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/reviews</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/partnerships</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zambia-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/namibia-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mozambique-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/malawi-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/kenya-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/ethiopia-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/ghana-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/first-time-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/honeymoon-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/family-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/luxury-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/reviews/</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/group-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/solo-traveller</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/fair-trade-tourism</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/big-five</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/wildlife-migrations</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/gorilla-trekking</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/walking-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/horseback-safari</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/chimpanzee-trekking</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/whale-watching</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/specialist-hides</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/cultural-experience</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/hot-air-balloon</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/consumer-financial-protection</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/day-5-climbing-kilimanjaro-with-tailormade-africa</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/day-4-climbing-kilimanjaro-with-tailormade-africa</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-extraordinary-allure-of-rwanda</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/terms-conditions</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/privacy-policy</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/bookings/new</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/accommodations</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/lake-kariba-matusadona-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/about/clyde-beaty</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/about/rob-morley</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/about/cameron-pearce</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/contact</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/bwindi-impenetrable-forest</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari/odzala-kokoua-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/nyungwe-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/kibale-forest-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/queen-elizabeth-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/murchison-falls-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/mahale-mountains-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/vehicle-safaris</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/full-day-game-drive</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/night-drive-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/birding-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/boat-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/sundowner-boat-cruise</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/mokoro-boat-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/fishing</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/canoeing</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/big-five-lion</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/big-five-leopard</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/big-five-elephant</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/big-five-buffalo</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/big-five-rhino</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/local-school-visit</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/rhino-tracking-by-foot</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/elephant-back-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/optional-fly-camping</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/bush-dining</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/helicopter-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/microlight-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/mountain-bike-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/camel-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/bungee-jumping</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/quad-biking</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/white-water-rafting</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/wine-tasting</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/golf</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/tennis</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/diving</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/snorkeling</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/turtle-activity</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/shark-diving</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/sea-kayaking</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/water-sports</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/night-walking</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/lemur-activity</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/motorized-water-sports</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/surfing</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/kite-surfing</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/yachting</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/dolphin-activity</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/activities/pirate-history-tour</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mashatu-game-reserve</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/cape-town</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/grootbos-private-nature-reserve-why-the-hype</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/zambezi-sands</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/the-highlands-ngorongoro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/namiri-plains</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/islands-coast/pemba-island</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/islands-coast/pemba-island/the-manta-resort</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/entebbe-kampala</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-best-safari-destinations-in-southern-africa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/the-garden-route</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/lake-manyara</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/kwara-concession/kwara-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/kwara-concession/little-kwara-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/lagoon-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mobile-safaris/letaka-safaris</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/central-kalahari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/lake-kivu</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/partnerships</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/day-3-climbing-kilimanjaro-with-tailormade-africa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/2019-is-an-exciting-year-for-magashi-in-rwanda</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/day-2-climbing-kilimanjaro-with-tailormade-africa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/day-1-climbing-kilimanjaro-with-tailormade-africa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/climbing-kilimanjaro-with-tailormade-africa-our-story</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/from-tragedy-to-sanctuary-zakouma-national-park-s-elephants</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/2018-africa-in-review-with-african-parks</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=2</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=3</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=4</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=5</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=6</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=7</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=8</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=9</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=14</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=15</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/botswana-safari/chobe</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/botswana-safari/makgadikgadi-salt-pans</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mobile-safaris</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/bespoke-exciting-cycling-experiences-in-botswana-and-south-africa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/mashatu-game-reserve-botswana-a-candid-review</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/botswana-travel-guide</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/akagera-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/kigali</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/madagascar-holidays/eastern-madagascar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/madagascar-holidays/southern-madagascar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/madagascar-holidays/western-madagascar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/aye-aye-lemurs-return-to-the-wild-in-anjajavy-madagascar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/miavana-madagascar-celebrates-3-new-lemur-pups</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/successful-crowned-lemur-conservation-at-miavana-madagascar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/katavi-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/tanzania-coast</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/mafia-island</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-african-walking-company</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-best-time-of-year-to-climb-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/climbing-mount-kilimanjaro-cost</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/who-can-climb-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-best-route-to-climb-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/mount-kilimanjaro-facts-history</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/altitude-sickness-on-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/gonarezhou-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/matobo-hills-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/dynasties-featuring-mana-pools-with-david-attenborough</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/rise-the-rebirth-of-zimbabwe</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari/brazzaville</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari/etoumbi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/garamba-national-park-s-80th-anniversary-celebration</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/latest-census-results-show-mountain-gorilla-population-still-increasing</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/kidepo-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/lake-mburo-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/uganda-safari/jinja</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/dreaming-of-a-rwanda-or-uganda-primate-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/experience-uganda-s-gorillas-in-the-mist-in-a-new-way</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/shady-dealings-the-black-heron</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/kruger-national-park-private-game-reserves</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/the-winelands</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/western-cape-wildlife</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/eastern-cape-private-game-reserves</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/kwazulu-natal</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/south-africa-holidays/johannesburg</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/progressive-responsible-tourism-at-grootbos-foundation</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/becoming-one-with-painted-wolves</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/5-african-travel-resolutions-for-2018</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/farewell-to-liuwa-plain-s-legendary-lionesses</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/bitten-by-africa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-ever-exploring-african-meerkat</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/celebrate-big-cats-this-world-wildlife-day</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/cottar-s-1920s-safari-camp-bush-villa-the-heartbeat-continues</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/till-we-meet-again-sudan-old-friend</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/what-to-consider-when-packing-for-your-first-safari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/top-5-emerging-africa-destinations-for-2017</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/freetown</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/bunce-island</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/western-area-peninsula-forest</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/tacugama-chimpanzee-sanctuary</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/beaches-islands</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/tiwai-island-wildlife-sanctuary</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/gola-rainforest</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/bo</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/sierra-leone-holidays/makeni</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/akagera-national-park-rwanda</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/bangweulu-wetlands-zambia</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/bazaruto-archipelago-national-park-mozambique</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/chinko-wildlife-refuge-central-african-republic</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/ennedi-natural-and-cultural-reserve-chad</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/garamba-national-park-democratic-republic-of-congo</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/liuwa-plain-national-park-zambia</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/zakouma-national-park-chad</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/liwonde-national-park-malawi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/majete-wildlife-reserve-malawi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/nkhotakota-wildlife-reserve-malawi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/odzala-kokoua-national-park-congo</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/african-parks/pendjari-national-park-benin</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mashatu-game-reserve/mashatu-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mashatu-game-reserve/mashatu-tented-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/virunga-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/sabyinyo-silverback-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/bisate-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/mountain-gorilla-view-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/nyungwe-national-park/one-only-nyungwe-house</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/blog/posts/the-lions-of-akagera-national-park-rwanda</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/akagera-national-park/ruzizi-tented-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/akagera-national-park/karenge-bush-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/kichaka-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/kwihala-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/jongomero-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/mdonya-river-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/kigelia-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/jabali-ridge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/roho-ya-selous</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/sand-rivers-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/kiba-point</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/siwandu</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/selous-impala-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/lake-manze-tented-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/selous-serena-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/selous-game-reserve/mivumo-river-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/katavi-national-park/katuma-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/katavi-national-park/chada-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/mahale-mountains-national-park/greystoke-mahale</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/mahale-mountains-national-park/kungwe-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/ruckomechi-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/vumbura-concession</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/duba-concession</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/chitabe-concession</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/moremi-central</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/abu-concession</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/kilindi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/matemwe-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/matemwe-retreat</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/matemwe-beach-house</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/mnemba-island</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/breezes</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/baraza</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/palms</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/zawadi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/accommodations/pongwe</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/zanzibar-white-sand-villas</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/the-residence-zanzibar</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/accommodations/zanzibar-serena-inn</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/islands-coast/pemba-island/fundu-lagoon</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/tanzania-coast/ras-kutani</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/tanzania-coast/fanjove-island</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/rwanda-safari/lake-kivu/lake-kivu-serena</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/accommodations/paradis-malahide</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>http://www.tailormadeafrica.com/tanzania-safari/islands-coast/mafia-island/chole-mjini-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/consumer-financial-protection</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/singita-kwitonda-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/terms-conditions</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/privacy-policy</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/vumbura-concession/little-vumbura-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/vumbura-concession/vumbura-plains</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/abu-concession/abu-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/baines-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/chitabe-concession/chitabe-lediba</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/chitabe-concession/sandibe-safari-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/chitabe-concession/chitabe-main</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/duba-concession/duba-expedition</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession/little-tubu-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession/kwetsani-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession/pelo-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession/jacana-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession/jao-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/jao-concession/tubu-tree-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/moremi-central/little-mombo-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/moremi-central/xigera-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/moremi-central/mombo-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/chiefs-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/abu-concession/macatoo-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/nxabega-concession/nxabega-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/nxabega-concession/pom-pom-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/abu-concession/seba-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/stanleys-concession/stanley-s-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/ranns-concession/xaranna-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/ranns-concession/xudum-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/duma-tau</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/selinda-explorations</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/kings-pool</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/zarafa-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/selinda-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/lebala-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/linyanti/zarafa-dhow-suites</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/makgadikgadi-salt-pans/san-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/makgadikgadi-salt-pans/camp-kalahari</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/makgadikgadi-salt-pans/jacks-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/makgadikgadi-salt-pans/nxai-pan-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/central-kalahari/kalahari-plains</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/central-kalahari/tau-pan-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/chobe/linyanti-ebony</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/chobe/zambezi-queen</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/chobe/chobe-princess</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/chobe/chobe-chilwero</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mobile-safaris/beyond-mobile-expeditions</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mobile-safaris/kazuma-trails</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/mobile-safaris/john-chase-safaris</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari/odzala-kokoua-national-park/lango-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari/odzala-kokoua-national-park/mboko-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/congo-safari/odzala-kokoua-national-park/ngaga-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/southern-madagascar/manafiafy-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/southern-madagascar/mandrare-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/southern-madagascar/isalo-rock-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/southern-madagascar/bakuba-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/southern-madagascar/jardin-du-roy</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/miavana</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/tsarabanjina</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/masoala-forest-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/iharana-bush-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/tsara-komba</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/eden-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/litchi-tree</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/northern-madagascar/palm-beach</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/western-madagascar/anjajavy-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/western-madagascar/palissandre-cote-ouest</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/eastern-madagascar/princess-bora-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/eastern-madagascar/vakona-forest-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/accommodations/andasibe-hotel</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/eastern-madagascar/lokanga-hotel</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/madagascar-holidays/eastern-madagascar/relais-des-plateaux--2</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/akagera-national-park/magashi-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/singita-serengeti-house</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/one-only-gorilla-s-nest</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/kigali/kigali-serena</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/islands-coast/zanzibar-holidays/pongwe-beach-hotel</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/lake-manyara/chem-chem-safari-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/lake-manyara/little-chem-chem</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park/swala-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park/kuro-tarangire</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park/tarangire-river-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park/oliver-s-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park/little-oliver-s-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/tarangire-national-park/nasikia-ndovu-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/lake-manyara/manyara-tree-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/entamanu-ngorongoro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/gibbs-farm</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/lemala-ngorongoro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/sanctuary-ngorongoro-crater-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/plantation-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/the-manor</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/tloma-mountain-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/ngorongoro-crater/ngorongoro-crater-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/serian-lamai-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/olakira-migration-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/nomad-lamai</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/kaskaz-mara-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/serengeti-safari-camp-north</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/chaka-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/singita-mara-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/lemala-kuria-hills</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/klein-s-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/sayari-mara-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/lemala-mara-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/mkombe-s-house</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/nasikia-migration-camp-north</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/serengeti-under-canvas-north</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/serian-serengeti-north</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/northern-serengeti/ubuntu-migration-camp-north</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/dunia-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/naona-moru-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/accommodations/serengeti-safari-camp-central</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/grumeti-river-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/kiota-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/lemala-ewanjan</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/accommodations/serengeti-under-canvas-central</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/serian-serengeti-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/serengeti-under-canvas-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/olakira-migration-camp-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/serengeti-safari-camp-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/nasikia-migration-camp-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/kimondo-migration-camp-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/lemala-ndutu-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/serian-kusini</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/southern-serengeti/ubuntu-migration-camp-south</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/singita-faru-faru</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/singita-sasakwa</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/singita-sabora</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/northern-tanzania/central-serengeti/singita-explore</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/tanzania-safari/ruaha-national-park/ikuka-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/gonarezhou-national-park/singita-pamushana</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/gonarezhou-national-park/chilo-gorge-safari-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/little-ruckomechi</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/john-s-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/kanga-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/zambezi-expeditions-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/goliath-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/vundu-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/mana-pools-national-park/little-vundu</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/hwange-bushcamp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/somalisa-expeditions-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/bomani-tented-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/davisons-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/camp-hwange</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/jozibanani-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/little-makalolo</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/somalisa-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/linkwasha-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/hwange-national-park/somalisa-acacia-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/victoria-falls-hotel</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/batonka-guest-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/victoria-falls-river-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/the-elephant-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/matetsi-river-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/imbabala-safari-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/victoria-falls-zimbabwe/gorges-little-gorges-lodge</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/lake-kariba-matusadona-national-park/mv-matusadona-houseboat</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/lake-kariba-matusadona-national-park/umbozha-houseboat</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/lake-kariba-matusadona-national-park/changa-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/lake-kariba-matusadona-national-park/musango-safari-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/matobo-hills-national-park/camp-amalinda</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/zimbabwe-safari/matobo-hills-national-park/big-cave-camp</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/volcanoes-national-park/five-volcanoes-boutique-hotel</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/general-operating-conditions-on-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/fitness-training-preparation-before-climbing-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/group-climbs-versus-private-climbs-of-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/kilimanjaro-kit-list</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/how-to-book-a-kilimanjaro-climb</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/climbing-mount-kilimanjaro/planning-your-kilimanjaro-climb</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/mount-kilimanjaro-facts-history/where-does-the-name-kilimanjaro-originate</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/mount-kilimanjaro-facts-history/the-early-history-of-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/mount-kilimanjaro-facts-history/kilimanjaro-climb-history</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/mount-kilimanjaro-facts-history/the-geology-of-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-best-route-to-climb-mount-kilimanjaro/lemosho-route</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/altitude-sickness-on-mount-kilimanjaro/different-types-of-altitude-sickness</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/altitude-sickness-on-mount-kilimanjaro/how-to-avoid-altitude-sickness-on-mount-kilimanjaro</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/altitude-sickness-on-mount-kilimanjaro/emergency-oxygen-system-on-kilimanjaro-climbs</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-best-time-of-year-to-climb-mount-kilimanjaro/mount-kilimanjaro-and-its-climate-zones</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-african-walking-company/african-walking-company-staff-equipment</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-african-walking-company/mount-kilimanjaro-guide-teams-and-staff-welfare</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-african-walking-company/catering-and-service-on-a-mount-kilimanjaro-climb</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-african-walking-company/kilimanjaro-porters-assistance-project-kpap</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/mount-kilimanjaro/the-best-route-to-climb-mount-kilimanjaro/general-mount-kilimanjaro-trekking-conditions</loc><changefreq>daily</changefreq><priority>0.69</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/buffalo-ambush</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/zimbabwe-month-by-month</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/clyde-beaty</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/rob-morley</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/pages/cameron-pearce</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/singita-kwitonda-lodge-embodying-the-spirit-of-rwanda</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/celebrating-gorillas-and-the-communities-of-rwanda</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/re-opening-of-one-only-nyungwe-house-rwanda</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/uganda-the-african-queen</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/essential-tanzania-safari-getaway</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/ruaha-national-park-tanzania-the-satchwell-s-final-leg</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/4-of-the-best-wilderness-areas-in-zimbabwe</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/discovering-the-best-villas-for-a-zanzibar-holiday</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/snorkelling-at-the-mnemba-atoll-in-zanzibar</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/saving-like-a-local-takeaways-from-cape-town-s-water-shortage</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-satchwell-s-tanzania-safari-when-once-just-wasn-t-enough</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-satchwell-s-tanzania-safari-adventures-once-in-a-life-time</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/kwara-concession</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/nxabega-concession</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/ranns-concession</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/botswana-safari/okavango-delta/stanleys-concession</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/flying-the-okavango</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/lebala-in-linyanti-offered-up-some-elusive-animal-sightings</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/february-2018-sightings-at-lagoon-camp-linyanti-botswana</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/tau-pan-february-2018-sightings</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/babylonstoren-in-franschhoek-with-monty-don</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/tailormade-africa-explores-the-beauty-of-south-africa</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=1</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-world-renowned-hermanus-whale-festival-in-south-africa</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/a-rwanda-holiday-at-sabyinyo-silverback-lodge</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/african-parks-a-bright-future-for-rhinos</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/singita-kwitonda-lodge-helping-the-future-of-rwanda-s-gorillas</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/elephants-on-the-rise-in-chad</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/magashi-lodge-rwanda-something-new-exciting</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/singita-kwitonda-rwanda-is-all-about-conservation-community</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/gorilla-trekking-in-rwanda-stirs-up-emotions</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/canine-members-of-akagera-national-parks-anti-poaching-unit</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/10th-birthday-celebration-for-sabyinyo-silverback-lodge-rwanda</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/a-new-era-for-uk-travel-and-south-africa-safaris</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/wilderness-safaris-to-open-new-magashi-camp-in-akagera</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-captivation-of-grootbos-private-nature-reserve</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-joy-of-a-walking-safari</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/six-black-rhinos-arrive-in-zakouma-national-park-chad</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/table-mountain-cape-town-a-force-of-nature</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=10</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-imbalance-of-nature</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/3-habits-of-highly-effective-intrepid-travellers</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/babylonstoren-the-hidden-gem-of-the-winelands-south-africa</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/summer-rains-in-nxai-pan-bring-home-the-migration</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/8-things-that-make-lower-zambezi-national-park-so-special</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=11</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/why-every-child-should-visit-africa</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/kwara-concession-february-2018-wildlife-sightings</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/wildlife-conservation-is-everything</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/safari-travel-tips-for-a-memorable-experience</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=12</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog?page=13</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/10-best-safari-tips-for-family-safaris-with-kids</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/be-prepared-for-the-bestcase-scenario-a-safari-guide</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/south-african-safari-a-place-of-cheetah-lion</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/bird-sightings-in-erongo</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/etosha-a-bird-watchers-paradise</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/exhilarating-experience-walking-with-rhinos</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/best-madagascar-holidays-for-first-time-visitors</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-big-five-of-the-sea</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-best-botswana-safari-locations-travel-guide</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/return-of-the-black-rhino-akagera-national-park-rwanda</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/who-does-it-better-serengeti-or-kruger</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/diversity-of-the-kwara-concession-in-the-okavango</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/wildlife-of-the-nxai-tau-pan-in-the-kalahari-area-of-botswana</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/general-information-before-travelling-to-botswana</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/africa-is-a-night-flight-away</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/congo-s-hidden-paradise</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/botswana-through-our-eyes</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/wild-dogs-and-kwando-safaris-botswana</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>http://www.tailormadeafrica.com/accommodations/constance-tsarabanjina</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>http://www.tailormadeafrica.com/accommodations/soleil-des-tsingy-hotel</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/baraza-resort-and-spa-by-anne-beaty</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/matemwe-retreat-zanzibar-tanzania</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/matemwe-lodge-zanzibar-tanzania</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/october-sightings-in-the-kwara-concession</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/rwanda-safari/</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/10-worthy-african-safari-tips</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-majestic-grevy-zebra-struggling-for-survival-in-northern-kenya</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/breath-taking-zawadi-hotel-in-zanzibar</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/jozani-forest-a-piece-of-heaven-in-zanzibar-tanzania</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/introducing-the-little-5-of-africa</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/october-sightings-in-tau-pan-central-kalahari</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/october-sightings-in-nxai-pan-near-makgadigadi</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/lebala-camp-s-october-sightings</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/october-sightings-linyanti-lagoon-camp</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/rhinos-without-borders-release-announcement</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/authentic-private-chitake-camp-in-mana-pools</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/zanzibar-serena-hotel-stone-town-by-anne-beaty</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/permanent-camps-lodges-in-mana-pools-zimbabwe</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/matemwe-s-sustainable-tourism-programme-in-the-local-community</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/luxury-semi-permanent-camps-in-mana-pools-zimbabwe</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/walking-safaris-in-zimbabwe-are-life-changing</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/canoeing-safaris-at-mana-pools-zimbabwe</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/different-safari-styles-available-to-experience-mana-pools</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/dazzling-beaches-coral-reefs-at-breezes-beach-club</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/when-is-the-best-time-to-visit-mana-pools-in-zimbabwe</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/zanzibar-collection-and-bwejuu-village-tour</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/first-wild-rhino-born-in-rwanda-in-over-a-decade</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/experience-the-beautiful-mana-pools-safari-in-zimbabwe</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/sierra-leone-marathon-how-running-is-rebooting-tourism</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/running-for-the-worthiest-cause-in-sierra-leone</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/sierra-leone-run-for-their-lives</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/6-reasons-you-need-to-visit-sierra-leone-sue-watt</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-satchwell-s-tanzania-safari-why-ubuntu-camp</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>https://www.tailormadeafrica.com/blog/posts/the-satchwell-s-tanzania-safari-into-africa-arusha-beyond</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>http://www.tailormadeafrica.com/locations/37</loc><changefreq>daily</changefreq><priority>0.46</priority></url>
+<url><loc>http://www.tailormadeafrica.com/locations?search=Mana+Pools+National+Park</loc><changefreq>daily</changefreq><priority>0.38</priority></url>
 </urlset>
-<!--<guid value="a328c9b6-34ec-4d35-b390-0b87ba1d6450" />-->
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+ 
