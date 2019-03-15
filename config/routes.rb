@@ -5,7 +5,7 @@ TailorMadeAfrica::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
 
-  get '/sitemap.xml', :to => redirect('/sitemap.xml')
+  # get '/sitemap.xml', :to => redirect('/sitemap.xml')
 
   authenticate :refinery_user do
     require 'sidekiq/web'
