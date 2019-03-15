@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.3.0'
+# ruby '2.3.0'
 
 gem 'rails', '3.2.22'
 
@@ -125,6 +125,7 @@ gem 'dalli' # memcache client
 gem 'kgio' # non-blocking i/o gives dalli 10-20% speed boost
 gem 'rack-cache', :require => 'rack/cache'
 gem 'connection_pool'
+gem 'test-unit', '~> 3.0'
 
 gem 'refinerycms-activities', :path => 'vendor/extensions'
 gem 'refinerycms-accommodations', :path => 'vendor/extensions'

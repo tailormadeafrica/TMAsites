@@ -10,10 +10,12 @@ services:
       GOOGLE_RECAPTCHA_SECRET_KEY: 6LcMxosUAAAAAPlC2r2b5PhlNdp8hY4ls03BKEfx
       GOOGLE_RECAPTCHA_MINIMUM_SCORE: 0.5
       CLOUDFRONT_ENDPOINT: d3k53vojhyqy0e.cloudfront.net
+      WEB_CONCURRENCY: 4
+      RAILS_MAX_THREADS: 8
     volumes:
       - .:/app
     ports:
-      - "8080:8080"
+      - "8081:8081"
     depends_on:
       - db
     stdin_open: true
