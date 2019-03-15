@@ -7,7 +7,7 @@ module ::Refinery
 
       respond_to do |format|
         format.xml do
-           send_file("#{Rails.root}/public/sitemap.xml", filename: "sitemap.xml", type: "application/xml")
+            render :file=>"#{Rails.root}/public/sitemap.xml", :content_type => 'application/xml'
         end
       end
     end
