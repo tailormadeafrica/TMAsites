@@ -6,12 +6,8 @@ module ::Refinery
       headers['Content-Type'] = 'application/xml'
 
       respond_to do |format|
-        format.json do
-          @locales = if defined?(::Refinery::I18n) && ::Refinery::I18n.enabled?
-                       ::Refinery::I18n.frontend_locales
-                     else
-                       [::I18n.locale]
-                     end
+        format.xml do
+           send_file("#{Rails.root}/public/sitemap.xml", filename: "sitemap.xml", type: "application/xml")
         end
       end
     end
