@@ -5,10 +5,11 @@ services:
     environment:
       RAILS_ENV: development
       RAKE_ENV: development
-      DATABASE_URL: postgresql://postgres:tma@db:5432/postgres?encoding=utf8&pool=5&timeout=5000
+      # DATABASE_URL: postgresql://postgres:tma@db:5432/postgres?encoding=utf8&pool=5&timeout=5000
       GOOGLE_RECAPTCHA_SITE_KEY: 6LcMxosUAAAAABCUfL8b5k1rlkzha75U0lgCOZxW
       GOOGLE_RECAPTCHA_SECRET_KEY: 6LcMxosUAAAAAPlC2r2b5PhlNdp8hY4ls03BKEfx
       GOOGLE_RECAPTCHA_MINIMUM_SCORE: 0.5
+      DATABASE_HOST: db
       CLOUDFRONT_ENDPOINT: d3k53vojhyqy0e.cloudfront.net
       WEB_CONCURRENCY: 4
       RAILS_MAX_THREADS: 8
@@ -21,11 +22,13 @@ services:
     stdin_open: true
     tty: true
     command: "bundle exec puma -C config/puma.rb"
+
   db:
-    image: postgres:9.4-alpine
-    restart: always
+    image: "postgres:11.2-alpine"
     environment:
       POSTGRES_PASSWORD: tma
+      POSTGRES_USER: tma
     volumes:
       - .docker-data/db:/var/lib/postgresql
-      - .:/app
+    ports:
+      - "5432:5432"

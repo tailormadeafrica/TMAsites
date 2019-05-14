@@ -15,4 +15,5 @@ COPY Gemfile* .$app/
 WORKDIR $app
 ADD . $app
 RUN bundle config github.https true && bundle config git.allow_insecure true && bundle install --jobs 4
-# CMD rails s -b 0.0.0.0
+
+ENTRYPOINT ["bin/start.sh"]

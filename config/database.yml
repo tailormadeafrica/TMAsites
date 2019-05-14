@@ -8,12 +8,13 @@
 #  database: db/development.sqlite3
 #  pool: 5
 #  timeout: 5000
-
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+ username: tma
+ password: tma
+ pool: 5
 development:
-   adapter: postgresql
-   encoding: unicode
-   database: tailor_made_africa
-   pool: 5
-   username: postgres
-   password: postgres
-   host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+ <<: *default
+ database: tma_dev
